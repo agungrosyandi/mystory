@@ -1,0 +1,105 @@
+:root {
+  --logoFontSize: calc(0.9rem + 1vw);
+  --menuFontSize: calc(0.5rem + 1vw);
+  --mainFontSize: calc(5rem + 1vw);
+  --mainSubFontSize: calc(0.4rem + 1.5vw);
+
+  --descriptionTitleFontSize: calc(3.5rem + 1vw);
+  --descriptionParagraphFontSize: calc(0.8rem + 0.5vw);
+
+  --retroVectorMotionTitleFontSize: calc(2.5rem + 0.5vw);
+}
+
+/* home */
+
+nav {
+  padding: 0 5%;
+}
+
+.home-container svg {
+  top: 30%;
+  left: 25%;
+}
+
+.cta {
+  top: 50%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+}
+
+.img-agng {
+  width: 100%;
+  height: 100%;
+  top: 15%;
+}
+
+/* short biography */
+
+.short-paragraph p {
+  width: 70%;
+}
+
+/* retro */
+
+.right-photo-retro img,
+.right-photo-vector img,
+.right-video-retro video {
+  padding: 40% 0;
+}
+
+/* about sections */
+
+.about-container {
+  flex-direction: column;
+}
+
+.img-photo-agung img {
+  padding: 15% 10%;
+  height: 200%;
+}
+
+.description-cv {
+  padding: 0 10%;
+}
+
+.title-cv {
+  font-size: calc(4rem + 1vw);
+}
+
+.description-cv p {
+  font-size: calc(0.8rem + 1vw);
+  width: 100%;
+}
+
+.soft-skills {
+  width: 90%;
+}
+
+.adobe-illustrator,
+.adobe-photoshop,
+.adobe-aftereffect,
+.javascript,
+.css {
+  font-size: calc(0.5rem + 1vw);
+}
+
+/* gallery sections */
+
+.galery-container {
+  padding: 0 10%;
+}
+
+.title-gallery {
+  font-size: calc(7rem + 0.5vw);
+}
+
+.galery-download {
+  font-size: calc(1rem + 1vw);
+}
+
+.galery-message {
+  z-index: 1;
+  opacity: 0;
+  position: relative;
+  bottom: 0.8rem;
+}

@@ -9,7 +9,6 @@ const tl = gsap.timeline({
 
 const navmenu = document.querySelector(".menu1");
 const navmenu2 = document.querySelector(".menu2");
-const navmenu3 = document.querySelector(".menu3");
 
 navmenu.addEventListener("click", () => {
   gsap.fromTo(".menu1", { scale: 1 }, { scale: 1.1, yoyo: true, repeat: 1 });
@@ -19,8 +18,22 @@ navmenu2.addEventListener("click", () => {
   gsap.fromTo(".menu2", { scale: 1 }, { scale: 1.1, yoyo: true, repeat: 1 });
 });
 
-navmenu3.addEventListener("click", () => {
-  gsap.fromTo(".menu3", { scale: 1 }, { scale: 1.1, yoyo: true, repeat: 1 });
+// navbar burger toggle mobile version
+
+const burger = document.querySelector(".burger");
+const nav = document.querySelector(".menu-navbar");
+const links = nav.querySelectorAll("a");
+
+burger.addEventListener("click", () => {
+  nav.classList.toggle("navbar-open");
+  burger.classList.toggle("toggle");
+});
+
+links.forEach((link) => {
+  link.addEventListener("click", () => {
+    nav.classList.toggle("navbar-open");
+    burger.classList.toggle("toggle");
+  });
 });
 
 // navbar closed
@@ -41,82 +54,269 @@ ScrollTrigger.create({
   },
 });
 
+// logo agung
+
+tl.fromTo("svg", { opacity: 0 }, { opacity: 1, duration: 3, delay: 0.5 });
+
+tl.fromTo(
+  "#left_line",
+  { x: "95%", rotation: "-27deg", transformOrigin: "bottom" },
+  { x: "0%", rotation: "0deg", duration: 1 }
+)
+  .fromTo(
+    "#right_line",
+    { x: "-95%", rotation: "27deg", transformOrigin: "bottom" },
+    { x: "0%", rotation: "0deg", duration: 1 },
+    "<"
+  )
+  .fromTo(
+    "#center_line",
+    { opacity: 0, rotation: "35deg" },
+    { opacity: 1, rotation: "0deg", duration: 2 },
+    "<35%"
+  )
+  .fromTo(
+    "#teks_gungs",
+    { opacity: 0, rotation: "45deg", transformOrigin: "bottom left" },
+    { opacity: 1, rotation: "0deg", duration: 2 },
+    "<35%"
+  );
+
+// logo dissapear and change to text
+
+tl.to(".home-container svg", { opacity: 0, duration: 2 });
+tl.fromTo(
+  ".logo-navbar h2",
+  { x: "-10%", opacity: 0 },
+  { x: "0%", opacity: 1, duration: 1 }
+);
+
 // tex home
 
 tl.fromTo(
   ".cta1",
-  { x: "100%", opacity: 0.5 },
-  { x: 0, opacity: 1, duration: 1 },
-  "<35%"
+  { y: "-50%", opacity: 0 },
+  { y: "0%", opacity: 1, duration: 1.5 }
 );
+
 tl.fromTo(
-  ".cta3",
-  { x: "-100%", opacity: 0.5 },
-  { x: 0, opacity: 1, duration: 1 },
-  "<35%"
+  ".cta1-x",
+  { x: "50%", opacity: 0 },
+  { x: "0%", opacity: 1, duration: 1.5 }
 );
+
 tl.fromTo(
   ".cta2",
-  { y: "-100%", opacity: 0.5 },
-  { y: 0, opacity: 1, duration: 1 },
-  "<35%"
-);
-tl.fromTo(
-  ".cta4",
   { y: "100%", opacity: 0.5 },
-  { y: 0, opacity: 1, duration: 1 },
-  "<35%"
-);
-tl.fromTo(
-  ".cta5",
-  { y: "-100%", opacity: 0.5 },
-  { y: 0, opacity: 1, duration: 1 },
-  "<35%"
-);
-tl.fromTo(
-  ".cta-btn",
-  { y: "100%", opacity: 0 },
-  { y: 0, opacity: 1, duration: 1 },
-  "<5%"
+  { y: 0, opacity: 1, duration: 1.5 },
+  "<"
 );
 
-// logo agung
+// img show agung background
 
 tl.fromTo(
-  "#huruf_A",
-  { opacity: 0, x: -100, rotation: "-45deg" },
-  { opacity: 1, x: 0, rotation: "0deg" }
+  ".home-container img",
+  { x: "-20%", opacity: 0 },
+  { x: "0%", opacity: 1, duration: 3.5 },
+  "<20%"
 );
-tl.fromTo("#huruf_R", { opacity: 0, x: 100 }, { opacity: 1, x: 0 });
-
-// logo jump
-
-tl.fromTo("#huruf_A", { y: "-20%" }, { y: 0 });
-tl.fromTo("#huruf_R", { y: "20%" }, { y: 0 });
 
 // text navbar
 
 tl.fromTo(
   ".menu1",
   { y: "100%", opacity: 0 },
-  { y: 0, opacity: 1, delay: 0.5 }
-);
-tl.fromTo(
-  ".menu3",
-  { y: "100%", opacity: 0 },
-  { y: 0, opacity: 1, delay: 0.5 },
+  { y: 0, opacity: 1, duration: 1 },
   "<"
-);
-tl.fromTo(".menu2", { y: "-100%", opacity: 0 }, { y: 0, opacity: 1 }, "<");
+)
+  .fromTo(
+    ".menu3",
+    { y: "100%", opacity: 0 },
+    { y: 0, opacity: 1, duration: 1 },
+    "<"
+  )
+  .fromTo(
+    ".menu2",
+    { y: "-100%", opacity: 0 },
+    { y: 0, opacity: 1, duration: 1 },
+    "<"
+  );
 
-// logo dissapear and change to text
-
-tl.to(".logo-navbar svg", { opacity: 0, duration: 2 });
 tl.fromTo(
-  ".logo-navbar h1",
-  { x: "-10%", opacity: 0 },
-  { x: "0%", opacity: 1, duration: 1 }
+  ".cta3",
+  { x: "-100%", opacity: 0.5 },
+  { x: 0, opacity: 1, duration: 1 },
+  "<35%"
+)
+  .fromTo(
+    ".cta4",
+    { y: "100%", opacity: 0.5 },
+    { y: 0, opacity: 1, duration: 1 },
+    "<35%"
+  )
+  .fromTo(
+    ".cta5",
+    { y: "-100%", opacity: 0.5 },
+    { y: 0, opacity: 1, duration: 1 },
+    "<35%"
+  );
+
+// closing home sections with opacity
+
+const tlClosingHomeSections = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#home",
+    start: "20% ",
+    end: "90% ",
+    scrub: 1,
+  },
+});
+
+tlClosingHomeSections.to(".home-container", { opacity: 0, duration: 1 });
+
+const tlShortBiography = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#home",
+    start: "0%",
+    end: "100%",
+    pin: true,
+    pinSpacing: false,
+  },
+});
+
+// short biography animation
+
+const tlSplit = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#biography",
+    start: "-45% center",
+    end: "0% top",
+    scrub: 4,
+  },
+});
+
+tlSplit.fromTo(
+  ".short-paragraph",
+  { x: "50%", opacity: 0 },
+  { x: "0%", opacity: 1 }
 );
+
+// retro sections
+
+const tlSplitRetro = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#retro-design",
+    start: "-45% center",
+    end: "0% top",
+    scrub: 4,
+  },
+});
+
+tlSplitRetro
+  .fromTo(
+    ".short-paragraph-retro",
+    { x: "-50%", opacity: 0 },
+    { x: "0%", opacity: 1, duration: 0.5 }
+  )
+  .fromTo(
+    ".right-photo-retro",
+    { x: "50%", opacity: 0 },
+    { x: "0%", opacity: 1, duration: 0.5 },
+    "<"
+  );
+
+// vector sections
+
+const tlSplitVector = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#vector-design",
+    start: "-45% center ",
+    end: "0% top ",
+    scrub: 4,
+  },
+});
+
+tlSplitVector
+  .fromTo(
+    ".right-photo-vector",
+    { x: "-50%", opacity: 0 },
+    { x: "0%", opacity: 1, duration: 0.5 }
+  )
+  .fromTo(
+    ".short-paragraph-vector",
+    { x: "50%", opacity: 0 },
+    { x: "0%", opacity: 1, duration: 0.5 },
+    "<"
+  );
+
+// motion sections
+
+const tlSplitMotion = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#motion-design",
+    start: "-45% center",
+    end: "0% top",
+    scrub: 4,
+  },
+});
+
+tlSplitMotion
+  .fromTo(
+    ".short-paragraph-motion",
+    { x: "-50%", opacity: 0 },
+    { x: "0%", opacity: 1, duration: 0.5 }
+  )
+  .fromTo(
+    ".right-video-retro",
+    { x: "50%", opacity: 0 },
+    { x: "0%", opacity: 1, duration: 0.5 },
+    "<"
+  );
+
+// portfolio sections
+
+const tlSplitPortfolio = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#porfolio-section",
+    start: "-25% center",
+    end: "0% top",
+    scrub: 4,
+  },
+});
+
+tlSplitPortfolio
+  .fromTo(
+    ".short-paragprah-text1",
+    { y: "-50%", opacity: 0 },
+    { y: "0%", opacity: 1, duration: 2 }
+  )
+  .fromTo(
+    ".short-paragprah-text2",
+    { y: "50%", opacity: 0 },
+    { y: "0%", opacity: 1, duration: 2 },
+    "<30%"
+  )
+  .fromTo(
+    ".short-paragprah-text3",
+    { y: "-50%", opacity: 0 },
+    { y: "0%", opacity: 1, duration: 2 },
+    "<30%"
+  )
+  .fromTo(
+    ".short-paragprah-portfolio p",
+    { y: "-50%", opacity: 0 },
+    { y: "0%", opacity: 1, duration: 2 }
+  )
+  .fromTo(
+    ".cv-btn",
+    { y: "-50%", opacity: 0 },
+    { y: "0%", opacity: 1, duration: 3 }
+  )
+  .fromTo(
+    ".portfolio-gallery-carousei",
+    { x: "0%" },
+    { x: "-50%", duration: 5 }
+  );
 
 // download cv submitted button
 
@@ -132,117 +332,38 @@ buttoncv.addEventListener("click", (e) => {
   tl2.fromTo(".download-message", { opacity: 0 }, { opacity: 1 });
 });
 
-// short biography animation
+// closing sections
 
-const tlShortBiography = gsap.timeline({
+const tlClosingSections = gsap.timeline({
   scrollTrigger: {
-    trigger: "#home",
-    start: "0%",
+    trigger: "#porfolio-section",
+    start: "20% ",
+    end: "90% ",
+    scrub: 1,
+  },
+});
+
+tlClosingSections.to(".portfolio-container", { opacity: 0, duration: 1 });
+
+const tlClosing = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#porfolio-section",
+    start: "25%",
     end: "100%",
     pin: true,
     pinSpacing: false,
   },
 });
 
-const tlSplit = gsap.timeline({
+const tlSplitClosing = gsap.timeline({
   scrollTrigger: {
-    trigger: "#biography",
-    start: "-25%",
-    end: "0%",
-    scrub: 1,
+    trigger: "#closing-sections",
+    start: "-30% center ",
+    end: "0% top ",
+    scrub: 4,
   },
 });
 
-tlSplit
-  .fromTo(".left-photo", { x: "50%" }, { x: "0%" })
-  .fromTo(".short-paragraph", { x: "-50%" }, { x: "0%" }, "<");
-
-const tlSplitdescription = gsap.timeline({
-  scrollTrigger: {
-    trigger: "#biography",
-    start: "-10%",
-    end: "20%",
-    scrub: 1,
-  },
-});
-
-// tlSplitdescription.fromTo(".left-photo img", { opacity: 0.5 }, { opacity: 1 });
-
-tlSplitdescription.fromTo(
-  ".short-paragraph p, .short-paragraph h1, .cv-btn",
-  { opacity: 0 },
-  { opacity: 1, duration: 2 },
-  "<"
-);
-
-const tlSplitdescriptionRemove = gsap.timeline({
-  scrollTrigger: {
-    trigger: "#biography",
-    start: "10%",
-    end: "60%",
-    scrub: 1,
-  },
-});
-
-tlSplitdescriptionRemove.to(".short-biograpy", { opacity: 0, duration: 1 });
-
-// galery scrolltrigger horizontal
-
-const tlHorizontallScroll = gsap.timeline({
-  scrollTrigger: {
-    trigger: "#graphic-design-slide",
-    start: "0%",
-    end: () =>
-      "+=" + document.querySelector("#graphic-design-slide").offsetWidth,
-    pin: true,
-    scrub: 1,
-  },
-});
-
-tlHorizontallScroll.to("#graphic-design-slide", {
-  xPercent: -100,
-  ease: "none",
-});
-
-// big title animation
-
-gsap
-  .timeline({
-    scrollTrigger: {
-      trigger: ".big-title",
-      start: "left left",
-      end: "right left",
-      scrub: true,
-      containerAnimation: tlHorizontallScroll,
-    },
-  })
-  .from(".big-title", { scale: 1.4 });
-
-// galery1 animation
-
-gsap
-  .timeline({
-    scrollTrigger: {
-      trigger: ".galery-portfolio",
-      start: "-30% 0%",
-      end: "60% 10%",
-      scrub: 2,
-      containerAnimation: tlHorizontallScroll,
-    },
-  })
-  .from(".galery-portfolio img", { x: "100vw", stagger: 0.05 })
-  .to(".galery-portfolio img", { scale: 0.4, stagger: 0.05 });
-
-// big title animation 2
-
-gsap
-  .timeline({
-    scrollTrigger: {
-      trigger: ".big-title2",
-      start: "-30% 0%",
-      end: "30% 10%",
-      scrub: true,
-      containerAnimation: tlHorizontallScroll,
-    },
-  })
-  .from(".big-title2", { opacity: 0.5 });
+tlSplitClosing
+  .fromTo(".closing-container", { x: "-50%", opacity: 0 }, { x: 0, opacity: 1 })
+  .fromTo(".img-closing", { x: "50%", opacity: 0 }, { x: 0, opacity: 1 }, "<");

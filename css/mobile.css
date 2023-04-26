@@ -1,0 +1,208 @@
+:root {
+  --logoFontSize: calc(0.9rem + 1vw);
+  --menuFontSize: calc(0.5rem + 1vw);
+  --mainFontSize: calc(4rem + 0.5vw);
+  --mainSubFontSize: calc(0.4rem + 1.5vw);
+
+  --descriptionTitleFontSize: calc(3rem + 0.5vw);
+  --descriptionParagraphFontSize: calc(0.8rem + 0.5vw);
+
+  --retroVectorMotionTitleFontSize: calc(2.5rem + 0.5vw);
+}
+
+/* navbar */
+
+.burger {
+  position: relative;
+  display: block;
+}
+
+.burger span {
+  padding: 0.1rem 1rem;
+  background: rgb(255, 255, 255);
+  margin: 0.3rem 0rem;
+  display: block;
+  transition: all 0.5s ease;
+}
+
+.menu-navbar {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: rgb(36, 36, 36);
+  top: 0%;
+  left: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 1s ease;
+}
+
+.menu-navbar li {
+  padding: 2.5rem 7rem 2.5rem 2.5rem;
+}
+
+.menu-navbar li a {
+  font-size: 1.5rem;
+}
+
+.navbar-open {
+  transform: translate(-80%);
+}
+
+.toggle .line1 {
+  transform: rotateZ(35deg) translateY(300%);
+  background: white;
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotateZ(-35deg) translateY(-300%);
+  background: white;
+}
+
+/* home */
+
+.cta {
+  top: 40%;
+  left: 50%;
+}
+
+.img-agng {
+  top: 50%;
+}
+
+/* biography */
+
+.short-paragraph p {
+  width: 85%;
+}
+
+/* retro */
+
+.short-paragraph-retro p,
+.short-paragraph-vector p,
+.short-paragraph-motion p {
+  padding-bottom: 20%;
+}
+
+.retro-container,
+.motion-container {
+  flex-direction: column-reverse;
+  position: relative;
+}
+
+.vector-container {
+  flex-direction: column;
+  position: relative;
+}
+
+.right-photo-retro img,
+.right-photo-vector img,
+.right-video-retro video {
+  padding: 5% 10%;
+}
+
+.title-short-paragraph {
+  flex-direction: column;
+  justify-content: left;
+}
+
+.short-paragprah-portfolio {
+  align-items: baseline;
+  padding: 0 10% 10% 10%;
+}
+
+.short-paragprah-text1,
+.short-paragprah-text2,
+.short-paragprah-text3 {
+  padding: 0.2rem 0;
+}
+
+.short-paragprah-portfolio p {
+  text-align: left;
+}
+
+.download-message {
+  right: -20%;
+}
+
+.glery {
+  width: 50%;
+}
+
+.closing-container h1 {
+  font-size: calc(2.5rem + 1vw);
+}
+
+.closing-container p {
+  font-size: calc(0.6rem + 0.5vw);
+}
+
+.wa-svg svg,
+.gmail-svg svg {
+  width: 15%;
+  height: 15%;
+}
+
+.wa-svg h6,
+.gmail-svg h6 {
+  font-size: calc(0.5rem + 1vw);
+}
+
+/* about sections */
+
+.img-photo-agung img {
+  padding: 30% 10%;
+}
+
+.description-cv {
+  padding: 0 10%;
+}
+
+.title-cv {
+  font-size: calc(3rem + 1vw);
+}
+
+.description-cv p {
+  font-size: calc(0.8rem + 1vw);
+  width: 100%;
+}
+
+.soft-skills {
+  width: 90%;
+}
+
+.adobe-illustrator,
+.adobe-photoshop,
+.adobe-aftereffect,
+.javascript,
+.css {
+  font-size: calc(0.3rem + 1vw);
+}
+
+/* gallery sections */
+
+.galery-container {
+  padding: 0 10%;
+}
+
+.title-gallery {
+  font-size: calc(3rem + 0.5vw);
+  text-align: center;
+}
+
+.galery-download {
+  font-size: calc(0.5rem + 1vw);
+}
+
+.galery-message {
+  z-index: 1;
+  opacity: 0;
+  position: relative;
+  bottom: 0.8rem;
+}
