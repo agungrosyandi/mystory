@@ -86,7 +86,7 @@ tl.fromTo(
 
 tl.to(".home-container svg", { opacity: 0, duration: 2 });
 tl.fromTo(
-  ".logo-navbar h2",
+  ".logo-navbar",
   { x: "-10%", opacity: 0 },
   { x: "0%", opacity: 1, duration: 1 }
 );
@@ -128,19 +128,12 @@ tl.fromTo(
   { y: "100%", opacity: 0 },
   { y: 0, opacity: 1, duration: 1 },
   "<"
-)
-  .fromTo(
-    ".menu3",
-    { y: "100%", opacity: 0 },
-    { y: 0, opacity: 1, duration: 1 },
-    "<"
-  )
-  .fromTo(
-    ".menu2",
-    { y: "-100%", opacity: 0 },
-    { y: 0, opacity: 1, duration: 1 },
-    "<"
-  );
+).fromTo(
+  ".menu2",
+  { y: "-100%", opacity: 0 },
+  { y: 0, opacity: 1, duration: 1 },
+  "<"
+);
 
 tl.fromTo(
   ".cta3",
@@ -161,29 +154,6 @@ tl.fromTo(
     "<35%"
   );
 
-// closing home sections with opacity
-
-const tlClosingHomeSections = gsap.timeline({
-  scrollTrigger: {
-    trigger: "#home",
-    start: "20% ",
-    end: "90% ",
-    scrub: 1,
-  },
-});
-
-tlClosingHomeSections.to(".home-container", { opacity: 0, duration: 1 });
-
-const tlShortBiography = gsap.timeline({
-  scrollTrigger: {
-    trigger: "#home",
-    start: "0%",
-    end: "100%",
-    pin: true,
-    pinSpacing: false,
-  },
-});
-
 // short biography animation
 
 const tlSplit = gsap.timeline({
@@ -197,7 +167,7 @@ const tlSplit = gsap.timeline({
 
 tlSplit.fromTo(
   ".short-paragraph",
-  { x: "50%", opacity: 0 },
+  { x: "-50%", opacity: 0 },
   { x: "0%", opacity: 1 }
 );
 
@@ -273,7 +243,7 @@ tlSplitMotion
     "<"
   );
 
-// portfolio sections
+// // portfolio sections
 
 const tlSplitPortfolio = gsap.timeline({
   scrollTrigger: {

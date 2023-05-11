@@ -1,4 +1,6 @@
 :root {
+  overflow-x: hidden;
+
   --logoFontSize: calc(0.9rem + 1vw);
   --menuFontSize: calc(0.5rem + 1vw);
   --mainFontSize: calc(4rem + 0.5vw);
@@ -67,6 +69,12 @@
 
 /* home */
 
+#home {
+  width: 100vw;
+  min-height: 100vh;
+  background: var(--blackColor);
+}
+
 .cta {
   top: 40%;
   left: 50%;
@@ -79,7 +87,7 @@
 /* biography */
 
 .short-paragraph p {
-  width: 85%;
+  width: 100%;
 }
 
 /* retro */
@@ -88,6 +96,7 @@
 .short-paragraph-vector p,
 .short-paragraph-motion p {
   padding-bottom: 20%;
+  width: 70%;
 }
 
 .retro-container,
@@ -154,35 +163,39 @@
   font-size: calc(0.5rem + 1vw);
 }
 
+/* portfolio */
+
+.short-paragprah-portfolio p {
+  width: 100%;
+}
+
+/* closing */
+
+.left-paragraph-closing h1 {
+  width: 80%;
+}
+
+/* navbar burger about and gallery */
+
 /* about sections */
 
 .img-photo-agung img {
-  padding: 30% 10%;
+  margin-top: 15%;
+  padding: 10% 10% 0 10%;
 }
 
 .description-cv {
-  padding: 0 10%;
+  bottom: 0%;
 }
 
 .title-cv {
   font-size: calc(3rem + 1vw);
 }
 
-.description-cv p {
+.cv-btn-about {
   font-size: calc(0.8rem + 1vw);
-  width: 100%;
-}
-
-.soft-skills {
-  width: 90%;
-}
-
-.adobe-illustrator,
-.adobe-photoshop,
-.adobe-aftereffect,
-.javascript,
-.css {
-  font-size: calc(0.3rem + 1vw);
+  cursor: pointer;
+  width: 70%;
 }
 
 /* gallery sections */

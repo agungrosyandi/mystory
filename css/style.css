@@ -74,7 +74,6 @@
 body {
   font-family: "Poppins", sans-serif;
   overflow-x: hidden;
-  scroll-behavior: smooth;
 }
 
 /* navbar sections */
@@ -92,7 +91,7 @@ nav {
   z-index: 20;
 }
 
-.logo-navbar h2 {
+.logo-navbar {
   font-family: var(--nelaSlabLightFont);
   font-size: var(--logoFontSize);
   opacity: 0;
@@ -133,9 +132,9 @@ nav {
 
 /* navbar about and gallery sections */
 
-.nav-gallery-about {
+nav {
   position: fixed;
-  width: 150vw;
+  width: 100vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -146,7 +145,7 @@ nav {
   z-index: 20;
 }
 
-.logo-navbar-gallery-about h2 {
+.logo-navbar-gallery-about {
   font-family: var(--nelaSlabLightFont);
   font-size: var(--logoFontSize);
   letter-spacing: 0.2rem;
@@ -154,7 +153,7 @@ nav {
 
 .logo-navbar-gallery-about a {
   text-decoration: none;
-  color: rgb(103, 101, 101);
+  color: rgb(107, 107, 107);
 }
 
 .menu-navbar-gallery-about {
@@ -169,14 +168,14 @@ nav {
 }
 
 .menu-navbar-gallery-about li a {
-  color: rgb(103, 101, 101);
+  color: rgb(107, 107, 107);
   text-decoration: none;
   font-size: var(--menuFontSize);
   font-weight: bold;
 }
 
 .menu-navbar-gallery-about li a:hover {
-  color: rgb(2, 2, 2);
+  color: var(--whiteColor);
 }
 
 .burger,
@@ -187,9 +186,10 @@ nav {
 /* home sections */
 
 #home {
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
   background: var(--blackColor);
+  position: relative;
 }
 
 .home-container {
@@ -305,13 +305,14 @@ nav {
 .img-photo-agung {
   position: relative;
   overflow: hidden;
+  flex-wrap: wrap;
 }
 
 .img-photo-agung img {
   position: absolute;
   width: 100%;
   height: 100%;
-  padding: 20%;
+  padding: 10% 20% 0 0;
   object-fit: cover;
 }
 
@@ -334,19 +335,24 @@ nav {
   padding: 2rem 0;
 }
 
-.soft-skills {
-  display: flex;
-  justify-content: space-between;
-  width: 70%;
-  padding: 1rem 0;
+.cv-btn-about {
+  position: relative;
+  margin: 3rem 0 0 0;
+  padding: 1rem 1rem;
+  background: black;
+  transition: background 2s ease-out;
+  font-family: "Poppins", sans-serif;
+  border-radius: 0.7rem;
+  color: white;
+  font-size: var(--paragraph);
+  cursor: pointer;
+  width: 35%;
 }
 
-.adobe-illustrator,
-.adobe-photoshop,
-.adobe-aftereffect,
-.javascript,
-.css {
-  font-size: var(--softskills);
+.cv-btn-about:hover {
+  background: rgb(255, 255, 255);
+  border-style: solid;
+  color: black;
 }
 
 /* galery link sections css  */
@@ -375,39 +381,19 @@ nav {
   font-family: var(--drukBoldFont);
 }
 
-.galery-btn {
-  padding: 0.3rem;
-  cursor: pointer;
-}
-
-.galery-download {
-  font-size: 1.3rem;
-  position: relative;
-  top: 0.6rem;
-  padding: 1rem;
-}
-
-.galery-message {
-  z-index: 1;
-  opacity: 0;
-  position: relative;
-  bottom: 0.8rem;
-}
-
 /* short biography */
 
 #biography {
+  position: relative;
   background: white;
   min-height: 100vh;
-  width: 100vw;
-  position: relative;
+  width: 100%;
 }
 
 .short-paragraph {
+  height: 80vh;
   color: rgb(10, 9, 9);
   padding: 10% 10% 5% 10%;
-  width: 100%;
-  height: 100%;
 }
 
 .short-paragraph h1 {
@@ -424,8 +410,8 @@ nav {
 .adobe-web-svg {
   display: flex;
   position: absolute;
-  width: 20%;
-  height: 20%;
+  width: 15%;
+  height: 15%;
 }
 
 .adobe-web-svg img {
@@ -440,7 +426,7 @@ nav {
 #retro-design {
   background: var(--whiteColor);
   min-height: 100vh;
-  width: 100vw;
+  width: 100%;
   position: relative;
 }
 
@@ -449,6 +435,7 @@ nav {
   position: absolute;
   height: 100%;
   width: 100%;
+  flex-wrap: wrap;
 }
 
 .short-paragraph-retro,
@@ -465,10 +452,10 @@ nav {
 }
 
 .short-paragraph-retro {
+  position: relative;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  position: relative;
   left: 10%;
   color: rgb(10, 9, 9);
 }
@@ -482,7 +469,7 @@ nav {
 .short-paragraph-retro p {
   font-size: var(--descriptionParagraphFontSize);
   line-height: 3rem;
-  padding-top: 5%;
+  padding: 2rem 0;
   width: 50%;
 }
 
@@ -491,7 +478,7 @@ nav {
 #vector-design {
   background: var(--whiteColor);
   min-height: 100vh;
-  width: 100vw;
+  width: 100%;
   position: relative;
 }
 
@@ -541,7 +528,7 @@ nav {
 #motion-design {
   background: var(--whiteColor);
   min-height: 100vh;
-  width: 100vw;
+  width: 100%;
   position: relative;
 }
 
@@ -592,7 +579,7 @@ nav {
 #porfolio-section {
   background: var(--whiteColor);
   min-height: 100vh;
-  width: 100vw;
+  width: 100%;
 }
 
 .portfolio-container {
@@ -645,17 +632,6 @@ nav {
   cursor: pointer;
 }
 
-.titlecv-download a {
-  color: rgb(220, 220, 220);
-  text-decoration: none;
-}
-
-.titlecv-download a:hover {
-  color: rgb(220, 220, 220);
-  text-decoration: none;
-  color: black;
-}
-
 .cv-btn:hover {
   background: rgb(255, 255, 255);
   border-style: solid;
@@ -690,29 +666,41 @@ nav {
 
 #closing-sections {
   background: var(--blackColor);
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
   position: relative;
-  display: flex;
-  align-items: center;
 }
 
 .closing-container {
-  width: 50%;
-  padding-left: 10%;
+  position: absolute;
+  height: 100%;
+  display: flex;
 }
 
-.closing-container h1 {
+.left-paragraph-closing {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 0 0 15%;
+}
+
+.left-paragraph-closing h1 {
   color: var(--whiteColor);
   font-size: var(--descriptionTitleFontSize);
 }
 
-.closing-container p {
+.left-paragraph-closing p {
   color: var(--whiteColor);
   font-size: var(--descriptionParagraphFontSize);
   line-height: 1.7rem;
   letter-spacing: 0.2rem;
   padding: 10% 0;
+}
+
+.left-paragraph-closing,
+.img-closing {
+  flex: 1;
 }
 
 .wa-svg,
@@ -724,9 +712,9 @@ nav {
 
 .wa-svg svg,
 .gmail-svg svg {
-  width: 5%;
-  height: 5%;
-  transform: scale(100%);
+  width: 8%;
+  height: 8%;
+  transform: scale(80%);
   object-fit: cover;
 }
 
@@ -746,9 +734,13 @@ nav {
 }
 
 .img-closing {
-  width: 50%;
+  position: relative;
+}
+
+.img-closing-agung {
+  width: 100%;
   height: 100%;
   object-fit: cover;
   position: absolute;
-  left: 55%;
+  left: 80%;
 }

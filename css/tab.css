@@ -1,4 +1,6 @@
 :root {
+  overflow-x: hidden;
+
   --logoFontSize: calc(0.9rem + 1vw);
   --menuFontSize: calc(0.5rem + 1vw);
   --mainFontSize: calc(5rem + 1vw);
@@ -10,11 +12,21 @@
   --retroVectorMotionTitleFontSize: calc(2.5rem + 0.5vw);
 }
 
-/* home */
+/* navbar */
 
 nav {
-  padding: 0 5%;
+  padding: 0 10%;
 }
+
+.logo-navbar {
+  font-size: calc(1.5rem + 1vw);
+}
+
+.menu-navbar li a {
+  font-size: calc(1rem + 1vw);
+}
+
+/* home */
 
 .home-container svg {
   top: 30%;
@@ -36,10 +48,25 @@ nav {
 /* short biography */
 
 .short-paragraph p {
-  width: 70%;
+  width: 80%;
+  font-size: calc(0.8rem + 1vw);
 }
 
 /* retro */
+
+.short-paragraph-retro h1,
+.short-paragraph-vector h1,
+.short-paragraph-motion h1 {
+  font-size: calc(3rem + 0.5vw);
+  width: 65%;
+}
+
+.short-paragraph-retro p,
+.short-paragraph-vector p,
+.short-paragraph-motion p {
+  font-size: calc(0.8rem + 1vw);
+  width: 50%;
+}
 
 .right-photo-retro img,
 .right-photo-vector img,
@@ -47,19 +74,61 @@ nav {
   padding: 40% 0;
 }
 
+/* portfolio sections */
+
+.short-paragprah-portfolio p {
+  font-size: calc(0.8rem + 1vw);
+}
+
+/* closing sections */
+
+.closing-container {
+  flex-direction: column;
+}
+
+.left-paragraph-closing p {
+  font-size: calc(0.8rem + 1vw);
+  width: 60%;
+}
+
+.wa-svg h6,
+.gmail-svg h6 {
+  font-size: calc(0.6rem + 1vw);
+}
+
+.img-closing-agung {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  left: 0;
+}
+
+/* navbar about and gallery */
+
+.logo-navbar-gallery-about {
+  font-size: calc(1.5rem + 1vw);
+}
+
+.menu-navbar-gallery-about li a {
+  font-size: calc(1rem + 1vw);
+}
+
 /* about sections */
 
 .about-container {
   flex-direction: column;
+  height: 150%;
 }
 
 .img-photo-agung img {
-  padding: 15% 10%;
-  height: 200%;
+  padding: 5% 10% 0 10%;
+  margin-top: 10%;
 }
 
 .description-cv {
   padding: 0 10%;
+  bottom: 5%;
 }
 
 .title-cv {
@@ -71,16 +140,16 @@ nav {
   width: 100%;
 }
 
-.soft-skills {
-  width: 90%;
+.cv-btn-about {
+  font-size: calc(0.8rem + 1vw);
+  cursor: pointer;
+  width: 45%;
 }
 
-.adobe-illustrator,
-.adobe-photoshop,
-.adobe-aftereffect,
-.javascript,
-.css {
-  font-size: calc(0.5rem + 1vw);
+.cv-btn-about:hover {
+  background: rgb(255, 255, 255);
+  border-style: solid;
+  color: black;
 }
 
 /* gallery sections */
