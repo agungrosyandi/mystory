@@ -340,7 +340,8 @@ tlSplitClosing
 
 // video play responsive mobile fix
 
-const video = document.getElementsById("videoID");
-video.setAttribute("playsinline", "");
-video.setAttribute("muted", "");
-video.play();
+for (video of document.getElementsByTagName("video")) {
+  video.setAttribute("playsinline", "");
+  video.setAttribute("muted", "");
+  video.play();
+}
