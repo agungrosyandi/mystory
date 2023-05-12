@@ -339,11 +339,3 @@ tlSplitClosing
   .fromTo(".img-closing", { x: "50%", opacity: 0 }, { x: 0, opacity: 1 }, "<");
 
 // video play responsive fix
-
-const videos = document.querySelectorAll(" .right-video-retro .video-motion");
-
-for (const video of videos) {
-  video.setAttribute("playsinline", "");
-  video.setAttribute("muted", "");
-  video.play();
-}
