@@ -337,3 +337,10 @@ const tlSplitClosing = gsap.timeline({
 tlSplitClosing
   .fromTo(".closing-container", { x: "-50%", opacity: 0 }, { x: 0, opacity: 1 })
   .fromTo(".img-closing", { x: "50%", opacity: 0 }, { x: 0, opacity: 1 }, "<");
+
+// video play responsive mobile fix
+
+const video = document.getElementsById("videoID");
+video.setAttribute("playsinline", "");
+video.setAttribute("muted", "");
+video.play();
