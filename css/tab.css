@@ -82,26 +82,19 @@ nav {
 
 /* closing sections */
 
-.closing-container {
-  flex-direction: column;
+#closing-sections {
+  min-height: 100vh;
 }
 
-.left-paragraph-closing p {
-  font-size: calc(0.8rem + 1vw);
-  width: 60%;
+.left-paragraph-closing h1 {
+  font-size: calc(3rem + 1vw);
+  padding-top: 15rem;
 }
 
-.wa-svg h6,
-.gmail-svg h6 {
-  font-size: calc(0.6rem + 1vw);
-}
-
-.img-closing-agung {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: absolute;
-  left: 0;
+.wa-contact {
+  width: 15%;
+  left: 80%;
+  top: 70%;
 }
 
 /* navbar about and gallery */

@@ -144,35 +144,79 @@
   width: 50%;
 }
 
-.closing-container h1 {
-  font-size: calc(2.5rem + 1vw);
-}
-
-.closing-container p {
-  font-size: calc(0.6rem + 0.5vw);
-}
-
-.wa-svg svg,
-.gmail-svg svg {
-  width: 15%;
-  height: 15%;
-}
-
-.wa-svg h6,
-.gmail-svg h6 {
-  font-size: calc(0.5rem + 1vw);
-}
-
 /* portfolio */
 
-.short-paragprah-portfolio p {
+.title-short-paragraph {
+  text-align: center;
   width: 100%;
+}
+
+.short-paragprah-portfolio p {
+  text-align: center;
+  width: 100%;
+}
+
+.cv-btn {
+  width: 100%;
+}
+
+.download-message {
+  bottom: 0;
+  right: 0;
 }
 
 /* closing */
 
+#closing-sections {
+  min-height: 125vh;
+}
+
 .left-paragraph-closing h1 {
-  width: 80%;
+  font-size: calc(2.5rem + 1vw);
+  padding-top: 5rem;
+  width: 76%;
+  text-align: center;
+}
+
+.left-paragraph-closing p {
+  font-size: calc(0.5rem + 1vw);
+  text-align: center;
+  width: 50%;
+}
+
+.email-input {
+  width: 100%;
+}
+
+.input-name,
+.input-email,
+.input-subject {
+  padding: 0.5rem 7rem 0.5rem 0.2rem;
+}
+
+.input-message {
+  padding: 0.5rem 7rem 8.5rem 0.2rem;
+}
+
+.button-email {
+  padding: 0.7rem 9.8rem;
+}
+
+.wa-contact {
+  width: 30%;
+  left: 40%;
+  top: 105%;
+}
+
+.wa-contact svg {
+  width: 30%;
+  height: 30%;
+  transform: scale(80%);
+  left: 10%;
+}
+
+.wa-contact-text {
+  font-size: calc(0.5rem + 1vw);
 }
 
 /* navbar burger about and gallery */

@@ -300,9 +300,59 @@
           <div class="left-paragraph-closing">
             <h1>Thank You Let's working together</h1>
             <p>Don't hestitate to contact me if you need my service</p>
-            <div class="whatsapp-gmail">
-              <div class="wa-svg">
-                <svg
+            <form class="form-wa-email" action="">
+              <div class="email-form">
+                <div class="email-input">
+                  <h3 class="email-text">Contact via Email</h3>
+                  <div class="text-name">
+                    <input
+                      id="name"
+                      class="input-name"
+                      type="text"
+                      name="name"
+                      placeholder=""
+                      autocomplete="off"
+                    />
+                    <label for="">Nama</label>
+                  </div>
+                  <div class="email-name">
+                    <input
+                      id="email"
+                      class="input-email"
+                      type="email"
+                      name="email"
+                      placeholder=""
+                      autocomplete="off"
+                    />
+                    <label for="email">Email</label>
+                  </div>
+                  <div class="message-area-name">
+                    <textarea
+                      id="subject"
+                      class="input-message"
+                      type="text"
+                      name="text"
+                      placeholder=""
+                      autocomplete="off"
+                    ></textarea>
+
+                    <label for="Nama">Tulis Pesan</label>
+                  </div>
+                  <button
+                    class="button-email"
+                    type="button"
+                    onclick="sendMail()"
+                  >
+                    Submit
+                  </button>
+                </div>
+              </div>
+            </form>
+            <div class="wa-contact">
+              <a
+                class=".wa-contact"
+                href="whatsapp://send?text=Hello&phone=+6282120106076"
+                ><svg
                   width="700"
                   height="700"
                   viewBox="0 0 700 700"
@@ -347,75 +397,10 @@
                       <stop stop-color="#5BD066" />
                       <stop offset="1" stop-color="#27B43E" />
                     </linearGradient>
-                  </defs>
-                </svg>
-                <h6>
-                  <a href="whatsapp://send?text=Hello&phone=+6282120106076">
-                    0821-2010-6076</a
-                  >
-                </h6>
-              </div>
-              <div class="gmail-svg">
-                <svg
-                  width="800"
-                  height="800"
-                  viewBox="0 0 800 800"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g id="GMAIL SVG">
-                    <path
-                      id="background"
-                      d="M50 298.89C50 211.769 50 168.21 66.9545 134.935C81.8682 105.665 105.665 81.8682 134.935 66.9545C168.21 50 211.769 50 298.89 50H501.11C588.23 50 631.79 50 665.065 66.9545C694.335 81.8682 718.133 105.665 733.045 134.935C750 168.21 750 211.769 750 298.89V501.11C750 588.23 750 631.79 733.045 665.065C718.133 694.335 694.335 718.133 665.065 733.045C631.79 750 588.23 750 501.11 750H298.89C211.769 750 168.21 750 134.935 733.045C105.665 718.133 81.8682 694.335 66.9545 665.065C50 631.79 50 588.23 50 501.11V298.89Z"
-                      fill="white"
-                    />
-                    <path
-                      id="orange"
-                      d="M551.288 213.074L401.61 329.885L248.511 213.074V213.105L248.696 213.263V376.83L399.885 496.165L551.288 381.438V213.074Z"
-                      fill="#EA4335"
-                    />
-                    <path
-                      id="yellow"
-                      d="M590.578 184.66L551.27 213.073V381.437L674.958 286.475V229.268C674.958 229.268 659.945 147.565 590.578 184.66Z"
-                      fill="#FBBC05"
-                    />
-                    <path
-                      id="green"
-                      d="M551.27 381.437V599.81H646.07C646.07 599.81 673.048 597.032 674.988 566.282V286.475L551.27 381.437Z"
-                      fill="#34A853"
-                    />
-                    <path
-                      id="shadow"
-                      d="M248.703 600.002V376.83L248.511 376.673L248.703 600.002Z"
-                      fill="#C5221F"
-                    />
-                    <path
-                      id="red"
-                      d="M248.503 213.101L209.412 184.846C140.045 147.75 125 229.423 125 229.423V286.628L248.503 376.668V213.101Z"
-                      fill="#C5221F"
-                    />
-                    <path
-                      id="shadow 1"
-                      d="M248.511 213.11V376.677L248.703 376.835V213.268L248.511 213.11Z"
-                      fill="#C5221F"
-                    />
-                    <path
-                      id="blue"
-                      d="M125 286.67V566.477C126.911 597.26 153.918 600.007 153.918 600.007H248.719L248.503 376.677L125 286.67Z"
-                      fill="#4285F4"
-                    />
-                  </g>
-                </svg>
-                <h6><a href="http://"> agungrosyandi@gmail.com</a></h6>
-              </div>
+                  </defs></svg
+              ></a>
+              <h6 class="wa-contact-text">via WA</h6>
             </div>
-          </div>
-          <div class="img-closing">
-            <img
-              class="img-closing-agung"
-              src="./img/agung web background 3.jpg"
-              alt=""
-            />
           </div>
         </div>
       </section>
@@ -425,5 +410,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
     <script src="./app.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("7ZJEtjaB8vOInnFgN");
+      })();
+    </script>
   </body>
 </html>

@@ -121,6 +121,15 @@ tl.fromTo(
   "<20%"
 );
 
+// navbar animation
+
+tl.fromTo(
+  ".burger",
+  { x: "20%", opacity: 0 },
+  { x: "0%", opacity: 1, duration: 3.5 },
+  "<"
+);
+
 // text navbar
 
 tl.fromTo(
@@ -334,8 +343,51 @@ const tlSplitClosing = gsap.timeline({
   },
 });
 
-tlSplitClosing
-  .fromTo(".closing-container", { x: "-50%", opacity: 0 }, { x: 0, opacity: 1 })
-  .fromTo(".img-closing", { x: "50%", opacity: 0 }, { x: 0, opacity: 1 }, "<");
+tlSplitClosing.fromTo(
+  ".closing-container",
+  { x: "-50%", opacity: 0 },
+  { x: 0, opacity: 1 }
+);
 
-// video play responsive fix
+//  wa form animation
+
+const tlWaAnimation = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#closing-sections",
+    duration: 0.75,
+    ease: "Power3.easeOut",
+    start: "55% bottom ",
+    end: "75% center ",
+    scrub: 4,
+  },
+});
+
+tlWaAnimation.fromTo(
+  ".wa-contact",
+  { scale: 0 },
+  { scale: 1, delay: 8.5, duration: 5.5, ease: "elastic.out(1.5,1)" }
+);
+
+// mail sender code
+
+const sendMail = () => {
+  const templateParams = {
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    subject: document.getElementById("subject").value,
+  };
+  const serviceID = "service_nhvqzzs";
+  const templateID = "template_hizzrsg";
+
+  emailjs
+    .send(serviceID, templateID, templateParams)
+    .then((res) => {
+      document.getElementById("name").value = "";
+      document.getElementById("email").value = "";
+      document.getElementById("subject").value = "";
+
+      console.log(res);
+      alert("pesan anda terkirim, tunggu balasan ya");
+    })
+    .catch((err) => console.log(err));
+};
