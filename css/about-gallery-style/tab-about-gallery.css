@@ -1,0 +1,173 @@
+/* font used */
+
+@font-face {
+  font-family: "NelaSlabMedium";
+  src: url("../../font/NelaSlab\ Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "NelaSlabLight";
+  src: url("../../font/NelaSlab\ Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "DrukBold";
+  src: url("../../font/Druk-Bold-Trial.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "DrukMedium";
+  src: url("../../font/Druk-Medium-Trial.otf") format("opentype");
+}
+
+:root {
+  font-size: 62.5%;
+
+  /* colour */
+  --blackColor: black;
+  --whiteColor: white;
+  --lightWhiteColor: rgb(220, 220, 220);
+  --blackShadow: rgb(0, 0, 0, 0.4) 0px 0px 20px;
+
+  /* font  */
+
+  --nelaSlabFont: "NelaSlabMedium";
+  --nelaSlabLightFont: "NelaSlabLight";
+  --drukBoldFont: "DrukBold";
+  --drukMediumFont: "DrukMedium";
+  --poppinsFont: "Poppins", sans-serif;
+  --montserratFont: "Montserrat", sans-serif;
+}
+
+/* default settings */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* navbar */
+
+.logo-navbar {
+  font-size: calc(2rem + 1vw);
+}
+
+/* burger menu */
+
+.burger-gallery-about {
+  position: relative;
+  display: block;
+}
+
+.burger-gallery-about span {
+  padding: 0.1rem 1rem;
+  background: rgb(53, 52, 52);
+  margin: 0.3rem 0rem;
+  display: block;
+  transition: all 0.5s ease;
+  width: 200%;
+  height: 200%;
+}
+
+.menu-navbar-gallery-about {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: rgb(78, 77, 77);
+  top: 0%;
+  left: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: transform 1s ease;
+}
+
+.menu-navbar-gallery-about li {
+  padding: 2.5rem 7rem 2.5rem 15rem;
+}
+
+.menu-navbar-gallery-about li a {
+  font-size: calc(1.7rem + 1vw);
+}
+
+.navbar-open {
+  transform: translate(-50%);
+}
+
+.toggle .line1-gallery-about {
+  transform: rotateZ(35deg) translateY(300%);
+  background: white;
+}
+
+.toggle .line2-gallery-about {
+  opacity: 0;
+}
+
+.toggle .line3-gallery-about {
+  transform: rotateZ(-35deg) translateY(-300%);
+  background: white;
+}
+
+/* about link sections css -------------------------------------------------*/
+
+.about-container {
+  flex-direction: column;
+}
+
+.img-photo-agung {
+  height: 100%;
+}
+
+.img-photo-agung img {
+  height: 150%;
+  padding: 15% 0 0 0;
+}
+
+.description-cv {
+  padding: 0 10%;
+}
+
+.title-cv {
+  font-size: calc(5rem + 1vw);
+}
+
+.description-cv p {
+  font-size: calc(0.5rem + 1vw);
+  width: 100%;
+}
+
+.cv-btn-about {
+  font-size: calc(0.5rem + 1vw);
+  width: 35%;
+}
+
+/* galery link sections css ------------------------------------------------- */
+
+#galery {
+  position: relative;
+  min-height: 100vh;
+  width: 100vw;
+  background: var(--whiteColor);
+}
+
+.galery-container {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.title-gallery {
+  font-size: calc(7.5rem + 1vw);
+  padding-bottom: 3rem;
+  letter-spacing: 0.5rem;
+  font-family: var(--drukBoldFont);
+}

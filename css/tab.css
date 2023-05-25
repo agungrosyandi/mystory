@@ -1,32 +1,94 @@
+/* font used */
+
+@font-face {
+  font-family: "NelaSlabMedium";
+  src: url("../font/NelaSlab\ Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "NelaSlabLight";
+  src: url("../font/NelaSlab\ Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "DrukBold";
+  src: url("../font/Druk-Bold-Trial.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "DrukMedium";
+  src: url("../font/Druk-Medium-Trial.otf") format("opentype");
+}
+
 :root {
+  font-size: 62.5%;
   overflow-x: hidden;
-
-  --logoFontSize: calc(0.9rem + 1vw);
-  --menuFontSize: calc(0.5rem + 1vw);
-  --mainFontSize: calc(5rem + 1vw);
-  --mainSubFontSize: calc(0.4rem + 1.5vw);
-
-  --descriptionTitleFontSize: calc(3.5rem + 1vw);
-  --descriptionParagraphFontSize: calc(0.8rem + 0.5vw);
-
-  --retroVectorMotionTitleFontSize: calc(2.5rem + 0.5vw);
 }
 
 /* navbar */
 
-nav {
-  padding: 0 10%;
+.logo-navbar {
+  font-size: calc(2rem + 1vw);
 }
 
-.logo-navbar {
-  font-size: calc(1.5rem + 1vw);
+/* burger menu */
+
+.burger {
+  position: relative;
+  display: block;
+}
+
+.burger span {
+  padding: 0.1rem 1rem;
+  background: rgb(255, 255, 255);
+  margin: 0.3rem 0rem;
+  display: block;
+  transition: all 0.5s ease;
+  width: 200%;
+  height: 200%;
+}
+
+.menu-navbar {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: rgb(53, 52, 52);
+  top: 0%;
+  left: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: transform 1s ease;
+  border-radius: 10rem;
+}
+
+.menu-navbar li {
+  padding: 2.5rem 7rem 2.5rem 15rem;
 }
 
 .menu-navbar li a {
-  font-size: calc(1rem + 1vw);
+  font-size: calc(1.7rem + 1vw);
 }
 
-/* home */
+.navbar-open {
+  transform: translate(-50%);
+}
+
+.toggle .line1 {
+  transform: rotateZ(35deg) translateY(300%);
+  background: white;
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotateZ(-35deg) translateY(-300%);
+  background: white;
+}
+
+/* home ----------------------------------------------------------------- */
 
 .home-container svg {
   top: 30%;
@@ -34,22 +96,30 @@ nav {
 }
 
 .cta {
-  top: 50%;
-  left: 70%;
-  transform: translate(-50%, -50%);
+  left: 65%;
 }
 
-.img-agng {
-  width: 100%;
-  height: 100%;
-  top: 15%;
+.cta1,
+.cta2,
+.cta1-x {
+  font-size: calc(5.5rem + 1vw);
+}
+
+.cta3,
+.cta4,
+.cta5 {
+  font-size: calc(1rem + 1vw);
 }
 
 /* short biography */
 
 .short-paragraph p {
-  width: 80%;
-  font-size: calc(0.8rem + 1vw);
+  width: 85%;
+  font-size: calc(1.3rem + 1vw);
+}
+
+.adobe-web-svg {
+  width: 10vw;
 }
 
 /* retro */
@@ -57,8 +127,8 @@ nav {
 .short-paragraph-retro h1,
 .short-paragraph-vector h1,
 .short-paragraph-motion h1 {
-  font-size: calc(3rem + 0.5vw);
-  width: 65%;
+  font-size: calc(4.5rem + 0.5vw);
+  width: 70%;
 }
 
 .short-paragraph-retro p,
@@ -71,97 +141,50 @@ nav {
 .right-photo-retro img,
 .right-photo-vector img,
 .right-video-retro video {
-  padding: 40% 0;
+  padding: 10% 0;
 }
 
-/* portfolio sections */
+/* portfolio sections --------------------------------------------------------- */
+
+.title-short-paragraph {
+  display: flex;
+  align-items: center;
+}
+
+.title-short-paragraph h1 {
+  font-size: calc(5rem + 1vw);
+}
 
 .short-paragprah-portfolio p {
-  font-size: calc(0.8rem + 1vw);
+  font-size: calc(1rem + 1vw);
 }
 
-/* closing sections */
-
-#closing-sections {
-  min-height: 100vh;
+.cv-btn {
+  width: 40%;
 }
 
-.left-paragraph-closing h1 {
-  font-size: calc(3rem + 1vw);
+/* closing sections ----------------------------------------------------------- */
+
+.closing-container h1 {
+  font-size: calc(5rem + 1vw);
   padding-top: 15rem;
+  text-align: center;
 }
+
+.closing-container p {
+  font-size: calc(0.5rem + 1vw);
+  padding: 5rem 0 10rem 0;
+}
+
+/* form sections -------------------------------------------------------------- */
+
+.form-wa-email {
+  width: 40%;
+}
+
+/* wa sections -------------------------------------------------------------- */
 
 .wa-contact {
-  width: 15%;
-  left: 80%;
-  top: 70%;
-}
-
-/* navbar about and gallery */
-
-.logo-navbar-gallery-about {
-  font-size: calc(1.5rem + 1vw);
-}
-
-.menu-navbar-gallery-about li a {
-  font-size: calc(1rem + 1vw);
-}
-
-/* about sections */
-
-.about-container {
-  flex-direction: column;
-  height: 150%;
-}
-
-.img-photo-agung img {
-  padding: 5% 10% 0 10%;
-  margin-top: 10%;
-}
-
-.description-cv {
-  padding: 0 10%;
-  bottom: 5%;
-}
-
-.title-cv {
-  font-size: calc(4rem + 1vw);
-}
-
-.description-cv p {
-  font-size: calc(0.8rem + 1vw);
-  width: 100%;
-}
-
-.cv-btn-about {
-  font-size: calc(0.8rem + 1vw);
-  cursor: pointer;
-  width: 45%;
-}
-
-.cv-btn-about:hover {
-  background: rgb(255, 255, 255);
-  border-style: solid;
-  color: black;
-}
-
-/* gallery sections */
-
-.galery-container {
-  padding: 0 10%;
-}
-
-.title-gallery {
-  font-size: calc(7rem + 0.5vw);
-}
-
-.galery-download {
-  font-size: calc(1rem + 1vw);
-}
-
-.galery-message {
-  z-index: 1;
-  opacity: 0;
-  position: relative;
-  bottom: 0.8rem;
+  top: 5%;
+  left: 35%;
 }

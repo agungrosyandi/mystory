@@ -5,7 +5,7 @@ const tl = gsap.timeline({
   default: { duration: 0.75, ease: "Power3.easeOut" },
 });
 
-// navbar animation
+// navbar animation -------------------------------------------------------------
 
 const navmenu = document.querySelector(".menu1");
 const navmenu2 = document.querySelector(".menu2");
@@ -18,7 +18,7 @@ navmenu2.addEventListener("click", () => {
   gsap.fromTo(".menu2", { scale: 1 }, { scale: 1.1, yoyo: true, repeat: 1 });
 });
 
-// navbar burger toggle mobile version
+// navbar burger toggle mobile version -------------------------------------------
 
 const burger = document.querySelector(".burger");
 const nav = document.querySelector(".menu-navbar");
@@ -36,7 +36,7 @@ links.forEach((link) => {
   });
 });
 
-// navbar closed
+// navbar closed ---------------------------------------------------------------
 
 const showAnim = gsap
   .from("nav", {
@@ -54,7 +54,7 @@ ScrollTrigger.create({
   },
 });
 
-// logo agung
+// logo agung -------------------------------------------------------------------
 
 tl.fromTo("svg", { opacity: 0 }, { opacity: 1, duration: 3, delay: 0.5 });
 
@@ -82,7 +82,7 @@ tl.fromTo(
     "<35%"
   );
 
-// logo dissapear and change to text
+// logo dissapear and change to text -------------------------------------------
 
 tl.to(".home-container svg", { opacity: 0, duration: 2 });
 tl.fromTo(
@@ -91,11 +91,11 @@ tl.fromTo(
   { x: "0%", opacity: 1, duration: 1 }
 );
 
-// tex home
+// tex home ----------------------------------------------------------------------
 
 tl.fromTo(
   ".cta1",
-  { y: "-50%", opacity: 0 },
+  { y: "-100%", opacity: 0.5 },
   { y: "0%", opacity: 1, duration: 1.5 }
 );
 
@@ -130,7 +130,7 @@ tl.fromTo(
   "<"
 );
 
-// text navbar
+// text navbar ---------------------------------------------------------------------
 
 tl.fromTo(
   ".menu1",
@@ -296,20 +296,6 @@ tlSplitPortfolio
     { x: "0%" },
     { x: "-50%", duration: 5 }
   );
-
-// download cv submitted button
-
-const buttoncv = document.querySelector(".cv-btn");
-
-const tl2 = gsap.timeline({
-  default: { duration: 0.75, ease: "Power3.easeOut" },
-});
-
-buttoncv.addEventListener("click", (e) => {
-  e.preventDefault();
-  tl2.to(".titlecv-download", { opacity: 0, pointerEvents: "none" });
-  tl2.fromTo(".download-message", { opacity: 0 }, { opacity: 1 });
-});
 
 // closing sections
 

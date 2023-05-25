@@ -1,0 +1,206 @@
+/* font used */
+
+@font-face {
+  font-family: "NelaSlabMedium";
+  src: url("../../font/NelaSlab\ Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "NelaSlabLight";
+  src: url("../../font/NelaSlab\ Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "DrukBold";
+  src: url("../../font/Druk-Bold-Trial.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "DrukMedium";
+  src: url("../../font/Druk-Medium-Trial.otf") format("opentype");
+}
+
+:root {
+  font-size: 62.5%;
+
+  /* colour */
+  --blackColor: black;
+  --whiteColor: white;
+  --lightWhiteColor: rgb(220, 220, 220);
+  --blackShadow: rgb(0, 0, 0, 0.4) 0px 0px 20px;
+
+  /* font  */
+
+  --nelaSlabFont: "NelaSlabMedium";
+  --nelaSlabLightFont: "NelaSlabLight";
+  --drukBoldFont: "DrukBold";
+  --drukMediumFont: "DrukMedium";
+  --poppinsFont: "Poppins", sans-serif;
+  --montserratFont: "Montserrat", sans-serif;
+}
+
+/* default settings */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* navbar sections ---------------------------------------------------------- */
+
+nav {
+  position: fixed;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 10vh;
+  padding: 0 10%;
+  background: var(--whiteColor);
+  z-index: 20;
+}
+
+.logo-navbar-gallery-about {
+  font-family: var(--montserratFont);
+  font-size: calc(2rem + 1vw);
+  letter-spacing: 0.2rem;
+}
+
+.logo-navbar-gallery-about a {
+  text-decoration: none;
+  color: var(--blackColor);
+}
+
+.menu-navbar-gallery-about {
+  list-style-type: none;
+  background: black;
+  padding: 1rem 3rem;
+  border-radius: 10rem;
+}
+
+.menu-navbar-gallery-about li {
+  display: inline-block;
+  padding: 0 1rem;
+  font-family: var(--montserratFont);
+  letter-spacing: 0.1rem;
+}
+
+.menu-navbar-gallery-about li a {
+  color: rgb(202, 197, 197);
+  text-decoration: none;
+  font-size: calc(1rem + 1vw);
+  font-weight: bold;
+}
+
+.menu-navbar-gallery-about li a:hover {
+  color: var(--whiteColor);
+}
+
+.burger-gallery-about {
+  display: none;
+}
+
+/* about link sections css -------------------------------------------------*/
+
+#about {
+  position: relative;
+  background: var(--whiteColor);
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.about-container {
+  display: flex;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.img-photo-agung,
+.description-cv {
+  flex: 1;
+}
+
+.img-photo-agung {
+  position: relative;
+  overflow: hidden;
+  flex-wrap: wrap;
+}
+
+.img-photo-agung img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 10% 20% 0 0;
+  object-fit: cover;
+}
+
+.description-cv {
+  position: relative;
+  color: rgb(10, 9, 9);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title-cv {
+  font-size: calc(3rem + 1vw);
+}
+
+.description-cv p {
+  font-size: calc(0.2rem + 1vw);
+  width: 80%;
+  line-height: 2.8rem;
+  padding: 2rem 0;
+}
+
+.cv-btn-about {
+  position: relative;
+  margin: 3rem 0 0 0;
+  padding: 1rem 1rem;
+  background: black;
+  transition: background 2s ease-out;
+  font-family: "Poppins", sans-serif;
+  border-radius: 5.7rem;
+  color: white;
+  font-size: var(--paragraph);
+  cursor: pointer;
+  width: 35%;
+}
+
+.cv-btn-about:hover {
+  background: rgb(255, 255, 255);
+  border-style: solid;
+  color: black;
+}
+
+/* galery link sections css ------------------------------------------------- */
+
+#galery {
+  position: relative;
+  min-height: 100vh;
+  width: 100vw;
+  background: var(--whiteColor);
+}
+
+.galery-container {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.title-gallery {
+  font-size: calc(7.5rem + 1vw);
+  padding-bottom: 3rem;
+  letter-spacing: 0.5rem;
+  font-family: var(--drukBoldFont);
+}

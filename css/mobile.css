@@ -1,101 +1,84 @@
+/* font used */
+
+@font-face {
+  font-family: "NelaSlabMedium";
+  src: url("../font/NelaSlab\ Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "NelaSlabLight";
+  src: url("../font/NelaSlab\ Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "DrukBold";
+  src: url("../font/Druk-Bold-Trial.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "DrukMedium";
+  src: url("../font/Druk-Medium-Trial.otf") format("opentype");
+}
+
 :root {
+  font-size: 62.5%;
   overflow-x: hidden;
-
-  --logoFontSize: calc(0.9rem + 1vw);
-  --menuFontSize: calc(0.5rem + 1vw);
-  --mainFontSize: calc(4rem + 0.5vw);
-  --mainSubFontSize: calc(0.4rem + 1.5vw);
-
-  --descriptionTitleFontSize: calc(3rem + 0.5vw);
-  --descriptionParagraphFontSize: calc(0.8rem + 0.5vw);
-
-  --retroVectorMotionTitleFontSize: calc(2.5rem + 0.5vw);
 }
 
 /* navbar */
 
-.burger {
-  position: relative;
-  display: block;
-}
-
 .burger span {
-  padding: 0.1rem 1rem;
-  background: rgb(255, 255, 255);
-  margin: 0.3rem 0rem;
-  display: block;
-  transition: all 0.5s ease;
-}
-
-.menu-navbar {
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  background: rgb(36, 36, 36);
-  top: 0%;
-  left: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  transition: transform 1s ease;
+  width: 100%;
+  height: 100%;
 }
 
 .menu-navbar li {
-  padding: 2.5rem 7rem 2.5rem 2.5rem;
-}
-
-.menu-navbar li a {
-  font-size: 1.5rem;
+  padding: 2.5rem 7rem 2.5rem 5rem;
 }
 
 .navbar-open {
-  transform: translate(-80%);
-}
-
-.toggle .line1 {
-  transform: rotateZ(35deg) translateY(300%);
-  background: white;
-}
-
-.toggle .line2 {
-  opacity: 0;
-}
-
-.toggle .line3 {
-  transform: rotateZ(-35deg) translateY(-300%);
-  background: white;
+  transform: translate(-50%);
 }
 
 /* home */
 
-#home {
-  width: 100vw;
-  min-height: 100vh;
-  background: var(--blackColor);
-}
-
 .cta {
-  top: 40%;
+  top: 35%;
   left: 50%;
 }
 
-.img-agng {
-  top: 50%;
+.cta1,
+.cta2,
+.cta1-x {
+  font-size: calc(4rem + 1vw);
 }
 
-/* biography */
+.home-container img {
+  top: 50%;
+  width: 150vw;
+}
+
+/* biography ------------------------------------------------------------------ */
+
+.short-paragraph h1 {
+  font-size: calc(3rem + 1vw);
+}
 
 .short-paragraph p {
-  width: 100%;
+  width: 90%;
+  font-size: calc(1rem + 1vw);
 }
 
-/* retro */
+.adobe-web-svg {
+  width: 20vw;
+}
 
-.short-paragraph-retro p,
-.short-paragraph-vector p,
-.short-paragraph-motion p {
-  padding-bottom: 20%;
+/* retro ---------------------------------------------------------------------- */
+
+.short-paragraph-retro h1,
+.short-paragraph-vector h1,
+.short-paragraph-motion h1 {
+  font-size: calc(2.5rem + 0.5vw);
   width: 70%;
 }
 
@@ -116,150 +99,74 @@
   padding: 5% 10%;
 }
 
+/* portfolio section ------------------------------------------------------ */
+
 .title-short-paragraph {
   flex-direction: column;
-  justify-content: left;
 }
 
-.short-paragprah-portfolio {
-  align-items: baseline;
-  padding: 0 10% 10% 10%;
-}
-
-.short-paragprah-text1,
-.short-paragprah-text2,
-.short-paragprah-text3 {
-  padding: 0.2rem 0;
+.title-short-paragraph h1 {
+  font-size: calc(3.5rem + 1vw);
 }
 
 .short-paragprah-portfolio p {
-  text-align: left;
-}
-
-.download-message {
-  right: -20%;
-}
-
-.glery {
-  width: 50%;
-}
-
-/* portfolio */
-
-.title-short-paragraph {
-  text-align: center;
-  width: 100%;
-}
-
-.short-paragprah-portfolio p {
-  text-align: center;
-  width: 100%;
+  font-size: calc(1rem + 1vw);
+  width: 65%;
 }
 
 .cv-btn {
-  width: 100%;
+  width: 60%;
 }
 
-.download-message {
-  bottom: 0;
-  right: 0;
-}
-
-/* closing */
+/* closing sections ----------------------------------------------------------- */
 
 #closing-sections {
-  min-height: 125vh;
+  min-height: 140vh;
 }
 
-.left-paragraph-closing h1 {
-  font-size: calc(2.5rem + 1vw);
+.closing-container h1 {
+  font-size: calc(3.5rem + 1vw);
   padding-top: 5rem;
-  width: 76%;
-  text-align: center;
+  width: 70%;
 }
 
-.left-paragraph-closing p {
-  font-size: calc(0.5rem + 1vw);
+.closing-container p {
+  font-size: calc(1rem + 1vw);
   text-align: center;
-  width: 50%;
+  width: 60%;
+}
+
+/* form sections -------------------------------------------------------------- */
+
+.form-wa-email {
+  width: 65%;
+}
+
+.email-form {
+  height: 90%;
 }
 
 .email-input {
-  width: 100%;
+  width: 120%;
+}
+
+.button-email {
+  padding: 0.7rem 11rem;
 }
 
 .input-name,
 .input-email,
 .input-subject {
-  padding: 0.5rem 7rem 0.5rem 0.2rem;
+  width: 100%;
 }
 
 .input-message {
-  padding: 0.5rem 7rem 8.5rem 0.2rem;
+  width: 100%;
 }
 
-.button-email {
-  padding: 0.7rem 9.8rem;
-}
+/* wa sections -------------------------------------------------------------- */
 
 .wa-contact {
-  width: 30%;
-  left: 40%;
-  top: 105%;
-}
-
-.wa-contact svg {
-  width: 30%;
-  height: 30%;
-  transform: scale(80%);
-  left: 10%;
-}
-
-.wa-contact-text {
-  font-size: calc(0.5rem + 1vw);
-}
-
-/* navbar burger about and gallery */
-
-/* about sections */
-
-.img-photo-agung img {
-  margin-top: 15%;
-  padding: 10% 10% 0 10%;
-}
-
-.description-cv {
-  bottom: 0%;
-}
-
-.title-cv {
-  font-size: calc(3rem + 1vw);
-}
-
-.cv-btn-about {
-  font-size: calc(0.8rem + 1vw);
-  cursor: pointer;
-  width: 70%;
-}
-
-/* gallery sections */
-
-.galery-container {
-  padding: 0 10%;
-}
-
-.title-gallery {
-  font-size: calc(3rem + 0.5vw);
-  text-align: center;
-}
-
-.galery-download {
-  font-size: calc(0.5rem + 1vw);
-}
-
-.galery-message {
-  z-index: 1;
-  opacity: 0;
-  position: relative;
-  bottom: 0.8rem;
+  width: 20%;
+  left: 20%;
 }
