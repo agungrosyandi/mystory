@@ -480,11 +480,12 @@ nav {
   position: relative;
   background: var(--blackColor);
   width: 100vw;
-  height: 120vh;
+  min-height: 120vh;
 }
 
 .closing-container {
   position: absolute;
+  background: var(--blackColor);
   display: flex;
   flex-direction: column;
   align-items: center;
