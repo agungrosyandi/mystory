@@ -178,18 +178,22 @@
 
 /* form sections -------------------------------------------------------------- */
 
-.form-email {
-  width: 40%;
-  height: 40%;
+.form {
+  padding: 2rem 5rem;
 }
 
 .button-email {
-  padding: 0.7rem 13rem;
+  padding: 0.7rem 13.2rem;
 }
 
 /* wa sections -------------------------------------------------------------- */
 
 .wa-contact {
-  top: 5%;
-  left: 35%;
+  width: 15vw;
+  height: 5vh;
+}
+
+.wa-contact img {
+  left: 5%;
+  width: 40%;
 }
