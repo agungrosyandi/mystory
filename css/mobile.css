@@ -138,20 +138,17 @@
 
 /* form sections -------------------------------------------------------------- */
 
-.form-wa-email {
+.form-email {
   width: 65%;
+  height: 40%;
 }
 
 .email-form {
   height: 90%;
 }
 
-.email-input {
-  width: 120%;
-}
-
 .button-email {
-  padding: 0.7rem 11rem;
+  padding: 0.7rem 8rem;
 }
 
 .input-name,

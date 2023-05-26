@@ -474,18 +474,17 @@ nav {
   height: 50%;
 }
 
-/* closing sections */
+/* closing sections ------------------------------------------------------- */
 
 #closing-sections {
   position: relative;
   background: var(--blackColor);
   width: 100vw;
-  min-height: 120vh;
+  min-height: 100vh;
 }
 
 .closing-container {
   position: absolute;
-  background: var(--blackColor);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -509,13 +508,14 @@ nav {
 
 /* form sections -------------------------------------------------------------- */
 
-.form-wa-email {
+.form-email {
   position: relative;
   width: 30%;
+  height: 100%;
 }
 
 .email-form {
-  position: relative;
+  position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -592,6 +592,7 @@ nav {
   align-items: center;
   position: relative;
   left: 35%;
+  bottom: 10%;
   width: 15%;
   border: 3px solid var(--lightWhiteColor);
   border-radius: 30px;
