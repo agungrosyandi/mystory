@@ -93,7 +93,7 @@
 
 .short-paragraph p {
   width: 90%;
-  font-size: calc(1rem + 1vw);
+  font-size: calc(0.8rem + 1vw);
 }
 
 .adobe-web-svg {
@@ -102,6 +102,10 @@
 
 /* gallery showcase ----------------------------------------------- */
 
+#gallery-showcase {
+  min-height: 60vh;
+}
+
 .gallery-showcase-container {
   padding: 0 10rem;
 }
@@ -109,23 +113,19 @@
 .retro-style,
 .vector-style,
 .motion-style {
-  width: 200%;
+  width: 220%;
 }
 
 .retro-content,
 .vector-content,
 .motion-content {
-  font-size: calc(2.7rem + 1vw);
-}
-
-.retro-content2 {
-  font-size: calc(2.7rem + 1vw);
+  font-size: calc(1.3rem + 1vw);
 }
 
 /* portfolio section ------------------------------------------------------ */
 
 #porfolio-section {
-  min-height: 70vh;
+  min-height: 65vh;
 }
 
 .short-paragprah-text1,

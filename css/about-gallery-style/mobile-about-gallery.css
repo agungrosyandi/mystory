@@ -93,5 +93,7 @@ body {
 /* galery link sections css ------------------------------------------------- */
 
 .title-gallery {
-  font-size: calc(5.5rem + 1vw);
+  font-size: calc(4.5rem + 1vw);
+  text-align: center;
+  padding: 0 10rem;
 }

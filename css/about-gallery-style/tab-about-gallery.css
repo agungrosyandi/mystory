@@ -166,8 +166,8 @@ body {
 }
 
 .title-gallery {
-  font-size: calc(7.5rem + 1vw);
+  font-size: calc(5.5rem + 1vw);
   padding-bottom: 3rem;
   letter-spacing: 0.5rem;
-  font-family: var(--drukBoldFont);
+  font-family: var(--newEleganceItalic);
 }

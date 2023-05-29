@@ -194,19 +194,19 @@ const tlSplitRetro = gsap.timeline({
 tlSplitRetro
   .fromTo(
     ".retro-style",
-    { y: "50%", opacity: 0 },
-    { y: "0%", opacity: 1, duration: 0.5 }
+    { x: "-50%", opacity: 0 },
+    { x: "0%", opacity: 1, duration: 0.5 }
   )
   .fromTo(
     ".vector-style",
-    { y: "50%", opacity: 0 },
-    { y: "0%", opacity: 1, duration: 0.5 },
+    { x: "50%", opacity: 0 },
+    { x: "0%", opacity: 1, duration: 0.5 },
     "<35%"
   )
   .fromTo(
     ".motion-style",
-    { y: "50%", opacity: 0 },
-    { y: "0%", opacity: 1, duration: 0.5 },
+    { x: "-50%", opacity: 0 },
+    { x: "0%", opacity: 1, duration: 0.5 },
     "<35%"
   );
 

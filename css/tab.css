@@ -139,6 +139,10 @@
   min-height: 70vh;
 }
 
+.short-paragraph h1 {
+  font-size: calc(4.5rem + 1vw);
+}
+
 .short-paragraph p {
   width: 85%;
   font-size: calc(1.3rem + 1vw);
@@ -151,53 +155,23 @@
 /* gallery showcase ----------------------------------------------- */
 
 #gallery-showcase {
-  min-height: 80vh;
+  min-height: 50vh;
 }
 
 .gallery-showcase-container {
-  flex-direction: column;
-  padding: 0 5rem;
+  padding: 0 10rem;
 }
 
 .retro-style,
 .vector-style,
 .motion-style {
-  width: 120%;
-}
-
-.retro-style img,
-.vector-style img {
-  position: absolute;
-  height: 90%;
-}
-
-.motion-style video {
-  position: absolute;
-  height: 90%;
-}
-
-.retro-title,
-.vector-title,
-.motion-title {
-  bottom: 5%;
-  left: 5%;
-  height: 90%;
+  width: 130%;
 }
 
 .retro-content,
 .vector-content,
 .motion-content {
-  font-size: calc(4.7rem + 1vw);
-  top: 30%;
-  left: 40%;
-  width: 50%;
-}
-
-.retro-content2 {
-  font-size: calc(4.7rem + 1vw);
-  top: 60%;
-  left: 40%;
-  width: 50%;
+  font-size: calc(2rem + 1vw);
 }
 
 /* portfolio sections --------------------------------------------------------- */
@@ -217,7 +191,7 @@
 }
 
 .short-paragprah-portfolio p {
-  padding: 0 15rem;
+  padding: 0 19rem;
   font-size: calc(1.4rem + 1vw);
 }
 
@@ -235,11 +209,11 @@
 .text-closing h1 {
   padding: 0 5rem;
   text-align: center;
-  font-size: calc(5rem + 1vw);
+  font-size: calc(4.5rem + 1vw);
 }
 
 .text-closing p {
-  font-size: calc(1rem + 1vw);
+  font-size: calc(0.7rem + 1vw);
 }
 /* form sections -------------------------------------------------------------- */
 

@@ -11,13 +11,18 @@
 }
 
 @font-face {
-  font-family: "DrukBold";
-  src: url("../../font/Druk-Bold-Trial.otf") format("opentype");
+  font-family: "NewEleganceSansCondensed";
+  src: url("../../font/TheNewElegance-Condensed.otf") format("opentype");
 }
 
 @font-face {
-  font-family: "DrukMedium";
-  src: url("../../font/Druk-Medium-Trial.otf") format("opentype");
+  font-family: "NewEleganceItalic";
+  src: url("../../font/TheNewElegance-Italic.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "NewEleganceCondita";
+  src: url("../../font/TheNewElegance-CondIta.otf") format("opentype");
 }
 
 :root {
@@ -25,6 +30,7 @@
 
   /* colour */
   --blackColor: black;
+  --blackvintage: #181d31;
   --whiteColor: white;
   --lightWhiteColor: rgb(220, 220, 220);
   --blackShadow: rgb(0, 0, 0, 0.4) 0px 0px 20px;
@@ -33,10 +39,23 @@
 
   --nelaSlabFont: "NelaSlabMedium";
   --nelaSlabLightFont: "NelaSlabLight";
-  --drukBoldFont: "DrukBold";
-  --drukMediumFont: "DrukMedium";
   --poppinsFont: "Poppins", sans-serif;
   --montserratFont: "Montserrat", sans-serif;
+  --newEleganceCondensed: "NewEleganceSansCondensed";
+  --newEleganceItalic: "NewEleganceItalic";
+  --newEleganceCondita: "NewEleganceCondita";
+}
+
+/* default settings */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 /* default settings */
@@ -202,5 +221,5 @@ nav {
   font-size: calc(7.5rem + 1vw);
   padding-bottom: 3rem;
   letter-spacing: 0.5rem;
-  font-family: var(--drukBoldFont);
+  font-family: var(--newEleganceItalic);
 }
