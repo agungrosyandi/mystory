@@ -150,9 +150,13 @@
 
 /* gallery showcase ----------------------------------------------- */
 
+#gallery-showcase {
+  min-height: 80vh;
+}
+
 .gallery-showcase-container {
   flex-direction: column;
-  padding: 0 10rem;
+  padding: 0 5rem;
 }
 
 .retro-style,
@@ -198,22 +202,27 @@
 
 /* portfolio sections --------------------------------------------------------- */
 
+#porfolio-section {
+  min-height: 55vh;
+}
+
 .title-short-paragraph {
   flex-direction: column;
 }
 
+.short-paragprah-text1,
+.short-paragprah-text2,
+.short-paragprah-text3 {
+  font-size: calc(5rem + 1vw);
+}
+
 .short-paragprah-portfolio p {
-  width: 60%;
+  padding: 0 15rem;
   font-size: calc(1.4rem + 1vw);
 }
 
 .titlecv-download {
   font-size: calc(1.4rem + 1vw);
-}
-
-.glery {
-  width: 60%;
-  height: 100%;
 }
 
 /* closing sections ----------------------------------------------------------- */

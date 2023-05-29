@@ -124,14 +124,18 @@
 
 /* portfolio section ------------------------------------------------------ */
 
+#porfolio-section {
+  min-height: 70vh;
+}
+
 .short-paragprah-text1,
 .short-paragprah-text2,
 .short-paragprah-text3 {
-  font-size: calc(2.5rem + 1vw);
+  font-size: calc(3rem + 1vw);
 }
 
 .short-paragprah-portfolio p {
-  width: 60%;
+  padding: 0 5rem;
   font-size: calc(1rem + 1vw);
 }
 
@@ -141,8 +145,12 @@
 
 /* closing sections ----------------------------------------------------------- */
 
+#closing-sections {
+  min-height: 125vh;
+}
+
 .closing-container {
-  height: 125%;
+  height: 100%;
   padding-top: 5rem;
 }
 

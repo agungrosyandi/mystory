@@ -248,50 +248,7 @@ tlSplitPortfolio
     ".cv-btn",
     { y: "-50%", opacity: 0 },
     { y: "0%", opacity: 1, duration: 3 }
-  )
-  .fromTo(
-    ".portfolio-gallery-carousei",
-    { x: "0%" },
-    { x: "-50%", duration: 5 }
   );
-
-// closing sections
-
-const tlClosingSections = gsap.timeline({
-  scrollTrigger: {
-    trigger: "#porfolio-section",
-    start: "20% ",
-    end: "90% ",
-    scrub: 1,
-  },
-});
-
-tlClosingSections.to(".portfolio-container", { opacity: 0, duration: 1 });
-
-const tlClosing = gsap.timeline({
-  scrollTrigger: {
-    trigger: "#porfolio-section",
-    start: "25%",
-    end: "100%",
-    pin: true,
-    pinSpacing: false,
-  },
-});
-
-const tlSplitClosing = gsap.timeline({
-  scrollTrigger: {
-    trigger: "#closing-sections",
-    start: "-30% center ",
-    end: "0% top ",
-    scrub: 4,
-  },
-});
-
-tlSplitClosing.fromTo(
-  ".closing-container",
-  { x: "-50%", opacity: 0 },
-  { x: 0, opacity: 1 }
-);
 
 //  wa form animation
 
