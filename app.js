@@ -184,7 +184,7 @@ tlSplit.fromTo(
 
 const tlSplitRetro = gsap.timeline({
   scrollTrigger: {
-    trigger: "#retro-design",
+    trigger: "#gallery-showcase",
     start: "-45% center",
     end: "0% top",
     scrub: 4,
@@ -193,63 +193,21 @@ const tlSplitRetro = gsap.timeline({
 
 tlSplitRetro
   .fromTo(
-    ".short-paragraph-retro",
-    { x: "-50%", opacity: 0 },
-    { x: "0%", opacity: 1, duration: 0.5 }
+    ".retro-style",
+    { y: "50%", opacity: 0 },
+    { y: "0%", opacity: 1, duration: 0.5 }
   )
   .fromTo(
-    ".right-photo-retro",
-    { x: "50%", opacity: 0 },
-    { x: "0%", opacity: 1, duration: 0.5 },
-    "<"
-  );
-
-// vector sections
-
-const tlSplitVector = gsap.timeline({
-  scrollTrigger: {
-    trigger: "#vector-design",
-    start: "-45% center ",
-    end: "0% top ",
-    scrub: 4,
-  },
-});
-
-tlSplitVector
-  .fromTo(
-    ".right-photo-vector",
-    { x: "-50%", opacity: 0 },
-    { x: "0%", opacity: 1, duration: 0.5 }
+    ".vector-style",
+    { y: "50%", opacity: 0 },
+    { y: "0%", opacity: 1, duration: 0.5 },
+    "<35%"
   )
   .fromTo(
-    ".short-paragraph-vector",
-    { x: "50%", opacity: 0 },
-    { x: "0%", opacity: 1, duration: 0.5 },
-    "<"
-  );
-
-// motion sections
-
-const tlSplitMotion = gsap.timeline({
-  scrollTrigger: {
-    trigger: "#motion-design",
-    start: "-45% center",
-    end: "0% top",
-    scrub: 4,
-  },
-});
-
-tlSplitMotion
-  .fromTo(
-    ".short-paragraph-motion",
-    { x: "-50%", opacity: 0 },
-    { x: "0%", opacity: 1, duration: 0.5 }
-  )
-  .fromTo(
-    ".right-video-retro",
-    { x: "50%", opacity: 0 },
-    { x: "0%", opacity: 1, duration: 0.5 },
-    "<"
+    ".motion-style",
+    { y: "50%", opacity: 0 },
+    { y: "0%", opacity: 1, duration: 0.5 },
+    "<35%"
   );
 
 // // portfolio sections

@@ -11,18 +11,40 @@
 }
 
 @font-face {
-  font-family: "DrukBold";
-  src: url("../font/Druk-Bold-Trial.otf") format("opentype");
+  font-family: "NewEleganceSansCondensed";
+  src: url("../font/TheNewElegance-Condensed.otf") format("opentype");
 }
 
 @font-face {
-  font-family: "DrukMedium";
-  src: url("../font/Druk-Medium-Trial.otf") format("opentype");
+  font-family: "NewEleganceItalic";
+  src: url("../font/TheNewElegance-Italic.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "NewEleganceCondita";
+  src: url("../font/TheNewElegance-CondIta.otf") format("opentype");
 }
 
 :root {
   font-size: 62.5%;
   overflow-x: hidden;
+
+  /* colour */
+  --blackColor: black;
+  --blackvintage: #181d31;
+  --whiteColor: white;
+  --lightWhiteColor: rgb(220, 220, 220);
+  --blackShadow: rgb(0, 0, 0, 0.4) 0px 0px 20px;
+
+  /* font  */
+
+  --nelaSlabFont: "NelaSlabMedium";
+  --nelaSlabLightFont: "NelaSlabLight";
+  --poppinsFont: "Poppins", sans-serif;
+  --montserratFont: "Montserrat", sans-serif;
+  --newEleganceCondensed: "NewEleganceSansCondensed";
+  --newEleganceItalic: "NewEleganceItalic";
+  --newEleganceCondita: "NewEleganceCondita";
 }
 
 /* navbar */
@@ -50,7 +72,7 @@
 .cta1,
 .cta2,
 .cta1-x {
-  font-size: calc(4rem + 1vw);
+  font-size: calc(3rem + 1vw);
 }
 
 .home-container img {
@@ -60,8 +82,13 @@
 
 /* biography ------------------------------------------------------------------ */
 
+#biography {
+  min-height: 100vh;
+}
+
 .short-paragraph h1 {
-  font-size: calc(3rem + 1vw);
+  font-size: calc(2.5rem + 1vw);
+  padding-bottom: 3rem;
 }
 
 .short-paragraph p {
@@ -73,89 +100,89 @@
   width: 20vw;
 }
 
-/* retro ---------------------------------------------------------------------- */
+/* gallery showcase ----------------------------------------------- */
 
-.short-paragraph-retro h1,
-.short-paragraph-vector h1,
-.short-paragraph-motion h1 {
-  font-size: calc(2.5rem + 0.5vw);
-  width: 70%;
+.gallery-showcase-container {
+  padding: 0 10rem;
 }
 
-.retro-container,
-.motion-container {
-  flex-direction: column-reverse;
-  position: relative;
+.retro-style,
+.vector-style,
+.motion-style {
+  width: 200%;
 }
 
-.vector-container {
-  flex-direction: column;
-  position: relative;
+.retro-content,
+.vector-content,
+.motion-content {
+  font-size: calc(2.7rem + 1vw);
 }
 
-.right-photo-retro img,
-.right-photo-vector img,
-.right-video-retro video {
-  padding: 5% 10%;
+.retro-content2 {
+  font-size: calc(2.7rem + 1vw);
 }
 
 /* portfolio section ------------------------------------------------------ */
 
-.title-short-paragraph {
-  flex-direction: column;
-}
-
-.title-short-paragraph h1 {
-  font-size: calc(3.5rem + 1vw);
+.short-paragprah-text1,
+.short-paragprah-text2,
+.short-paragprah-text3 {
+  font-size: calc(2.5rem + 1vw);
 }
 
 .short-paragprah-portfolio p {
+  width: 60%;
   font-size: calc(1rem + 1vw);
-  width: 65%;
 }
 
-.cv-btn {
-  width: 60%;
+.titlecv-download {
+  font-size: calc(0.8rem + 1vw);
 }
 
 /* closing sections ----------------------------------------------------------- */
 
-.closing-container h1 {
-  font-size: calc(4rem + 1vw);
+.closing-container {
+  height: 125%;
   padding-top: 5rem;
+}
+
+.text-closing h1 {
+  font-size: calc(2.5rem + 1vw);
+}
+
+.text-closing p {
+  font-size: calc(1rem + 1vw);
   text-align: center;
+  width: 70%;
 }
-
-.closing-container p {
-  font-size: calc(0.5rem + 1vw);
-  padding: 2rem 0 5rem 0;
-}
-
 /* form sections -------------------------------------------------------------- */
 
 .form {
   padding: 2rem 0;
 }
 
-.text-name,
-.email-name,
-.subject-name,
-.message-area-name {
-  width: 80%;
+.input-name,
+.input-email,
+.input-subject {
+  padding: 0.5rem 10rem 0.5rem 0.2rem;
+}
+
+.input-message {
+  padding: 0.5rem 10rem 8.5rem 0.2rem;
 }
 
 .button-email {
-  padding: 0.7rem 10.3rem;
+  padding: 0.7rem 10.7rem;
 }
 
 /* wa sections -------------------------------------------------------------- */
 
 .wa-contact {
-  width: 25vw;
-  height: 5vh;
+  width: 50vw;
+  height: 8vh;
 }
 
 .wa-contact img {
   left: 0;
-  width: 50%;
+  width: 30%;
 }
