@@ -22,6 +22,7 @@
 
 :root {
   font-size: 62.5%;
+  overflow-x: hidden;
 
   /* colour */
   --blackColor: black;
@@ -111,39 +112,6 @@ body {
 .toggle .line3-gallery-about {
   transform: rotateZ(-35deg) translateY(-300%);
   background: white;
-}
-
-/* about link sections css -------------------------------------------------*/
-
-.about-container {
-  flex-direction: column;
-}
-
-.img-photo-agung {
-  height: 100%;
-}
-
-.img-photo-agung img {
-  height: 150%;
-  padding: 15% 0 0 0;
-}
-
-.description-cv {
-  padding: 0 10%;
-}
-
-.title-cv {
-  font-size: calc(5rem + 1vw);
-}
-
-.description-cv p {
-  font-size: calc(0.5rem + 1vw);
-  width: 100%;
-}
-
-.cv-btn-about {
-  font-size: calc(0.5rem + 1vw);
-  width: 35%;
 }
 
 /* galery link sections css ------------------------------------------------- */

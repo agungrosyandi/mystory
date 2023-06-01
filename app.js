@@ -23,16 +23,19 @@ navmenu2.addEventListener("click", () => {
 const burger = document.querySelector(".burger");
 const nav = document.querySelector(".menu-navbar");
 const links = nav.querySelectorAll("a");
+const blurOpen = document.querySelector(".blur-burger-menu");
 
 burger.addEventListener("click", () => {
   nav.classList.toggle("navbar-open");
   burger.classList.toggle("toggle");
+  blurOpen.classList.toggle("blur-open");
 });
 
 links.forEach((link) => {
   link.addEventListener("click", () => {
     nav.classList.toggle("navbar-open");
     burger.classList.toggle("toggle");
+    blurOpen.classList.toggle("blur-open");
   });
 });
 
@@ -112,15 +115,6 @@ tl.fromTo(
   "<"
 );
 
-// img show agung background
-
-tl.fromTo(
-  ".home-container img",
-  { x: "-20%", opacity: 0 },
-  { x: "0%", opacity: 1, duration: 3.5 },
-  "<20%"
-);
-
 // navbar animation
 
 tl.fromTo(
@@ -163,7 +157,48 @@ tl.fromTo(
     "<35%"
   );
 
-// short biography animation
+// closing home sections with opacity -----------------------------------------
+
+const tlClosingHomeSections = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#home",
+    start: "20% ",
+    end: "70% ",
+    scrub: 1,
+  },
+});
+
+tlClosingHomeSections.to("#home", {
+  background: "white",
+  duration: 1,
+});
+
+const tlShortBiography = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#home",
+    start: "0%",
+    end: "100%",
+    pin: true,
+    pinSpacing: false,
+  },
+});
+
+// logo and navbar change color ---------------------------------------------
+
+const tlLogoNavbarChangeColorSections = gsap.timeline({
+  scrollTrigger: {
+    trigger: "body",
+    start: "10% ",
+    end: "40% ",
+    scrub: 1,
+  },
+});
+
+tlLogoNavbarChangeColorSections
+  .to(".menu-navbar li a", { color: "black" })
+  .to(".logo-navbar a", { color: "black" }, "<");
+
+// short biography animation ------------------------------------------------
 
 const tlSplit = gsap.timeline({
   scrollTrigger: {
@@ -174,18 +209,52 @@ const tlSplit = gsap.timeline({
   },
 });
 
-tlSplit.fromTo(
-  ".short-paragraph",
-  { x: "-50%", opacity: 0 },
-  { x: "0%", opacity: 1 }
-);
+tlSplit
+  .fromTo(
+    ".img-photo-agung img",
+    { x: "-50%", opacity: 0 },
+    { x: "0%", opacity: 1 }
+  )
 
-// retro sections
+  .fromTo(
+    ".short-paragraph",
+    { x: "50%", opacity: 0 },
+    { x: "0%", opacity: 1 },
+    "<35%"
+  );
+
+// short biography closing animation ------------------------------------------------
+
+const tlSplitClosing = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#biography",
+    start: "20% ",
+    end: "70% ",
+    scrub: 1,
+  },
+});
+
+tlSplitClosing.to("#biography", {
+  opacity: 0,
+  duration: 1,
+});
+
+const tlShortBiographyClosing = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#biography",
+    start: "30%",
+    end: "100%",
+    pin: true,
+    pinSpacing: false,
+  },
+});
+
+// gallery showcase sections -----------------------------------------------------------
 
 const tlSplitRetro = gsap.timeline({
   scrollTrigger: {
     trigger: "#gallery-showcase",
-    start: "-45% center",
+    start: "-15% center",
     end: "0% top",
     scrub: 4,
   },
@@ -193,9 +262,15 @@ const tlSplitRetro = gsap.timeline({
 
 tlSplitRetro
   .fromTo(
+    ".gallery-showcase-container h2",
+    { y: "-50%", opacity: 0 },
+    { y: "0%", opacity: 1, duration: 0.5 }
+  )
+  .fromTo(
     ".retro-style",
     { x: "-50%", opacity: 0 },
-    { x: "0%", opacity: 1, duration: 0.5 }
+    { x: "0%", opacity: 1, duration: 0.5 },
+    "<35%"
   )
   .fromTo(
     ".vector-style",
@@ -210,12 +285,12 @@ tlSplitRetro
     "<35%"
   );
 
-// // portfolio sections
+// portfolio sections -------------------------------------------------------
 
 const tlSplitPortfolio = gsap.timeline({
   scrollTrigger: {
     trigger: "#porfolio-section",
-    start: "-25% center",
+    start: "-95% center",
     end: "0% top",
     scrub: 4,
   },
