@@ -232,7 +232,7 @@ nav {
 }
 
 .img-photo-agung img {
-  position: relative;
+  position: absolute;
   width: 100%;
   height: 100%;
   padding: 10% 20% 0 0;
@@ -264,7 +264,7 @@ nav {
 #gallery-showcase {
   position: relative;
   width: 100vw;
-  min-height: 120vh;
+  min-height: 150vh;
   background: white;
 }
 
@@ -276,33 +276,48 @@ nav {
   align-items: center;
   width: 100%;
   height: 100%;
-  padding: 15rem 10rem 0 10rem;
+  padding: 10rem 10rem 0 10rem;
 }
 
-.gallery-showcase-container h2 {
+.gallery-showcase-left {
+  padding-bottom: 5rem;
+}
+
+.gallery-showcase-left h2 {
   font-size: calc(4rem + 1vw);
   font-family: var(--newEleganceCondita);
   padding-bottom: 5rem;
+}
+
+.gallery-showcase-left p {
+  font-size: calc(0.5rem + 1vw);
+  line-height: 4rem;
+  width: 100%;
+}
+
+.gallery-showcase-right {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
 }
 
 .retro-style,
 .vector-style,
 .motion-style {
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   flex: 1;
-  width: 110%;
+  width: 100%;
   height: 100%;
-  margin: 1rem 0;
+  margin: 0.5rem 0;
 }
 
 .retro-style img,
 .vector-style img {
   position: absolute;
   display: block;
-  width: 90%;
+  width: 100%;
   height: 100%;
   object-fit: cover;
 }
@@ -310,7 +325,7 @@ nav {
 .motion-style video {
   position: absolute;
   display: block;
-  width: 90%;
+  width: 100%;
   height: 100%;
   object-fit: cover;
 }
@@ -320,7 +335,7 @@ nav {
 .motion-title {
   position: absolute;
   bottom: 0;
-  left: 5%;
+  left: 0;
   right: 0;
   background: rgba(30, 24, 24, 0.1);
   backdrop-filter: blur(8px);
@@ -335,7 +350,7 @@ nav {
 .motion-content {
   position: absolute;
   color: var(--whiteColor);
-  font-size: calc(3rem + 1vw);
+  font-size: calc(4rem + 1vw);
   font-family: var(--newEleganceCondensed);
   top: 50%;
   left: 40%;
@@ -347,15 +362,15 @@ nav {
 }
 
 .retro-style:hover .retro-title {
-  width: 90%;
+  width: 100%;
 }
 
 .vector-style:hover .vector-title {
-  width: 90%;
+  width: 100%;
 }
 
 .motion-style:hover .motion-title {
-  width: 90%;
+  width: 100%;
 }
 
 /* portfolio gallery --------------------------------------------------- */
@@ -398,8 +413,9 @@ nav {
 
 .short-paragprah-portfolio p {
   text-align: center;
-  font-size: calc(0.8rem + 1vw);
+  font-size: calc(0.5rem + 1vw);
   line-height: 3rem;
+  font-family: var(--poppinsFont);
 }
 
 .cv-btn {
@@ -457,6 +473,7 @@ nav {
 
 .text-closing p {
   font-size: calc(0.5rem + 1vw);
+  font-family: var(--poppinsFont);
   line-height: 1.7rem;
   padding: 3rem 0 5rem 0;
 }

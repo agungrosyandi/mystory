@@ -83,17 +83,17 @@ body {
 .cta1,
 .cta2,
 .cta1-x {
-  font-size: calc(2.5rem + 1vw);
+  font-size: calc(2rem + 1vw);
 }
 
 /* biography ------------------------------------------------------------------ */
 
 .img-photo-agung img {
-  padding: 5rem 15rem 0 0;
+  padding: 5rem 0 5rem 0;
 }
 
 .short-paragraph h1 {
-  font-size: calc(2rem + 1vw);
+  font-size: calc(3rem + 1vw);
 }
 
 .short-paragraph p {
@@ -103,31 +103,44 @@ body {
 
 /* gallery showcase ----------------------------------------------- */
 
-.gallery-showcase-container {
-  padding: 10rem 5rem 0 5rem;
+#gallery-showcase {
+  min-height: 140vh;
 }
 
-.gallery-showcase-container h2 {
-  font-size: calc(2rem + 1vw);
-  padding-bottom: 2rem;
+.gallery-showcase-container {
+  padding: 10rem 5rem 0 4rem;
+}
+
+.gallery-showcase-left h2 {
+  font-size: calc(3rem + 1vw);
+  padding-bottom: 3rem;
+}
+
+.gallery-showcase-left p {
+  font-size: calc(1rem + 1vw);
+  line-height: 2.5rem;
+}
+
+.gallery-showcase-right {
+  width: 120%;
 }
 
 .retro-style,
 .vector-style,
 .motion-style {
-  width: 130%;
+  width: 100%;
 }
 
 .retro-content,
 .vector-content,
 .motion-content {
-  font-size: calc(1rem + 1vw);
+  font-size: calc(1.3rem + 1vw);
 }
 
 /* portfolio section ------------------------------------------------------ */
 
 #porfolio-section {
-  min-height: 55vh;
+  min-height: 60vh;
 }
 
 .title-short-paragraph {
@@ -137,12 +150,12 @@ body {
 .short-paragprah-text1,
 .short-paragprah-text2,
 .short-paragprah-text3 {
-  font-size: calc(2rem + 1vw);
+  font-size: calc(3rem + 1vw);
 }
 
 .short-paragprah-portfolio p {
-  padding: 0 5rem;
-  font-size: calc(0.8rem + 1vw);
+  padding: 0 7rem;
+  font-size: calc(0.7rem + 1vw);
 }
 
 .titlecv-download {
@@ -152,7 +165,7 @@ body {
 /* closing sections ----------------------------------------------------------- */
 
 #closing-sections {
-  min-height: 125vh;
+  min-height: 130vh;
 }
 
 .closing-container {

@@ -87,12 +87,16 @@ tl.fromTo(
 
 // logo dissapear and change to text -------------------------------------------
 
-tl.to(".home-container svg", { opacity: 0, duration: 2 });
-tl.fromTo(
-  ".logo-navbar",
-  { x: "-10%", opacity: 0 },
-  { x: "0%", opacity: 1, duration: 1 }
-);
+const logoNavbar = new SplitType(".logo-navbar");
+
+tl.to(".home-container svg", { opacity: 0, duration: 2 })
+  .fromTo(".logo-navbar", { opacity: 0 }, { opacity: 1 })
+  .fromTo(
+    ".char",
+    { y: 50, opacity: 0 },
+    { y: 0, opacity: 1, stagger: 0.05, duration: 1, ease: "power4.out" },
+    "<"
+  );
 
 // tex home ----------------------------------------------------------------------
 

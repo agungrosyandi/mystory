@@ -137,6 +137,11 @@
   background: rgb(0, 0, 0);
 }
 
+.char {
+  transform: translateY(115px);
+  transition: 0.5s;
+}
+
 /* home ----------------------------------------------------------------- */
 
 .home-container svg {
@@ -155,10 +160,6 @@
 }
 
 /* short biography ------------------------------------------------------ */
-
-#biography {
-  min-height: 100vh;
-}
 
 .biography-container {
   flex-direction: column-reverse;
@@ -184,27 +185,33 @@
 
 .short-paragraph p {
   width: 90%;
-  font-size: calc(1.3rem + 1vw);
+  font-size: calc(0.8rem + 1vw);
 }
 
 /* gallery showcase ----------------------------------------------- */
 
 #gallery-showcase {
-  min-height: 80vh;
+  min-height: 100vh;
 }
 
 .gallery-showcase-container {
-  padding: 15rem 10rem 0 10rem;
+  padding: 10rem 10rem 0 10rem;
 }
 
-.gallery-showcase-container h2 {
+.gallery-showcase-left h2 {
   font-size: calc(3rem + 1vw);
+  padding-bottom: 5rem;
+}
+
+.gallery-showcase-left p {
+  font-size: calc(1rem + 1vw);
+  width: 100%;
 }
 
 .retro-style,
 .vector-style,
 .motion-style {
-  width: 120%;
+  width: 100%;
 }
 
 .retro-content,
@@ -222,16 +229,16 @@
 .short-paragprah-text1,
 .short-paragprah-text2,
 .short-paragprah-text3 {
-  font-size: calc(2.5rem + 1vw);
+  font-size: calc(2rem + 1vw);
 }
 
 .short-paragprah-portfolio p {
   padding: 0 20rem;
-  font-size: calc(1.3rem + 1vw);
+  font-size: calc(0.7rem + 1vw);
 }
 
 .titlecv-download {
-  font-size: calc(1.3rem + 1vw);
+  font-size: calc(0.7rem + 1vw);
 }
 
 /* closing sections ----------------------------------------------------------- */
