@@ -424,12 +424,18 @@ nav {
   font-size: calc(0.5rem + 1vw);
   line-height: 3rem;
   font-family: var(--poppinsFont);
+  padding: 0 35rem;
+}
+
+.resume-hyperlink a,
+.portfolio-hyperlink a {
+  color: var(--blackColor);
 }
 
 .cv-btn {
   position: relative;
   margin: 3rem 0 0 0;
-  padding: 1rem 4rem;
+  padding: 1rem 5rem;
   background: black;
   transition: background 2s ease-out;
   font-family: "Poppins", sans-serif;
