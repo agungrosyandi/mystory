@@ -191,7 +191,7 @@
 /* gallery showcase ----------------------------------------------- */
 
 #gallery-showcase {
-  min-height: 100vh;
+  min-height: 120vh;
 }
 
 .gallery-showcase-container {
@@ -210,13 +210,15 @@
 
 .retro-style,
 .vector-style,
-.motion-style {
+.motion-style,
+.web-style {
   width: 100%;
 }
 
 .retro-content,
 .vector-content,
-.motion-content {
+.motion-content,
+.web-content {
   font-size: calc(2rem + 1vw);
 }
 
@@ -243,47 +245,38 @@
 
 /* closing sections ----------------------------------------------------------- */
 
-#closing-sections {
-  min-height: 100vh;
+.text-title h1 {
+  font-size: calc(5rem + 1vw);
+  padding: 0 2rem;
 }
 
-.closing-container {
-  padding-top: 10rem;
-}
-
-.text-closing h1 {
-  padding: 0 5rem;
+.text-title p {
+  font-size: calc(1rem + 1vw);
   text-align: center;
-  font-size: calc(4.5rem + 1vw);
+  line-height: 1.7rem;
+  padding: 6rem 5rem;
 }
 
-.text-closing p {
-  font-size: calc(0.7rem + 1vw);
-}
-/* form sections -------------------------------------------------------------- */
+/* contact sections -------------------------------------------------------------- */
 
-.form {
-  padding: 2rem 5rem;
+.text-contact {
+  width: 60%;
 }
 
-.button-email {
-  padding: 0.7rem 13.2rem;
+.wa-icon {
+  width: calc(150% + 1vw);
 }
 
-/* wa sections -------------------------------------------------------------- */
-
-.wa-contact {
-  left: 20%;
-  width: 30vw;
-  height: 5vh;
+.text-wa h6 {
+  font-size: calc(0.5rem + 1vw);
+  padding: 3rem;
 }
 
-.wa-contact img {
-  left: 5%;
-  width: 25%;
+.email-icon {
+  width: calc(100% + 1vw);
 }
 
-.wa-contact h6 {
-  right: 25%;
-  font-size: calc(1.5rem + 1vw);
+.text-email h6 {
+  font-size: calc(0.5rem + 1vw);
+  padding: 3rem;
 }

@@ -83,7 +83,14 @@ body {
 .cta1,
 .cta2,
 .cta1-x {
-  font-size: calc(2rem + 1vw);
+  font-size: calc(2.5rem + 1vw);
+}
+
+.cta3,
+.cta4,
+.cta5 {
+  font-size: calc(0.7rem + 1vw);
+  letter-spacing: 0.7rem;
 }
 
 /* biography ------------------------------------------------------------------ */
@@ -108,7 +115,7 @@ body {
 }
 
 .gallery-showcase-container {
-  padding: 10rem 5rem 0 4rem;
+  padding: 1rem 5rem 0 4rem;
 }
 
 .gallery-showcase-left h2 {
@@ -127,13 +134,15 @@ body {
 
 .retro-style,
 .vector-style,
-.motion-style {
+.motion-style,
+.web-style {
   width: 100%;
 }
 
 .retro-content,
 .vector-content,
-.motion-content {
+.motion-content,
+.web-content {
   font-size: calc(1.3rem + 1vw);
 }
 
@@ -164,52 +173,51 @@ body {
 
 /* closing sections ----------------------------------------------------------- */
 
-#closing-sections {
-  min-height: 130vh;
+.text-title {
+  width: 100%;
 }
 
-.closing-container {
-  height: 100%;
-  padding-top: 5rem;
+.text-title h1 {
+  font-size: calc(3rem + 1vw);
 }
 
-.text-closing h1 {
-  font-size: calc(2.5rem + 1vw);
-}
-
-.text-closing p {
-  font-size: calc(0.8rem + 1vw);
+.text-title p {
+  font-size: calc(1rem + 1vw);
   text-align: center;
-  width: 70%;
-}
-/* form sections -------------------------------------------------------------- */
-
-.form {
-  padding: 2rem 0;
+  line-height: 1.7rem;
+  padding: 3rem 5rem;
 }
 
-.input-name,
-.input-email,
-.input-subject {
-  padding: 0.5rem 10rem 0.5rem 0.2rem;
+/* contact sections -------------------------------------------------------------- */
+
+.text-contact {
+  width: 90%;
 }
 
-.input-message {
-  padding: 0.5rem 10rem 8.5rem 0.2rem;
+.text-wa {
+  width: 40%;
+  height: 40%;
 }
 
-.button-email {
-  padding: 0.7rem 10.7rem;
+.wa-icon {
+  width: calc(150% + 1vw);
 }
 
-/* wa sections -------------------------------------------------------------- */
-
-.wa-contact {
-  width: 50vw;
-  height: 8vh;
+.text-wa h6 {
+  font-size: calc(0.5rem + 1vw);
+  padding: 0 3rem 0 1rem;
 }
 
-.wa-contact img {
-  left: 0;
-  width: 30%;
+.text-email {
+  width: 40%;
+  height: 40%;
+}
+
+.email-icon {
+  width: calc(130% + 1vw);
+}
+
+.text-email h6 {
+  font-size: calc(0.5rem + 1vw);
+  padding: 3rem;
 }
