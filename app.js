@@ -290,13 +290,19 @@ matchMediaResponsive.add(
       )
       .fromTo(
         ".vector-style",
-        { x: isMobile ? "0%" : "50%", opacity: isMobile ? 1 : 0 },
+        { x: isMobile ? "0%" : "-50%", opacity: isMobile ? 1 : 0 },
+        { x: "0%", opacity: 1, duration: 0.5 },
+        "<35%"
+      )
+      .fromTo(
+        ".web-style",
+        { x: isMobile ? "0%" : "-50%", opacity: isMobile ? 1 : 0 },
         { x: "0%", opacity: 1, duration: 0.5 },
         "<35%"
       )
       .fromTo(
         ".motion-style",
-        { x: isMobile ? "0%" : "-50%", opacity: isMobile ? 1 : 0 },
+        { x: isMobile ? "0%" : "50%", opacity: isMobile ? 1 : 0 },
         { x: "0%", opacity: 1, duration: 0.5 },
         "<35%"
       );

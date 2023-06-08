@@ -264,7 +264,7 @@ nav {
 #gallery-showcase {
   position: relative;
   width: 100vw;
-  min-height: 200vh;
+  min-height: 150vh;
   background: white;
 }
 
@@ -297,10 +297,29 @@ nav {
 
 .gallery-showcase-right {
   position: relative;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
   width: 100%;
   height: 100%;
+  padding: 1rem 0;
+}
+
+.retro-style {
+  grid-column: 1/3;
+}
+
+.vector-style {
+  grid-column: 1/2;
+}
+
+.web-style {
+  grid-column: 1/2;
+}
+
+.motion-style {
+  grid-row: 2/4;
+  grid-column: 2/3;
 }
 
 .retro-style,
@@ -354,7 +373,6 @@ nav {
 .web-content {
   position: absolute;
   color: var(--whiteColor);
-  font-size: calc(4rem + 1vw);
   font-family: var(--newEleganceCondensed);
   top: 50%;
   left: 40%;
@@ -363,6 +381,22 @@ nav {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   white-space: nowrap;
+}
+
+.retro-content {
+  font-size: calc(4rem + 1vw);
+}
+
+.vector-content {
+  font-size: calc(1.5rem + 1vw);
+}
+
+.motion-content {
+  font-size: calc(1.5rem + 1vw);
+}
+
+.web-content {
+  font-size: calc(1.5rem + 1vw);
 }
 
 .retro-style:hover .retro-title {
@@ -436,19 +470,12 @@ nav {
   position: relative;
   margin: 3rem 0 0 0;
   padding: 1rem 5rem;
-  background: black;
-  transition: background 2s ease-out;
+  background: none;
   font-family: "Poppins", sans-serif;
   border-radius: 5.7rem;
-  color: white;
+  color: var(--blackColor);
   font-size: calc(0.4rem + 1vw);
   cursor: pointer;
-}
-
-.cv-btn:hover {
-  background: rgb(255, 255, 255);
-  border-style: solid;
-  color: black;
 }
 
 /* closing sections ------------------------------------------------------- */

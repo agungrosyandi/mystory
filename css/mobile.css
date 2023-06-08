@@ -100,7 +100,7 @@ body {
 }
 
 .short-paragraph h1 {
-  font-size: calc(3rem + 1vw);
+  font-size: calc(2.5rem + 1vw);
 }
 
 .short-paragraph p {
@@ -111,15 +111,15 @@ body {
 /* gallery showcase ----------------------------------------------- */
 
 #gallery-showcase {
-  min-height: 140vh;
+  min-height: 130vh;
 }
 
 .gallery-showcase-container {
-  padding: 1rem 5rem 0 4rem;
+  padding: 1rem 4.5rem 0 4.5rem;
 }
 
 .gallery-showcase-left h2 {
-  font-size: calc(3rem + 1vw);
+  font-size: calc(2.5rem + 1vw);
   padding-bottom: 3rem;
 }
 
@@ -129,7 +129,7 @@ body {
 }
 
 .gallery-showcase-right {
-  width: 120%;
+  width: 125%;
 }
 
 .retro-style,
@@ -146,6 +146,22 @@ body {
   font-size: calc(1.3rem + 1vw);
 }
 
+.retro-content {
+  font-size: calc(1.5rem + 1vw);
+}
+
+.vector-content {
+  font-size: calc(0.5rem + 1vw);
+}
+
+.motion-content {
+  font-size: calc(0.5rem + 1vw);
+}
+
+.web-content {
+  font-size: calc(0.5rem + 1vw);
+}
+
 /* portfolio section ------------------------------------------------------ */
 
 #porfolio-section {
@@ -159,7 +175,7 @@ body {
 .short-paragprah-text1,
 .short-paragprah-text2,
 .short-paragprah-text3 {
-  font-size: calc(3rem + 1vw);
+  font-size: calc(2rem + 1vw);
 }
 
 .short-paragprah-portfolio p {
@@ -178,7 +194,7 @@ body {
 }
 
 .text-title h1 {
-  font-size: calc(3rem + 1vw);
+  font-size: calc(2.5rem + 1vw);
 }
 
 .text-title p {

@@ -185,13 +185,13 @@
 
 .short-paragraph p {
   width: 90%;
-  font-size: calc(0.8rem + 1vw);
+  font-size: calc(1.5rem + 1vw);
 }
 
 /* gallery showcase ----------------------------------------------- */
 
 #gallery-showcase {
-  min-height: 120vh;
+  min-height: 130vh;
 }
 
 .gallery-showcase-container {
@@ -199,13 +199,17 @@
 }
 
 .gallery-showcase-left h2 {
-  font-size: calc(3rem + 1vw);
+  font-size: calc(3.5rem + 1vw);
   padding-bottom: 5rem;
 }
 
 .gallery-showcase-left p {
-  font-size: calc(1rem + 1vw);
+  font-size: calc(1.5rem + 1vw);
   width: 100%;
+}
+
+.gallery-showcase-right {
+  width: 130%;
 }
 
 .retro-style,
@@ -215,11 +219,20 @@
   width: 100%;
 }
 
-.retro-content,
-.vector-content,
-.motion-content,
+.retro-content {
+  font-size: calc(3rem + 1vw);
+}
+
+.vector-content {
+  font-size: calc(1rem + 1vw);
+}
+
+.motion-content {
+  font-size: calc(1rem + 1vw);
+}
+
 .web-content {
-  font-size: calc(2rem + 1vw);
+  font-size: calc(1rem + 1vw);
 }
 
 /* portfolio sections --------------------------------------------------------- */
@@ -231,7 +244,7 @@
 .short-paragprah-text1,
 .short-paragprah-text2,
 .short-paragprah-text3 {
-  font-size: calc(2rem + 1vw);
+  font-size: calc(3rem + 1vw);
 }
 
 .short-paragprah-portfolio p {
