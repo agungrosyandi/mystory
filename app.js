@@ -1,5 +1,41 @@
 gsap.registerPlugin(ScrollTrigger);
 
+// navbar animation ----------------------------------------------------------
+
+const navmenu = document.querySelector(".menu1");
+const navmenu2 = document.querySelector(".menu2");
+
+navmenu.addEventListener("click", () => {
+  tl.fromTo(".menu1", { scale: 1 }, { scale: 1.1, yoyo: true, repeat: 1 });
+});
+
+navmenu2.addEventListener("click", () => {
+  tl.fromTo(".menu2", { scale: 1 }, { scale: 1.1, yoyo: true, repeat: 1 });
+});
+
+// navbar burger toggle mobile version -------------------------------------------
+
+const burger = document.querySelector(".burger");
+const nav = document.querySelector(".menu-navbar");
+const links = nav.querySelectorAll("a");
+const blurOpen = document.querySelector(".blur-burger-menu");
+
+burger.addEventListener("click", () => {
+  nav.classList.toggle("navbar-open");
+  burger.classList.toggle("toggle");
+  blurOpen.classList.toggle("blur-open");
+});
+
+links.forEach((link) => {
+  link.addEventListener("click", () => {
+    nav.classList.toggle("navbar-open");
+    burger.classList.toggle("toggle");
+    blurOpen.classList.toggle("blur-open");
+  });
+});
+
+// matchmedia responsive --------------------------------------------------
+
 const matchMediaResponsive = gsap.matchMedia();
 
 matchMediaResponsive.add(
@@ -15,40 +51,6 @@ matchMediaResponsive.add(
 
     const tl = gsap.timeline({
       default: { duration: 0.75, ease: "Power3.easeOut" },
-    });
-
-    // navbar animation ----------------------------------------------------------
-
-    const navmenu = document.querySelector(".menu1");
-    const navmenu2 = document.querySelector(".menu2");
-
-    navmenu.addEventListener("click", () => {
-      tl.fromTo(".menu1", { scale: 1 }, { scale: 1.1, yoyo: true, repeat: 1 });
-    });
-
-    navmenu2.addEventListener("click", () => {
-      tl.fromTo(".menu2", { scale: 1 }, { scale: 1.1, yoyo: true, repeat: 1 });
-    });
-
-    // navbar burger toggle mobile version -------------------------------------------
-
-    const burger = document.querySelector(".burger");
-    const nav = document.querySelector(".menu-navbar");
-    const links = nav.querySelectorAll("a");
-    const blurOpen = document.querySelector(".blur-burger-menu");
-
-    burger.addEventListener("click", () => {
-      nav.classList.toggle("navbar-open");
-      burger.classList.toggle("toggle");
-      blurOpen.classList.toggle("blur-open");
-    });
-
-    links.forEach((link) => {
-      link.addEventListener("click", () => {
-        nav.classList.toggle("navbar-open");
-        burger.classList.toggle("toggle");
-        blurOpen.classList.toggle("blur-open");
-      });
     });
 
     // navbar closed ---------------------------------------------------------------
