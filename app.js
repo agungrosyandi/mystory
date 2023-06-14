@@ -1,18 +1,5 @@
 gsap.registerPlugin(ScrollTrigger);
 
-// navbar animation ----------------------------------------------------------
-
-const navmenu = document.querySelector(".menu1");
-const navmenu2 = document.querySelector(".menu2");
-
-navmenu.addEventListener("click", () => {
-  tl.fromTo(".menu1", { scale: 1 }, { scale: 1.1, yoyo: true, repeat: 1 });
-});
-
-navmenu2.addEventListener("click", () => {
-  tl.fromTo(".menu2", { scale: 1 }, { scale: 1.1, yoyo: true, repeat: 1 });
-});
-
 // navbar burger toggle mobile version -------------------------------------------
 
 const burger = document.querySelector(".burger");
