@@ -1,28 +1,28 @@
 /* font used */
 
 @font-face {
-  font-family: "NelaSlabMedium";
-  src: url("../../font/NelaSlab\ Medium.ttf") format("truetype");
+  font-family: 'NelaSlabMedium';
+  src: url('../../font/NelaSlab\ Medium.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: "NelaSlabLight";
-  src: url("../../font/NelaSlab\ Light.ttf") format("truetype");
+  font-family: 'NelaSlabLight';
+  src: url('../../font/NelaSlab\ Light.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: "NewEleganceSansCondensed";
-  src: url("../../font/TheNewElegance-Condensed.otf") format("opentype");
+  font-family: 'NewEleganceSansCondensed';
+  src: url('../../font/TheNewElegance-Condensed.otf') format('opentype');
 }
 
 @font-face {
-  font-family: "NewEleganceItalic";
-  src: url("../../font/TheNewElegance-Italic.otf") format("opentype");
+  font-family: 'NewEleganceItalic';
+  src: url('../../font/TheNewElegance-Italic.otf') format('opentype');
 }
 
 @font-face {
-  font-family: "NewEleganceCondita";
-  src: url("../../font/TheNewElegance-CondIta.otf") format("opentype");
+  font-family: 'NewEleganceCondita';
+  src: url('../../font/TheNewElegance-CondIta.otf') format('opentype');
 }
 
 :root {
@@ -38,13 +38,13 @@
 
   /* font  */
 
-  --nelaSlabFont: "NelaSlabMedium";
-  --nelaSlabLightFont: "NelaSlabLight";
-  --poppinsFont: "Poppins", sans-serif;
-  --montserratFont: "Montserrat", sans-serif;
-  --newEleganceCondensed: "NewEleganceSansCondensed";
-  --newEleganceItalic: "NewEleganceItalic";
-  --newEleganceCondita: "NewEleganceCondita";
+  --nelaSlabFont: 'NelaSlabMedium';
+  --nelaSlabLightFont: 'NelaSlabLight';
+  --poppinsFont: 'Poppins', sans-serif;
+  --montserratFont: 'Montserrat', sans-serif;
+  --newEleganceCondensed: 'NewEleganceSansCondensed';
+  --newEleganceItalic: 'NewEleganceItalic';
+  --newEleganceCondita: 'NewEleganceCondita';
 }
 
 /* default settings */
@@ -140,6 +140,7 @@ nav {
   height: 100%;
   width: 100%;
   padding: 5% 10%;
+  overflow: hidden;
 }
 
 .gallery-poster {
@@ -151,16 +152,27 @@ nav {
   height: 100%;
 }
 
-.gallery-poster h1 {
-  font-size: calc(4rem + 1vw);
-  font-family: var(--newEleganceItalic);
+.gallery-poster h1,
+.gallery-poster p {
+  overflow: hidden;
 }
 
-.gallery-poster p {
+.poster-title span {
+  display: block;
+}
+
+.poster-title-main {
+  font-size: calc(4rem + 1vw);
+  font-family: var(--newEleganceItalic);
+  opacity: 0;
+}
+
+.poster-title-submain {
   font-size: calc(0.5rem + 1vw);
   font-family: var(--poppinsFont);
   padding-top: 2rem;
   width: 30%;
+  opacity: 0;
 }
 
 .poster-1,
@@ -172,10 +184,15 @@ nav {
   object-fit: cover;
   object-position: center;
   overflow: hidden;
+  opacity: 0;
 }
 
 .poster-title {
   grid-column: 1/4;
+}
+
+.poster-title span {
+  display: block;
 }
 
 .poster-1 {

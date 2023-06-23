@@ -1,28 +1,28 @@
 /* font used */
 
 @font-face {
-  font-family: "NelaSlabMedium";
-  src: url("../font/NelaSlab\ Medium.ttf") format("truetype");
+  font-family: 'NelaSlabMedium';
+  src: url('../font/NelaSlab\ Medium.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: "NelaSlabLight";
-  src: url("../font/NelaSlab\ Light.ttf") format("truetype");
+  font-family: 'NelaSlabLight';
+  src: url('../font/NelaSlab\ Light.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: "NewEleganceSansCondensed";
-  src: url("../font/TheNewElegance-Condensed.otf") format("opentype");
+  font-family: 'NewEleganceSansCondensed';
+  src: url('../font/TheNewElegance-Condensed.otf') format('opentype');
 }
 
 @font-face {
-  font-family: "NewEleganceItalic";
-  src: url("../font/TheNewElegance-Italic.otf") format("opentype");
+  font-family: 'NewEleganceItalic';
+  src: url('../font/TheNewElegance-Italic.otf') format('opentype');
 }
 
 @font-face {
-  font-family: "NewEleganceCondita";
-  src: url("../font/TheNewElegance-CondIta.otf") format("opentype");
+  font-family: 'NewEleganceCondita';
+  src: url('../font/TheNewElegance-CondIta.otf') format('opentype');
 }
 
 :root {
@@ -39,13 +39,13 @@
 
   /* font  */
 
-  --nelaSlabFont: "NelaSlabMedium";
-  --nelaSlabLightFont: "NelaSlabLight";
-  --poppinsFont: "Poppins", sans-serif;
-  --montserratFont: "Montserrat", sans-serif;
-  --newEleganceCondensed: "NewEleganceSansCondensed";
-  --newEleganceItalic: "NewEleganceItalic";
-  --newEleganceCondita: "NewEleganceCondita";
+  --nelaSlabFont: 'NelaSlabMedium';
+  --nelaSlabLightFont: 'NelaSlabLight';
+  --poppinsFont: 'Poppins', sans-serif;
+  --montserratFont: 'Montserrat', sans-serif;
+  --newEleganceCondensed: 'NewEleganceSansCondensed';
+  --newEleganceItalic: 'NewEleganceItalic';
+  --newEleganceCondita: 'NewEleganceCondita';
 }
 
 /* default settings */
@@ -84,6 +84,7 @@
 .burger {
   position: relative;
   display: block;
+  opacity: 0;
 }
 
 .burger span {
@@ -269,29 +270,19 @@
   font-size: calc(1rem + 1vw);
   text-align: center;
   line-height: 1.7rem;
-  padding: 6rem 5rem;
+  padding: 6rem 7rem;
 }
 
 /* contact sections -------------------------------------------------------------- */
 
-.text-contact {
+.contact-svg {
+  width: 30%;
+}
+
+.contact-icon {
   width: 60%;
 }
 
-.wa-icon {
-  width: calc(150% + 1vw);
-}
-
-.text-wa h6 {
-  font-size: calc(0.5rem + 1vw);
-  padding: 3rem;
-}
-
-.email-icon {
-  width: calc(100% + 1vw);
-}
-
-.text-email h6 {
-  font-size: calc(0.5rem + 1vw);
-  padding: 3rem;
+.contact-me h6 {
+  font-size: calc(0.8rem + 0.5vw);
 }

@@ -1,23 +1,23 @@
 /* font used */
 
 @font-face {
-  font-family: "NelaSlabMedium";
-  src: url("../../font/NelaSlab\ Medium.ttf") format("truetype");
+  font-family: 'NelaSlabMedium';
+  src: url('../../font/NelaSlab\ Medium.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: "NelaSlabLight";
-  src: url("../../font/NelaSlab\ Light.ttf") format("truetype");
+  font-family: 'NelaSlabLight';
+  src: url('../../font/NelaSlab\ Light.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: "DrukBold";
-  src: url("../../font/Druk-Bold-Trial.otf") format("opentype");
+  font-family: 'DrukBold';
+  src: url('../../font/Druk-Bold-Trial.otf') format('opentype');
 }
 
 @font-face {
-  font-family: "DrukMedium";
-  src: url("../../font/Druk-Medium-Trial.otf") format("opentype");
+  font-family: 'DrukMedium';
+  src: url('../../font/Druk-Medium-Trial.otf') format('opentype');
 }
 
 :root {
@@ -32,12 +32,12 @@
 
   /* font  */
 
-  --nelaSlabFont: "NelaSlabMedium";
-  --nelaSlabLightFont: "NelaSlabLight";
-  --drukBoldFont: "DrukBold";
-  --drukMediumFont: "DrukMedium";
-  --poppinsFont: "Poppins", sans-serif;
-  --montserratFont: "Montserrat", sans-serif;
+  --nelaSlabFont: 'NelaSlabMedium';
+  --nelaSlabLightFont: 'NelaSlabLight';
+  --drukBoldFont: 'DrukBold';
+  --drukMediumFont: 'DrukMedium';
+  --poppinsFont: 'Poppins', sans-serif;
+  --montserratFont: 'Montserrat', sans-serif;
 }
 
 /* default settings */
@@ -74,12 +74,13 @@ body {
   grid-gap: 1rem;
 }
 
-.gallery-poster h1 {
-  font-size: calc(3rem + 1vw);
+.poster-title-main {
+  font-size: calc(2.5rem + 1vw);
 }
 
-.gallery-poster p {
-  width: 100%;
+.poster-title-submain {
+  font-size: calc(0.5rem + 1vw);
+  width: 80%;
 }
 
 .poster-title {
@@ -113,6 +114,10 @@ body {
   font-size: calc(3rem + 1vw);
 }
 
+.vector-title p {
+  font-size: calc(0.5rem + 1vw);
+}
+
 /* video ------------------------------------------------- */
 
 .gallery-video-container {
@@ -129,7 +134,7 @@ body {
 }
 
 .gallery-video p {
-  font-size: calc(1rem + 1vw);
+  font-size: calc(0.5rem + 1vw);
   width: 60%;
 }
 

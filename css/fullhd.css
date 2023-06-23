@@ -1,28 +1,28 @@
 /* font used */
 
 @font-face {
-  font-family: "NelaSlabMedium";
-  src: url("../font/NelaSlab\ Medium.ttf") format("truetype");
+  font-family: 'NelaSlabMedium';
+  src: url('../font/NelaSlab\ Medium.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: "NelaSlabLight";
-  src: url("../font/NelaSlab\ Light.ttf") format("truetype");
+  font-family: 'NelaSlabLight';
+  src: url('../font/NelaSlab\ Light.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: "NewEleganceSansCondensed";
-  src: url("../font/TheNewElegance-Condensed.otf") format("opentype");
+  font-family: 'NewEleganceSansCondensed';
+  src: url('../font/TheNewElegance-Condensed.otf') format('opentype');
 }
 
 @font-face {
-  font-family: "NewEleganceItalic";
-  src: url("../font/TheNewElegance-Italic.otf") format("opentype");
+  font-family: 'NewEleganceItalic';
+  src: url('../font/TheNewElegance-Italic.otf') format('opentype');
 }
 
 @font-face {
-  font-family: "NewEleganceCondita";
-  src: url("../font/TheNewElegance-CondIta.otf") format("opentype");
+  font-family: 'NewEleganceCondita';
+  src: url('../font/TheNewElegance-CondIta.otf') format('opentype');
 }
 
 :root {
@@ -38,13 +38,13 @@
 
   /* font  */
 
-  --nelaSlabFont: "NelaSlabMedium";
-  --nelaSlabLightFont: "NelaSlabLight";
-  --poppinsFont: "Poppins", sans-serif;
-  --montserratFont: "Montserrat", sans-serif;
-  --newEleganceCondensed: "NewEleganceSansCondensed";
-  --newEleganceItalic: "NewEleganceItalic";
-  --newEleganceCondita: "NewEleganceCondita";
+  --nelaSlabFont: 'NelaSlabMedium';
+  --nelaSlabLightFont: 'NelaSlabLight';
+  --poppinsFont: 'Poppins', sans-serif;
+  --montserratFont: 'Montserrat', sans-serif;
+  --newEleganceCondensed: 'NewEleganceSansCondensed';
+  --newEleganceItalic: 'NewEleganceItalic';
+  --newEleganceCondita: 'NewEleganceCondita';
 }
 
 /* default settings */
@@ -484,7 +484,7 @@ nav {
   margin: 3rem 0 0 0;
   padding: 1rem 5rem;
   background: none;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   border-radius: 5.7rem;
   color: var(--blackColor);
   font-size: calc(0.4rem + 1vw);
@@ -536,70 +536,35 @@ nav {
 
 /* contact sections -------------------------------------------------------------- */
 
-.text-contact {
+.contact-me {
   position: relative;
   display: flex;
-  justify-content: space-around;
-  width: 50%;
-}
-
-.wa-email-color {
-  fill: var(--whiteColor);
-}
-
-.text-wa {
-  position: relative;
-  display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   overflow: hidden;
-  border: 2px solid white;
-  border-radius: 50px;
   width: 40%;
-  height: 60%;
+  height: 10%;
+  bottom: 2%;
 }
 
-.wa-icon {
-  position: relative;
-  width: calc(100% + 1vw);
+.contact-svg {
+  width: 25%;
+  height: 100%;
+}
+
+.contact-icon {
+  width: 100%;
   height: 100%;
   object-fit: cover;
-  padding: 3rem;
 }
 
-.text-wa h6 {
-  position: relative;
+.contact-me h6 {
   color: var(--whiteColor);
-  font-family: var(--montserratFont);
-  letter-spacing: 0.2rem;
-  font-size: calc(0.5rem + 1vw);
-  padding: 3rem;
+  font-family: var(--nelaSlabLightFont);
+  letter-spacing: 0.5rem;
+  font-size: calc(0.8rem + 0.5vw);
 }
 
-.text-email {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 2px solid white;
-  border-radius: 50px;
-  width: 40%;
-  height: 60%;
-}
-
-.email-icon {
-  position: relative;
-  width: calc(100% + 1vw);
-  height: 100%;
-  padding: 3rem;
-  object-fit: cover;
-}
-
-.text-email h6 {
-  position: relative;
-  color: var(--whiteColor);
-  font-family: var(--montserratFont);
-  letter-spacing: 0.2rem;
-  font-size: calc(0.5rem + 1vw);
-  padding: 3rem;
+.contact-icon-color {
+  fill: var(--whiteColor);
 }
