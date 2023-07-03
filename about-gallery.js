@@ -108,107 +108,85 @@ matchMediaResponsive.add(
         { y: '50', opacity: 0 },
         { y: 0, opacity: 1, duration: 1 },
         '<35%'
+      )
+      .fromTo(
+        '.poster-4',
+        { y: '50', opacity: 0 },
+        { y: 0, opacity: 1, duration: 1 },
+        '<35%'
+      )
+      .fromTo(
+        '.poster-5',
+        { y: '50', opacity: 0 },
+        { y: 0, opacity: 1, duration: 1 },
+        '<35%'
+      )
+      .fromTo(
+        '.poster-6',
+        { y: '50', opacity: 0 },
+        { y: 0, opacity: 1, duration: 1 },
+        '<35%'
       );
-
-    // closing poster with opacity -----------------------------------------
-
-    const tlClosingPoster = gsap.timeline({
-      scrollTrigger: {
-        trigger: '#poster',
-        start: '20% ',
-        end: '70% ',
-        scrub: 1,
-      },
-    });
-
-    tlClosingPoster.to('#poster', {
-      opacity: isMobileTab ? 1 : 0,
-      duration: 1,
-    });
-
-    const tlPoster = gsap.timeline({
-      scrollTrigger: {
-        trigger: '#poster',
-        start: '0%',
-        end: '100%',
-        pin: isMobileTab ? false : true,
-        pinSpacing: isMobileTab ? true : false,
-      },
-    });
 
     // vector animation sections -----------------------------------------------------------
 
     const tlSplitvector = gsap.timeline({
       scrollTrigger: {
         trigger: '#vector',
-        start: '-20% center',
-        end: '0% top',
+        start: '-10% center',
+        end: '30% top',
         scrub: 4,
       },
     });
 
     tlSplitvector
       .fromTo(
-        '.vector-1',
-        { y: '50%', opacity: 0 },
-        { y: '0%', opacity: 1, duration: 0.5 }
-      )
-      .fromTo(
-        '.vector-2',
-        { y: '50%', opacity: 0 },
-        { y: '0%', opacity: 1, duration: 0.5 },
-        '<35%'
-      )
-      .fromTo(
         '.vector-title h1',
-        { x: '50%', opacity: 0 },
-        { x: '0%', opacity: 1, duration: 0.5 },
-        '<35%'
+        { x: isMobileTab ? '0%' : '-50%', opacity: isMobileTab ? 1 : 0 },
+        { x: '0%', opacity: 1, duration: 1.5 }
       )
       .fromTo(
         '.vector-title p',
-        { x: '50%', opacity: 0 },
-        { x: '0%', opacity: 1, duration: 0.5 },
+        { x: isMobileTab ? '0%' : '-50%', opacity: isMobileTab ? 1 : 0 },
+        { x: '0%', opacity: 1, duration: 1.5 },
         '<35%'
       )
       .fromTo(
-        '.vector-3',
-        { scale: 0 },
-        { scale: 1, duration: 2.5, delay: 0.35, ease: 'elastic.out(1.5, 1)' },
+        '.vector-1',
+        { x: isMobileTab ? '0%' : '-50%', opacity: isMobileTab ? 1 : 0 },
+        { x: '0%', opacity: 1, duration: 1.5 },
+        '<35%'
+      )
+      .fromTo(
+        '.vector-2',
+        { x: isMobileTab ? '0%' : '50%', opacity: isMobileTab ? 1 : 0 },
+        { x: '0%', opacity: 1, duration: 1.5 },
         '<35%'
       )
       .fromTo(
         '.vector-4',
-        { scale: 0 },
-        { scale: 1, duration: 2.5, delay: 0.35, ease: 'elastic.out(1.5, 1)' },
+        { x: isMobileTab ? '0%' : '-50%', opacity: isMobileTab ? 1 : 0 },
+        { x: '0%', opacity: 1, duration: 1.5 },
+        '<35%'
+      )
+      .fromTo(
+        '.vector-3',
+        { x: isMobileTab ? '0%' : '-50%', opacity: isMobileTab ? 1 : 0 },
+        { x: '0%', opacity: 1, duration: 1.5 },
+        '<35%'
+      )
+      .fromTo(
+        '.vector-5',
+        { x: isMobileTab ? '0%' : '50%', opacity: isMobileTab ? 1 : 0 },
+        { x: '0%', opacity: 1, duration: 1.5 },
+        '<35%'
+      )
+      .fromTo(
+        '.vector-6',
+        { x: isMobileTab ? '0%' : '50%', opacity: isMobileTab ? 1 : 0 },
+        { x: '0%', opacity: 1, duration: 1.5 },
         '<35%'
       );
-
-    // closing vector with opacity -----------------------------------------
-
-    const tlClosingVector = gsap.timeline({
-      scrollTrigger: {
-        trigger: '#vector',
-        start: '20% ',
-        end: '70% ',
-        scrub: 1,
-      },
-    });
-
-    tlClosingVector.to('#vector', {
-      opacity: isMobileTab ? 1 : 0,
-      duration: 1,
-    });
-
-    const tlVector = gsap.timeline({
-      scrollTrigger: {
-        trigger: '#vector',
-        start: '0%',
-        end: '100%',
-        pin: isMobileTab ? false : true,
-        pinSpacing: isMobileTab ? true : false,
-      },
-    });
 
     // video animation sections -----------------------------------------------------------
 
@@ -223,33 +201,50 @@ matchMediaResponsive.add(
 
     tlSplitvideo
       .fromTo(
-        '.video-1',
-        { x: '-50%', opacity: 0 },
+        '.video-title h1',
+        { x: isMobileTab ? '0%' : '50%', opacity: isMobileTab ? 1 : 0 },
         { x: '0%', opacity: 1, duration: 0.5 }
       )
       .fromTo(
-        '.video-title h1',
-        { x: '50%', opacity: 0 },
+        '.video-title p',
+        { x: isMobileTab ? '0%' : '50%', opacity: isMobileTab ? 1 : 0 },
         { x: '0%', opacity: 1, duration: 0.5 },
         '<35%'
       )
       .fromTo(
-        '.video-title p',
-        { x: '50%', opacity: 0 },
+        '.video-1',
+        { x: isMobileTab ? '0%' : '50%', opacity: isMobileTab ? 1 : 0 },
         { x: '0%', opacity: 1, duration: 0.5 },
         '<35%'
       )
       .fromTo(
         '.video-2',
-        { x: '50%', opacity: 0 },
+        { x: isMobileTab ? '0%' : '50%', opacity: isMobileTab ? 1 : 0 },
         { x: '0%', opacity: 1, duration: 0.5 },
         '<35%'
       )
       .fromTo(
         '.video-3',
-        { x: '50%', opacity: 0 },
+        { x: isMobileTab ? '0%' : '50%', opacity: isMobileTab ? 1 : 0 },
         { x: '0%', opacity: 1, duration: 0.5 },
         '<35%'
       );
+
+    // closing animation sections -----------------------------------------------------------
+
+    const tlSplitClosing = gsap.timeline({
+      scrollTrigger: {
+        trigger: '#closing-gallery',
+        start: '-30% center',
+        end: '0% top',
+        scrub: 4,
+      },
+    });
+
+    tlSplitClosing.fromTo(
+      '.closing-text h1',
+      { scale: 0 },
+      { scale: 1, duration: 4, delay: 0.35, ease: 'elastic.out(1.5, 1)' }
+    );
   }
 );

@@ -86,17 +86,44 @@ matchMediaResponsive.add(
         '<35%'
       );
 
-    // logo dissapear and change to text -------------------------------------------
+    tl.to('.home-container svg', { opacity: 0, duration: 2 });
+
+    // navbar animation
+
+    tl.fromTo('nav', { y: '-100%' }, { y: '0%', duration: 1.5 });
 
     const logoNavbar = new SplitType('.logo-navbar');
 
-    tl.to('.home-container svg', { opacity: 0, duration: 2 })
-      .fromTo('.logo-navbar', { opacity: 0 }, { opacity: 1 })
+    tl.fromTo('.logo-navbar', { opacity: 0 }, { opacity: 1 })
       .fromTo(
         '.char',
         { y: 50, opacity: 0 },
         { y: 0, opacity: 1, stagger: 0.05, duration: 1, ease: 'power4.out' },
         '<'
+      )
+      .fromTo(
+        '.burger',
+        { x: '20%', opacity: 0 },
+        { x: '0%', opacity: 1, duration: 3.5 },
+        '<'
+      )
+      .fromTo(
+        '.menu1',
+        { y: '100%', opacity: 0 },
+        { y: 0, opacity: 1, duration: 1 },
+        '<'
+      )
+      .fromTo(
+        '.menu2',
+        { y: '-100%', opacity: 0 },
+        { y: 0, opacity: 1, duration: 1 },
+        '<'
+      )
+      .fromTo(
+        '.right-image',
+        { x: '100%', opacity: 0.5 },
+        { x: 0, opacity: 1, duration: 1.5 },
+        '<35%'
       );
 
     // tex home ----------------------------------------------------------------------
@@ -104,51 +131,30 @@ matchMediaResponsive.add(
     tl.fromTo(
       '.cta1',
       { y: '-100%', opacity: 0.5 },
-      { y: '0%', opacity: 1, duration: 1.5 }
-    );
-
-    tl.fromTo(
-      '.cta1-x',
-      { x: '50%', opacity: 0 },
-      { x: '0%', opacity: 1, duration: 1.5 }
-    );
-
-    tl.fromTo(
-      '.cta2',
-      { y: '100%', opacity: 0.5 },
-      { y: 0, opacity: 1, duration: 1.5 },
+      { y: '0%', opacity: 1, duration: 1.5 },
       '<'
-    );
-
-    // navbar animation
-
-    tl.fromTo(
-      '.burger',
-      { x: '20%', opacity: 0 },
-      { x: '0%', opacity: 1, duration: 3.5 },
-      '<'
-    );
-
-    // text navbar ---------------------------------------------------------------------
-
-    tl.fromTo(
-      '.menu1',
-      { y: '100%', opacity: 0 },
-      { y: 0, opacity: 1, duration: 1 },
-      '<'
-    ).fromTo(
-      '.menu2',
-      { y: '-100%', opacity: 0 },
-      { y: 0, opacity: 1, duration: 1 },
-      '<'
-    );
-
-    tl.fromTo(
-      '.cta3',
-      { x: '-100%', opacity: 0.5 },
-      { x: 0, opacity: 1, duration: 1 },
-      '<35%'
     )
+
+      .fromTo(
+        '.cta1-x',
+        { x: '50%', opacity: 0 },
+        { x: '0%', opacity: 1, duration: 1.5 },
+        '<35%'
+      )
+
+      .fromTo(
+        '.cta2',
+        { y: '100%', opacity: 0.5 },
+        { y: 0, opacity: 1, duration: 1.5 },
+        '<35%'
+      )
+
+      .fromTo(
+        '.cta3',
+        { x: '-100%', opacity: 0.5 },
+        { x: 0, opacity: 1, duration: 1 },
+        '<35%'
+      )
       .fromTo(
         '.cta4',
         { y: '100%', opacity: 0.5 },
@@ -160,7 +166,14 @@ matchMediaResponsive.add(
         { y: '-100%', opacity: 0.5 },
         { y: 0, opacity: 1, duration: 1 },
         '<35%'
-      );
+      )
+      .fromTo(
+        '.cta6',
+        { y: '100%', opacity: 0.5 },
+        { y: 0, opacity: 1, duration: 1 },
+        '<35%'
+      )
+      .fromTo('.footer p', { opacity: 0 }, { opacity: 1 }, '<35%');
 
     // closing home sections with opacity -----------------------------------------
 
@@ -174,7 +187,7 @@ matchMediaResponsive.add(
     });
 
     tlClosingHomeSections.to('#home', {
-      background: isMobile ? 'black' : 'white',
+      opacity: isMobile ? 1 : 0,
       duration: 1,
     });
 
@@ -188,9 +201,9 @@ matchMediaResponsive.add(
       },
     });
 
-    // logo and navbar change color ---------------------------------------------
+    // navbar change width ---------------------------------------------
 
-    const tlLogoNavbarChangeColorSections = gsap.timeline({
+    const tlNavbarChangeWidth = gsap.timeline({
       scrollTrigger: {
         trigger: 'body',
         start: '10% ',
@@ -199,9 +212,13 @@ matchMediaResponsive.add(
       },
     });
 
-    tlLogoNavbarChangeColorSections
-      .to('.menu-navbar li a', { color: 'black' })
-      .to('.logo-navbar a', { color: 'black' }, '<');
+    tlNavbarChangeWidth
+      .fromTo('nav', { left: isMobile ? '0' : '45%' }, { left: '0' })
+      .fromTo(
+        'nav',
+        { width: isMobile ? '100vw' : '60vw' },
+        { width: '100vw' }
+      );
 
     // short biography animation ------------------------------------------------
 
@@ -296,44 +313,16 @@ matchMediaResponsive.add(
         '<35%'
       );
 
-    // portfolio sections -------------------------------------------------------
-
-    const tlSplitPortfolio = gsap.timeline({
+    const tlFooter = gsap.timeline({
       scrollTrigger: {
-        trigger: '#porfolio-section',
-        start: '-95% center',
-        end: '0% top',
+        trigger: 'body',
+        start: '80% center',
+        end: '80% center',
+        duration: 0.75,
         scrub: 4,
       },
     });
 
-    tlSplitPortfolio
-      .fromTo(
-        '.short-paragprah-text1',
-        { y: isMobile ? '0%' : '-50%', opacity: isMobile ? 1 : 0 },
-        { y: '0%', opacity: 1, duration: 2 }
-      )
-      .fromTo(
-        '.short-paragprah-text2',
-        { y: isMobile ? '0%' : '50%', opacity: isMobile ? 1 : 0 },
-        { y: '0%', opacity: 1, duration: 2 },
-        '<30%'
-      )
-      .fromTo(
-        '.short-paragprah-text3',
-        { y: isMobile ? '0%' : '-50%', opacity: isMobile ? 1 : 0 },
-        { y: '0%', opacity: 1, duration: 2 },
-        '<30%'
-      )
-      .fromTo(
-        '.short-paragprah-portfolio p',
-        { y: isMobile ? '0%' : '-50%', opacity: isMobile ? 1 : 0 },
-        { y: '0%', opacity: 1, duration: 2 }
-      )
-      .fromTo(
-        '.cv-btn',
-        { y: isMobile ? '0%' : '-50%', opacity: isMobile ? 1 : 0 },
-        { y: '0%', opacity: 1, duration: 3 }
-      );
+    tlFooter.fromTo('.footer', { y: '100%' }, { y: 0 });
   }
 );

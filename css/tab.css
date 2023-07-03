@@ -58,6 +58,11 @@
 
 /* navbar --------------------------------------------------------------- */
 
+nav {
+  left: 0;
+  width: 100vw;
+}
+
 .logo-navbar {
   font-size: calc(2rem + 1vw);
 }
@@ -85,6 +90,7 @@
   position: relative;
   display: block;
   opacity: 0;
+  padding-right: 5rem;
 }
 
 .burger span {
@@ -147,142 +153,129 @@
 
 /* home ----------------------------------------------------------------- */
 
+.home-container {
+  display: flex;
+  flex-direction: column;
+}
+
 .home-container svg {
   top: 30%;
   left: 25%;
 }
 
+/* --------------------------------------------------------------- left text  */
+
 .cta {
-  top: 30%;
+  padding: 15rem 0 10rem 5%;
 }
 
-.cta1,
-.cta2,
-.cta1-x {
-  font-size: calc(5.5rem + 1vw);
+.cta3,
+.cta4,
+.cta5 {
+  font-size: calc(2rem + 1vw);
+}
+
+.cta6 {
+  font-size: calc(2rem + 0.5vw);
+  padding: 0 25rem 0 0;
+}
+
+/* ---------------------------------------------------------- right side  */
+
+.right-image img {
+  width: 50%;
+  height: 50%;
 }
 
 /* short biography ------------------------------------------------------ */
 
 .biography-container {
-  flex-direction: column-reverse;
-  align-items: center;
-}
-
-.img-photo-agung {
-  width: 100%;
-  height: 100%;
-}
-
-.img-photo-agung img {
-  padding: 10rem 40rem 0 0;
-}
-
-.short-paragraph {
-  padding: 10% 0 0 10%;
-}
-
-.short-paragraph h1 {
-  font-size: calc(4.5rem + 1vw);
+  padding: 10rem 0 10rem 5%;
 }
 
 .short-paragraph p {
-  width: 90%;
   font-size: calc(1.5rem + 1vw);
 }
 
 /* gallery showcase ----------------------------------------------- */
 
-#gallery-showcase {
-  min-height: 130vh;
+.showcase-container {
+  padding: 10rem 5rem 10rem 5%;
 }
 
-.gallery-showcase-container {
-  padding: 10rem 10rem 0 10rem;
+.retro-style {
+  grid-column: 1/3;
 }
 
-.gallery-showcase-left h2 {
-  font-size: calc(3.5rem + 1vw);
-  padding-bottom: 5rem;
+.vector-style {
+  grid-column: 1/2;
 }
 
-.gallery-showcase-left p {
-  font-size: calc(1.5rem + 1vw);
-  width: 100%;
+.title-style {
+  display: none;
 }
 
-.gallery-showcase-right {
-  width: 130%;
-}
-
-.retro-style,
-.vector-style,
-.motion-style,
 .web-style {
-  width: 100%;
+  grid-column: 1/2;
+}
+
+.motion-style {
+  grid-column: 2/3;
+  grid-row: 2/4;
 }
 
 .retro-content {
-  font-size: calc(3rem + 1vw);
+  font-size: calc(2.5rem + 1vw);
 }
 
 .vector-content {
-  font-size: calc(1rem + 1vw);
+  font-size: calc(0.8rem + 1vw);
 }
 
 .motion-content {
-  font-size: calc(1rem + 1vw);
+  font-size: calc(0.8rem + 1vw);
 }
 
 .web-content {
-  font-size: calc(1rem + 1vw);
+  font-size: calc(0.8rem + 1vw);
 }
 
-/* portfolio sections --------------------------------------------------------- */
+/* ---------------------------------------------------  download menu */
 
-#porfolio-section {
-  min-height: 35vh;
+.title-short-paragraph {
+  padding: 0 0 2% 0;
 }
 
 .short-paragprah-text1,
 .short-paragprah-text2,
 .short-paragprah-text3 {
-  font-size: calc(3rem + 1vw);
+  font-size: calc(2.5rem + 1vw);
 }
 
-.short-paragprah-portfolio p {
-  padding: 0 20rem;
-  font-size: calc(0.7rem + 1vw);
-}
-
-.titlecv-download {
-  font-size: calc(0.7rem + 1vw);
+.download-menu p {
+  font-size: calc(1rem + 1vw);
+  padding: 0 10rem;
 }
 
 /* closing sections ----------------------------------------------------------- */
 
+.closing-container {
+  padding: 5rem 5rem 5rem 5%;
+}
+
 .text-title h1 {
   font-size: calc(5rem + 1vw);
-  padding: 0 2rem;
+  padding: 0 10rem 2rem 10rem;
 }
 
 .text-title p {
-  font-size: calc(1rem + 1vw);
   text-align: center;
-  line-height: 1.7rem;
-  padding: 6rem 7rem;
+  font-size: calc(1rem + 1vw);
+  padding: 3rem 5rem 5rem 5rem;
 }
 
-/* contact sections -------------------------------------------------------------- */
+/* footer ---------------------------------------------  */
 
-.contact-svg {
-  width: 30%;
-}
-
-.contact-icon {
-  width: 60%;
-}
-
-.contact-me h6 {
-  font-size: calc(0.8rem + 0.5vw);
+.footer p {
+  font-size: calc(1.5rem + 0.5vw);
 }
