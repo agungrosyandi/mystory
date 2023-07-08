@@ -1,28 +1,28 @@
 /* font used */
 
 @font-face {
-  font-family: 'NelaSlabMedium';
-  src: url('../font/NelaSlab\ Medium.ttf') format('truetype');
+  font-family: "NelaSlabMedium";
+  src: url("../font/NelaSlab\ Medium.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'NelaSlabLight';
-  src: url('../font/NelaSlab\ Light.ttf') format('truetype');
+  font-family: "NelaSlabLight";
+  src: url("../font/NelaSlab\ Light.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'NewEleganceSansCondensed';
-  src: url('../font/TheNewElegance-Condensed.otf') format('opentype');
+  font-family: "NewEleganceSansCondensed";
+  src: url("../font/TheNewElegance-Condensed.otf") format("opentype");
 }
 
 @font-face {
-  font-family: 'NewEleganceItalic';
-  src: url('../font/TheNewElegance-Italic.otf') format('opentype');
+  font-family: "NewEleganceItalic";
+  src: url("../font/TheNewElegance-Italic.otf") format("opentype");
 }
 
 @font-face {
-  font-family: 'NewEleganceCondita';
-  src: url('../font/TheNewElegance-CondIta.otf') format('opentype');
+  font-family: "NewEleganceCondita";
+  src: url("../font/TheNewElegance-CondIta.otf") format("opentype");
 }
 
 :root {
@@ -39,13 +39,13 @@
 
   /* font  */
 
-  --nelaSlabFont: 'NelaSlabMedium';
-  --nelaSlabLightFont: 'NelaSlabLight';
-  --poppinsFont: 'Poppins', sans-serif;
-  --montserratFont: 'Montserrat', sans-serif;
-  --newEleganceCondensed: 'NewEleganceSansCondensed';
-  --newEleganceItalic: 'NewEleganceItalic';
-  --newEleganceCondita: 'NewEleganceCondita';
+  --nelaSlabFont: "NelaSlabMedium";
+  --nelaSlabLightFont: "NelaSlabLight";
+  --poppinsFont: "Poppins", sans-serif;
+  --montserratFont: "Montserrat", sans-serif;
+  --newEleganceCondensed: "NewEleganceSansCondensed";
+  --newEleganceItalic: "NewEleganceItalic";
+  --newEleganceCondita: "NewEleganceCondita";
 }
 
 /* default settings */
@@ -159,7 +159,7 @@ nav {
 }
 
 .home-container svg {
-  top: 30%;
+  top: 20%;
   left: 25%;
 }
 
@@ -169,6 +169,12 @@ nav {
   padding: 15rem 0 10rem 5%;
 }
 
+.cta1,
+.cta1-x,
+.cta2 {
+  font-size: calc(5rem + 1vw);
+}
+
 .cta3,
 .cta4,
 .cta5 {
@@ -176,7 +182,7 @@ nav {
 }
 
 .cta6 {
-  font-size: calc(2rem + 0.5vw);
+  font-size: calc(1rem + 1vw);
   padding: 0 25rem 0 0;
 }
 
@@ -184,7 +190,7 @@ nav {
 
 .right-image img {
   width: 50%;
-  height: 50%;
+  height: 100%;
 }
 
 /* short biography ------------------------------------------------------ */
@@ -193,8 +199,13 @@ nav {
   padding: 10rem 0 10rem 5%;
 }
 
-.short-paragraph p {
-  font-size: calc(1.5rem + 1vw);
+.biography-container h1 {
+  font-size: calc(4rem + 1vw);
+}
+
+.biography-container p {
+  font-size: calc(1rem + 1vw);
+  padding: 0 10rem 0 0;
 }
 
 /* gallery showcase ----------------------------------------------- */
@@ -225,26 +236,16 @@ nav {
 }
 
 .retro-content {
-  font-size: calc(2.5rem + 1vw);
+  font-size: calc(5rem + 1vw);
 }
 
-.vector-content {
-  font-size: calc(0.8rem + 1vw);
-}
-
-.motion-content {
-  font-size: calc(0.8rem + 1vw);
-}
-
+.vector-content,
+.motion-content,
 .web-content {
-  font-size: calc(0.8rem + 1vw);
+  font-size: calc(2rem + 1vw);
 }
 
 /* ---------------------------------------------------  download menu */
-
-.title-short-paragraph {
-  padding: 0 0 2% 0;
-}
 
 .short-paragprah-text1,
 .short-paragprah-text2,
@@ -253,25 +254,29 @@ nav {
 }
 
 .download-menu p {
+  text-align: center;
   font-size: calc(1rem + 1vw);
-  padding: 0 10rem;
+  padding: 0 5rem;
 }
 
+.cv-btn {
+  font-size: calc(0.5rem + 1vw);
+  margin: 3rem 0 0 0;
+}
 /* closing sections ----------------------------------------------------------- */
 
 .closing-container {
-  padding: 5rem 5rem 5rem 5%;
+  padding: 5rem 0rem 5rem 0%;
 }
 
 .text-title h1 {
   font-size: calc(5rem + 1vw);
-  padding: 0 10rem 2rem 10rem;
+  padding: 0 2rem 2rem 2rem;
 }
 
 .text-title p {
-  text-align: center;
-  font-size: calc(1rem + 1vw);
-  padding: 3rem 5rem 5rem 5rem;
+  font-size: calc(0.5rem + 1vw);
+  padding: 3rem 0 5rem 0;
 }
 
 /* footer ---------------------------------------------  */

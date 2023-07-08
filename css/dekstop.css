@@ -55,149 +55,118 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   overflow-x: hidden;
+  background: #2b2730;
 }
 
-/* navbar */
+/* navbar sections */
 
-.burger {
-  padding-right: 0rem;
-}
+/* opacity burger menu sections -------------------------------------------------------- */
 
-.burger span {
-  width: 100%;
-  height: 100%;
-}
-
-.menu-navbar li a {
-  font-size: calc(3rem + 1vw);
-}
-
-/* home ----------------------------------------------------------------- */
-
-.home-container svg {
-  top: 20%;
-  left: 25%;
-}
+/* home sections -------------------------------------------------------- */
 
 /* --------------------------------------------------------------- left text  */
 
 .cta1,
 .cta1-x,
 .cta2 {
-  font-size: calc(2.5rem + 1vw);
-}
-
-.cta1-x {
-  padding-left: 1rem;
+  font-size: calc(5rem + 1vw);
 }
 
 .cta3,
 .cta4,
 .cta5 {
-  font-size: calc(1rem + 1vw);
+  font-size: calc(2rem + 1vw);
 }
 
 .cta6 {
   font-size: calc(1rem + 1vw);
-  padding: 0 10rem 0 0;
+  padding: 0 20rem 0 0;
 }
 
 /* ---------------------------------------------------------- right side  */
 
-.right-image img {
-  width: 80%;
-  height: 100%;
-}
-
-/* biography ------------------------------------------------------------------ */
+/* short biography ------------------------------------------------- */
 
 .biography-container h1 {
-  font-size: calc(2.5rem + 1vw);
-  padding-bottom: 5rem;
+  font-size: calc(4rem + 1vw);
 }
 
 .biography-container p {
   font-size: calc(1rem + 1vw);
-  line-height: 3rem;
-  padding: 0 3rem 0 0;
 }
 
-/* gallery showcase ----------------------------------------------- */
-
-.showcase-container {
-  padding: 5rem 2rem 10rem 5%;
-}
+/* gallery showcase ----------------------------------------------------- */
 
 .retro-style {
-  grid-column: 1/3;
+  grid-column: 1/2;
 }
 
 .vector-style {
-  grid-column: 1/3;
+  grid-column: 1/2;
+}
+
+.title-style {
+  grid-column: 2/3;
+  padding: 5rem;
 }
 
 .web-style {
-  grid-column: 1/3;
+  grid-column: 1/2;
 }
 
 .motion-style {
-  grid-column: 1/3;
-  grid-row: 3/4;
+  grid-column: 2/3;
+  grid-row: 2/4;
 }
 
-.retro-content {
-  font-size: calc(2.5rem + 1vw);
+.title-style {
+  background: rgb(84, 81, 116);
+  filter: grayscale(70%);
 }
 
+.title-style h1 {
+  font-size: calc(4rem + 1vw);
+}
+
+.retro-content,
 .vector-content,
 .motion-content,
 .web-content {
-  font-size: calc(2.5rem + 1vw);
+  font-size: calc(4rem + 1vw);
 }
 
 /* ---------------------------------------------------  download menu */
 
-.title-short-paragraph {
-  flex-direction: column;
-}
-
 .short-paragprah-text1,
 .short-paragprah-text2,
 .short-paragprah-text3 {
-  font-size: calc(2.5rem + 1vw);
+  font-size: calc(4rem + 1vw);
 }
 
 .download-menu p {
   text-align: center;
-  font-size: calc(0.8rem + 1vw);
-  padding: 0 3rem;
+  font-size: calc(1rem + 1vw);
+  padding: 0 20rem;
 }
 
 .cv-btn {
-  font-size: calc(0.5rem + 1vw);
-  padding: 1rem 3rem;
+  font-size: calc(0.4rem + 1vw);
+  margin: 5rem 0 0 0;
+  padding: 1rem 5rem;
 }
-/* closing sections ----------------------------------------------------------- */
 
-.closing-container {
-  padding: 5rem 0rem 5rem 0%;
-}
+/* closing sections ------------------------------------------------------- */
 
 .text-title h1 {
-  font-size: calc(2.5rem + 1vw);
-  padding: 0 2rem 2rem 2rem;
+  font-size: calc(5rem + 1vw);
 }
 
 .text-title p {
-  font-size: calc(0.8rem + 1vw);
-  text-align: center;
-  padding: 2rem 5rem 5rem 5rem;
+  font-size: calc(0.5rem + 1vw);
+  padding: 3rem 0 5rem 0;
 }
 
 /* footer ---------------------------------------------  */
-
-.footer p {
-  font-size: calc(1rem + 0.5vw);
-}

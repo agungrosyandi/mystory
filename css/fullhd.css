@@ -1,28 +1,28 @@
 /* font used */
 
 @font-face {
-  font-family: 'NelaSlabMedium';
-  src: url('../font/NelaSlab\ Medium.ttf') format('truetype');
+  font-family: "NelaSlabMedium";
+  src: url("../font/NelaSlab\ Medium.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'NelaSlabLight';
-  src: url('../font/NelaSlab\ Light.ttf') format('truetype');
+  font-family: "NelaSlabLight";
+  src: url("../font/NelaSlab\ Light.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'NewEleganceSansCondensed';
-  src: url('../font/TheNewElegance-Condensed.otf') format('opentype');
+  font-family: "NewEleganceSansCondensed";
+  src: url("../font/TheNewElegance-Condensed.otf") format("opentype");
 }
 
 @font-face {
-  font-family: 'NewEleganceItalic';
-  src: url('../font/TheNewElegance-Italic.otf') format('opentype');
+  font-family: "NewEleganceItalic";
+  src: url("../font/TheNewElegance-Italic.otf") format("opentype");
 }
 
 @font-face {
-  font-family: 'NewEleganceCondita';
-  src: url('../font/TheNewElegance-CondIta.otf') format('opentype');
+  font-family: "NewEleganceCondita";
+  src: url("../font/TheNewElegance-CondIta.otf") format("opentype");
 }
 
 :root {
@@ -39,13 +39,13 @@
 
   /* font  */
 
-  --nelaSlabFont: 'NelaSlabMedium';
-  --nelaSlabLightFont: 'NelaSlabLight';
-  --poppinsFont: 'Poppins', sans-serif;
-  --montserratFont: 'Montserrat', sans-serif;
-  --newEleganceCondensed: 'NewEleganceSansCondensed';
-  --newEleganceItalic: 'NewEleganceItalic';
-  --newEleganceCondita: 'NewEleganceCondita';
+  --nelaSlabFont: "NelaSlabMedium";
+  --nelaSlabLightFont: "NelaSlabLight";
+  --poppinsFont: "Poppins", sans-serif;
+  --montserratFont: "Montserrat", sans-serif;
+  --newEleganceCondensed: "NewEleganceSansCondensed";
+  --newEleganceItalic: "NewEleganceItalic";
+  --newEleganceCondita: "NewEleganceCondita";
 }
 
 /* default settings */
@@ -184,7 +184,7 @@ nav {
 .cta1,
 .cta1-x,
 .cta2 {
-  font-size: calc(5rem + 1vw);
+  font-size: calc(7rem + 1vw);
   font-family: var(--newEleganceCondensed);
   letter-spacing: 0.5rem;
   opacity: 0;
@@ -206,16 +206,16 @@ nav {
 .cta3,
 .cta4,
 .cta5 {
-  font-size: calc(1rem + 1vw);
+  font-size: calc(2rem + 1vw);
   font-family: var(--montserratFont);
   letter-spacing: 0.7rem;
   opacity: 0;
 }
 
 .cta6 {
-  font-size: calc(1rem + 0.5vw);
+  font-size: calc(1rem + 1vw);
   font-family: var(--montserratFont);
-  padding: 0 30rem 0 0;
+  padding: 0 40rem 0 0;
   opacity: 0;
 }
 
@@ -244,31 +244,28 @@ nav {
 }
 
 .biography-container {
-  position: absolute;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 4rem;
   width: 100%;
   height: 100%;
   padding: 10rem 0 10rem 5%;
 }
 
-.short-paragraph {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  flex: 1 1 0%;
-}
-
-.short-paragraph h1 {
-  font-size: calc(4rem + 1vw);
+.biography-container h1 {
+  font-size: calc(6rem + 1vw);
   letter-spacing: 0.3rem;
-  padding-bottom: 3rem;
+  padding-bottom: 8rem;
   font-family: var(--newEleganceItalic);
 }
 
-.short-paragraph p {
-  font-size: calc(0.5rem + 1vw);
-  font-family: var(--poppinsFont);
+.biography-container p {
+  font-size: calc(1rem + 1vw);
   line-height: 4rem;
-  width: 85%;
+  font-family: var(--poppinsFont);
+  padding: 0 15rem 0 0;
 }
 
 /* gallery showcase ----------------------------------------------------- */
@@ -290,18 +287,14 @@ nav {
   padding: 10rem 10rem 10rem 5%;
 }
 
-.gallery-showcase-container {
-  position: relative;
-}
-
 .gallery-showcase {
   position: relative;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 1rem;
-  flex: 1 1 0%;
   width: 100%;
   height: 100%;
+  flex: 1 1 0%;
   padding: 5rem 0;
 }
 
@@ -328,14 +321,14 @@ nav {
 }
 
 .title-style {
-  background: rgb(69, 62, 56);
+  background: rgb(110, 104, 163);
+  filter: grayscale(70%);
 }
 
 .title-style h1 {
-  font-size: calc(4rem + 1vw);
+  font-size: calc(6rem + 1vw);
   font-family: var(--newEleganceCondita);
   color: var(--whiteColor);
-  width: 100%;
 }
 
 .retro-style,
@@ -343,22 +336,18 @@ nav {
 .motion-style,
 .web-style,
 .title-style {
-  position: relative;
   flex: 1 1 0%;
-  width: 100%;
-  height: 100%;
   margin: 0.5rem 0;
 }
 
 .retro-style img,
 .vector-style img,
 .web-style img {
-  position: relative;
   display: block;
+  object-fit: cover;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  filter: grayscale(50%);
+  filter: grayscale(70%);
 }
 
 .retro-style img:hover,
@@ -369,11 +358,10 @@ nav {
 }
 
 .motion-style video {
-  position: relative;
   display: block;
+  object-fit: cover;
   width: 100%;
   height: 100%;
-  object-fit: cover;
   filter: grayscale(50%);
 }
 
@@ -401,28 +389,19 @@ nav {
   color: var(--whiteColor);
   font-family: var(--newEleganceCondensed);
   top: 50%;
-  left: 40%;
-  width: 50%;
+  left: 60%;
+  width: 100%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   white-space: nowrap;
 }
 
-.retro-content {
-  font-size: calc(1.5rem + 1vw);
-}
-
-.vector-content {
-  font-size: calc(1.5rem + 1vw);
-}
-
-.motion-content {
-  font-size: calc(1.5rem + 1vw);
-}
-
+.retro-content,
+.vector-content,
+.motion-content,
 .web-content {
-  font-size: calc(1.5rem + 1vw);
+  font-size: calc(5rem + 1vw);
 }
 
 .retro-style:hover .retro-title {
@@ -462,7 +441,7 @@ nav {
 .short-paragprah-text2,
 .short-paragprah-text3 {
   padding: 0.4rem;
-  font-size: calc(4rem + 1vw);
+  font-size: calc(6rem + 1vw);
   font-family: var(--newEleganceItalic);
   letter-spacing: 0.3rem;
 }
@@ -472,22 +451,22 @@ nav {
   font-size: calc(1rem + 1vw);
   line-height: 3rem;
   font-family: var(--montserratFont);
-  padding: 0 20rem;
+  padding: 0 25rem;
 }
 
 .resume-hyperlink a,
 .portfolio-hyperlink a {
-  color: white;
+  color: var(--whiteColor);
 }
 
 .cv-btn {
   position: relative;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   background: none;
   border-radius: 6rem;
   font-size: calc(0.4rem + 1vw);
   cursor: pointer;
-  margin: 3rem 0 0 0;
+  margin: 5rem 0 0 0;
   padding: 1rem 5rem;
   color: white;
   border: 1px solid white;
@@ -523,9 +502,9 @@ nav {
 
 .text-title h1 {
   font-family: var(--newEleganceCondensed);
-  font-size: calc(6rem + 1vw);
+  font-size: calc(7rem + 1vw);
   text-align: center;
-  padding: 0 15rem 2rem 15rem;
+  padding: 0 10rem 2rem 10rem;
 }
 
 .text-title p {
@@ -545,6 +524,7 @@ nav {
   backdrop-filter: blur(10px);
   z-index: 5;
   bottom: 0;
+  color: var(--whiteColor);
 }
 
 .footer-container {
@@ -558,11 +538,11 @@ nav {
 
 .footer p {
   font-size: calc(1rem + 0.5vw);
-  color: var(--whiteColor);
   font-family: var(--nelaSlabLightFont);
+  opacity: 0;
 }
 
 .footer a {
   text-decoration: none;
-  color: var(--whiteColor);
+  color: white;
 }
