@@ -1,28 +1,28 @@
 /* font used */
 
 @font-face {
-  font-family: 'NelaSlabMedium';
-  src: url('../../font/NelaSlab\ Medium.ttf') format('truetype');
+  font-family: "NelaSlabMedium";
+  src: url("../../font/NelaSlab\ Medium.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'NelaSlabLight';
-  src: url('../../font/NelaSlab\ Light.ttf') format('truetype');
+  font-family: "NelaSlabLight";
+  src: url("../../font/NelaSlab\ Light.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'NewEleganceSansCondensed';
-  src: url('../../font/TheNewElegance-Condensed.otf') format('opentype');
+  font-family: "NewEleganceSansCondensed";
+  src: url("../../font/TheNewElegance-Condensed.otf") format("opentype");
 }
 
 @font-face {
-  font-family: 'NewEleganceItalic';
-  src: url('../../font/TheNewElegance-Italic.otf') format('opentype');
+  font-family: "NewEleganceItalic";
+  src: url("../../font/TheNewElegance-Italic.otf") format("opentype");
 }
 
 @font-face {
-  font-family: 'NewEleganceCondita';
-  src: url('../../font/TheNewElegance-CondIta.otf') format('opentype');
+  font-family: "NewEleganceCondita";
+  src: url("../../font/TheNewElegance-CondIta.otf") format("opentype");
 }
 
 :root {
@@ -38,13 +38,13 @@
 
   /* font  */
 
-  --nelaSlabFont: 'NelaSlabMedium';
-  --nelaSlabLightFont: 'NelaSlabLight';
-  --poppinsFont: 'Poppins', sans-serif;
-  --montserratFont: 'Montserrat', sans-serif;
-  --newEleganceCondensed: 'NewEleganceSansCondensed';
-  --newEleganceItalic: 'NewEleganceItalic';
-  --newEleganceCondita: 'NewEleganceCondita';
+  --nelaSlabFont: "NelaSlabMedium";
+  --nelaSlabLightFont: "NelaSlabLight";
+  --poppinsFont: "Poppins", sans-serif;
+  --montserratFont: "Montserrat", sans-serif;
+  --newEleganceCondensed: "NewEleganceSansCondensed";
+  --newEleganceItalic: "NewEleganceItalic";
+  --newEleganceCondita: "NewEleganceCondita";
 }
 
 /* default settings */

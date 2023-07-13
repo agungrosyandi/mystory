@@ -1,23 +1,23 @@
 /* font used */
 
 @font-face {
-  font-family: 'NelaSlabMedium';
-  src: url('../../font/NelaSlab\ Medium.ttf') format('truetype');
+  font-family: "NelaSlabMedium";
+  src: url("../../font/NelaSlab\ Medium.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'NelaSlabLight';
-  src: url('../../font/NelaSlab\ Light.ttf') format('truetype');
+  font-family: "NelaSlabLight";
+  src: url("../../font/NelaSlab\ Light.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'DrukBold';
-  src: url('../../font/Druk-Bold-Trial.otf') format('opentype');
+  font-family: "DrukBold";
+  src: url("../../font/Druk-Bold-Trial.otf") format("opentype");
 }
 
 @font-face {
-  font-family: 'DrukMedium';
-  src: url('../../font/Druk-Medium-Trial.otf') format('opentype');
+  font-family: "DrukMedium";
+  src: url("../../font/Druk-Medium-Trial.otf") format("opentype");
 }
 
 :root {
@@ -32,12 +32,12 @@
 
   /* font  */
 
-  --nelaSlabFont: 'NelaSlabMedium';
-  --nelaSlabLightFont: 'NelaSlabLight';
-  --drukBoldFont: 'DrukBold';
-  --drukMediumFont: 'DrukMedium';
-  --poppinsFont: 'Poppins', sans-serif;
-  --montserratFont: 'Montserrat', sans-serif;
+  --nelaSlabFont: "NelaSlabMedium";
+  --nelaSlabLightFont: "NelaSlabLight";
+  --drukBoldFont: "DrukBold";
+  --drukMediumFont: "DrukMedium";
+  --poppinsFont: "Poppins", sans-serif;
+  --montserratFont: "Montserrat", sans-serif;
 }
 
 /* default settings */
@@ -75,28 +75,32 @@ body {
 }
 
 .poster-title-main {
-  font-size: calc(4rem + 1vw);
+  font-size: calc(2rem + 1vw);
 }
 
 .poster-title-submain {
   font-size: calc(1rem + 1vw);
-  width: 80%;
-  padding: 2rem 5rem 0 0;
+  width: 100%;
+  padding: 2rem 10rem 0 0;
+}
+
+.poster-title {
+  grid-column: 1/5;
 }
 
 /* vector ------------------------------------------------------------ */
 
 .vector-title h1 {
-  font-size: calc(4rem + 1vw);
+  font-size: calc(2rem + 1vw);
 }
 
 .vector-title p {
   font-size: calc(1rem + 1vw);
-  width: 60%;
+  width: 100%;
 }
 
 .vector-title {
-  grid-column: 1/4;
+  grid-column: 1/5;
 }
 
 .vector-2 {
@@ -106,8 +110,12 @@ body {
 
 /* video ------------------------------------------------- */
 
+.gallery-video h1 {
+  font-size: calc(2rem + 1vw);
+}
+
 .gallery-video p {
-  width: 60%;
+  width: 90%;
 }
 
 /* closing sections ------------------------------------------------------- */
