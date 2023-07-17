@@ -238,32 +238,6 @@ matchMediaResponsive.add(
       "<35%"
     );
 
-    // short biography closing animation ------------------------------------------------
-
-    const tlSplitClosing = gsap.timeline({
-      scrollTrigger: {
-        trigger: "#biography",
-        start: "20% ",
-        end: "70% ",
-        scrub: 1,
-      },
-    });
-
-    tlSplitClosing.to("#biography", {
-      opacity: isMobile ? 1 : 0,
-      duration: 1,
-    });
-
-    const tlShortBiographyClosing = gsap.timeline({
-      scrollTrigger: {
-        trigger: "#biography",
-        start: "30%",
-        end: "100%",
-        pin: isMobile ? false : true,
-        pinSpacing: isMobile ? true : false,
-      },
-    });
-
     // gallery showcase sections -----------------------------------------------------------
 
     const tlSplitRetro = gsap.timeline({
