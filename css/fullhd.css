@@ -5,25 +5,25 @@
   src: url("../font/NelaSlab\ Medium.ttf") format("truetype");
 }
 
+/* mona font -------------------------------------------------------------- */
+
 @font-face {
-  font-family: "NelaSlabLight";
-  src: url("../font/NelaSlab\ Light.ttf") format("truetype");
+  font-family: "MonaSansLight";
+  src: url("Mona-Sans.woff2") format("woff2 supports variations"),
+    url("../font/Mona-Sans.woff2") format("woff2-variations");
+  font-weight: 300;
+  font-stretch: 100%;
 }
 
 @font-face {
-  font-family: "NewEleganceSansCondensed";
-  src: url("../font/TheNewElegance-Condensed.otf") format("opentype");
+  font-family: "MonaSansLightNarrow";
+  src: url("Mona-Sans.woff2") format("woff2 supports variations"),
+    url("../font/Mona-Sans.woff2") format("woff2-variations");
+  font-weight: 200;
+  font-stretch: 75%;
 }
 
-@font-face {
-  font-family: "NewEleganceItalic";
-  src: url("../font/TheNewElegance-Italic.otf") format("opentype");
-}
-
-@font-face {
-  font-family: "NewEleganceCondita";
-  src: url("../font/TheNewElegance-CondIta.otf") format("opentype");
-}
+/* default settings ----------------------------------------------------------*/
 
 :root {
   font-size: 62.5%;
@@ -43,12 +43,7 @@
   --nelaSlabLightFont: "NelaSlabLight";
   --poppinsFont: "Poppins", sans-serif;
   --montserratFont: "Montserrat", sans-serif;
-  --newEleganceCondensed: "NewEleganceSansCondensed";
-  --newEleganceItalic: "NewEleganceItalic";
-  --newEleganceCondita: "NewEleganceCondita";
 }
-
-/* default settings */
 
 * {
   margin: 0;
@@ -61,6 +56,28 @@ body {
   background: #2b2730;
 }
 
+/* lenis scrool css setup  ------------------------------------------*/
+
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
 /* navbar sections */
 
 nav {
@@ -68,18 +85,16 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  left: 45%;
-  width: 60vw;
+  width: 68vw;
   min-height: 10vh;
   padding: 0 5%;
   z-index: 20;
-  /* background: #38323e; */
   background: rgba(30, 24, 24, 0.1);
   backdrop-filter: blur(20px);
+  font-family: var(--montserratFont);
 }
 
 .logo-navbar {
-  font-family: var(--montserratFont);
   font-size: calc(1rem + 1vw);
   opacity: 0;
   letter-spacing: 0.2rem;
@@ -99,7 +114,6 @@ nav {
 .menu-navbar li {
   display: inline-block;
   padding: 0 1rem;
-  font-family: var(--montserratFont);
   letter-spacing: 0.1rem;
 }
 
@@ -184,10 +198,11 @@ nav {
 .cta1,
 .cta1-x,
 .cta2 {
-  font-size: calc(7rem + 1vw);
-  font-family: var(--newEleganceCondensed);
+  font-size: calc(7.5rem + 1vw);
+  font-family: "MonaSansLight";
   letter-spacing: 0.5rem;
   opacity: 0;
+  text-transform: uppercase;
 }
 
 .cta1-x {
@@ -195,7 +210,7 @@ nav {
 }
 
 .cta-text2 {
-  padding: 1.8rem 0rem;
+  padding: 3rem 0rem;
   display: flex;
 }
 
@@ -207,13 +222,13 @@ nav {
 .cta4,
 .cta5 {
   font-size: calc(2rem + 1vw);
-  font-family: var(--montserratFont);
+  font-family: "MonaSansLightNarrow";
   letter-spacing: 0.7rem;
   opacity: 0;
 }
 
 .cta6 {
-  font-size: calc(1rem + 1vw);
+  font-size: calc(0.5rem + 1vw);
   font-family: var(--montserratFont);
   padding: 0 40rem 0 0;
   opacity: 0;
@@ -238,7 +253,6 @@ nav {
 
 #biography {
   position: relative;
-  min-height: 100vh;
   width: 100vw;
   color: var(--whiteColor);
 }
@@ -251,21 +265,21 @@ nav {
   line-height: 4rem;
   width: 100%;
   height: 100%;
-  padding: 10rem 0 10rem 5%;
+  padding: 10rem 0 5rem 5%;
 }
 
 .biography-container h1 {
   font-size: calc(6rem + 1vw);
+  font-family: var(--montserratFont);
   letter-spacing: 0.3rem;
   padding-bottom: 8rem;
-  font-family: var(--newEleganceItalic);
 }
 
-.biography-container p {
-  font-size: calc(1rem + 1vw);
-  line-height: 4rem;
+.text-container {
+  font-size: calc(3rem + 1vw);
   font-family: var(--poppinsFont);
-  padding: 0 15rem 0 0;
+  line-height: 10rem;
+  padding: 0 25rem 0 0;
 }
 
 /* gallery showcase ----------------------------------------------------- */
@@ -273,7 +287,6 @@ nav {
 #showcase {
   position: relative;
   width: 100vw;
-  min-height: 100vh;
 }
 
 .showcase-container {
@@ -282,7 +295,7 @@ nav {
   height: 100%;
   display: flex;
   justify-content: center;
-  flex-direction: column;
+  flex-direction: column-reverse;
   align-items: center;
   padding: 10rem 10rem 10rem 5%;
 }
@@ -303,12 +316,7 @@ nav {
 }
 
 .vector-style {
-  grid-column: 1/2;
-}
-
-.title-style {
   grid-column: 2/3;
-  padding: 5rem;
 }
 
 .web-style {
@@ -317,52 +325,31 @@ nav {
 
 .motion-style {
   grid-column: 2/3;
-  grid-row: 2/4;
-}
-
-.title-style {
-  background: rgb(110, 104, 163);
-  filter: grayscale(70%);
-}
-
-.title-style h1 {
-  font-size: calc(6rem + 1vw);
-  font-family: var(--newEleganceCondita);
-  color: var(--whiteColor);
+  grid-row: 2/3;
 }
 
 .retro-style,
 .vector-style,
 .motion-style,
-.web-style,
-.title-style {
+.web-style {
   flex: 1 1 0%;
   margin: 0.5rem 0;
 }
 
 .retro-style img,
-.vector-style img,
-.web-style img {
+.vector-style img {
   display: block;
   object-fit: cover;
   width: 100%;
   height: 100%;
-  filter: grayscale(70%);
 }
 
-.retro-style img:hover,
-.vector-style img:hover,
-.web-style img:hover,
-.motion-style video:hover {
-  filter: grayscale(0);
-}
-
-.motion-style video {
+.motion-style video,
+.web-style video {
   display: block;
   object-fit: cover;
   width: 100%;
   height: 100%;
-  filter: grayscale(50%);
 }
 
 .retro-title,
@@ -387,7 +374,7 @@ nav {
 .web-content {
   position: absolute;
   color: var(--whiteColor);
-  font-family: var(--newEleganceCondensed);
+  font-family: var(--montserratFont);
   top: 50%;
   left: 60%;
   width: 100%;
@@ -442,16 +429,16 @@ nav {
 .short-paragprah-text3 {
   padding: 0.4rem;
   font-size: calc(6rem + 1vw);
-  font-family: var(--newEleganceItalic);
+  font-family: var(--montserratFont);
   letter-spacing: 0.3rem;
 }
 
 .download-menu p {
   text-align: center;
-  font-size: calc(1rem + 1vw);
+  font-size: calc(0.5rem + 1vw);
   line-height: 3rem;
   font-family: var(--montserratFont);
-  padding: 0 25rem;
+  padding: 0 35rem;
 }
 
 .resume-hyperlink a,
@@ -459,37 +446,23 @@ nav {
   color: var(--whiteColor);
 }
 
-.cv-btn {
-  position: relative;
-  font-family: "Poppins", sans-serif;
-  background: none;
-  border-radius: 6rem;
-  font-size: calc(0.4rem + 1vw);
-  cursor: pointer;
-  margin: 5rem 0 0 0;
-  padding: 1rem 5rem;
-  color: white;
-  border: 1px solid white;
-}
-
 /* closing sections ------------------------------------------------------- */
 
 #closing-sections {
   position: relative;
   width: 100vw;
-  min-height: 100vh;
   color: var(--whiteColor);
 }
 
 .closing-container {
-  position: absolute;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100%;
   width: 100%;
-  padding: 10rem 10rem 10rem 5%;
+  padding: 1rem 10rem 20rem 5%;
 }
 
 .text-title {
@@ -501,10 +474,10 @@ nav {
 }
 
 .text-title h1 {
-  font-family: var(--newEleganceCondensed);
+  font-family: var(--montserratFont);
   font-size: calc(7rem + 1vw);
   text-align: center;
-  padding: 0 10rem 2rem 10rem;
+  padding: 0 10rem 1rem 10rem;
 }
 
 .text-title p {
@@ -512,6 +485,18 @@ nav {
   font-family: var(--montserratFont);
   line-height: 1.7rem;
   padding: 3rem 0 5rem 0;
+}
+
+.cv-btn {
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  background: none;
+  border-radius: 6rem;
+  font-size: calc(0.4rem + 1vw);
+  cursor: pointer;
+  padding: 1rem 5rem;
+  color: white;
+  border: 1px solid white;
 }
 
 /* footer ---------------------------------------------  */

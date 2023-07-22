@@ -5,25 +5,25 @@
   src: url("../font/NelaSlab\ Medium.ttf") format("truetype");
 }
 
+/* mona font -------------------------------------------------------------- */
+
 @font-face {
-  font-family: "NelaSlabLight";
-  src: url("../font/NelaSlab\ Light.ttf") format("truetype");
+  font-family: "MonaSansLight";
+  src: url("Mona-Sans.woff2") format("woff2 supports variations"),
+    url("../font/Mona-Sans.woff2") format("woff2-variations");
+  font-weight: 300;
+  font-stretch: 100%;
 }
 
 @font-face {
-  font-family: "NewEleganceSansCondensed";
-  src: url("../font/TheNewElegance-Condensed.otf") format("opentype");
+  font-family: "MonaSansLightNarrow";
+  src: url("Mona-Sans.woff2") format("woff2 supports variations"),
+    url("../font/Mona-Sans.woff2") format("woff2-variations");
+  font-weight: 200;
+  font-stretch: 75%;
 }
 
-@font-face {
-  font-family: "NewEleganceItalic";
-  src: url("../font/TheNewElegance-Italic.otf") format("opentype");
-}
-
-@font-face {
-  font-family: "NewEleganceCondita";
-  src: url("../font/TheNewElegance-CondIta.otf") format("opentype");
-}
+/* default settings ----------------------------------------------------------*/
 
 :root {
   font-size: 62.5%;
@@ -61,10 +61,6 @@ body {
   background: #2b2730;
 }
 
-/* navbar sections */
-
-/* opacity burger menu sections -------------------------------------------------------- */
-
 /* home sections -------------------------------------------------------- */
 
 /* --------------------------------------------------------------- left text  */
@@ -82,8 +78,8 @@ body {
 }
 
 .cta6 {
-  font-size: calc(1rem + 1vw);
-  padding: 0 20rem 0 0;
+  font-size: calc(0.5rem + 1vw);
+  padding: 0 25rem 0 0;
 }
 
 /* ---------------------------------------------------------- right side  */
@@ -94,8 +90,10 @@ body {
   font-size: calc(4rem + 1vw);
 }
 
-.biography-container p {
-  font-size: calc(1rem + 1vw);
+.text-container {
+  font-size: calc(2rem + 1vw);
+  line-height: 7rem;
+  padding: 0 20rem 0 0;
 }
 
 /* gallery showcase ----------------------------------------------------- */
@@ -105,12 +103,7 @@ body {
 }
 
 .vector-style {
-  grid-column: 1/2;
-}
-
-.title-style {
   grid-column: 2/3;
-  padding: 5rem;
 }
 
 .web-style {
@@ -119,23 +112,14 @@ body {
 
 .motion-style {
   grid-column: 2/3;
-  grid-row: 2/4;
-}
-
-.title-style {
-  background: rgb(84, 81, 116);
-  filter: grayscale(70%);
-}
-
-.title-style h1 {
-  font-size: calc(4rem + 1vw);
+  grid-row: 2/3;
 }
 
 .retro-content,
 .vector-content,
 .motion-content,
 .web-content {
-  font-size: calc(4rem + 1vw);
+  font-size: calc(3rem + 1vw);
 }
 
 /* ---------------------------------------------------  download menu */
@@ -148,17 +132,15 @@ body {
 
 .download-menu p {
   text-align: center;
-  font-size: calc(1rem + 1vw);
+  font-size: calc(0.8rem + 1vw);
   padding: 0 20rem;
 }
 
-.cv-btn {
-  font-size: calc(0.4rem + 1vw);
-  margin: 5rem 0 0 0;
-  padding: 1rem 5rem;
-}
-
 /* closing sections ------------------------------------------------------- */
+
+.closing-container {
+  padding: 5rem 10rem 20rem 5%;
+}
 
 .text-title h1 {
   font-size: calc(5rem + 1vw);

@@ -5,25 +5,25 @@
   src: url("../../font/NelaSlab\ Medium.ttf") format("truetype");
 }
 
+/* mona font -------------------------------------------------------------- */
+
 @font-face {
-  font-family: "NelaSlabLight";
-  src: url("../../font/NelaSlab\ Light.ttf") format("truetype");
+  font-family: "MonaSansLight";
+  src: url("Mona-Sans.woff2") format("woff2 supports variations"),
+    url("../../font/Mona-Sans.woff2") format("woff2-variations");
+  font-weight: 300;
+  font-stretch: 100%;
 }
 
 @font-face {
-  font-family: "NewEleganceSansCondensed";
-  src: url("../../font/TheNewElegance-Condensed.otf") format("opentype");
+  font-family: "MonaSansLightNarrow";
+  src: url("Mona-Sans.woff2") format("woff2 supports variations"),
+    url("../../font/Mona-Sans.woff2") format("woff2-variations");
+  font-weight: 200;
+  font-stretch: 75%;
 }
 
-@font-face {
-  font-family: "NewEleganceItalic";
-  src: url("../../font/TheNewElegance-Italic.otf") format("opentype");
-}
-
-@font-face {
-  font-family: "NewEleganceCondita";
-  src: url("../../font/TheNewElegance-CondIta.otf") format("opentype");
-}
+/* default settings ----------------------------------------------------------*/
 
 :root {
   font-size: 62.5%;
@@ -38,13 +38,8 @@
 
   /* font  */
 
-  --nelaSlabFont: "NelaSlabMedium";
-  --nelaSlabLightFont: "NelaSlabLight";
   --poppinsFont: "Poppins", sans-serif;
   --montserratFont: "Montserrat", sans-serif;
-  --newEleganceCondensed: "NewEleganceSansCondensed";
-  --newEleganceItalic: "NewEleganceItalic";
-  --newEleganceCondita: "NewEleganceCondita";
 }
 
 /* default settings */
@@ -72,14 +67,35 @@ body {
   background: #eeeeee;
 }
 
+/* lenis scrool css setup  ------------------------------------------*/
+
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
 /* navbar sections ---------------------------------------------------------- */
 
 nav {
   position: fixed;
-  width: 60vw;
-  left: 45%;
+  width: 100vw;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   min-height: 10vh;
   padding: 0 5%;
@@ -132,7 +148,6 @@ nav {
 #poster {
   position: relative;
   width: 100vw;
-  min-height: 100vh;
 }
 
 .gallery-poster-container {
@@ -140,7 +155,7 @@ nav {
   height: 100%;
   width: 100%;
   overflow: hidden;
-  padding: 8rem 5%;
+  padding: 20rem 5% 5rem 5%;
 }
 
 .gallery-poster {
@@ -162,17 +177,17 @@ nav {
 }
 
 .poster-title-main {
-  font-size: calc(4rem + 1vw);
-  font-family: var(--newEleganceItalic);
+  font-size: calc(8rem + 1vw);
+  font-family: var(--montserratFont);
   opacity: 0;
 }
 
 .poster-title-submain {
-  font-size: calc(0.5rem + 1vw);
-  font-family: var(--poppinsFont);
-  width: 50%;
-  padding: 2rem 5rem 0 0;
+  font-size: calc(2rem + 1vw);
+  font-family: "MonaSansLightNarrow";
+  padding: 2rem 0 3rem 0;
   opacity: 0;
+  border-bottom: 2px solid black;
 }
 
 .poster-1,
@@ -190,12 +205,8 @@ nav {
 }
 
 .poster-title {
-  grid-column: 1/3;
+  grid-column: 1/4;
   padding: 0 0 5rem 0;
-}
-
-.poster-title span {
-  display: block;
 }
 
 .poster-1 {
@@ -227,14 +238,13 @@ nav {
 #vector {
   position: relative;
   width: 100vw;
-  min-height: 100vh;
 }
 
 .gallery-vector-container {
   position: relative;
   height: 100%;
   width: 100%;
-  padding: 8rem 5%;
+  padding: 20rem 5% 5rem 5%;
 }
 
 .gallery-vector {
@@ -246,21 +256,16 @@ nav {
   height: 100%;
 }
 
-.vector-title {
-  position: relative;
-}
-
 .vector-title h1 {
-  font-size: calc(4rem + 1vw);
-  font-family: var(--newEleganceCondita);
-  width: 100%;
+  font-size: calc(8rem + 1vw);
+  font-family: var(--montserratFont);
 }
 
 .vector-title p {
-  font-size: calc(0.5rem + 1vw);
-  font-family: var(--poppinsFont);
-  padding-top: 2rem;
-  width: 100%;
+  font-size: calc(2rem + 1vw);
+  font-family: "MonaSansLightNarrow";
+  padding: 2rem 0 3rem 0;
+  border-bottom: 2px solid black;
 }
 
 .vector-1,
@@ -277,7 +282,7 @@ nav {
 }
 
 .vector-title {
-  grid-column: 1/3;
+  grid-column: 1/5;
   padding: 0 0 5rem 0;
 }
 
@@ -313,14 +318,13 @@ nav {
 #video {
   position: relative;
   width: 100vw;
-  min-height: 100vh;
 }
 
 .gallery-video-container {
   position: relative;
   height: 100%;
   width: 100%;
-  padding: 8rem 5%;
+  padding: 20rem 5% 20rem 5%;
 }
 
 .gallery-video {
@@ -333,15 +337,15 @@ nav {
 }
 
 .gallery-video h1 {
-  font-size: calc(4rem + 1vw);
-  font-family: var(--newEleganceItalic);
+  font-size: calc(8rem + 1vw);
+  font-family: var(--montserratFont);
 }
 
 .gallery-video p {
-  font-size: calc(0.5rem + 1vw);
-  font-family: var(--poppinsFont);
-  padding-top: 2rem;
-  width: 100%;
+  font-size: calc(2rem + 1vw);
+  font-family: "MonaSansLightNarrow";
+  padding: 2rem 0 3rem 0;
+  border-bottom: 2px solid black;
 }
 
 .video-1,
@@ -372,55 +376,4 @@ nav {
 .video-3 {
   grid-column: 3/4;
   grid-row: 2/3;
-}
-
-/* closing sections ------------------------------------------------------- */
-
-#closing-gallery {
-  position: relative;
-  width: 100vw;
-  min-height: 80vh;
-}
-
-.closing-container-gallery {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  width: 100%;
-}
-
-.closing-text {
-  position: relative;
-}
-
-.closing-text h1 {
-  font-family: var(--newEleganceCondita);
-  font-size: calc(8rem + 1vw);
-}
-
-.text-backhome-gallery {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  padding: 2rem 0;
-}
-
-.backhome-icon-gallery {
-  position: relative;
-  width: 80%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.text-backhome-gallery p {
-  position: relative;
-  color: var(--blackColor);
-  font-family: var(--nelaSlabLightFont);
-  letter-spacing: 0.2rem;
-  font-size: calc(2rem + 1vw);
-  padding: 3rem;
 }

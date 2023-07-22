@@ -5,25 +5,25 @@
   src: url("../font/NelaSlab\ Medium.ttf") format("truetype");
 }
 
+/* mona font -------------------------------------------------------------- */
+
 @font-face {
-  font-family: "NelaSlabLight";
-  src: url("../font/NelaSlab\ Light.ttf") format("truetype");
+  font-family: "MonaSansLight";
+  src: url("Mona-Sans.woff2") format("woff2 supports variations"),
+    url("../font/Mona-Sans.woff2") format("woff2-variations");
+  font-weight: 300;
+  font-stretch: 100%;
 }
 
 @font-face {
-  font-family: "NewEleganceSansCondensed";
-  src: url("../font/TheNewElegance-Condensed.otf") format("opentype");
+  font-family: "MonaSansLightNarrow";
+  src: url("Mona-Sans.woff2") format("woff2 supports variations"),
+    url("../font/Mona-Sans.woff2") format("woff2-variations");
+  font-weight: 200;
+  font-stretch: 75%;
 }
 
-@font-face {
-  font-family: "NewEleganceItalic";
-  src: url("../font/TheNewElegance-Italic.otf") format("opentype");
-}
-
-@font-face {
-  font-family: "NewEleganceCondita";
-  src: url("../font/TheNewElegance-CondIta.otf") format("opentype");
-}
+/* default settings ----------------------------------------------------------*/
 
 :root {
   font-size: 62.5%;
@@ -182,7 +182,7 @@ nav {
 }
 
 .cta6 {
-  font-size: calc(1rem + 1vw);
+  font-size: calc(0.8rem + 1vw);
   padding: 0 25rem 0 0;
 }
 
@@ -196,22 +196,23 @@ nav {
 /* short biography ------------------------------------------------------ */
 
 .biography-container {
-  padding: 10rem 0 10rem 5%;
+  padding: 10rem 0 5rem 5%;
 }
 
 .biography-container h1 {
   font-size: calc(4rem + 1vw);
 }
 
-.biography-container p {
-  font-size: calc(1rem + 1vw);
+.text-container {
+  font-size: calc(0.8rem + 1vw);
+  line-height: 5rem;
   padding: 0 10rem 0 0;
 }
 
 /* gallery showcase ----------------------------------------------- */
 
 .showcase-container {
-  padding: 10rem 5rem 10rem 5%;
+  padding: 5rem 5% 5rem 5%;
 }
 
 .retro-style {
@@ -219,11 +220,7 @@ nav {
 }
 
 .vector-style {
-  grid-column: 1/2;
-}
-
-.title-style {
-  display: none;
+  grid-column: 1/3;
 }
 
 .web-style {
@@ -232,14 +229,14 @@ nav {
 
 .motion-style {
   grid-column: 2/3;
-  grid-row: 2/4;
+  grid-row: 3/3;
 }
 
-.retro-content {
-  font-size: calc(5rem + 1vw);
+.retro-content,
+.vector-content {
+  font-size: calc(4rem + 1vw);
 }
 
-.vector-content,
 .motion-content,
 .web-content {
   font-size: calc(2rem + 1vw);
@@ -250,23 +247,19 @@ nav {
 .short-paragprah-text1,
 .short-paragprah-text2,
 .short-paragprah-text3 {
-  font-size: calc(2.5rem + 1vw);
+  font-size: calc(3rem + 1vw);
 }
 
 .download-menu p {
   text-align: center;
-  font-size: calc(1rem + 1vw);
-  padding: 0 5rem;
+  font-size: calc(0.8rem + 1vw);
+  padding: 0 10rem;
 }
 
-.cv-btn {
-  font-size: calc(0.5rem + 1vw);
-  margin: 3rem 0 0 0;
-}
 /* closing sections ----------------------------------------------------------- */
 
 .closing-container {
-  padding: 5rem 0rem 5rem 0%;
+  padding: 5rem 0rem 20rem 0%;
 }
 
 .text-title h1 {

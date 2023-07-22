@@ -5,25 +5,25 @@
   src: url("../font/NelaSlab\ Medium.ttf") format("truetype");
 }
 
+/* mona font -------------------------------------------------------------- */
+
 @font-face {
-  font-family: "NelaSlabLight";
-  src: url("../font/NelaSlab\ Light.ttf") format("truetype");
+  font-family: "MonaSansLight";
+  src: url("Mona-Sans.woff2") format("woff2 supports variations"),
+    url("../font/Mona-Sans.woff2") format("woff2-variations");
+  font-weight: 300;
+  font-stretch: 100%;
 }
 
 @font-face {
-  font-family: "NewEleganceSansCondensed";
-  src: url("../font/TheNewElegance-Condensed.otf") format("opentype");
+  font-family: "MonaSansLightNarrow";
+  src: url("Mona-Sans.woff2") format("woff2 supports variations"),
+    url("../font/Mona-Sans.woff2") format("woff2-variations");
+  font-weight: 200;
+  font-stretch: 75%;
 }
 
-@font-face {
-  font-family: "NewEleganceItalic";
-  src: url("../font/TheNewElegance-Italic.otf") format("opentype");
-}
-
-@font-face {
-  font-family: "NewEleganceCondita";
-  src: url("../font/TheNewElegance-CondIta.otf") format("opentype");
-}
+/* default settings ----------------------------------------------------------*/
 
 :root {
   font-size: 62.5%;
@@ -86,7 +86,7 @@ body {
 .cta1,
 .cta1-x,
 .cta2 {
-  font-size: calc(2.5rem + 1vw);
+  font-size: calc(2.2rem + 1vw);
 }
 
 .cta1-x {
@@ -100,35 +100,35 @@ body {
 }
 
 .cta6 {
-  font-size: calc(1rem + 1vw);
+  font-size: calc(0.8rem + 1vw);
   padding: 0 10rem 0 0;
 }
 
 /* ---------------------------------------------------------- right side  */
 
 .right-image img {
-  width: 80%;
+  width: 70%;
   height: 100%;
 }
 
 /* biography ------------------------------------------------------------------ */
 
-.biography-container h1 {
-  font-size: calc(2.5rem + 1vw);
-  padding-bottom: 5rem;
+.biography-container {
+  padding: 5rem 0 5rem 5%;
 }
 
-.biography-container p {
-  font-size: calc(1rem + 1vw);
+.biography-container h1 {
+  font-size: calc(2.5rem + 1vw);
+  padding-bottom: 3rem;
+}
+
+.text-container {
+  font-size: calc(0.8rem + 1vw);
   line-height: 3rem;
-  padding: 0 3rem 0 0;
+  padding: 0 5rem 0 0;
 }
 
 /* gallery showcase ----------------------------------------------- */
-
-.showcase-container {
-  padding: 5rem 2rem 10rem 5%;
-}
 
 .retro-style {
   grid-column: 1/3;
@@ -144,17 +144,17 @@ body {
 
 .motion-style {
   grid-column: 1/3;
-  grid-row: 3/4;
+  grid-row: 3/3;
 }
 
 .retro-content {
-  font-size: calc(2.5rem + 1vw);
+  font-size: calc(2rem + 1vw);
 }
 
 .vector-content,
 .motion-content,
 .web-content {
-  font-size: calc(2.5rem + 1vw);
+  font-size: calc(2rem + 1vw);
 }
 
 /* ---------------------------------------------------  download menu */
@@ -171,18 +171,15 @@ body {
 
 .download-menu p {
   text-align: center;
-  font-size: calc(0.8rem + 1vw);
-  padding: 0 3rem;
+  line-height: 2rem;
+  font-size: calc(0.5rem + 1vw);
+  padding: 2rem 3rem;
 }
 
-.cv-btn {
-  font-size: calc(0.5rem + 1vw);
-  padding: 1rem 3rem;
-}
 /* closing sections ----------------------------------------------------------- */
 
-.closing-container {
-  padding: 5rem 0rem 5rem 0%;
+closing-container {
+  padding: 0rem 0rem 20rem 0%;
 }
 
 .text-title h1 {
@@ -191,9 +188,9 @@ body {
 }
 
 .text-title p {
-  font-size: calc(0.8rem + 1vw);
+  font-size: calc(0.5rem + 1vw);
   text-align: center;
-  padding: 2rem 5rem 5rem 5rem;
+  padding: 1rem 5rem 5rem 5rem;
 }
 
 /* footer ---------------------------------------------  */

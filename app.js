@@ -1,5 +1,20 @@
 gsap.registerPlugin(ScrollTrigger);
 
+// lenis scrool basic setup -------------------------------------------
+
+const lenis = new Lenis();
+
+lenis.on("scroll", (e) => {
+  console.log(e);
+});
+
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
+
 // navbar burger toggle mobile version -------------------------------------------
 
 const burger = document.querySelector(".burger");
@@ -60,7 +75,16 @@ matchMediaResponsive.add(
 
     // logo agung -------------------------------------------------------------------
 
-    tl.fromTo("svg", { opacity: 0 }, { opacity: 1, duration: 3, delay: 0.5 });
+    tl.to("#biography", { display: "none" })
+      .to("#showcase", { display: "none" }, "<")
+      .to("#closing-sections", { display: "none" }, "<");
+
+    tl.fromTo(
+      "svg",
+      { opacity: 0 },
+      { opacity: 1, duration: 3, delay: 0.5 },
+      "<"
+    );
 
     tl.fromTo(
       "#left_line",
@@ -175,13 +199,17 @@ matchMediaResponsive.add(
       )
       .fromTo(".footer p", { opacity: 0 }, { opacity: 1 }, "<35%");
 
+    tl.to("#biography", { display: "block" })
+      .to("#showcase", { display: "block" }, "<")
+      .to("#closing-sections", { display: "block" }, "<");
+
     // closing home sections with opacity -----------------------------------------
 
     const tlClosingHomeSections = gsap.timeline({
       scrollTrigger: {
         trigger: "#home",
         start: "20% ",
-        end: "70% ",
+        end: "50% ",
         scrub: 1,
       },
     });
@@ -212,30 +240,81 @@ matchMediaResponsive.add(
       },
     });
 
-    tlNavbarChangeWidth
-      .fromTo("nav", { left: isMobile ? "0" : "45%" }, { left: "0" })
-      .fromTo(
-        "nav",
-        { width: isMobile ? "100vw" : "60vw" },
-        { width: "100vw" }
-      );
+    tlNavbarChangeWidth.fromTo(
+      "nav",
+      { width: isMobile ? "100vw" : "68vw" },
+      { width: "100vw" }
+    );
 
-    // short biography animation ------------------------------------------------
+    // higlight text biography animation ------------------------------------------------
 
-    const tlSplit = gsap.timeline({
+    const tlHiglightText = gsap.timeline({
       scrollTrigger: {
         trigger: "#biography",
-        start: "-45% center",
-        end: "0% top",
+        start: "-40%",
+        end: "40%",
         scrub: 4,
       },
     });
 
-    tlSplit.fromTo(
-      ".biography-container",
-      { x: isMobile ? "0%" : "50%", opacity: isMobile ? 1 : 0 },
-      { x: "0%", opacity: 1 },
-      "<35%"
+    tlHiglightText.fromTo(
+      ".highlight",
+      {
+        color: isMobile ? "rgba(255, 255, 255, 1)" : "rgba(255, 255, 255, 0.1)",
+      },
+      { color: "rgba(255, 255, 255, 1)", stagger: 1 }
+    );
+
+    // higlight remove text biography animation ------------------------------------------------
+
+    const tlHiglightRemoveText = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#biography",
+        start: "-20%",
+        end: "60%",
+        scrub: 4,
+      },
+    });
+
+    tlHiglightRemoveText.to(".highlight", {
+      color: isMobile ? "rgba(255, 255, 255, 1)" : "rgba(255, 255, 255, 0.1)",
+      stagger: 1,
+    });
+
+    // higlight text showcase animation ------------------------------------------------
+
+    const tlHiglightText2 = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#showcase",
+        start: "-10%",
+        end: "0%",
+        scrub: 4,
+      },
+    });
+
+    tlHiglightText2.fromTo(
+      ".highlight2",
+      {
+        color: isMobile ? "rgba(255, 255, 255, 1)" : "rgba(255, 255, 255, 0.1)",
+      },
+      { color: "rgba(255, 255, 255, 1)", stagger: 1 }
+    );
+
+    // higlight text showcase 2 animation ------------------------------------------------
+
+    const tlOpacityTextShowcase = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#showcase",
+        start: "-10%",
+        end: "0%",
+        scrub: 4,
+      },
+    });
+
+    tlOpacityTextShowcase.fromTo(
+      ".download-menu p",
+      { opacity: isMobile ? 1 : 0 },
+      { opacity: 1 }
     );
 
     // gallery showcase sections -----------------------------------------------------------
@@ -258,7 +337,7 @@ matchMediaResponsive.add(
       )
       .fromTo(
         ".vector-style",
-        { x: isMobile ? "0%" : "-50%", opacity: isMobile ? 1 : 0 },
+        { x: isMobile ? "0%" : "50%", opacity: isMobile ? 1 : 0 },
         { x: "0%", opacity: 1, duration: 0.5 },
         "<35%"
       )
