@@ -2,18 +2,18 @@ gsap.registerPlugin(ScrollTrigger);
 
 // lenis scrool basic setup -------------------------------------------
 
-const lenis = new Lenis();
+// const lenis = new Lenis();
 
-lenis.on("scroll", (e) => {
-  console.log(e);
-});
+// lenis.on("scroll", (e) => {
+//   console.log(e);
+// });
 
-function raf(time) {
-  lenis.raf(time);
-  requestAnimationFrame(raf);
-}
+// function raf(time) {
+//   lenis.raf(time);
+//   requestAnimationFrame(raf);
+// }
 
-requestAnimationFrame(raf);
+// requestAnimationFrame(raf);
 
 // navbar burger toggle mobile version -------------------------------------------
 
@@ -51,15 +51,15 @@ matchMediaResponsive.add(
 
     // lenis scrooltriger ---------------------------------------------------
 
-    const lenis = new Lenis();
+    // const lenis = new Lenis();
 
-    lenis.on("scroll", ScrollTrigger.update);
+    // lenis.on("scroll", ScrollTrigger.update);
 
-    gsap.ticker.add((time) => {
-      lenis.raf(time * 1000);
-    });
+    // gsap.ticker.add((time) => {
+    //   lenis.raf(time * 1000);
+    // });
 
-    gsap.ticker.lagSmoothing(0);
+    // gsap.ticker.lagSmoothing(0);
 
     // timeline setting basic---------------------------------------------------------------
 
