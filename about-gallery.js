@@ -46,6 +46,18 @@ matchMediaResponsive.add(
     console.log(context.conditions);
     const { isDesktop, isMobileTab } = context.conditions;
 
+    // lenis scrooltriger ---------------------------------------------------
+
+    const lenis = new Lenis();
+
+    lenis.on("scroll", ScrollTrigger.update);
+
+    gsap.ticker.add((time) => {
+      lenis.raf(time * 1000);
+    });
+
+    gsap.ticker.lagSmoothing(0);
+
     // timeline setting basic ------------------------------------------------
 
     const tl = gsap.timeline({
