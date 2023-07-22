@@ -265,7 +265,7 @@ matchMediaResponsive.add(
         trigger: "#biography",
         start: "-40%",
         end: "40%",
-        scrub: 1,
+        scrub: 4,
       },
     });
 
@@ -274,7 +274,7 @@ matchMediaResponsive.add(
       {
         color: isMobile ? "rgba(255, 255, 255, 1)" : "rgba(255, 255, 255, 0.1)",
       },
-      { color: "rgba(255, 255, 255, 1)", stagger: 1 }
+      { color: "rgba(255, 255, 255, 1)", stagger: 4 }
     );
 
     // higlight remove text biography animation ------------------------------------------------
@@ -284,7 +284,7 @@ matchMediaResponsive.add(
         trigger: "#biography",
         start: "-20%",
         end: "60%",
-        scrub: 1,
+        scrub: 4,
       },
     });
 
@@ -323,11 +323,9 @@ matchMediaResponsive.add(
       },
     });
 
-    tlOpacityTextShowcase.fromTo(
-      ".download-menu p",
-      { opacity: isMobile ? 1 : 0 },
-      { opacity: 1 }
-    );
+    tlOpacityTextShowcase.from(".download-menu p", {
+      opacity: isMobile ? 1 : 0,
+    });
 
     // gallery showcase sections -----------------------------------------------------------
 
