@@ -265,7 +265,7 @@ matchMediaResponsive.add(
         trigger: "#biography",
         start: "-40%",
         end: "40%",
-        scrub: 4,
+        scrub: 1,
       },
     });
 
@@ -284,7 +284,7 @@ matchMediaResponsive.add(
         trigger: "#biography",
         start: "-20%",
         end: "60%",
-        scrub: 4,
+        scrub: 1,
       },
     });
 
@@ -300,7 +300,7 @@ matchMediaResponsive.add(
         trigger: "#showcase",
         start: "-10%",
         end: "0%",
-        scrub: 4,
+        scrub: 1,
       },
     });
 
@@ -319,7 +319,7 @@ matchMediaResponsive.add(
         trigger: "#showcase",
         start: "-10%",
         end: "0%",
-        scrub: 4,
+        scrub: 1,
       },
     });
 
@@ -336,7 +336,7 @@ matchMediaResponsive.add(
         trigger: "#showcase",
         start: "-15% center",
         end: "0% top",
-        scrub: 4,
+        scrub: 1,
       },
     });
 
