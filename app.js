@@ -298,9 +298,9 @@ matchMediaResponsive.add(
 
     const tlHiglightText2 = gsap.timeline({
       scrollTrigger: {
-        trigger: "#showcase",
-        start: "0%",
-        end: "5%",
+        trigger: "#biography",
+        start: "80%",
+        end: "100%",
         scrub: 1,
       },
     });
@@ -317,9 +317,9 @@ matchMediaResponsive.add(
 
     const tlOpacityTextShowcase = gsap.timeline({
       scrollTrigger: {
-        trigger: "#showcase",
-        start: "2%",
-        end: "10%",
+        trigger: "#biography",
+        start: "90%",
+        end: "100%",
         scrub: 1,
       },
     });
