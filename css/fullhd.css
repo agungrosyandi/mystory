@@ -148,7 +148,6 @@ nav {
 #home {
   position: relative;
   width: 100vw;
-  min-height: 100vh;
 }
 
 .home-container {
@@ -176,7 +175,7 @@ nav {
   justify-content: center;
   flex: 2 1 0%;
   color: var(--whiteColor);
-  padding: 15rem 0 10rem 5%;
+  padding: 10rem 0 10rem 5%;
 }
 
 .cta-text1 H2,
