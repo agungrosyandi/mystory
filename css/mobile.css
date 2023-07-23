@@ -84,7 +84,7 @@ body {
 /* --------------------------------------------------------------- left text  */
 
 .cta {
-  padding: 15rem 0 10rem 5%;
+  padding: 10rem 2rem 10rem 5%;
 }
 
 .cta1,
@@ -112,13 +112,16 @@ body {
   padding: 0 5rem 0 0;
 }
 
+.cta-paragraph {
+  border-bottom: 1px solid white;
+  padding-bottom: 5rem;
+}
+
 /* ---------------------------------------------------------- right side  */
 
 .right-image {
-  width: 60%;
-  height: 90rem;
+  display: none;
 }
-
 /* biography ------------------------------------------------------------------ */
 
 .biography-container {
