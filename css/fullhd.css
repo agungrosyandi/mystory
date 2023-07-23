@@ -58,7 +58,7 @@ body {
 
 /* lenis scrool css setup  ------------------------------------------*/
 
-/* html.lenis {
+html.lenis {
   height: auto;
 }
 
@@ -76,7 +76,7 @@ body {
 
 .lenis.lenis-scrolling iframe {
   pointer-events: none;
-} */
+}
 
 /* navbar sections */
 
@@ -176,7 +176,7 @@ nav {
   justify-content: center;
   flex: 2 1 0%;
   color: var(--whiteColor);
-  padding: 10rem 0 10rem 5%;
+  padding: 15rem 0 10rem 5%;
 }
 
 .cta-text1 H2,
@@ -198,7 +198,7 @@ nav {
 .cta1,
 .cta1-x,
 .cta2 {
-  font-size: calc(7.5rem + 1vw);
+  font-size: calc(5.5rem + 1vw);
   font-family: "MonaSansLight";
   letter-spacing: 0.5rem;
   opacity: 0;
@@ -221,16 +221,17 @@ nav {
 .cta3,
 .cta4,
 .cta5 {
-  font-size: calc(2rem + 1vw);
+  font-size: calc(3rem + 1vw);
   font-family: "MonaSansLightNarrow";
   letter-spacing: 0.7rem;
   opacity: 0;
 }
 
 .cta6 {
-  font-size: calc(0.5rem + 1vw);
+  font-size: calc(1rem + 1vw);
   font-family: var(--montserratFont);
-  padding: 0 40rem 0 0;
+  width: 80%;
+  padding: 0 10rem 0 0;
   opacity: 0;
 }
 
@@ -241,6 +242,8 @@ nav {
   flex: 1 1 0%;
   filter: grayscale(50%);
   opacity: 0;
+  width: 100%;
+  height: 90rem;
 }
 
 .right-image img {
@@ -276,10 +279,10 @@ nav {
 }
 
 .text-container {
-  font-size: calc(3rem + 1vw);
+  font-size: calc(1.5rem + 1vw);
   font-family: var(--poppinsFont);
-  line-height: 10rem;
-  padding: 0 25rem 0 0;
+  line-height: 7rem;
+  padding: 0 15rem 0 0;
 }
 
 /* gallery showcase ----------------------------------------------------- */
@@ -415,6 +418,7 @@ nav {
   flex-direction: column;
   text-align: center;
   color: white;
+  padding: 0 0 2rem 0;
 }
 
 .title-short-paragraph {
@@ -435,10 +439,10 @@ nav {
 
 .download-menu p {
   text-align: center;
-  font-size: calc(0.5rem + 1vw);
+  font-size: calc(1rem + 1vw);
   line-height: 3rem;
   font-family: var(--montserratFont);
-  padding: 0 35rem;
+  padding: 0 15rem;
 }
 
 .resume-hyperlink a,
@@ -462,7 +466,7 @@ nav {
   align-items: center;
   height: 100%;
   width: 100%;
-  padding: 1rem 10rem 20rem 5%;
+  padding: 1rem 10rem 25rem 5%;
 }
 
 .text-title {
@@ -480,54 +484,25 @@ nav {
   padding: 0 10rem 1rem 10rem;
 }
 
-.text-title p {
-  font-size: calc(0.5rem + 1vw);
-  font-family: var(--montserratFont);
+.text-title h6 {
+  font-size: calc(1.5rem + 1vw);
+  font-family: "MonaSansLightNarrow";
+  text-align: center;
   line-height: 1.7rem;
-  padding: 3rem 0 5rem 0;
+  padding: 5rem 0 5rem 0;
 }
 
-.cv-btn {
-  position: relative;
-  font-family: "Poppins", sans-serif;
-  background: none;
-  border-radius: 6rem;
-  font-size: calc(0.4rem + 1vw);
-  cursor: pointer;
-  padding: 1rem 5rem;
+.text-title p {
+  font-size: calc(1rem + 1vw);
+  font-family: var(--montserratFont);
+  text-align: center;
+  line-height: 1.7rem;
+  padding: 2rem 0 2rem 0;
+}
+
+.text-title a {
   color: white;
-  border: 1px solid white;
-}
-
-/* footer ---------------------------------------------  */
-
-.footer {
-  position: fixed;
-  width: 100vw;
-  min-height: 10vh;
-  background: rgba(30, 24, 24, 0.1);
-  backdrop-filter: blur(10px);
-  z-index: 5;
-  bottom: 0;
-  color: var(--whiteColor);
-}
-
-.footer-container {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-}
-
-.footer p {
-  font-size: calc(1rem + 0.5vw);
-  font-family: var(--nelaSlabLightFont);
-  opacity: 0;
-}
-
-.footer a {
   text-decoration: none;
-  color: white;
+  border-bottom: 1px solid white;
+  padding: 2rem 0;
 }

@@ -166,31 +166,14 @@ nav {
 /* --------------------------------------------------------------- left text  */
 
 .cta {
-  padding: 15rem 0 10rem 5%;
-}
-
-.cta1,
-.cta1-x,
-.cta2 {
-  font-size: calc(5rem + 1vw);
-}
-
-.cta3,
-.cta4,
-.cta5 {
-  font-size: calc(2rem + 1vw);
-}
-
-.cta6 {
-  font-size: calc(0.8rem + 1vw);
-  padding: 0 25rem 0 0;
+  padding: 20rem 0 10rem 5%;
 }
 
 /* ---------------------------------------------------------- right side  */
 
-.right-image img {
-  width: 50%;
-  height: 100%;
+.right-image {
+  width: 60%;
+  height: 90rem;
 }
 
 /* short biography ------------------------------------------------------ */
@@ -199,12 +182,7 @@ nav {
   padding: 10rem 0 5rem 5%;
 }
 
-.biography-container h1 {
-  font-size: calc(4rem + 1vw);
-}
-
 .text-container {
-  font-size: calc(0.8rem + 1vw);
   line-height: 5rem;
   padding: 0 10rem 0 0;
 }
@@ -251,9 +229,7 @@ nav {
 }
 
 .download-menu p {
-  text-align: center;
-  font-size: calc(0.8rem + 1vw);
-  padding: 0 10rem;
+  padding: 0 5rem;
 }
 
 /* closing sections ----------------------------------------------------------- */
@@ -264,16 +240,12 @@ nav {
 
 .text-title h1 {
   font-size: calc(5rem + 1vw);
-  padding: 0 2rem 2rem 2rem;
+}
+
+.text-title h6 {
+  font-size: calc(1rem + 1vw);
 }
 
 .text-title p {
-  font-size: calc(0.5rem + 1vw);
-  padding: 3rem 0 5rem 0;
-}
-
-/* footer ---------------------------------------------  */
-
-.footer p {
-  font-size: calc(1.5rem + 0.5vw);
+  font-size: calc(1rem + 1vw);
 }

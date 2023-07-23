@@ -83,52 +83,66 @@ body {
 
 /* --------------------------------------------------------------- left text  */
 
+.cta {
+  padding: 15rem 0 10rem 5%;
+}
+
 .cta1,
 .cta1-x,
 .cta2 {
-  font-size: calc(2.2rem + 1vw);
+  font-size: calc(3.5rem + 1vw);
 }
 
 .cta1-x {
   padding-left: 1rem;
 }
 
+.cta-text2 {
+  padding: 2rem 0rem;
+}
+
 .cta3,
 .cta4,
 .cta5 {
-  font-size: calc(1rem + 1vw);
+  font-size: calc(1.5rem + 1vw);
 }
 
 .cta6 {
-  font-size: calc(0.8rem + 1vw);
-  padding: 0 10rem 0 0;
+  width: 90%;
+  padding: 0 5rem 0 0;
 }
 
 /* ---------------------------------------------------------- right side  */
 
-.right-image img {
-  width: 70%;
-  height: 100%;
+.right-image {
+  width: 60%;
+  height: 90rem;
 }
 
 /* biography ------------------------------------------------------------------ */
 
 .biography-container {
-  padding: 5rem 0 5rem 5%;
+  padding: 5rem 0rem 5rem 5%;
 }
 
 .biography-container h1 {
-  font-size: calc(2.5rem + 1vw);
+  font-size: calc(3rem + 1vw);
   padding-bottom: 3rem;
 }
 
 .text-container {
-  font-size: calc(0.8rem + 1vw);
+  font-size: calc(1rem + 1vw);
   line-height: 3rem;
-  padding: 0 5rem 0 0;
+  padding: 0 4rem 5rem 0;
+  border-bottom: 1px solid white;
 }
 
 /* gallery showcase ----------------------------------------------- */
+
+.gallery-showcase {
+  position: relative;
+  padding: 2rem 0;
+}
 
 .retro-style {
   grid-column: 1/3;
@@ -166,35 +180,30 @@ body {
 .short-paragprah-text1,
 .short-paragprah-text2,
 .short-paragprah-text3 {
-  font-size: calc(2.5rem + 1vw);
+  font-size: calc(4rem + 1vw);
 }
 
 .download-menu p {
-  text-align: center;
   line-height: 2rem;
-  font-size: calc(0.5rem + 1vw);
   padding: 2rem 3rem;
 }
 
 /* closing sections ----------------------------------------------------------- */
 
-closing-container {
-  padding: 0rem 0rem 20rem 0%;
+.closing-container {
+  padding: 0 0rem 15rem 0%;
 }
 
 .text-title h1 {
   font-size: calc(2.5rem + 1vw);
-  padding: 0 2rem 2rem 2rem;
+  padding: 0 3rem 1rem 3rem;
+}
+
+.text-title h6 {
+  font-size: calc(1rem + 1vw);
+  padding: 2rem 7rem 2rem 7rem;
 }
 
 .text-title p {
-  font-size: calc(0.5rem + 1vw);
-  text-align: center;
-  padding: 1rem 5rem 5rem 5rem;
-}
-
-/* footer ---------------------------------------------  */
-
-.footer p {
-  font-size: calc(1rem + 0.5vw);
+  font-size: calc(0.8rem + 1vw);
 }
