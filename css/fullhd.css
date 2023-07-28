@@ -1,24 +1,24 @@
 /* font used */
 
 @font-face {
-  font-family: "NelaSlabMedium";
-  src: url("../font/NelaSlab\ Medium.ttf") format("truetype");
+  font-family: 'NelaSlabMedium';
+  src: url('../font/NelaSlab\ Medium.ttf') format('truetype');
 }
 
 /* mona font -------------------------------------------------------------- */
 
 @font-face {
-  font-family: "MonaSansLight";
-  src: url("Mona-Sans.woff2") format("woff2 supports variations"),
-    url("../font/Mona-Sans.woff2") format("woff2-variations");
+  font-family: 'MonaSansLight';
+  src: url('Mona-Sans.woff2') format('woff2 supports variations'),
+    url('../font/Mona-Sans.woff2') format('woff2-variations');
   font-weight: 200;
   font-stretch: 125%;
 }
 
 @font-face {
-  font-family: "MonaSansLightNarrow";
-  src: url("Mona-Sans.woff2") format("woff2 supports variations"),
-    url("../font/Mona-Sans.woff2") format("woff2-variations");
+  font-family: 'MonaSansLightNarrow';
+  src: url('Mona-Sans.woff2') format('woff2 supports variations'),
+    url('../font/Mona-Sans.woff2') format('woff2-variations');
   font-weight: 200;
   font-stretch: 75%;
 }
@@ -39,10 +39,10 @@
 
   /* font  */
 
-  --nelaSlabFont: "NelaSlabMedium";
-  --nelaSlabLightFont: "NelaSlabLight";
-  --poppinsFont: "Poppins", sans-serif;
-  --montserratFont: "Montserrat", sans-serif;
+  --nelaSlabFont: 'NelaSlabMedium';
+  --nelaSlabLightFont: 'NelaSlabLight';
+  --poppinsFont: 'Poppins', sans-serif;
+  --montserratFont: 'Montserrat', sans-serif;
 }
 
 * {
@@ -200,7 +200,7 @@ nav {
 .cta1-x,
 .cta2 {
   font-size: calc(5.5rem + 1vw);
-  font-family: "MonaSansLight";
+  font-family: 'MonaSansLight';
   letter-spacing: 0.5rem;
   opacity: 0;
   text-transform: uppercase;
@@ -223,7 +223,7 @@ nav {
 .cta4,
 .cta5 {
   font-size: calc(3rem + 1vw);
-  font-family: "MonaSansLightNarrow";
+  font-family: 'MonaSansLightNarrow';
   letter-spacing: 0.7rem;
   opacity: 0;
 }
@@ -448,7 +448,8 @@ nav {
 
 .resume-hyperlink a,
 .portfolio-hyperlink a {
-  color: var(--whiteColor);
+  color: rgb(208, 221, 88);
+  text-decoration: none;
 }
 
 /* closing sections ------------------------------------------------------- */
@@ -487,10 +488,10 @@ nav {
 
 .text-title h6 {
   font-size: calc(1.5rem + 1vw);
-  font-family: "MonaSansLightNarrow";
+  font-family: 'MonaSansLightNarrow';
   text-align: center;
   line-height: 1.7rem;
-  padding: 5rem 0 5rem 0;
+  padding: 3rem 0 3rem 0;
 }
 
 .text-title p {
@@ -502,8 +503,6 @@ nav {
 }
 
 .text-title a {
-  color: white;
+  color: rgb(208, 221, 88);
   text-decoration: none;
-  border-bottom: 1px solid white;
-  padding: 2rem 0;
 }
