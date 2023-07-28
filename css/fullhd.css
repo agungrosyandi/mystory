@@ -448,7 +448,7 @@ nav {
 
 .resume-hyperlink a,
 .portfolio-hyperlink a {
-  color: rgb(208, 221, 88);
+  color: rgb(229, 255, 0);
   text-decoration: none;
 }
 
@@ -503,6 +503,6 @@ nav {
 }
 
 .text-title a {
-  color: rgb(208, 221, 88);
+  color: rgb(229, 255, 0);
   text-decoration: none;
 }
