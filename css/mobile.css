@@ -84,37 +84,25 @@ body {
 /* --------------------------------------------------------------- left text  */
 
 .cta {
-  padding: 10rem 2rem 10rem 5%;
+  padding: 5rem 2rem 5rem 5%;
 }
 
 .cta1,
 .cta1-x,
 .cta2 {
-  font-size: calc(3.5rem + 1vw);
-}
-
-.cta1-x {
-  padding-left: 1rem;
-}
-
-.cta-text2 {
-  padding: 2rem 0rem;
+  font-size: calc(3.3rem + 1vw);
 }
 
 .cta3,
 .cta4,
 .cta5 {
-  font-size: calc(1.5rem + 1vw);
+  font-size: calc(1.3rem + 1vw);
 }
 
 .cta6 {
-  width: 90%;
-  padding: 0 5rem 0 0;
-}
-
-.cta-paragraph {
+  width: 100%;
+  padding: 0 5rem 5rem 0;
   border-bottom: 1px solid white;
-  padding-bottom: 5rem;
 }
 
 /* ---------------------------------------------------------- right side  */
@@ -202,11 +190,7 @@ body {
   padding: 0 3rem 1rem 3rem;
 }
 
-.text-title h6 {
-  font-size: calc(1rem + 1vw);
-  padding: 2rem 7rem 2rem 7rem;
-}
-
 .text-title p {
-  font-size: calc(0.8rem + 1vw);
+  line-height: 2rem;
+  padding: 3rem 6rem 4rem 6rem;
 }

@@ -68,17 +68,13 @@ body {
 .cta1,
 .cta1-x,
 .cta2 {
-  font-size: calc(4.5rem + 1vw);
+  font-size: calc(5rem + 1vw);
 }
 
 .cta3,
 .cta4,
 .cta5 {
   font-size: calc(1rem + 1vw);
-}
-
-.cta6 {
-  font-size: calc(0.5rem + 1vw);
 }
 
 /* ---------------------------------------------------------- right side  */
@@ -144,12 +140,4 @@ body {
 
 .text-title h1 {
   font-size: calc(5rem + 1vw);
-}
-
-.text-title h6 {
-  font-size: calc(1rem + 1vw);
-}
-
-.text-title p {
-  font-size: calc(1rem + 1vw);
 }

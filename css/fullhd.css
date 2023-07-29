@@ -12,7 +12,7 @@
   src: url('Mona-Sans.woff2') format('woff2 supports variations'),
     url('../font/Mona-Sans.woff2') format('woff2-variations');
   font-weight: 200;
-  font-stretch: 125%;
+  font-stretch: 100%;
 }
 
 @font-face {
@@ -180,6 +180,10 @@ nav {
   padding: 10rem 0 10rem 5%;
 }
 
+.cta1-x {
+  padding: 0.5rem 0;
+}
+
 .cta-text1 H2,
 .cta-text2 h2,
 .cta-paragraph p {
@@ -199,19 +203,18 @@ nav {
 .cta1,
 .cta1-x,
 .cta2 {
-  font-size: calc(5.5rem + 1vw);
+  font-size: calc(7rem + 1vw);
   font-family: 'MonaSansLight';
   letter-spacing: 0.5rem;
   opacity: 0;
   text-transform: uppercase;
 }
 
-.cta1-x {
-  padding-left: 3rem;
+.cta-text1 {
+  padding: 3rem 0rem;
 }
 
 .cta-text2 {
-  padding: 3rem 0rem;
   display: flex;
 }
 
@@ -222,16 +225,15 @@ nav {
 .cta3,
 .cta4,
 .cta5 {
-  font-size: calc(3rem + 1vw);
+  font-size: calc(1.5rem + 1vw);
   font-family: 'MonaSansLightNarrow';
-  letter-spacing: 0.7rem;
   opacity: 0;
 }
 
 .cta6 {
-  font-size: calc(1rem + 1vw);
+  font-size: calc(0.5rem + 1vw);
   font-family: var(--montserratFont);
-  width: 80%;
+  width: 70%;
   padding: 0 10rem 0 0;
   opacity: 0;
 }
@@ -440,7 +442,7 @@ nav {
 
 .download-menu p {
   text-align: center;
-  font-size: calc(1rem + 1vw);
+  font-size: calc(0.8rem + 1vw);
   line-height: 3rem;
   font-family: var(--montserratFont);
   padding: 0 15rem;
@@ -486,23 +488,25 @@ nav {
   padding: 0 10rem 1rem 10rem;
 }
 
-.text-title h6 {
-  font-size: calc(1.5rem + 1vw);
-  font-family: 'MonaSansLightNarrow';
-  text-align: center;
-  line-height: 1.7rem;
-  padding: 3rem 0 3rem 0;
-}
-
 .text-title p {
-  font-size: calc(1rem + 1vw);
+  font-size: calc(0.8rem + 1vw);
   font-family: var(--montserratFont);
   text-align: center;
-  line-height: 1.7rem;
-  padding: 2rem 0 2rem 0;
+  line-height: 3rem;
+  padding: 3rem 0 4rem 0;
 }
 
-.text-title a {
-  color: rgb(229, 255, 0);
+.email-button {
+  font-size: calc(0.5rem + 1vw);
+  font-family: var(--poppinsFont);
+  cursor: pointer;
+  color: white;
+  padding: 1rem 3rem;
+  border: 1px solid white;
+  border-radius: 10px;
+}
+
+.email-button a {
+  color: white;
   text-decoration: none;
 }
