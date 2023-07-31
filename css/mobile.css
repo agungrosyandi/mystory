@@ -1,24 +1,24 @@
 /* font used */
 
 @font-face {
-  font-family: 'NelaSlabMedium';
-  src: url('../font/NelaSlab\ Medium.ttf') format('truetype');
+  font-family: "NelaSlabMedium";
+  src: url("../font/NelaSlab\ Medium.ttf") format("truetype");
 }
 
 /* mona font -------------------------------------------------------------- */
 
 @font-face {
-  font-family: 'MonaSansLight';
-  src: url('Mona-Sans.woff2') format('woff2 supports variations'),
-    url('../font/Mona-Sans.woff2') format('woff2-variations');
+  font-family: "MonaSansLight";
+  src: url("Mona-Sans.woff2") format("woff2 supports variations"),
+    url("../font/Mona-Sans.woff2") format("woff2-variations");
   font-weight: 200;
   font-stretch: 125%;
 }
 
 @font-face {
-  font-family: 'MonaSansLightNarrow';
-  src: url('Mona-Sans.woff2') format('woff2 supports variations'),
-    url('../font/Mona-Sans.woff2') format('woff2-variations');
+  font-family: "MonaSansLightNarrow";
+  src: url("Mona-Sans.woff2") format("woff2 supports variations"),
+    url("../font/Mona-Sans.woff2") format("woff2-variations");
   font-weight: 200;
   font-stretch: 75%;
 }
@@ -39,13 +39,13 @@
 
   /* font  */
 
-  --nelaSlabFont: 'NelaSlabMedium';
-  --nelaSlabLightFont: 'NelaSlabLight';
-  --poppinsFont: 'Poppins', sans-serif;
-  --montserratFont: 'Montserrat', sans-serif;
-  --newEleganceCondensed: 'NewEleganceSansCondensed';
-  --newEleganceItalic: 'NewEleganceItalic';
-  --newEleganceCondita: 'NewEleganceCondita';
+  --nelaSlabFont: "NelaSlabMedium";
+  --nelaSlabLightFont: "NelaSlabLight";
+  --poppinsFont: "Poppins", sans-serif;
+  --montserratFont: "Montserrat", sans-serif;
+  --newEleganceCondensed: "NewEleganceSansCondensed";
+  --newEleganceItalic: "NewEleganceItalic";
+  --newEleganceCondita: "NewEleganceCondita";
 }
 
 /* default settings */
@@ -186,7 +186,7 @@ body {
 }
 
 .text-title h1 {
-  font-size: calc(2.5rem + 1vw);
+  font-size: calc(2rem + 1vw);
   padding: 0 3rem 1rem 3rem;
 }
 
