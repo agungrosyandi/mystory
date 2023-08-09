@@ -1,24 +1,24 @@
 /* font used */
 
 @font-face {
-  font-family: "NelaSlabMedium";
-  src: url("../font/NelaSlab\ Medium.ttf") format("truetype");
+  font-family: 'NelaSlabMedium';
+  src: url('../font/NelaSlab\ Medium.ttf') format('truetype');
 }
 
 /* mona font -------------------------------------------------------------- */
 
 @font-face {
-  font-family: "MonaSansLight";
-  src: url("Mona-Sans.woff2") format("woff2 supports variations"),
-    url("../font/Mona-Sans.woff2") format("woff2-variations");
+  font-family: 'MonaSansLight';
+  src: url('Mona-Sans.woff2') format('woff2 supports variations'),
+    url('../font/Mona-Sans.woff2') format('woff2-variations');
   font-weight: 200;
   font-stretch: 125%;
 }
 
 @font-face {
-  font-family: "MonaSansLightNarrow";
-  src: url("Mona-Sans.woff2") format("woff2 supports variations"),
-    url("../font/Mona-Sans.woff2") format("woff2-variations");
+  font-family: 'MonaSansLightNarrow';
+  src: url('Mona-Sans.woff2') format('woff2 supports variations'),
+    url('../font/Mona-Sans.woff2') format('woff2-variations');
   font-weight: 200;
   font-stretch: 75%;
 }
@@ -39,13 +39,13 @@
 
   /* font  */
 
-  --nelaSlabFont: "NelaSlabMedium";
-  --nelaSlabLightFont: "NelaSlabLight";
-  --poppinsFont: "Poppins", sans-serif;
-  --montserratFont: "Montserrat", sans-serif;
-  --newEleganceCondensed: "NewEleganceSansCondensed";
-  --newEleganceItalic: "NewEleganceItalic";
-  --newEleganceCondita: "NewEleganceCondita";
+  --nelaSlabFont: 'NelaSlabMedium';
+  --nelaSlabLightFont: 'NelaSlabLight';
+  --poppinsFont: 'Poppins', sans-serif;
+  --montserratFont: 'Montserrat', sans-serif;
+  --newEleganceCondensed: 'NewEleganceSansCondensed';
+  --newEleganceItalic: 'NewEleganceItalic';
+  --newEleganceCondita: 'NewEleganceCondita';
 }
 
 /* default settings */
@@ -102,7 +102,6 @@ body {
 .cta6 {
   width: 100%;
   padding: 0 5rem 5rem 0;
-  border-bottom: 1px solid white;
 }
 
 /* ---------------------------------------------------------- right side  */
@@ -113,53 +112,45 @@ body {
 /* biography ------------------------------------------------------------------ */
 
 .biography-container {
-  padding: 5rem 0rem 5rem 5%;
+  padding: 5rem 0rem 1rem 5%;
 }
 
 .biography-container h1 {
   font-size: calc(3rem + 1vw);
   padding-bottom: 3rem;
+  padding-top: 0;
+  border-top: none;
 }
 
 .text-container {
   font-size: calc(1rem + 1vw);
   line-height: 3rem;
   padding: 0 4rem 5rem 0;
-  border-bottom: 1px solid white;
 }
 
 /* gallery showcase ----------------------------------------------- */
 
 .gallery-showcase {
   position: relative;
-  padding: 2rem 0;
+  padding: 2rem 0 5rem 0;
 }
 
-.retro-style {
-  grid-column: 1/3;
-}
-
-.vector-style {
-  grid-column: 1/3;
-}
-
-.web-style {
-  grid-column: 1/3;
-}
-
-.motion-style {
-  grid-column: 1/3;
-  grid-row: 3/3;
-}
-
-.retro-content {
-  font-size: calc(2rem + 1vw);
-}
-
+.retro-content,
 .vector-content,
-.motion-content,
 .web-content {
-  font-size: calc(2rem + 1vw);
+  top: 40%;
+  left: 60%;
+}
+
+.retro-content,
+.vector-content,
+.web-content {
+  font-size: calc(2.5rem + 1vw);
+}
+
+.button-content button {
+  font-size: calc(0.5rem + 1vw);
+  padding: 0.5rem 2rem;
 }
 
 /* ---------------------------------------------------  download menu */
@@ -176,7 +167,7 @@ body {
 
 .download-menu p {
   line-height: 2rem;
-  padding: 2rem 3rem;
+  padding: 1rem 1rem;
 }
 
 /* closing sections ----------------------------------------------------------- */
@@ -187,10 +178,10 @@ body {
 
 .text-title h1 {
   font-size: calc(2rem + 1vw);
-  padding: 0 3rem 1rem 3rem;
+  padding: 0 1rem 1rem 1rem;
 }
 
 .text-title p {
   line-height: 2rem;
-  padding: 3rem 6rem 4rem 6rem;
+  padding: 1rem 3rem 3rem 3rem;
 }

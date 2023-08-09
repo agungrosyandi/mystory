@@ -89,7 +89,8 @@ matchMediaResponsive.add(
 
     tl.to('#biography', { display: isMobile ? 'block' : 'none' })
       .to('#showcase', { display: isMobile ? 'block' : 'none' }, '<')
-      .to('#closing-sections', { display: isMobile ? 'block' : 'none' }, '<');
+      .to('#closing-sections', { display: isMobile ? 'block' : 'none' }, '<')
+      .to('.footer', { display: isMobile ? 'block' : 'none' }, '<');
 
     tl.to('svg', { display: isMobile ? 'none' : 'block' });
 
@@ -224,7 +225,8 @@ matchMediaResponsive.add(
 
     tl.to('#biography', { display: 'block' })
       .to('#showcase', { display: 'block' }, '<')
-      .to('#closing-sections', { display: 'block' }, '<');
+      .to('#closing-sections', { display: 'block' }, '<')
+      .to('.footer', { display: 'block' }, '<');
 
     // closing home sections with opacity -----------------------------------------
 
@@ -280,19 +282,19 @@ matchMediaResponsive.add(
 
     // higlight remove text biography animation ------------------------------------------------
 
-    const tlHiglightRemoveText = gsap.timeline({
-      scrollTrigger: {
-        trigger: '#biography',
-        start: '-20%',
-        end: '60%',
-        scrub: 4,
-      },
-    });
+    // const tlHiglightRemoveText = gsap.timeline({
+    //   scrollTrigger: {
+    //     trigger: '#biography',
+    //     start: '-20%',
+    //     end: '60%',
+    //     scrub: 4,
+    //   },
+    // });
 
-    tlHiglightRemoveText.to('.highlight', {
-      color: isMobile ? 'rgba(255, 255, 255, 1)' : 'rgba(255, 255, 255, 0.1)',
-      stagger: 1,
-    });
+    // tlHiglightRemoveText.to('.highlight', {
+    //   color: isMobile ? 'rgba(255, 255, 255, 1)' : 'rgba(255, 255, 255, 0.1)',
+    //   stagger: 1,
+    // });
 
     // higlight text showcase animation ------------------------------------------------
 
@@ -333,8 +335,8 @@ matchMediaResponsive.add(
     const tlSplitRetro = gsap.timeline({
       scrollTrigger: {
         trigger: '#showcase',
-        start: '-15% center',
-        end: '0% top',
+        start: '-25% center',
+        end: '60% top',
         scrub: 1,
       },
     });
@@ -355,12 +357,6 @@ matchMediaResponsive.add(
       .fromTo(
         '.web-style',
         { x: isMobile ? '0%' : '-50%', opacity: isMobile ? 1 : 0 },
-        { x: '0%', opacity: 1, duration: 0.5 },
-        '<35%'
-      )
-      .fromTo(
-        '.motion-style',
-        { x: isMobile ? '0%' : '50%', opacity: isMobile ? 1 : 0 },
         { x: '0%', opacity: 1, duration: 0.5 },
         '<35%'
       );

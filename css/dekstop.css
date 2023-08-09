@@ -77,6 +77,10 @@ body {
   font-size: calc(1rem + 1vw);
 }
 
+.cta6 {
+  padding: 0 5rem 5rem 0;
+}
+
 /* ---------------------------------------------------------- right side  */
 
 /* short biography ------------------------------------------------- */
@@ -86,38 +90,24 @@ body {
 }
 
 .biography-container h1 {
-  font-size: calc(4rem + 1vw);
+  font-size: calc(5rem + 1vw);
 }
 
 .text-container {
   line-height: 6rem;
-  padding: 0 20rem 0 0;
+  padding: 0 10rem 0 0;
+}
+
+.text-container a {
+  font-size: calc(1.5rem + 1vw);
 }
 
 /* gallery showcase ----------------------------------------------------- */
 
-.retro-style {
-  grid-column: 1/2;
-}
-
-.vector-style {
-  grid-column: 2/3;
-}
-
-.web-style {
-  grid-column: 1/2;
-}
-
-.motion-style {
-  grid-column: 2/3;
-  grid-row: 2/3;
-}
-
 .retro-content,
 .vector-content,
-.motion-content,
 .web-content {
-  font-size: calc(3rem + 1vw);
+  font-size: calc(7rem + 1vw);
 }
 
 /* ---------------------------------------------------  download menu */
@@ -125,11 +115,11 @@ body {
 .short-paragprah-text1,
 .short-paragprah-text2,
 .short-paragprah-text3 {
-  font-size: calc(4rem + 1vw);
+  font-size: calc(5rem + 1vw);
 }
 
 .download-menu p {
-  padding: 0 20rem;
+  padding: 0 5rem;
 }
 
 /* closing sections ------------------------------------------------------- */
