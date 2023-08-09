@@ -57,17 +57,10 @@ body {
   overflow-x: hidden;
 }
 
-/* navbar sections ---------------------------------------------------------- */
-
-.burger-gallery-about span {
-  width: 100%;
-  height: 100%;
-}
-
 /* poster ------------------------------------------------- */
 
 .gallery-poster-container {
-  padding: 15rem 5% 5rem 5%;
+  padding: 10rem 5% 5rem 5%;
 }
 
 .gallery-poster {

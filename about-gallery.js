@@ -15,24 +15,6 @@ function raf(time) {
 
 requestAnimationFrame(raf);
 
-// navbar burger toggle mobile version ------------------------------------
-
-const burger = document.querySelector('.burger-gallery-about');
-const nav = document.querySelector('.menu-navbar-gallery-about');
-const links = nav.querySelectorAll('a');
-
-burger.addEventListener('click', () => {
-  nav.classList.toggle('navbar-open');
-  burger.classList.toggle('toggle');
-});
-
-links.forEach((link) => {
-  link.addEventListener('click', () => {
-    nav.classList.toggle('navbar-open');
-    burger.classList.toggle('toggle');
-  });
-});
-
 // matchmedia responsive --------------------------------------------------
 
 const matchMediaResponsive = gsap.matchMedia();
@@ -71,40 +53,6 @@ matchMediaResponsive.add(
       { scale: 0 },
       { scale: 1, duration: 2.5, delay: 0.35, ease: 'elastic.out(1.5, 1)' }
     )
-      .fromTo(
-        '.menu1-gallery-about',
-        { scale: 0 },
-        {
-          scale: 1,
-          duration: 2.5,
-          delay: 0.35,
-          ease: 'elastic.out(1.5, 1)',
-        },
-        '<10%'
-      )
-      .fromTo(
-        '.menu2-gallery-about',
-        { scale: 0 },
-        {
-          scale: 1,
-          duration: 2.5,
-          delay: 0.35,
-          ease: 'elastic.out(1.5, 1)',
-        },
-        '<10%'
-      )
-      .fromTo(
-        '.burger-gallery-about',
-        { scale: 0 },
-        {
-          scale: 1,
-          duration: 2.5,
-          delay: 0.35,
-          ease: 'elastic.out(1.5, 1)',
-        },
-        '<10%'
-      )
-
       .fromTo(
         '.poster-title-main',
         { y: '50', opacity: 0 },
