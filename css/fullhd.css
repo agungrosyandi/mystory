@@ -1,32 +1,32 @@
 /* font used */
 
 @font-face {
-  font-family: 'NelaSlabMedium';
-  src: url('../font/NelaSlab\ Medium.ttf') format('truetype');
+  font-family: "NelaSlabMedium";
+  src: url("../font/NelaSlab\ Medium.ttf") format("truetype");
 }
 
 /* mona font -------------------------------------------------------------- */
 
 @font-face {
-  font-family: 'MonaSansLight';
-  src: url('Mona-Sans.woff2') format('woff2 supports variations'),
-    url('../font/Mona-Sans.woff2') format('woff2-variations');
+  font-family: "MonaSansLight";
+  src: url("Mona-Sans.woff2") format("woff2 supports variations"),
+    url("../font/Mona-Sans.woff2") format("woff2-variations");
   font-weight: 200;
   font-stretch: 100%;
 }
 
 @font-face {
-  font-family: 'MonaSansLightNarrow';
-  src: url('Mona-Sans.woff2') format('woff2 supports variations'),
-    url('../font/Mona-Sans.woff2') format('woff2-variations');
+  font-family: "MonaSansLightNarrow";
+  src: url("Mona-Sans.woff2") format("woff2 supports variations"),
+    url("../font/Mona-Sans.woff2") format("woff2-variations");
   font-weight: 200;
   font-stretch: 75%;
 }
 
 @font-face {
-  font-family: 'MonaSansBold';
-  src: url('Mona-Sans.woff2') format('woff2 supports variations'),
-    url('../font/Mona-Sans.woff2') format('woff2-variations');
+  font-family: "MonaSansBold";
+  src: url("Mona-Sans.woff2") format("woff2 supports variations"),
+    url("../font/Mona-Sans.woff2") format("woff2-variations");
   font-weight: 500;
   font-stretch: 125%;
 }
@@ -47,10 +47,10 @@
 
   /* font  */
 
-  --nelaSlabFont: 'NelaSlabMedium';
-  --nelaSlabLightFont: 'NelaSlabLight';
-  --poppinsFont: 'Poppins', sans-serif;
-  --montserratFont: 'Montserrat', sans-serif;
+  --nelaSlabFont: "NelaSlabMedium";
+  --nelaSlabLightFont: "NelaSlabLight";
+  --poppinsFont: "Poppins", sans-serif;
+  --montserratFont: "Montserrat", sans-serif;
 }
 
 * {
@@ -212,7 +212,7 @@ nav {
 .cta1-x,
 .cta2 {
   font-size: calc(7rem + 1vw);
-  font-family: 'MonaSansLight';
+  font-family: "MonaSansLight";
   letter-spacing: 0.5rem;
   opacity: 0;
   text-transform: uppercase;
@@ -234,7 +234,7 @@ nav {
 .cta4,
 .cta5 {
   font-size: calc(1.5rem + 1vw);
-  font-family: 'MonaSansLightNarrow';
+  font-family: "MonaSansLightNarrow";
   opacity: 0;
 }
 
@@ -284,7 +284,7 @@ nav {
 
 .biography-container h1 {
   font-size: calc(7rem + 1vw);
-  font-family: 'MonaSansLight';
+  font-family: "MonaSansLight";
   letter-spacing: 0.3rem;
   padding-bottom: 8rem;
 }
@@ -298,7 +298,7 @@ nav {
 
 .text-container a {
   text-decoration: none;
-  font-family: 'MonaSansLight';
+  font-family: "MonaSansLight";
   font-size: calc(1.5rem + 1vw);
 }
 
@@ -380,7 +380,7 @@ nav {
 .web-content {
   position: absolute;
   color: var(--whiteColor);
-  font-family: 'MonaSansBold';
+  font-family: "MonaSansBold";
   top: 50%;
   left: 60%;
   width: 100%;
@@ -477,7 +477,7 @@ nav {
 .short-paragprah-text3 {
   padding: 0.4rem;
   font-size: calc(7rem + 1vw);
-  font-family: 'MonaSansLight';
+  font-family: "MonaSansLight";
   letter-spacing: 0.3rem;
 }
 
@@ -523,7 +523,7 @@ nav {
 }
 
 .text-title h1 {
-  font-family: 'MonaSansLight';
+  font-family: "MonaSansLight";
   font-size: calc(7rem + 1vw);
   text-align: center;
   padding: 0 10rem 1rem 10rem;

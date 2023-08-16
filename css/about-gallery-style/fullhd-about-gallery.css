@@ -1,24 +1,24 @@
 /* font used */
 
 @font-face {
-  font-family: 'NelaSlabMedium';
-  src: url('../../font/NelaSlab\ Medium.ttf') format('truetype');
+  font-family: "NelaSlabMedium";
+  src: url("../../font/NelaSlab\ Medium.ttf") format("truetype");
 }
 
 /* mona font -------------------------------------------------------------- */
 
 @font-face {
-  font-family: 'MonaSansLight';
-  src: url('Mona-Sans.woff2') format('woff2 supports variations'),
-    url('../../font/Mona-Sans.woff2') format('woff2-variations');
+  font-family: "MonaSansLight";
+  src: url("Mona-Sans.woff2") format("woff2 supports variations"),
+    url("../../font/Mona-Sans.woff2") format("woff2-variations");
   font-weight: 200;
   font-stretch: 125%;
 }
 
 @font-face {
-  font-family: 'MonaSansLightNarrow';
-  src: url('Mona-Sans.woff2') format('woff2 supports variations'),
-    url('../../font/Mona-Sans.woff2') format('woff2-variations');
+  font-family: "MonaSansLightNarrow";
+  src: url("Mona-Sans.woff2") format("woff2 supports variations"),
+    url("../../font/Mona-Sans.woff2") format("woff2-variations");
   font-weight: 200;
   font-stretch: 100%;
 }
@@ -38,8 +38,8 @@
 
   /* font  */
 
-  --poppinsFont: 'Poppins', sans-serif;
-  --montserratFont: 'Montserrat', sans-serif;
+  --poppinsFont: "Poppins", sans-serif;
+  --montserratFont: "Montserrat", sans-serif;
 }
 
 /* default settings */
@@ -394,7 +394,7 @@ nav {
 .narasihistorian-about h1,
 .mybiography-about h1 {
   font-size: calc(3rem + 1vw);
-  font-family: 'MonaSansLightNarrow';
+  font-family: "MonaSansLightNarrow";
 }
 
 .narasihistorian-about p,
