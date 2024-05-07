@@ -46,7 +46,7 @@ matchMediaResponsive.add(
       default: { duration: 0.75, ease: "Power3.easeOut" },
     });
 
-    // poster sections animations ---------------------------------------------
+    // poster sections ---------------------------------------------
 
     tl.fromTo(
       ".logo-navbar-gallery-about",
@@ -63,228 +63,19 @@ matchMediaResponsive.add(
         ".poster-title-submain",
         { y: "50", opacity: 0 },
         { y: 0, opacity: 1, duration: 1 },
-        "<35%"
+        "<10%"
       )
       .fromTo(
-        ".poster-1",
+        [
+          ".poster-1",
+          ".poster-2",
+          ".poster-3",
+          ".poster-4",
+          ".poster-5",
+          ".poster-6",
+        ],
         { y: "50", opacity: 0 },
-        { y: 0, opacity: 1, duration: 1 },
-        "<35%"
-      )
-      .fromTo(
-        ".poster-2",
-        { y: "50", opacity: 0 },
-        { y: 0, opacity: 1, duration: 1 },
-        "<35%"
-      )
-      .fromTo(
-        ".poster-3",
-        { y: "50", opacity: 0 },
-        { y: 0, opacity: 1, duration: 1 },
-        "<35%"
-      )
-      .fromTo(
-        ".poster-4",
-        { y: "50", opacity: 0 },
-        { y: 0, opacity: 1, duration: 1 },
-        "<35%"
-      )
-      .fromTo(
-        ".poster-5",
-        { y: "50", opacity: 0 },
-        { y: 0, opacity: 1, duration: 1 },
-        "<35%"
-      )
-      .fromTo(
-        ".poster-6",
-        { y: "50", opacity: 0 },
-        { y: 0, opacity: 1, duration: 1 },
-        "<35%"
-      );
-
-    // vector animation sections -----------------------------------------------------------
-
-    const tlSplitvector = gsap.timeline({
-      scrollTrigger: {
-        trigger: "#vector",
-        start: "-10% center",
-        end: "30% top",
-        scrub: 4,
-      },
-    });
-
-    tlSplitvector
-      .fromTo(
-        ".vector-title h1",
-        { x: isMobileTab ? "0%" : "-50%", opacity: isMobileTab ? 1 : 0 },
-        { x: "0%", opacity: 1, duration: 1.5 }
-      )
-      .fromTo(
-        ".vector-title p",
-        { x: isMobileTab ? "0%" : "-50%", opacity: isMobileTab ? 1 : 0 },
-        { x: "0%", opacity: 1, duration: 1.5 },
-        "<35%"
-      )
-      .fromTo(
-        ".vector-1",
-        { x: isMobileTab ? "0%" : "-50%", opacity: isMobileTab ? 1 : 0 },
-        { x: "0%", opacity: 1, duration: 1.5 },
-        "<35%"
-      )
-      .fromTo(
-        ".vector-2",
-        { x: isMobileTab ? "0%" : "50%", opacity: isMobileTab ? 1 : 0 },
-        { x: "0%", opacity: 1, duration: 1.5 },
-        "<35%"
-      )
-      .fromTo(
-        ".vector-4",
-        { x: isMobileTab ? "0%" : "-50%", opacity: isMobileTab ? 1 : 0 },
-        { x: "0%", opacity: 1, duration: 1.5 },
-        "<35%"
-      )
-      .fromTo(
-        ".vector-3",
-        { x: isMobileTab ? "0%" : "-50%", opacity: isMobileTab ? 1 : 0 },
-        { x: "0%", opacity: 1, duration: 1.5 },
-        "<35%"
-      )
-      .fromTo(
-        ".vector-5",
-        { x: isMobileTab ? "0%" : "50%", opacity: isMobileTab ? 1 : 0 },
-        { x: "0%", opacity: 1, duration: 1.5 },
-        "<35%"
-      )
-      .fromTo(
-        ".vector-6",
-        { x: isMobileTab ? "0%" : "50%", opacity: isMobileTab ? 1 : 0 },
-        { x: "0%", opacity: 1, duration: 1.5 },
-        "<35%"
-      );
-
-    // video animation sections -----------------------------------------------------------
-
-    const tlSplitvideo = gsap.timeline({
-      scrollTrigger: {
-        trigger: "#video",
-        start: "-30% center",
-        end: "0% top",
-        scrub: 4,
-      },
-    });
-
-    tlSplitvideo
-      .fromTo(
-        ".video-title h1",
-        { x: isMobileTab ? "0%" : "50%", opacity: isMobileTab ? 1 : 0 },
-        { x: "0%", opacity: 1, duration: 0.5 }
-      )
-      .fromTo(
-        ".video-title p",
-        { x: isMobileTab ? "0%" : "50%", opacity: isMobileTab ? 1 : 0 },
-        { x: "0%", opacity: 1, duration: 0.5 },
-        "<35%"
-      )
-      .fromTo(
-        ".video-1",
-        { x: isMobileTab ? "0%" : "50%", opacity: isMobileTab ? 1 : 0 },
-        { x: "0%", opacity: 1, duration: 0.5 },
-        "<35%"
-      )
-      .fromTo(
-        ".video-2",
-        { x: isMobileTab ? "0%" : "50%", opacity: isMobileTab ? 1 : 0 },
-        { x: "0%", opacity: 1, duration: 0.5 },
-        "<35%"
-      )
-      .fromTo(
-        ".video-3",
-        { x: isMobileTab ? "0%" : "50%", opacity: isMobileTab ? 1 : 0 },
-        { x: "0%", opacity: 1, duration: 0.5 },
-        "<35%"
-      );
-
-    // UI/UX sections -----------------------------------------------------------
-
-    const tlSplitWeb = gsap.timeline({
-      scrollTrigger: {
-        trigger: "#narasihistorian-web",
-        start: "-30% center",
-        end: "45% top",
-        scrub: 4,
-      },
-    });
-
-    tlSplitWeb
-      .fromTo(
-        ".narasihistorian-title h1",
-        { x: isMobileTab ? "0%" : "-50%", opacity: isMobileTab ? 1 : 0 },
-        { x: "0%", opacity: 1, duration: 0.5 }
-      )
-      .fromTo(
-        ".narasihistorian-title p",
-        { x: isMobileTab ? "0%" : "-50%", opacity: isMobileTab ? 1 : 0 },
-        { x: "0%", opacity: 1, duration: 0.5 },
-        "<35%"
-      )
-      .fromTo(
-        ".narasihistorian-1",
-        { x: isMobileTab ? "0%" : "-50%", opacity: isMobileTab ? 1 : 0 },
-        { x: "0%", opacity: 1, duration: 0.5 },
-        "<35%"
-      )
-      .fromTo(
-        ".narasihistorian-4",
-        { x: isMobileTab ? "0%" : "50%", opacity: isMobileTab ? 1 : 0 },
-        { x: "0%", opacity: 1, duration: 0.5 },
-        "<35%"
-      )
-      .fromTo(
-        ".narasihistorian-2",
-        { x: isMobileTab ? "0%" : "-50%", opacity: isMobileTab ? 1 : 0 },
-        { x: "0%", opacity: 1, duration: 0.5 },
-        "<35%"
-      )
-      .fromTo(
-        ".narasihistorian-3",
-        { x: isMobileTab ? "0%" : "50%", opacity: isMobileTab ? 1 : 0 },
-        { x: "0%", opacity: 1, duration: 0.5 },
-        "<35%"
-      )
-      .fromTo(
-        ".narasihistorian-about h1",
-        { x: isMobileTab ? "0%" : "50%", opacity: isMobileTab ? 1 : 0 },
-        { x: "0%", opacity: 1, duration: 0.5 },
-        "<35%"
-      )
-      .fromTo(
-        ".narasihistorian-about p",
-        { x: isMobileTab ? "0%" : "50%", opacity: isMobileTab ? 1 : 0 },
-        { x: "0%", opacity: 1, duration: 0.5 },
-        "<35%"
-      )
-      .fromTo(
-        ".biography-1",
-        { x: isMobileTab ? "0%" : "-50%", opacity: isMobileTab ? 1 : 0 },
-        { x: "0%", opacity: 1, duration: 0.5 },
-        "<35%"
-      )
-      .fromTo(
-        ".biography-2",
-        { x: isMobileTab ? "0%" : "50%", opacity: isMobileTab ? 1 : 0 },
-        { x: "0%", opacity: 1, duration: 0.5 },
-        "<35%"
-      )
-      .fromTo(
-        ".mybiography-about h1",
-        { x: isMobileTab ? "0%" : "50%", opacity: isMobileTab ? 1 : 0 },
-        { x: "0%", opacity: 1, duration: 0.5 },
-        "<35%"
-      )
-      .fromTo(
-        ".mybiography-about p",
-        { x: isMobileTab ? "0%" : "50%", opacity: isMobileTab ? 1 : 0 },
-        { x: "0%", opacity: 1, duration: 0.5 },
+        { y: 0, stagger: 0.3, opacity: 1, duration: 1 },
         "<35%"
       );
   }

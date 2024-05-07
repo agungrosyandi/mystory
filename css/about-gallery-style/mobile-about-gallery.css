@@ -1,18 +1,11 @@
 /* font used */
 
 @font-face {
-  font-family: "NelaSlabMedium";
-  src: url("../../font/NelaSlab\ Medium.ttf") format("truetype");
-}
-
-/* mona font -------------------------------------------------------------- */
-
-@font-face {
   font-family: "MonaSansLight";
   src: url("Mona-Sans.woff2") format("woff2 supports variations"),
     url("../../font/Mona-Sans.woff2") format("woff2-variations");
   font-weight: 200;
-  font-stretch: 125%;
+  font-stretch: 100%;
 }
 
 @font-face {
@@ -23,26 +16,39 @@
   font-stretch: 75%;
 }
 
+@font-face {
+  font-family: "MonaSansBold";
+  src: url("Mona-Sans.woff2") format("woff2 supports variations"),
+    url("../../font/Mona-Sans.woff2") format("woff2-variations");
+  font-weight: 500;
+  font-stretch: 125%;
+}
+
+@font-face {
+  font-family: "DrukBoldTrial";
+  src: url("../../font/Druk-Bold-Trial.otf") format("truetype");
+}
+
 /* default settings ----------------------------------------------------------*/
 
 :root {
   font-size: 62.5%;
+  scroll-behavior: smooth;
   overflow-x: hidden;
 
   /* colour */
   --blackColor: black;
+  --blackvintage: #181d31;
   --whiteColor: white;
-  --lightWhiteColor: rgb(220, 220, 220);
-  --blackShadow: rgb(0, 0, 0, 0.4) 0px 0px 20px;
+  --darkWhiteColor: #f1f0ea;
 
   /* font  */
 
-  --nelaSlabFont: "NelaSlabMedium";
-  --nelaSlabLightFont: "NelaSlabLight";
-  --drukBoldFont: "DrukBold";
-  --drukMediumFont: "DrukMedium";
-  --poppinsFont: "Poppins", sans-serif;
   --montserratFont: "Montserrat", sans-serif;
+  --drukBoldTrial: "DrukBoldTrial";
+  --monasansLightNarrow: "MonaSansLightNarrow";
+  --monaSansLight: "MonaSansLight";
+  --monaSansBold: "MonaSansBold";
 }
 
 /* default settings */
@@ -55,52 +61,100 @@
 
 body {
   overflow-x: hidden;
+  background: #eeeeee;
 }
 
 /* poster ------------------------------------------------- */
 
-.gallery-poster-container {
-  padding: 10rem 5% 5rem 5%;
-}
-
-.gallery-poster {
-  grid-template-columns: repeat(4, 1fr);
-}
-
 .poster-title-main {
-  font-size: calc(3.5rem + 1vw);
+  font-size: calc(4rem + 1vw);
+}
+
+.poster-title-submain {
+  font-size: calc(0.7rem + 1vw);
+  padding: 2rem 1rem 3rem 0;
+  line-height: 3rem;
 }
 
 .poster-title {
-  padding: 0 0 2rem 0;
+  grid-column: 1/5;
+  padding: 0 0 5rem 0;
+}
+
+.poster-1 {
+  grid-column: 1/5;
+}
+
+.poster-2 {
+  grid-column: 1/5;
+}
+
+.poster-3 {
+  grid-column: 1/5;
+}
+
+.poster-4 {
+  grid-column: 1/5;
+}
+
+.poster-5 {
+  grid-column: 1/5;
+}
+
+.poster-6 {
+  grid-column: 1/5;
 }
 
 /* vector ------------------------------------------------------------ */
 
 .gallery-vector-container {
-  padding: 5rem 5% 5rem 5%;
+  padding: 5rem 0 5rem 5%;
 }
 
 .vector-title h1 {
-  font-size: calc(3.5rem + 1vw);
+  font-size: calc(4rem + 1vw);
 }
 
-.vector-title {
-  padding: 0 0 2rem 0;
+.vector-title p {
+  font-size: calc(0.5rem + 1vw);
+  padding: 2rem 1rem 3rem 0;
+  line-height: 3rem;
 }
 
 /* video ------------------------------------------------- */
 
 .gallery-video-container {
-  padding: 5rem 5% 10rem 5%;
+  padding: 5rem 5% 5rem 5%;
+}
+
+.gallery-video {
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .gallery-video h1 {
-  font-size: calc(3.5rem + 1vw);
+  font-size: calc(5rem + 1vw);
 }
 
-.video-title {
-  padding: 0 0 2rem 0;
+.gallery-video p {
+  font-size: calc(0.5rem + 1vw);
+  padding: 2rem 1rem 3rem 0;
+  line-height: 3rem;
+}
+
+.video1-style {
+  grid-column: 1/4;
+}
+
+.video2-style {
+  grid-column: 1/2;
+}
+
+.video3-style {
+  grid-column: 2/4;
+}
+
+.video4-style {
+  grid-column: 1/4;
 }
 
 /* ui ux web design ------------------------------------------------------------ */
@@ -110,12 +164,15 @@ body {
 }
 
 .narasihistorian-title h1 {
-  font-size: calc(3rem + 1vw);
+  font-size: calc(5rem + 1vw);
 }
 
-.narasihistorian-about h1 {
-  font-size: calc(2rem + 1vw);
-  font-family: "MonaSansLightNarrow";
+.narasihistorian-title p,
+.narasihistorian-about p,
+.mybiography-about p {
+  font-size: calc(0.5rem + 1vw);
+  line-height: 3rem;
+  padding: 2rem 0 3rem 0;
 }
 
 .narasihistorian-title {
@@ -145,10 +202,6 @@ body {
 }
 
 /* vector portfollio ------------------------------------------------------------ */
-
-.mybiography-about h1 {
-  font-size: calc(2rem + 1vw);
-}
 
 .mybiography-about {
   grid-column: 1/3;

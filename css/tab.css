@@ -67,29 +67,11 @@ nav {
   font-size: calc(2rem + 1vw);
 }
 
-/* blur burger menu ---------------------------------------------------------- */
-
-.blur-burger-menu {
-  display: block;
-  position: absolute;
-  left: 100%;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(30, 24, 24, 0.1);
-  backdrop-filter: blur(8px);
-}
-
-.blur-open {
-  transform: translate(-100%);
-}
-
 /* burger menu ---------------------------------------------------------- */
 
 .burger {
   position: relative;
   display: block;
-  opacity: 0;
   padding-right: 5rem;
 }
 
@@ -107,87 +89,61 @@ nav {
   position: fixed;
   width: 100vw;
   height: 100vh;
-  background: rgba(30, 24, 24, 0.1);
-  backdrop-filter: blur(82px);
+  background: #2b2730;
+  transform: scaleY(0);
+  transform-origin: center;
+  top: 0;
   left: 0;
-  bottom: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transition: transform 1s ease;
-  border-radius: 1rem;
 }
 
 .menu-navbar li {
   padding: 5rem 0;
+  border-bottom: 2px solid white;
+  opacity: 1;
 }
 
 .menu-navbar li a {
-  font-size: calc(6rem + 1vw);
+  font-size: calc(4rem + 1vw);
   color: rgb(255, 255, 255);
-}
-
-.navbar-open {
-  transform: translateY(100%);
-}
-
-.toggle .line1 {
-  transform: rotateZ(35deg) translateY(300%);
-  background: rgb(255, 255, 255);
-}
-
-.toggle .line2 {
-  opacity: 0;
-}
-
-.toggle .line3 {
-  transform: rotateZ(-35deg) translateY(-300%);
-  background: rgb(255, 255, 255);
-}
-
-.char {
-  transform: translateY(115px);
-  transition: 0.5s;
 }
 
 /* home ----------------------------------------------------------------- */
 
-.home-container {
-  display: flex;
-  flex-direction: column;
+.cta-text1 {
+  padding: 1rem 0rem;
 }
 
-.home-container svg {
-  top: 20%;
-  left: 25%;
-}
-
-/* --------------------------------------------------------------- left text  */
-
-.cta {
-  padding: 15rem 0 10rem 5%;
+.cta1 {
+  padding-right: 1.5rem;
 }
 
 .cta1,
-.cta1-x,
 .cta2 {
-  font-size: calc(6rem + 1vw);
+  font-size: calc(10rem + 1vw);
 }
 
-.cta3,
-.cta4,
-.cta5 {
-  font-size: calc(1.5rem + 1vw);
+.cta3 {
+  font-size: calc(2rem + 1vw);
 }
 
 .cta6 {
   font-size: calc(1rem + 1vw);
+  width: 50%;
+  padding: 0 0rem 5rem 0;
 }
 
 /* ---------------------------------------------------------- right side  */
 
 .right-image {
+  position: absolute;
+  top: 0;
+  left: 10;
+  right: 0;
+  bottom: 0;
   width: 40%;
   height: 100%;
 }
@@ -195,55 +151,79 @@ nav {
 /* short biography ------------------------------------------------------ */
 
 .biography-container {
-  padding: 10rem 5rem 5rem 5%;
+  width: 90%;
 }
 
 .biography-container h1 {
+  font-size: calc(8rem + 1vw);
   padding-bottom: 5rem;
 }
 
-.text-container {
-  line-height: 5rem;
-  padding: 0 5rem 0 0;
+.text-higlight p {
+  font-size: calc(1rem + 1vw);
+  padding: 0 0 0 0;
 }
 
 /* gallery showcase ----------------------------------------------- */
 
+#showcase {
+  height: 130vh;
+}
+
 .showcase-container {
-  padding: 5rem 5% 5rem 5%;
+  width: 100%;
+  padding: 15rem 10rem 10rem 5%;
 }
 
-.retro-content,
-.vector-content,
-.web-content {
-  top: 45%;
-  left: 60%;
+.gallery-showcase {
+  height: 70%;
+  padding: 5rem 0 3rem 0;
 }
 
-.retro-content,
-.vector-content,
-.web-content {
-  font-size: calc(5rem + 1vw);
+.title-short-paragraph {
+  padding: 0 0 2% 0;
 }
-
-/* ---------------------------------------------------  download menu */
 
 .short-paragprah-text1,
 .short-paragprah-text2,
 .short-paragprah-text3 {
-  font-size: calc(3.5rem + 1vw);
+  font-size: calc(8rem + 1vw);
 }
 
 .download-menu p {
-  padding: 0 5rem;
+  font-size: calc(1rem + 1vw);
+  line-height: 4rem;
+  padding: 0 0 0 0;
+}
+
+.video1-style {
+  grid-column: 1/3;
+}
+
+.video2-style {
+  grid-column: 1/3;
 }
 
 /* closing sections ----------------------------------------------------------- */
 
 .closing-container {
-  padding: 5rem 0rem 20rem 0%;
+  width: 100%;
 }
 
 .text-title h1 {
-  font-size: calc(4rem + 1vw);
+  font-size: calc(9rem + 1vw);
+}
+
+.text-title p {
+  font-size: calc(1rem + 1vw);
+}
+
+.email-button {
+  font-size: calc(1rem + 1vw);
+}
+
+.footer-container,
+.footer {
+  display: none;
+  opacity: 0;
 }

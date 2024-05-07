@@ -1,13 +1,6 @@
 /* font used */
 
 @font-face {
-  font-family: "NelaSlabMedium";
-  src: url("../font/NelaSlab\ Medium.ttf") format("truetype");
-}
-
-/* mona font -------------------------------------------------------------- */
-
-@font-face {
   font-family: "MonaSansLight";
   src: url("Mona-Sans.woff2") format("woff2 supports variations"),
     url("../font/Mona-Sans.woff2") format("woff2-variations");
@@ -31,6 +24,11 @@
   font-stretch: 125%;
 }
 
+@font-face {
+  font-family: "DrukBoldTrial";
+  src: url("../font/Druk-Bold-Trial.otf") format("truetype");
+}
+
 /* default settings ----------------------------------------------------------*/
 
 :root {
@@ -42,15 +40,15 @@
   --blackColor: black;
   --blackvintage: #181d31;
   --whiteColor: white;
-  --lightWhiteColor: rgb(220, 220, 220);
-  --blackShadow: rgb(0, 0, 0, 0.4) 0px 0px 20px;
+  --darkWhiteColor: #f1f0ea;
 
   /* font  */
 
-  --nelaSlabFont: "NelaSlabMedium";
-  --nelaSlabLightFont: "NelaSlabLight";
-  --poppinsFont: "Poppins", sans-serif;
   --montserratFont: "Montserrat", sans-serif;
+  --drukBoldTrial: "DrukBoldTrial";
+  --monasansLightNarrow: "MonaSansLightNarrow";
+  --monaSansLight: "MonaSansLight";
+  --monaSansBold: "MonaSansBold";
 }
 
 * {
@@ -64,9 +62,24 @@ body {
   background: #2b2730;
 }
 
+/* smooth scrool snap  ------------------------------------------*/
+
+.main-content {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  width: 100vw;
+  height: 100vh;
+}
+
+section {
+  scroll-snap-align: start;
+}
+
 /* lenis scrool css setup  ------------------------------------------*/
 
-html.lenis {
+/* html.lenis {
   height: auto;
 }
 
@@ -84,7 +97,7 @@ html.lenis {
 
 .lenis.lenis-scrolling iframe {
   pointer-events: none;
-}
+} */
 
 /* navbar sections */
 
@@ -93,7 +106,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 68vw;
+  width: 69vw;
   min-height: 10vh;
   padding: 0 5%;
   z-index: 20;
@@ -103,7 +116,7 @@ nav {
 }
 
 .logo-navbar {
-  font-size: calc(1rem + 1vw);
+  font-size: calc(0.2rem + 1vw);
   opacity: 0;
   letter-spacing: 0.2rem;
 }
@@ -128,12 +141,12 @@ nav {
 .menu-navbar li a {
   color: rgb(253, 253, 253);
   text-decoration: none;
-  font-size: calc(0.6rem + 1vw);
+  font-size: calc(0.2rem + 1vw);
   font-weight: bold;
 }
 
 .menu-navbar li a:hover {
-  color: rgb(255, 255, 255);
+  color: rgb(214, 227, 71);
 }
 
 .menu1,
@@ -184,12 +197,8 @@ nav {
   flex-direction: column;
   justify-content: center;
   flex: 2 1 0%;
-  color: var(--whiteColor);
+  color: var(--darkWhiteColor);
   padding: 10rem 0 10rem 5%;
-}
-
-.cta1-x {
-  padding: 0.5rem 0;
 }
 
 .cta-text1 H2,
@@ -209,39 +218,29 @@ nav {
 }
 
 .cta1,
-.cta1-x,
 .cta2 {
-  font-size: calc(7rem + 1vw);
-  font-family: "MonaSansLight";
-  letter-spacing: 0.5rem;
+  font-size: calc(13rem + 1vw);
+  font-family: var(--drukBoldTrial);
+  letter-spacing: 0.2rem;
   opacity: 0;
   text-transform: uppercase;
 }
 
 .cta-text1 {
-  padding: 3rem 0rem;
+  padding: 2rem 0rem;
 }
 
-.cta-text2 {
-  display: flex;
-}
-
-.cta-text2 span {
-  padding: 0rem 1rem 0rem 0rem;
-}
-
-.cta3,
-.cta4,
-.cta5 {
-  font-size: calc(1.5rem + 1vw);
-  font-family: "MonaSansLightNarrow";
+.cta3 {
+  font-size: calc(1rem + 1vw);
+  font-family: var(--monasansLightNarrow);
   opacity: 0;
 }
 
 .cta6 {
-  font-size: calc(0.5rem + 1vw);
-  font-family: var(--montserratFont);
-  width: 70%;
+  font-size: calc(0.4rem + 1vw);
+  font-family: var(--monaSansLight);
+  width: 50%;
+  line-height: 4rem;
   padding: 0 10rem 5rem 0;
   opacity: 0;
   border-bottom: 1px solid rgb(155, 155, 155);
@@ -250,10 +249,13 @@ nav {
 /* ---------------------------------------------------------- right side  */
 
 .right-image {
-  position: relative;
-  flex: 1 1 0%;
+  position: fixed;
+  top: 0;
+  left: 10;
+  right: 0;
+  bottom: 0;
   opacity: 0;
-  width: 100%;
+  width: 31%;
   height: 100%;
 }
 
@@ -268,7 +270,8 @@ nav {
 #biography {
   position: relative;
   width: 100vw;
-  color: var(--whiteColor);
+  height: 100vh;
+  color: var(--darkWhiteColor);
 }
 
 .biography-container {
@@ -277,29 +280,38 @@ nav {
   flex-direction: column;
   justify-content: center;
   line-height: 4rem;
-  width: 100%;
+  width: 60%;
   height: 100%;
   padding: 10rem 0 5rem 5%;
 }
 
 .biography-container h1 {
-  font-size: calc(7rem + 1vw);
-  font-family: "MonaSansLight";
+  font-size: calc(8rem + 1vw);
+  font-family: var(--drukBoldTrial);
   letter-spacing: 0.3rem;
   padding-bottom: 8rem;
+  text-transform: uppercase;
 }
 
-.text-container {
-  font-size: calc(1.5rem + 1vw);
-  font-family: var(--montserratFont);
-  line-height: 7rem;
+.text-higlight {
+  padding: 0 0 5rem 0;
+}
+
+.text-higlight p {
+  font-size: calc(0.3rem + 1vw);
+  font-family: var(--monaSansLight);
+  line-height: 4rem;
   padding: 0 10rem 0 0;
 }
 
-.text-container a {
-  text-decoration: none;
-  font-family: "MonaSansLight";
-  font-size: calc(1.5rem + 1vw);
+.bottom-border {
+  height: 0.3rem;
+  background: rgb(155, 155, 155);
+  position: relative;
+  top: 2%;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: left;
 }
 
 /* gallery showcase ----------------------------------------------------- */
@@ -307,11 +319,13 @@ nav {
 #showcase {
   position: relative;
   width: 100vw;
+  height: 100vh;
+  color: var(--darkWhiteColor);
 }
 
 .showcase-container {
   position: relative;
-  width: 100%;
+  width: 60%;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -326,131 +340,50 @@ nav {
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 1rem;
   width: 100%;
+  height: 50%;
+  flex: 1 1 0%;
+  padding: 5rem 0 8rem 0;
+  overflow: hidden;
+  filter: grayscale(70%);
+}
+
+.video1-style {
+  grid-column: 1/2;
+  overflow: hidden;
+}
+
+.video2-style {
+  grid-column: 2/3;
+  overflow: hidden;
+}
+
+.video1-style video,
+.video2-style video {
+  transform: translate(-100%);
+  transform-origin: left;
+  opacity: 0;
+}
+
+.background-video {
+  position: relative;
+  width: 100%;
   height: 100%;
-  flex: 1 1 0%;
-  padding: 5rem 0;
-  border-bottom: 1px solid rgb(155, 155, 155);
-}
-
-.retro-style {
-  grid-column: 1/3;
-}
-
-.vector-style {
-  grid-column: 1/3;
-}
-
-.web-style {
-  grid-column: 1/3;
-}
-
-.retro-style,
-.vector-style,
-.web-style {
-  flex: 1 1 0%;
-  margin: 0.5rem 0;
-}
-
-.retro-style img,
-.vector-style img,
-.web-style img {
-  display: block;
   object-fit: cover;
-  width: 100%;
-  height: 100%;
-}
-
-.retro-title,
-.vector-title,
-.web-title {
-  position: absolute;
-  bottom: 0;
+  top: 0;
   left: 0;
   right: 0;
-  background: rgba(30, 24, 24, 0.1);
-  backdrop-filter: blur(8px);
-  overflow: hidden;
-  width: 0%;
-  height: 100%;
-  transition: 0.5s ease;
-}
-
-.retro-content,
-.vector-content,
-.web-content {
-  position: absolute;
-  color: var(--whiteColor);
-  font-family: "MonaSansBold";
-  top: 50%;
-  left: 60%;
-  width: 100%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  white-space: nowrap;
-}
-
-.retro-content span,
-.vector-content span,
-.web-content span {
-  border-bottom: 1px solid rgb(227, 227, 227);
-  padding: 1rem 0;
-}
-
-.button-title {
-  position: absolute;
   bottom: 0;
+  z-index: -1;
+}
+
+.bottom-border2 {
+  height: 0.3rem;
+  background: rgb(155, 155, 155);
+  position: relative;
+  top: 2%;
   left: 0;
-  right: 0;
-  background: rgba(30, 24, 24, 0.1);
-  backdrop-filter: blur(8px);
-  overflow: hidden;
-  width: 0%;
-  height: 100%;
-  transition: 0.5s ease;
-}
-
-.button-content {
-  position: absolute;
-  top: 65%;
-  left: 60%;
-  width: 100%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  white-space: nowrap;
-}
-
-.button-content button {
-  background: none;
-  color: rgb(255, 255, 255);
-  font-size: calc(0.8rem + 1vw);
-  padding: 1rem 3rem;
-  cursor: pointer;
-  border-radius: 10px;
-  border: 1px solid white;
-}
-
-.retro-content,
-.vector-content,
-.web-content {
-  font-size: calc(8rem + 1vw);
-}
-
-.retro-style:hover .retro-title {
-  width: 100%;
-}
-
-.vector-style:hover .vector-title {
-  width: 100%;
-}
-
-.web-style:hover .web-title {
-  width: 100%;
-}
-
-.web-style:hover .button-title {
-  width: 100%;
+  transform: scaleX(0);
+  transform-origin: left;
 }
 
 /* ---------------------------------------------------  download menu */
@@ -459,40 +392,29 @@ nav {
   position: relative;
   display: flex;
   flex-direction: column;
-  text-align: center;
   color: white;
   padding: 0 0 2rem 0;
 }
 
 .title-short-paragraph {
   display: flex;
-  justify-content: center;
-  align-items: center;
   padding: 5rem 0 2% 0;
-  border-top: 1px solid rgb(155, 155, 155);
 }
 
 .short-paragprah-text1,
 .short-paragprah-text2,
 .short-paragprah-text3 {
   padding: 0.4rem;
-  font-size: calc(7rem + 1vw);
-  font-family: "MonaSansLight";
-  letter-spacing: 0.3rem;
+  font-size: calc(8rem + 1vw);
+  font-family: var(--drukBoldTrial);
+  text-transform: uppercase;
 }
 
 .download-menu p {
-  text-align: center;
-  font-size: calc(0.8rem + 1vw);
-  line-height: 3rem;
-  font-family: var(--montserratFont);
-  padding: 0 2rem;
-}
-
-.resume-hyperlink a,
-.portfolio-hyperlink a {
-  color: rgb(229, 255, 0);
-  text-decoration: none;
+  font-size: calc(0.1rem + 1vw);
+  font-family: var(--monaSansLight);
+  line-height: 4rem;
+  padding: 0 5rem 0 0;
 }
 
 /* closing sections ------------------------------------------------------- */
@@ -500,7 +422,8 @@ nav {
 #closing-sections {
   position: relative;
   width: 100vw;
-  color: var(--whiteColor);
+  height: 100vh;
+  color: var(--darkWhiteColor);
 }
 
 .closing-container {
@@ -508,47 +431,43 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  width: 60%;
   height: 100%;
-  width: 100%;
-  padding: 1rem 10rem 25rem 5%;
+  padding: 1rem 10rem 0 5%;
 }
 
 .text-title {
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
   letter-spacing: 0.3rem;
 }
 
 .text-title h1 {
-  font-family: "MonaSansLight";
-  font-size: calc(7rem + 1vw);
-  text-align: center;
-  padding: 0 10rem 1rem 10rem;
+  font-family: var(--drukBoldTrial);
+  font-size: calc(9rem + 1vw);
+  text-transform: uppercase;
 }
 
 .text-title p {
-  font-size: calc(0.8rem + 1vw);
+  font-size: calc(0.2rem + 1vw);
   font-family: var(--montserratFont);
-  text-align: center;
-  line-height: 3rem;
-  padding: 3rem 0 4rem 0;
+  padding: 1rem 0 6rem 0;
 }
 
 .email-button {
-  font-size: calc(0.5rem + 1vw);
   font-family: var(--poppinsFont);
+  font-size: calc(0.2rem + 1vw);
   cursor: pointer;
-  color: white;
-  padding: 1rem 3rem;
-  border: 1px solid white;
-  border-radius: 10px;
+  transform: scaleX(1);
+  transform-origin: left;
 }
 
 .email-button a {
   color: white;
+  padding: 2rem 3rem;
+  border: 1px solid white;
+  border-radius: 10px;
   text-decoration: none;
 }
 
@@ -556,7 +475,7 @@ nav {
 
 .footer {
   position: relative;
-  width: 100vw;
+  width: 68vw;
   min-height: 7vh;
   background: rgba(30, 24, 24, 0.1);
   backdrop-filter: blur(10px);
@@ -574,6 +493,6 @@ nav {
 }
 
 .footer p {
-  font-size: calc(1rem + 0.5vw);
+  font-size: calc(0.8rem + 0.5vw);
   color: var(--whiteColor);
 }

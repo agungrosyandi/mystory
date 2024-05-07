@@ -1,26 +1,32 @@
 /* font used */
 
 @font-face {
-  font-family: 'NelaSlabMedium';
-  src: url('../font/NelaSlab\ Medium.ttf') format('truetype');
+  font-family: "MonaSansLight";
+  src: url("Mona-Sans.woff2") format("woff2 supports variations"),
+    url("../font/Mona-Sans.woff2") format("woff2-variations");
+  font-weight: 200;
+  font-stretch: 100%;
 }
 
-/* mona font -------------------------------------------------------------- */
+@font-face {
+  font-family: "MonaSansLightNarrow";
+  src: url("Mona-Sans.woff2") format("woff2 supports variations"),
+    url("../font/Mona-Sans.woff2") format("woff2-variations");
+  font-weight: 200;
+  font-stretch: 75%;
+}
 
 @font-face {
-  font-family: 'MonaSansLight';
-  src: url('Mona-Sans.woff2') format('woff2 supports variations'),
-    url('../font/Mona-Sans.woff2') format('woff2-variations');
-  font-weight: 200;
+  font-family: "MonaSansBold";
+  src: url("Mona-Sans.woff2") format("woff2 supports variations"),
+    url("../font/Mona-Sans.woff2") format("woff2-variations");
+  font-weight: 500;
   font-stretch: 125%;
 }
 
 @font-face {
-  font-family: 'MonaSansLightNarrow';
-  src: url('Mona-Sans.woff2') format('woff2 supports variations'),
-    url('../font/Mona-Sans.woff2') format('woff2-variations');
-  font-weight: 200;
-  font-stretch: 75%;
+  font-family: "DrukBoldTrial";
+  src: url("../font/Druk-Bold-Trial.otf") format("truetype");
 }
 
 /* default settings ----------------------------------------------------------*/
@@ -34,18 +40,15 @@
   --blackColor: black;
   --blackvintage: #181d31;
   --whiteColor: white;
-  --lightWhiteColor: rgb(220, 220, 220);
-  --blackShadow: rgb(0, 0, 0, 0.4) 0px 0px 20px;
+  --darkWhiteColor: #f1f0ea;
 
   /* font  */
 
-  --nelaSlabFont: 'NelaSlabMedium';
-  --nelaSlabLightFont: 'NelaSlabLight';
-  --poppinsFont: 'Poppins', sans-serif;
-  --montserratFont: 'Montserrat', sans-serif;
-  --newEleganceCondensed: 'NewEleganceSansCondensed';
-  --newEleganceItalic: 'NewEleganceItalic';
-  --newEleganceCondita: 'NewEleganceCondita';
+  --montserratFont: "Montserrat", sans-serif;
+  --drukBoldTrial: "DrukBoldTrial";
+  --monasansLightNarrow: "MonaSansLightNarrow";
+  --monaSansLight: "MonaSansLight";
+  --monaSansBold: "MonaSansBold";
 }
 
 /* default settings */
@@ -65,69 +68,74 @@ body {
 
 /* --------------------------------------------------------------- left text  */
 
-.cta1,
-.cta1-x,
-.cta2 {
-  font-size: calc(5rem + 1vw);
+.cta-text1 {
+  padding: 1rem 0rem;
 }
 
-.cta3,
-.cta4,
-.cta5 {
+.cta1 {
+  padding-right: 1.5rem;
+}
+
+.cta1,
+.cta2 {
+  font-size: calc(9rem + 1vw);
+}
+
+.cta3 {
   font-size: calc(1rem + 1vw);
 }
 
 .cta6 {
-  padding: 0 5rem 5rem 0;
+  font-size: calc(0.4rem + 1vw);
+  width: 60%;
+  padding: 0 10rem 5rem 0;
 }
 
 /* ---------------------------------------------------------- right side  */
 
 /* short biography ------------------------------------------------- */
 
-.biography-container {
-  padding: 10rem 0 5rem 5%;
-}
-
 .biography-container h1 {
-  font-size: calc(5rem + 1vw);
+  font-size: calc(6rem + 1vw);
+  letter-spacing: 0.3rem;
+  padding-bottom: 5rem;
 }
 
-.text-container {
-  line-height: 6rem;
+.text-higlight p {
+  font-size: calc(0.3rem + 1vw);
+  line-height: 4rem;
   padding: 0 10rem 0 0;
-}
-
-.text-container a {
-  font-size: calc(1.5rem + 1vw);
 }
 
 /* gallery showcase ----------------------------------------------------- */
 
-.retro-content,
-.vector-content,
-.web-content {
-  font-size: calc(7rem + 1vw);
+.gallery-showcase {
+  width: 100%;
+  height: 50%;
+  padding: 1rem 0 3rem 0;
 }
 
-/* ---------------------------------------------------  download menu */
+.title-short-paragraph {
+  padding: 0 0 2% 0;
+}
 
 .short-paragprah-text1,
 .short-paragprah-text2,
 .short-paragprah-text3 {
-  font-size: calc(5rem + 1vw);
+  padding: 0.4rem;
+  font-size: calc(6rem + 1vw);
+  font-family: var(--drukBoldTrial);
+  text-transform: uppercase;
 }
 
 .download-menu p {
-  padding: 0 5rem;
+  font-size: calc(0.1rem + 1vw);
+  line-height: 4rem;
+  padding: 0 5rem 0 0;
 }
 
 /* closing sections ------------------------------------------------------- */
 
-.closing-container {
-  padding: 2rem 10rem 15rem 5%;
-}
-
 .text-title h1 {
-  font-size: calc(5rem + 1vw);
+  font-size: calc(7rem + 1vw);
 }

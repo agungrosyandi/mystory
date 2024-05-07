@@ -1,24 +1,24 @@
 /* font used */
 
 @font-face {
-  font-family: 'NelaSlabMedium';
-  src: url('../font/NelaSlab\ Medium.ttf') format('truetype');
+  font-family: "NelaSlabMedium";
+  src: url("../font/NelaSlab\ Medium.ttf") format("truetype");
 }
 
 /* mona font -------------------------------------------------------------- */
 
 @font-face {
-  font-family: 'MonaSansLight';
-  src: url('Mona-Sans.woff2') format('woff2 supports variations'),
-    url('../font/Mona-Sans.woff2') format('woff2-variations');
+  font-family: "MonaSansLight";
+  src: url("Mona-Sans.woff2") format("woff2 supports variations"),
+    url("../font/Mona-Sans.woff2") format("woff2-variations");
   font-weight: 200;
   font-stretch: 125%;
 }
 
 @font-face {
-  font-family: 'MonaSansLightNarrow';
-  src: url('Mona-Sans.woff2') format('woff2 supports variations'),
-    url('../font/Mona-Sans.woff2') format('woff2-variations');
+  font-family: "MonaSansLightNarrow";
+  src: url("Mona-Sans.woff2") format("woff2 supports variations"),
+    url("../font/Mona-Sans.woff2") format("woff2-variations");
   font-weight: 200;
   font-stretch: 75%;
 }
@@ -39,13 +39,13 @@
 
   /* font  */
 
-  --nelaSlabFont: 'NelaSlabMedium';
-  --nelaSlabLightFont: 'NelaSlabLight';
-  --poppinsFont: 'Poppins', sans-serif;
-  --montserratFont: 'Montserrat', sans-serif;
-  --newEleganceCondensed: 'NewEleganceSansCondensed';
-  --newEleganceItalic: 'NewEleganceItalic';
-  --newEleganceCondita: 'NewEleganceCondita';
+  --nelaSlabFont: "NelaSlabMedium";
+  --nelaSlabLightFont: "NelaSlabLight";
+  --poppinsFont: "Poppins", sans-serif;
+  --montserratFont: "Montserrat", sans-serif;
+  --newEleganceCondensed: "NewEleganceSansCondensed";
+  --newEleganceItalic: "NewEleganceItalic";
+  --newEleganceCondita: "NewEleganceCondita";
 }
 
 /* default settings */
@@ -71,7 +71,11 @@ body {
 }
 
 .menu-navbar li a {
-  font-size: calc(3rem + 1vw);
+  font-size: calc(1.5rem + 1vw);
+}
+
+.logo-navbar {
+  font-size: calc(1rem + 1vw);
 }
 
 /* home ----------------------------------------------------------------- */
@@ -84,104 +88,97 @@ body {
 /* --------------------------------------------------------------- left text  */
 
 .cta {
-  padding: 5rem 2rem 5rem 5%;
+  padding: 30rem 0 10rem 5%;
 }
 
 .cta1,
-.cta1-x,
 .cta2 {
-  font-size: calc(3.3rem + 1vw);
+  font-size: calc(6rem + 1vw);
 }
 
-.cta3,
-.cta4,
-.cta5 {
-  font-size: calc(1.3rem + 1vw);
+.cta3 {
+  font-size: calc(1rem + 1vw);
 }
 
 .cta6 {
-  width: 100%;
-  padding: 0 5rem 5rem 0;
+  font-size: calc(0.8rem + 1vw);
+  width: 90%;
+  line-height: 2rem;
+  padding: 0 0rem 2rem 0;
 }
 
 /* ---------------------------------------------------------- right side  */
 
 .right-image {
-  display: none;
+  position: absolute;
+  top: 10%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 30%;
 }
 /* biography ------------------------------------------------------------------ */
 
-.biography-container {
-  padding: 5rem 0rem 1rem 5%;
-}
-
 .biography-container h1 {
-  font-size: calc(3rem + 1vw);
-  padding-bottom: 3rem;
-  padding-top: 0;
-  border-top: none;
+  font-size: calc(6rem + 1vw);
+  padding-bottom: 5rem;
 }
 
-.text-container {
+.text-higlight p {
   font-size: calc(1rem + 1vw);
   line-height: 3rem;
-  padding: 0 4rem 5rem 0;
+  padding: 0 0 0 0;
 }
 
 /* gallery showcase ----------------------------------------------- */
 
+#showcase {
+  height: 150vh;
+}
+
+.showcase-container {
+  width: 100%;
+  justify-content: start;
+  padding: 10rem 5rem 10rem 5%;
+}
+
 .gallery-showcase {
-  position: relative;
-  padding: 2rem 0 5rem 0;
+  height: 50%;
+  padding: 2rem 0 3rem 0;
 }
-
-.retro-content,
-.vector-content,
-.web-content {
-  top: 40%;
-  left: 60%;
-}
-
-.retro-content,
-.vector-content,
-.web-content {
-  font-size: calc(2.5rem + 1vw);
-}
-
-.button-content button {
-  font-size: calc(0.5rem + 1vw);
-  padding: 0.5rem 2rem;
-}
-
-/* ---------------------------------------------------  download menu */
 
 .title-short-paragraph {
   flex-direction: column;
+  padding: 0 0 2% 0;
 }
 
 .short-paragprah-text1,
 .short-paragprah-text2,
 .short-paragprah-text3 {
-  font-size: calc(4rem + 1vw);
+  font-size: calc(6rem + 1vw);
 }
 
 .download-menu p {
-  line-height: 2rem;
-  padding: 1rem 1rem;
+  font-size: calc(1rem + 1vw);
+  line-height: 3rem;
+  padding: 0 0 0 0;
+}
+
+.video1-style {
+  grid-column: 1/3;
+}
+
+.video2-style {
+  grid-column: 1/3;
 }
 
 /* closing sections ----------------------------------------------------------- */
 
 .closing-container {
-  padding: 0 0rem 15rem 0%;
+  padding: 1rem 2rem 0 5%;
 }
 
 .text-title h1 {
-  font-size: calc(2rem + 1vw);
-  padding: 0 1rem 1rem 1rem;
-}
-
-.text-title p {
-  line-height: 2rem;
-  padding: 1rem 3rem 3rem 3rem;
+  font-size: calc(6rem + 1vw);
 }

@@ -1,18 +1,11 @@
 /* font used */
 
 @font-face {
-  font-family: "NelaSlabMedium";
-  src: url("../../font/NelaSlab\ Medium.ttf") format("truetype");
-}
-
-/* mona font -------------------------------------------------------------- */
-
-@font-face {
   font-family: "MonaSansLight";
   src: url("Mona-Sans.woff2") format("woff2 supports variations"),
     url("../../font/Mona-Sans.woff2") format("woff2-variations");
   font-weight: 200;
-  font-stretch: 125%;
+  font-stretch: 100%;
 }
 
 @font-face {
@@ -23,35 +16,38 @@
   font-stretch: 75%;
 }
 
+@font-face {
+  font-family: "MonaSansBold";
+  src: url("Mona-Sans.woff2") format("woff2 supports variations"),
+    url("../../font/Mona-Sans.woff2") format("woff2-variations");
+  font-weight: 500;
+  font-stretch: 125%;
+}
+
+@font-face {
+  font-family: "DrukBoldTrial";
+  src: url("../../font/Druk-Bold-Trial.otf") format("truetype");
+}
 /* default settings ----------------------------------------------------------*/
 
 :root {
   font-size: 62.5%;
+  scroll-behavior: smooth;
   overflow-x: hidden;
 
   /* colour */
   --blackColor: black;
   --blackvintage: #181d31;
   --whiteColor: white;
-  --lightWhiteColor: rgb(220, 220, 220);
-  --blackShadow: rgb(0, 0, 0, 0.4) 0px 0px 20px;
+  --darkWhiteColor: #f1f0ea;
 
   /* font  */
 
-  --poppinsFont: "Poppins", sans-serif;
   --montserratFont: "Montserrat", sans-serif;
-}
-
-/* default settings */
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  overflow-x: hidden;
+  --drukBoldTrial: "DrukBoldTrial";
+  --monasansLightNarrow: "MonaSansLightNarrow";
+  --monaSansLight: "MonaSansLight";
+  --monaSansBold: "MonaSansBold";
 }
 
 /* default settings */
@@ -74,160 +70,27 @@ body {
 }
 
 .poster-title-main {
-  font-size: calc(6rem + 1vw);
-}
-
-.poster-title {
-  grid-column: 1/4;
-}
-
-.poster-1 {
-  grid-column: 1/2;
-}
-
-.poster-2 {
-  grid-column: 2/3;
-}
-
-.poster-3 {
-  grid-column: 3/4;
-}
-
-.poster-4 {
-  grid-column: 1/2;
-}
-
-.poster-5 {
-  grid-column: 2/3;
-}
-
-.poster-6 {
-  grid-column: 3/4;
+  font-size: calc(5rem + 1vw);
 }
 
 /* vector ------------------------------------------------------------ */
 
-.gallery-vector-container {
-  padding: 15rem 5% 5rem 5%;
+.title-vector-mask {
+  width: 70%;
 }
 
 .vector-title h1 {
-  font-size: calc(6rem + 1vw);
-}
-
-.vector-1,
-.vector-2,
-.vector-3,
-.vector-4,
-.vector-5,
-.vector-6 {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  overflow: hidden;
-}
-
-.vector-title {
-  grid-column: 1/5;
-}
-
-.vector-1 {
-  grid-column: 1/2;
-  grid-row: 2/4;
-}
-
-.vector-2 {
-  grid-column: 2/5;
-  grid-row: 2/4;
-}
-
-.vector-3 {
-  grid-column: 2/3;
-  grid-row: 4/5;
-}
-
-.vector-4 {
-  grid-column: 1/2;
-}
-
-.vector-5 {
-  grid-column: 3/4;
-}
-
-.vector-6 {
-  grid-column: 4/5;
+  font-size: calc(5rem + 1vw);
 }
 
 /* video  ---------------------------------------------------------------- */
 
-.gallery-video-container {
-  padding: 15rem 5% 10rem 5%;
-}
-
 .gallery-video h1 {
-  font-size: calc(6rem + 1vw);
-}
-
-.video-title {
-  grid-column: 1/4;
-  padding: 0 0 5rem 0;
-}
-
-.video-1 {
-  grid-column: 1/2;
-  grid-row: 2/3;
-}
-
-.video-2 {
-  grid-column: 2/3;
-  grid-row: 2/3;
-}
-
-.video-3 {
-  grid-column: 3/4;
-  grid-row: 2/3;
+  font-size: calc(5rem + 1vw);
 }
 
 /* ui ux web design ------------------------------------------------------------ */
 
-.gallery-narasihistorian-container {
-  padding: 15rem 5% 10rem 5%;
-}
-
 .narasihistorian-title h1 {
-  font-size: calc(6rem + 1vw);
+  font-size: calc(5rem + 1vw);
 }
-
-.narasihistorian-title {
-  grid-column: 1/3;
-  padding: 0 0 5rem 0;
-}
-
-.narasihistorian-1 {
-  grid-column: 1/2;
-  grid-row: 2/3;
-}
-
-.narasihistorian-2 {
-  grid-column: 1/2;
-  grid-row: 3/4;
-}
-
-.narasihistorian-3 {
-  grid-column: 2/3;
-  grid-row: 3/4;
-}
-
-.narasihistorian-4 {
-  grid-column: 2/3;
-  grid-row: 2/3;
-}
-
-.narasihistorian-about {
-  grid-column: 1/3;
-  grid-row: 4/5;
-  padding: 5rem 0 5rem 0;
-}
-
-/* vector portfollio ------------------------------------------------------------ */
