@@ -17,27 +17,27 @@ gsap.registerPlugin(ScrollTrigger);
 
 // navbar burger toggle mobile version -------------------------------------------
 
-const menuBurger = document.querySelector(".burger");
+const menuBurger = document.querySelector('.burger');
 
 let menuStatus = false;
 
 const menuTL = gsap.timeline({
-  default: { duration: 0.5, ease: "power4.inOut" },
+  default: { duration: 0.5, ease: 'power4.inOut' },
 });
 
-menuTL.to(".menu-navbar", { scaleY: 1, stagger: 0.5 });
+menuTL.to('.menu-navbar', { scaleY: 1, stagger: 0.5 });
 
-menuTL.to(".line1", { rotateZ: "35deg" }, "<");
-menuTL.to(".line3", { rotateZ: "-35deg", y: "-10px" }, "<");
-menuTL.to(".line2", { opacity: 0, onComplete: fadeIn }, "<");
+menuTL.to('.line1', { rotateZ: '35deg' }, '<');
+menuTL.to('.line3', { rotateZ: '-35deg', y: '-10px' }, '<');
+menuTL.to('.line2', { opacity: 0, onComplete: fadeIn }, '<');
 
 function fadeIn() {
-  menuTL.to(".menu-navbar li", { opacity: 1, duration: 0.5 });
+  menuTL.to('.menu-navbar li', { opacity: 1, duration: 0.5 });
 }
 
 menuTL.paused(true);
 
-menuBurger.addEventListener("click", () => {
+menuBurger.addEventListener('click', () => {
   if (!menuStatus) {
     menuTL.play();
     menuStatus = true;
@@ -53,8 +53,8 @@ const matchMediaResponsive = gsap.matchMedia();
 
 matchMediaResponsive.add(
   {
-    isDesktop: "(min-width: 721px)",
-    isMobile: "(max-width: 1024px)",
+    isDesktop: '(min-width: 721px)',
+    isMobile: '(max-width: 1024px)',
   },
   (context) => {
     console.log(context.conditions);
@@ -62,16 +62,16 @@ matchMediaResponsive.add(
 
     // smooth scrool ---------------------------------------------------
 
-    const container = document.querySelector(".main-content");
-    const items = document.querySelectorAll("section");
+    const container = document.querySelector('.main-content');
+    const items = document.querySelectorAll('section');
 
-    container.addEventListener("wheel", (event) => {
+    container.addEventListener('wheel', (event) => {
       event.preventDefault();
       const delta = event.deltaY;
 
       container.scrollBy({
         top: delta,
-        behavior: "smooth",
+        behavior: 'smooth',
       });
     });
 
@@ -108,141 +108,141 @@ matchMediaResponsive.add(
     // logo agung -------------------------------------------------------------------
 
     const tl = gsap.timeline({
-      default: { duration: 0.75, ease: "Power3.easeOut" },
+      default: { duration: 0.75, ease: 'Power3.easeOut' },
     });
 
-    tl.to(["#biography", "#showcase", "#closing-sections", ".footer"], {
-      display: isMobile ? "block" : "none",
+    tl.to(['#biography', '#showcase', '#closing-sections', '.footer'], {
+      display: isMobile ? 'block' : 'none',
     });
 
-    tl.to("svg", { display: isMobile ? "none" : "block" });
+    tl.to('svg', { display: isMobile ? 'none' : 'block' });
 
     tl.fromTo(
-      "svg",
+      'svg',
       { opacity: 0 },
       { opacity: isMobile ? 0 : 1, duration: 0.5 },
-      "<"
+      '<'
     );
 
     tl.fromTo(
-      "#left_line",
-      { x: "95%", rotation: "-27deg", transformOrigin: "bottom" },
-      { x: "0%", rotation: "0deg", duration: 0.8 }
+      '#left_line',
+      { x: '95%', rotation: '-27deg', transformOrigin: 'bottom' },
+      { x: '0%', rotation: '0deg', duration: 0.8 }
     )
       .fromTo(
-        "#right_line",
-        { x: "-95%", rotation: "27deg", transformOrigin: "bottom" },
-        { x: "0%", rotation: "0deg", duration: 0.8 },
-        "<"
+        '#right_line',
+        { x: '-95%', rotation: '27deg', transformOrigin: 'bottom' },
+        { x: '0%', rotation: '0deg', duration: 0.8 },
+        '<'
       )
       .fromTo(
-        "#center_line",
-        { opacity: 0, rotation: "35deg" },
-        { opacity: 1, rotation: "0deg", duration: 0.8 },
-        "<"
+        '#center_line',
+        { opacity: 0, rotation: '35deg' },
+        { opacity: 1, rotation: '0deg', duration: 0.8 },
+        '<'
       )
       .fromTo(
-        "#teks_gungs",
-        { opacity: 0, rotation: "45deg", transformOrigin: "bottom left" },
-        { opacity: 1, rotation: "0deg", duration: 1 }
+        '#teks_gungs',
+        { opacity: 0, rotation: '45deg', transformOrigin: 'bottom left' },
+        { opacity: 1, rotation: '0deg', duration: 1 }
       );
 
-    tl.to(".home-container svg", { opacity: 0, duration: 1 });
+    tl.to('.home-container svg', { opacity: 0, duration: 1 });
 
     // navbar animation
 
     tl.fromTo(
-      "nav",
-      { y: isMobile ? "0%" : "-100%" },
-      { y: "0%", duration: 1.5 }
+      'nav',
+      { y: isMobile ? '0%' : '-100%' },
+      { y: '0%', duration: 1.5 }
     ),
-      "<";
+      '<';
 
-    const logoNavbar = new SplitType(".logo-navbar");
+    const logoNavbar = new SplitType('.logo-navbar');
 
-    tl.fromTo(".logo-navbar", { opacity: isMobile ? 1 : 0 }, { opacity: 1 })
+    tl.fromTo('.logo-navbar', { opacity: isMobile ? 1 : 0 }, { opacity: 1 })
       .fromTo(
-        ".char",
+        '.char',
         { y: isMobile ? 0 : 50, opacity: isMobile ? 1 : 0 },
         {
           y: 0,
           opacity: 1,
           stagger: isMobile ? 0 : 0.05,
           duration: isMobile ? 0 : 1,
-          ease: isMobile ? "none" : "power4.out",
+          ease: isMobile ? 'none' : 'power4.out',
         },
-        "<"
+        '<'
       )
       .fromTo(
-        ".burger",
-        { x: isMobile ? "0%" : "20%", opacity: isMobile ? 1 : 0 },
-        { x: "0%", opacity: 1 },
-        "<"
+        '.burger',
+        { x: isMobile ? '0%' : '20%', opacity: isMobile ? 1 : 0 },
+        { x: '0%', opacity: 1 },
+        '<'
       )
       .fromTo(
-        ".menu1",
-        { y: isMobile ? 0 : "100%", opacity: isMobile ? 1 : 0 },
+        '.menu1',
+        { y: isMobile ? 0 : '100%', opacity: isMobile ? 1 : 0 },
         { y: 0, opacity: 1, duration: 1 },
-        "-=.9"
+        '-=.9'
       )
       .fromTo(
-        ".menu2",
-        { y: isMobile ? 0 : "-100%", opacity: isMobile ? 1 : 0 },
+        '.menu2',
+        { y: isMobile ? 0 : '-100%', opacity: isMobile ? 1 : 0 },
         { y: 0, opacity: 1, duration: 1 },
-        "-=.9"
+        '-=.9'
       )
       .fromTo(
-        ".right-image",
-        { x: isMobile ? 0 : "100%", opacity: isMobile ? 1 : 0.5 },
+        '.right-image',
+        { x: isMobile ? 0 : '100%', opacity: isMobile ? 1 : 0.5 },
         { x: 0, opacity: 1, duration: 1 },
-        "-=.8"
+        '-=.8'
       );
 
     // tex home ----------------------------------------------------------------------
 
     tl.fromTo(
-      ".cta1",
-      { x: isMobile ? "0%" : "-100%", opacity: isMobile ? 1 : 0.5 },
-      { x: "0%", opacity: 1, duration: 1 },
-      "<"
+      '.cta1',
+      { x: isMobile ? '0%' : '-100%', opacity: isMobile ? 1 : 0.5 },
+      { x: '0%', opacity: 1, duration: 1 },
+      '<'
     )
 
       .fromTo(
-        ".cta2",
-        { x: isMobile ? 0 : "-100%", opacity: isMobile ? 1 : 0.5 },
+        '.cta2',
+        { x: isMobile ? 0 : '-100%', opacity: isMobile ? 1 : 0.5 },
         { x: 0, opacity: 1, duration: 1 },
-        "-=.9"
+        '-=.9'
       )
 
       .fromTo(
-        ".cta3",
-        { x: isMobile ? 0 : "-100%", opacity: isMobile ? 1 : 0.5 },
+        '.cta3',
+        { x: isMobile ? 0 : '-100%', opacity: isMobile ? 1 : 0.5 },
         { x: 0, opacity: 1, duration: 1 },
-        "-=.9"
+        '-=.9'
       )
 
       .fromTo(
-        ".cta6",
-        { y: isMobile ? 0 : "100%", opacity: isMobile ? 1 : 0.5 },
+        '.cta6',
+        { y: isMobile ? 0 : '100%', opacity: isMobile ? 1 : 0.5 },
         { y: 0, opacity: 1, duration: 1 },
-        "-=.9"
+        '-=.9'
       );
 
     tl.to(
-      ["#biography", "#showcase", "#closing-sections", ".footer"],
+      ['#biography', '#showcase', '#closing-sections', '.footer'],
       {
-        display: "block",
+        display: 'block',
       },
-      "<"
+      '<'
     );
 
     // higlight text biography animation ------------------------------------------------
 
     const tlHiglightText = gsap.timeline({
       scrollTrigger: {
-        trigger: "#biography",
-        scroller: ".main-content",
-        start: "center 55%",
+        trigger: '#biography',
+        scroller: '.main-content',
+        start: 'center 55%',
         // end: "80% center",
 
         // the 4 states of toggle actions
@@ -253,29 +253,31 @@ matchMediaResponsive.add(
         // onLeaveBack - this actions happens when you scrool back out of a specific sections or elemetn for the first time . scrolling up
         // value: "play", "resume", "reset", "restart", complete, "reverse", and "none"
 
-        toggleActions: "play complete restart reverse",
+        toggleActions: isMobile
+          ? 'play complete none none'
+          : 'play complete restart reverse',
 
         // markers: true,
       },
     });
 
     tlHiglightText.fromTo(
-      ".highlight",
+      '.highlight',
       {
-        color: "rgba(255, 255, 255, 0.1)",
+        color: isMobile ? 'rgba(255, 255, 255, 1)' : 'rgba(255, 255, 255, 0.1)',
       },
-      { color: "rgba(255, 255, 255, 1)", stagger: 0.2, duration: 1.8 }
+      { color: 'rgba(255, 255, 255, 1)', stagger: 0.2, duration: 1.8 }
     );
 
-    tlHiglightText.to(".bottom-border", { scaleX: 1, duration: 1 }, "-=1.8");
+    tlHiglightText.to('.bottom-border', { scaleX: 1, duration: 1 }, '-=1.8');
 
     // higlight text showcase animation ------------------------------------------------
 
     const tlHiglightText2 = gsap.timeline({
       scrollTrigger: {
-        trigger: "#showcase",
-        scroller: ".main-content",
-        start: isMobile ? "center 85%" : "center 55%",
+        trigger: '#showcase',
+        scroller: '.main-content',
+        start: isMobile ? 'center 85%' : 'center 55%',
         // end: "100% center",
 
         // the 4 states of toggle actions
@@ -286,19 +288,21 @@ matchMediaResponsive.add(
         // onLeaveBack - this actions happens when you scrool back out of a specific sections or elemetn for the first time . scrolling up
         // value: "play", "resume", "reset", "restart", complete, "reverse", and "none"
 
-        toggleActions: "play complete restart reverse",
+        toggleActions: isMobile
+          ? 'play complete none none'
+          : 'play complete restart reverse',
 
         // markers: true,
       },
     });
 
     tlHiglightText2.fromTo(
-      [".highlight2", ".highlight2 a"],
+      ['.highlight2', '.highlight2 a'],
       {
-        color: "rgba(255, 255, 255, 0.1)",
+        color: isMobile ? 'rgba(255, 255, 255, 1)' : 'rgba(255, 255, 255, 0.1)',
       },
       {
-        color: "rgba(255, 255, 255, 1)",
+        color: 'rgba(255, 255, 255, 1)',
         stagger: 0.1,
         duration: 1.8,
       }
@@ -307,7 +311,7 @@ matchMediaResponsive.add(
     // gallery showcase sections -----------------------------------------------------------
 
     tlHiglightText2.to(
-      [".video1-style video", ".video2-style video"],
+      ['.video1-style video', '.video2-style video'],
       {
         x: 0,
         opacity: 1,
@@ -315,21 +319,21 @@ matchMediaResponsive.add(
         stagger: 0.5,
         // delay: 0.3,
       },
-      "-=1.8"
+      '-=1.8'
     );
 
-    tlHiglightText2.to(".bottom-border2", { scaleX: 1, duration: 2 }, "-=1.8");
+    tlHiglightText2.to('.bottom-border2', { scaleX: 1, duration: 2 }, '-=1.8');
 
     // closing sections -----------------------------------------------------------
 
-    const textClosing = new SplitType(".text-title h1");
-    const textClosin2 = new SplitType(".text-title p");
+    const textClosing = new SplitType('.text-title h1');
+    const textClosin2 = new SplitType('.text-title p');
 
     const tlClosingSections = gsap.timeline({
       scrollTrigger: {
-        trigger: "#closing-sections",
-        scroller: ".main-content",
-        start: "center 55%",
+        trigger: '#closing-sections',
+        scroller: '.main-content',
+        start: 'center 55%',
         // end: "-5%",
 
         // the 4 states of toggle actions
@@ -340,20 +344,22 @@ matchMediaResponsive.add(
         // onLeaveBack - this actions happens when you scrool back out of a specific sections or elemetn for the first time . scrolling up
         // value: "play", "resume", "reset", "restart", complete, "reverse", and "none"
 
-        toggleActions: "play complete restart reverse",
+        toggleActions: isMobile
+          ? 'play complete none none'
+          : 'play complete restart reverse',
 
         // markers: true,
       },
-      default: { ease: "power3.out", duration: 1 },
+      default: { ease: 'power3.out', duration: 1 },
     });
 
-    gsap.set(".text-title h1", { autoAlpha: 1 });
-    gsap.set(".text-title p", { autoAlpha: 1 });
+    gsap.set('.text-title h1', { autoAlpha: 1 });
+    gsap.set('.text-title p', { autoAlpha: 1 });
 
     tlClosingSections.from(textClosing.chars, {
-      y: 40,
-      opacity: 0,
-      skewX: 30,
+      y: isMobile ? 0 : 40,
+      opacity: isMobile ? 1 : 0,
+      skewX: isMobile ? 0 : 30,
       stagger: 0.03,
       duration: 1.8,
     });
@@ -361,15 +367,15 @@ matchMediaResponsive.add(
     tlClosingSections.from(
       textClosin2.lines,
       {
-        y: 40,
-        opacity: 0,
-        skewX: 30,
+        y: isMobile ? 0 : 40,
+        opacity: isMobile ? 1 : 0,
+        skewX: isMobile ? 0 : 30,
         stagger: 0.03,
         duration: 1.4,
       },
-      "-=.8"
+      '-=.8'
     );
 
-    tlClosingSections.from(".email-button", { scaleX: 0, duration: 0.7 }, "<");
+    tlClosingSections.from('.email-button', { scaleX: 0, duration: 0.7 }, '<');
   }
 );
