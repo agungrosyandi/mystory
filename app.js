@@ -53,12 +53,12 @@ const matchMediaResponsive = gsap.matchMedia();
 
 matchMediaResponsive.add(
   {
-    isDesktop: '(min-width: 721px)',
+    isDesktop: '(min-width: 1025px)',
     isMobile: '(max-width: 1024px)',
   },
   (context) => {
     console.log(context.conditions);
-    const { isMobile, isDesktopTab } = context.conditions;
+    const { isMobile, isDesktop } = context.conditions;
 
     // smooth scrool ---------------------------------------------------
 
@@ -108,132 +108,102 @@ matchMediaResponsive.add(
     // logo agung -------------------------------------------------------------------
 
     const tl = gsap.timeline({
-      default: { duration: 0.75, ease: 'Power3.easeOut' },
+      default: { duration: 0.75, ease: 'power4.easeOut' },
     });
 
-    tl.to(['#biography', '#showcase', '#closing-sections', '.footer'], {
-      display: isMobile ? 'block' : 'none',
+    const logoNavbar = new SplitType('.logo-navbar');
+    const menu1 = new SplitType('.menu1');
+    const menu2 = new SplitType('.menu2');
+
+    gsap.set(['.logo-navbar', '.menu1', '.menu2'], {
+      autoAlpha: 1,
+      visibility: 'hidden',
     });
-
-    tl.to('svg', { display: isMobile ? 'none' : 'block' });
-
-    tl.fromTo(
-      'svg',
-      { opacity: 0 },
-      { opacity: isMobile ? 0 : 1, duration: 0.5 },
-      '<'
-    );
-
-    tl.fromTo(
-      '#left_line',
-      { x: '95%', rotation: '-27deg', transformOrigin: 'bottom' },
-      { x: '0%', rotation: '0deg', duration: 0.8 }
-    )
-      .fromTo(
-        '#right_line',
-        { x: '-95%', rotation: '27deg', transformOrigin: 'bottom' },
-        { x: '0%', rotation: '0deg', duration: 0.8 },
-        '<'
-      )
-      .fromTo(
-        '#center_line',
-        { opacity: 0, rotation: '35deg' },
-        { opacity: 1, rotation: '0deg', duration: 0.8 },
-        '<'
-      )
-      .fromTo(
-        '#teks_gungs',
-        { opacity: 0, rotation: '45deg', transformOrigin: 'bottom left' },
-        { opacity: 1, rotation: '0deg', duration: 1 }
-      );
-
-    tl.to('.home-container svg', { opacity: 0, duration: 1 });
-
-    // navbar animation
+    gsap.set(['.cta-text1 h2', '.cta-text2 h1', '.cta-paragraph p'], {
+      opacity: isMobile ? 1 : 0,
+    });
 
     tl.fromTo(
       'nav',
       { y: isMobile ? '0%' : '-100%' },
-      { y: '0%', duration: 1.5 }
-    ),
-      '<';
+      { y: '0%', duration: 0.5 }
+    );
 
-    const logoNavbar = new SplitType('.logo-navbar');
+    tl.from(logoNavbar.chars, {
+      y: isMobile ? 0 : 40,
+      opacity: isMobile ? 1 : 0,
+      skewX: isMobile ? 0 : 30,
+      stagger: 0.03,
+      duration: 1,
+    });
 
-    tl.fromTo('.logo-navbar', { opacity: isMobile ? 1 : 0 }, { opacity: 1 })
-      .fromTo(
-        '.char',
-        { y: isMobile ? 0 : 50, opacity: isMobile ? 1 : 0 },
-        {
-          y: 0,
-          opacity: 1,
-          stagger: isMobile ? 0 : 0.05,
-          duration: isMobile ? 0 : 1,
-          ease: isMobile ? 'none' : 'power4.out',
-        },
-        '<'
-      )
-      .fromTo(
-        '.burger',
-        { x: isMobile ? '0%' : '20%', opacity: isMobile ? 1 : 0 },
-        { x: '0%', opacity: 1 },
-        '<'
-      )
-      .fromTo(
-        '.menu1',
-        { y: isMobile ? 0 : '100%', opacity: isMobile ? 1 : 0 },
-        { y: 0, opacity: 1, duration: 1 },
-        '-=.9'
-      )
-      .fromTo(
-        '.menu2',
-        { y: isMobile ? 0 : '-100%', opacity: isMobile ? 1 : 0 },
-        { y: 0, opacity: 1, duration: 1 },
-        '-=.9'
-      )
-      .fromTo(
-        '.right-image',
-        { x: isMobile ? 0 : '100%', opacity: isMobile ? 1 : 0.5 },
-        { x: 0, opacity: 1, duration: 1 },
-        '-=.8'
-      );
+    // navbar animation
+
+    tl.from(
+      menu1.chars,
+      {
+        y: 40,
+        opacity: 0,
+        skewX: 30,
+        stagger: 0.03,
+        duration: 1,
+      },
+      '-=.8'
+    );
+
+    tl.from(
+      menu2.chars,
+      {
+        y: 40,
+        opacity: 0,
+        skewX: 30,
+        stagger: 0.03,
+        duration: 1,
+      },
+      '-=1'
+    );
+
+    // right image animation
+
+    tl.fromTo(
+      '.right-image',
+      { x: isMobile ? '0%' : '100%', opacity: isMobile ? 1 : 0.5 },
+      { x: 0, opacity: 1, duration: 1 },
+      '-=.8'
+    );
 
     // tex home ----------------------------------------------------------------------
 
     tl.fromTo(
-      '.cta1',
-      { x: isMobile ? '0%' : '-100%', opacity: isMobile ? 1 : 0.5 },
-      { x: '0%', opacity: 1, duration: 1 },
+      '.cta-text1 h2',
+      { x: isMobile ? '0%' : '-100%', opacity: isMobile ? 1 : 0 },
+      { x: '0%', opacity: 1, duration: 1.3 },
       '<'
-    )
+    );
 
-      .fromTo(
-        '.cta2',
-        { x: isMobile ? 0 : '-100%', opacity: isMobile ? 1 : 0.5 },
-        { x: 0, opacity: 1, duration: 1 },
-        '-=.9'
-      )
-
-      .fromTo(
-        '.cta3',
-        { x: isMobile ? 0 : '-100%', opacity: isMobile ? 1 : 0.5 },
-        { x: 0, opacity: 1, duration: 1 },
-        '-=.9'
-      )
-
-      .fromTo(
-        '.cta6',
-        { y: isMobile ? 0 : '100%', opacity: isMobile ? 1 : 0.5 },
-        { y: 0, opacity: 1, duration: 1 },
-        '-=.9'
-      );
-
-    tl.to(
-      ['#biography', '#showcase', '#closing-sections', '.footer'],
+    tl.fromTo(
+      '.cta-text2 h1',
+      { x: isMobile ? '0%' : '-100%', opacity: isMobile ? 1 : 0 },
       {
-        display: 'block',
+        x: '0%',
+        stagger: 0.3,
+        opacity: 1,
+        duration: 1.3,
       },
-      '<'
+      '-=.8'
+    );
+
+    tl.fromTo(
+      '.cta-paragraph p',
+      { y: isMobile ? 0 : '100%', opacity: isMobile ? 1 : 0 },
+      { y: '0%', opacity: 1, duration: 1 },
+      '-=.7'
+    );
+    tl.fromTo(
+      '.footer',
+      { y: isMobile ? '0%' : '100%', opacity: isMobile ? 1 : 0 },
+      { y: '0%', opacity: 1, duration: 0.5 },
+      '-=.7'
     );
 
     // higlight text biography animation ------------------------------------------------
@@ -271,6 +241,35 @@ matchMediaResponsive.add(
 
     tlHiglightText.to('.bottom-border', { scaleX: 1, duration: 1 }, '-=1.8');
 
+    // image dissapers animation ------------------------------------------------
+
+    const tlImageDissapears = gsap.timeline({
+      scrollTrigger: {
+        trigger: '#biography',
+        scroller: '.main-content',
+        start: 'bottom center',
+        // end: "80% center",
+
+        // the 4 states of toggle actions
+
+        // onEnter - this actions happens when you scrool into specific sections or element for the first time. scroolling down
+        // onLeave - this actions happens when you scrool out of a specific sections or element for the frist time. scrooling down
+        // onEnterBack - this actions happens when you scrool back into a specific sections or element for the first time.  scrooling up
+        // onLeaveBack - this actions happens when you scrool back out of a specific sections or elemetn for the first time . scrolling up
+        // value: "play", "resume", "reset", "restart", complete, "reverse", and "none"
+
+        toggleActions: 'play complete play reverse',
+
+        // markers: true,
+      },
+    });
+
+    tlImageDissapears.to('.right-image', {
+      x: '100',
+      opacity: 0,
+      duration: 0.5,
+    });
+
     // higlight text showcase animation ------------------------------------------------
 
     const tlHiglightText2 = gsap.timeline({
@@ -289,40 +288,33 @@ matchMediaResponsive.add(
         // value: "play", "resume", "reset", "restart", complete, "reverse", and "none"
 
         toggleActions: isMobile
-          ? 'play complete none none'
+          ? 'play complete restart reverse'
           : 'play complete restart reverse',
 
         // markers: true,
       },
     });
 
-    tlHiglightText2.fromTo(
-      ['.highlight2', '.highlight2 a'],
-      {
-        color: isMobile ? 'rgba(255, 255, 255, 1)' : 'rgba(255, 255, 255, 0.1)',
-      },
-      {
-        color: 'rgba(255, 255, 255, 1)',
-        stagger: 0.1,
-        duration: 1.8,
-      }
-    );
+    tlHiglightText2.to(['.showcase-title h1', '.showcase-title p'], {
+      x: '0%',
+      stagger: 0.1,
+      opacity: 1,
+      duration: 1.8,
+    });
 
     // gallery showcase sections -----------------------------------------------------------
 
     tlHiglightText2.to(
-      ['.video1-style video', '.video2-style video'],
+      '.video1-style video',
       {
         x: 0,
         opacity: 1,
         duration: 1,
         stagger: 0.5,
-        // delay: 0.3,
+        delay: 0.5,
       },
       '-=1.8'
     );
-
-    tlHiglightText2.to('.bottom-border2', { scaleX: 1, duration: 2 }, '-=1.8');
 
     // closing sections -----------------------------------------------------------
 
@@ -376,6 +368,10 @@ matchMediaResponsive.add(
       '-=.8'
     );
 
-    tlClosingSections.from('.email-button', { scaleX: 0, duration: 0.7 }, '<');
+    tlClosingSections.from(
+      '.email-button',
+      { scaleX: isMobile ? 1 : 0, duration: 0.7 },
+      '<'
+    );
   }
 );

@@ -1,32 +1,32 @@
 /* font used */
 
 @font-face {
-  font-family: "MonaSansLight";
-  src: url("Mona-Sans.woff2") format("woff2 supports variations"),
-    url("../font/Mona-Sans.woff2") format("woff2-variations");
+  font-family: 'MonaSansLight';
+  src: url('Mona-Sans.woff2') format('woff2 supports variations'),
+    url('../font/Mona-Sans.woff2') format('woff2-variations');
   font-weight: 200;
   font-stretch: 100%;
 }
 
 @font-face {
-  font-family: "MonaSansLightNarrow";
-  src: url("Mona-Sans.woff2") format("woff2 supports variations"),
-    url("../font/Mona-Sans.woff2") format("woff2-variations");
+  font-family: 'MonaSansLightNarrow';
+  src: url('Mona-Sans.woff2') format('woff2 supports variations'),
+    url('../font/Mona-Sans.woff2') format('woff2-variations');
   font-weight: 200;
   font-stretch: 75%;
 }
 
 @font-face {
-  font-family: "MonaSansBold";
-  src: url("Mona-Sans.woff2") format("woff2 supports variations"),
-    url("../font/Mona-Sans.woff2") format("woff2-variations");
+  font-family: 'MonaSansBold';
+  src: url('Mona-Sans.woff2') format('woff2 supports variations'),
+    url('../font/Mona-Sans.woff2') format('woff2-variations');
   font-weight: 500;
   font-stretch: 125%;
 }
 
 @font-face {
-  font-family: "DrukBoldTrial";
-  src: url("../font/Druk-Bold-Trial.otf") format("truetype");
+  font-family: 'DrukBoldTrial';
+  src: url('../font/Druk-Bold-Trial.otf') format('truetype');
 }
 
 /* default settings ----------------------------------------------------------*/
@@ -44,11 +44,11 @@
 
   /* font  */
 
-  --montserratFont: "Montserrat", sans-serif;
-  --drukBoldTrial: "DrukBoldTrial";
-  --monasansLightNarrow: "MonaSansLightNarrow";
-  --monaSansLight: "MonaSansLight";
-  --monaSansBold: "MonaSansBold";
+  --montserratFont: 'Montserrat', sans-serif;
+  --drukBoldTrial: 'DrukBoldTrial';
+  --monasansLightNarrow: 'MonaSansLightNarrow';
+  --monaSansLight: 'MonaSansLight';
+  --monaSansBold: 'MonaSansBold';
 }
 
 /* default settings */
@@ -66,29 +66,27 @@ body {
 
 /* home sections -------------------------------------------------------- */
 
-/* --------------------------------------------------------------- left text  */
-
-.cta-text1 {
-  padding: 1rem 0rem;
+.home-container {
+  padding: 10rem 0 10rem 5%;
 }
 
-.cta1 {
-  padding-right: 1.5rem;
-}
-
-.cta1,
-.cta2 {
-  font-size: calc(9rem + 1vw);
-}
-
-.cta3 {
+.cta-text1 h2 {
   font-size: calc(1rem + 1vw);
 }
 
-.cta6 {
-  font-size: calc(0.4rem + 1vw);
-  width: 60%;
-  padding: 0 10rem 5rem 0;
+.cta-text2 {
+  padding: 2rem 0 3rem 0;
+}
+
+.cta-text2 h1 {
+  font-size: calc(10rem + 1vw);
+  line-height: 11rem;
+}
+
+.cta-paragraph p {
+  font-size: calc(0.3rem + 1vw);
+  width: 50%;
+  line-height: 3rem;
 }
 
 /* ---------------------------------------------------------- right side  */
@@ -103,35 +101,37 @@ body {
 
 .text-higlight p {
   font-size: calc(0.3rem + 1vw);
-  line-height: 4rem;
+  line-height: 3rem;
   padding: 0 10rem 0 0;
 }
 
 /* gallery showcase ----------------------------------------------------- */
 
-.gallery-showcase {
-  width: 100%;
-  height: 50%;
-  padding: 1rem 0 3rem 0;
+.showcase-container {
+  padding: 10rem 5% 10rem 5%;
 }
 
-.title-short-paragraph {
-  padding: 0 0 2% 0;
+/*  title showcase menu */
+
+.showcase-title {
+  padding: 0 10rem 0 0;
+  flex: 1 1 40rem;
 }
 
-.short-paragprah-text1,
-.short-paragprah-text2,
-.short-paragprah-text3 {
-  padding: 0.4rem;
+.showcase-title h1 {
+  padding: 3rem 0;
   font-size: calc(6rem + 1vw);
-  font-family: var(--drukBoldTrial);
-  text-transform: uppercase;
 }
 
-.download-menu p {
-  font-size: calc(0.1rem + 1vw);
-  line-height: 4rem;
-  padding: 0 5rem 0 0;
+.showcase-title p {
+  font-size: calc(0.3rem + 1vw);
+  line-height: 3rem;
+  padding: 0 0 0 0;
+}
+/*  gallery showcase menu */
+
+.video1-style {
+  grid-column: 1/3;
 }
 
 /* closing sections ------------------------------------------------------- */
