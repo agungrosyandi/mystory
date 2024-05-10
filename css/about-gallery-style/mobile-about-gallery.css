@@ -71,14 +71,11 @@ body {
 }
 
 .poster-title-submain {
-  font-size: calc(0.7rem + 1vw);
-  padding: 2rem 1rem 3rem 0;
-  line-height: 3rem;
+  font-size: calc(0.9rem + 1vw);
 }
 
 .poster-title {
   grid-column: 1/5;
-  padding: 0 0 5rem 0;
 }
 
 .poster-1 {
@@ -93,22 +90,10 @@ body {
   grid-column: 1/5;
 }
 
-.poster-4 {
-  grid-column: 1/5;
-}
-
-.poster-5 {
-  grid-column: 1/5;
-}
-
-.poster-6 {
-  grid-column: 1/5;
-}
-
 /* vector ------------------------------------------------------------ */
 
 .gallery-vector-container {
-  padding: 5rem 0 5rem 5%;
+  padding: 5rem 5% 5rem 5%;
 }
 
 .vector-title h1 {
@@ -116,9 +101,7 @@ body {
 }
 
 .vector-title p {
-  font-size: calc(0.5rem + 1vw);
-  padding: 2rem 1rem 3rem 0;
-  line-height: 3rem;
+  font-size: calc(0.9rem + 1vw);
 }
 
 /* video ------------------------------------------------- */
@@ -132,13 +115,11 @@ body {
 }
 
 .gallery-video h1 {
-  font-size: calc(5rem + 1vw);
+  font-size: calc(4rem + 1vw);
 }
 
 .gallery-video p {
-  font-size: calc(0.5rem + 1vw);
-  padding: 2rem 1rem 3rem 0;
-  line-height: 3rem;
+  font-size: calc(0.9rem + 1vw);
 }
 
 .video1-style {
@@ -164,17 +145,18 @@ body {
 }
 
 .narasihistorian-title h1 {
-  font-size: calc(5rem + 1vw);
+  font-size: calc(4rem + 1vw);
 }
 
-.narasihistorian-title p,
+.narasihistorian-title p {
+  font-size: calc(0.9rem + 1vw);
+}
+
 .narasihistorian-about p,
-.mybiography-about p {
-  font-size: calc(0.5rem + 1vw);
-  line-height: 3rem;
-  padding: 2rem 0 3rem 0;
+.mybiography-about p,
+.prototypemotionweb-about p {
+  font-size: calc(0.9rem + 1vw);
 }
-
 .narasihistorian-title {
   grid-column: 1/3;
   padding: 0 0 2rem 0;
@@ -190,31 +172,47 @@ body {
   grid-row: 3/4;
 }
 
-.narasihistorian-3 {
-  grid-column: 1/3;
-  grid-row: 4/5;
-}
-
 .narasihistorian-about {
   grid-column: 1/3;
-  grid-row: 5/6;
-  padding: 3rem 0 5rem 0;
+  grid-row: 4/5;
+  padding: 0 0 5rem 0;
 }
 
 /* vector portfollio ------------------------------------------------------------ */
 
-.mybiography-about {
-  grid-column: 1/3;
-  grid-row: 8/9;
-}
-
 .biography-1 {
   grid-column: 1/3;
-  grid-row: 6/7;
-  padding: 2rem 0 0 0;
+  grid-row: 5/6;
+  padding: 5rem 0 0 0;
 }
 
 .biography-2 {
   grid-column: 1/3;
+  grid-row: 6/7;
+  padding: 0 0 0 0;
+}
+
+.mybiography-about {
+  grid-column: 1/3;
   grid-row: 7/8;
+  padding: 0 0 5rem 0;
+  border-bottom: 1px solid black;
+}
+
+.prototypemotionweb-1 {
+  grid-column: 1/3;
+  grid-row: 8/9;
+  padding: 5rem 0 0 0;
+}
+
+.prototypemotionweb-2 {
+  grid-column: 1/3;
+  grid-row: 9/10;
+  padding: 0 0 0 0;
+}
+
+.prototypemotionweb-about {
+  grid-column: 1/3;
+  grid-row: 10/11;
+  padding: 0 0 5rem 0;
 }

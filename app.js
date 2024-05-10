@@ -270,6 +270,36 @@ matchMediaResponsive.add(
       duration: 0.5,
     });
 
+    // image dissapers animation ------------------------------------------------
+
+    const tlNavbarChange = gsap.timeline({
+      scrollTrigger: {
+        trigger: '#biography',
+        scroller: '.main-content',
+        start: 'bottom center',
+        // end: "80% center",
+
+        // the 4 states of toggle actions
+
+        // onEnter - this actions happens when you scrool into specific sections or element for the first time. scroolling down
+        // onLeave - this actions happens when you scrool out of a specific sections or element for the frist time. scrooling down
+        // onEnterBack - this actions happens when you scrool back into a specific sections or element for the first time.  scrooling up
+        // onLeaveBack - this actions happens when you scrool back out of a specific sections or elemetn for the first time . scrolling up
+        // value: "play", "resume", "reset", "restart", complete, "reverse", and "none"
+
+        toggleActions: 'play none play reverse',
+
+        // markers: true,
+      },
+    });
+
+    tlNavbarChange.fromTo(
+      'nav',
+      { width: isMobile ? '100vw' : '69vw' },
+      { width: '95vw', duration: 1.3, delay: 0.3 },
+      '-=.1'
+    );
+
     // higlight text showcase animation ------------------------------------------------
 
     const tlHiglightText2 = gsap.timeline({
