@@ -1,32 +1,32 @@
 /* font used */
 
 @font-face {
-  font-family: 'MonaSansLight';
-  src: url('Mona-Sans.woff2') format('woff2 supports variations'),
-    url('../font/Mona-Sans.woff2') format('woff2-variations');
+  font-family: "MonaSansLight";
+  src: url("Mona-Sans.woff2") format("woff2 supports variations"),
+    url("../font/Mona-Sans.woff2") format("woff2-variations");
   font-weight: 200;
   font-stretch: 100%;
 }
 
 @font-face {
-  font-family: 'MonaSansLightNarrow';
-  src: url('Mona-Sans.woff2') format('woff2 supports variations'),
-    url('../font/Mona-Sans.woff2') format('woff2-variations');
+  font-family: "MonaSansLightNarrow";
+  src: url("Mona-Sans.woff2") format("woff2 supports variations"),
+    url("../font/Mona-Sans.woff2") format("woff2-variations");
   font-weight: 200;
   font-stretch: 75%;
 }
 
 @font-face {
-  font-family: 'MonaSansBold';
-  src: url('Mona-Sans.woff2') format('woff2 supports variations'),
-    url('../font/Mona-Sans.woff2') format('woff2-variations');
+  font-family: "MonaSansBold";
+  src: url("Mona-Sans.woff2") format("woff2 supports variations"),
+    url("../font/Mona-Sans.woff2") format("woff2-variations");
   font-weight: 500;
   font-stretch: 125%;
 }
 
 @font-face {
-  font-family: 'DrukBoldTrial';
-  src: url('../font/Druk-Bold-Trial.otf') format('truetype');
+  font-family: "DrukBoldTrial";
+  src: url("../font/Druk-Bold-Trial.otf") format("truetype");
 }
 
 /* default settings ----------------------------------------------------------*/
@@ -44,11 +44,11 @@
 
   /* font  */
 
-  --montserratFont: 'Montserrat', sans-serif;
-  --drukBoldTrial: 'DrukBoldTrial';
-  --monasansLightNarrow: 'MonaSansLightNarrow';
-  --monaSansLight: 'MonaSansLight';
-  --monaSansBold: 'MonaSansBold';
+  --montserratFont: "Montserrat", sans-serif;
+  --drukBoldTrial: "DrukBoldTrial";
+  --monasansLightNarrow: "MonaSansLightNarrow";
+  --monaSansLight: "MonaSansLight";
+  --monaSansBold: "MonaSansBold";
 }
 
 * {
@@ -191,14 +191,14 @@ nav {
 }
 
 .cta-text2 {
-  padding: 2rem 0 5rem 0;
+  padding: 3rem 0 3rem 0;
 }
 
 .cta-text2 h1 {
-  font-size: calc(17rem + 1vw);
+  font-size: calc(13rem + 1vw);
   font-family: var(--drukBoldTrial);
   letter-spacing: 0.2rem;
-  line-height: 18rem;
+  line-height: 14rem;
   text-transform: uppercase;
   transform: translateX(-100%);
   transform-origin: left;
@@ -451,7 +451,7 @@ nav {
   height: 100%;
 }
 
-.footer p {
+small {
   font-size: calc(0.8rem + 0.5vw);
-  color: var(--whiteColor);
+  color: var(--darkWhiteColor);
 }

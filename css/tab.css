@@ -1,24 +1,24 @@
 /* font used */
 
 @font-face {
-  font-family: 'NelaSlabMedium';
-  src: url('../font/NelaSlab\ Medium.ttf') format('truetype');
+  font-family: "NelaSlabMedium";
+  src: url("../font/NelaSlab\ Medium.ttf") format("truetype");
 }
 
 /* mona font -------------------------------------------------------------- */
 
 @font-face {
-  font-family: 'MonaSansLight';
-  src: url('Mona-Sans.woff2') format('woff2 supports variations'),
-    url('../font/Mona-Sans.woff2') format('woff2-variations');
+  font-family: "MonaSansLight";
+  src: url("Mona-Sans.woff2") format("woff2 supports variations"),
+    url("../font/Mona-Sans.woff2") format("woff2-variations");
   font-weight: 200;
   font-stretch: 125%;
 }
 
 @font-face {
-  font-family: 'MonaSansLightNarrow';
-  src: url('Mona-Sans.woff2') format('woff2 supports variations'),
-    url('../font/Mona-Sans.woff2') format('woff2-variations');
+  font-family: "MonaSansLightNarrow";
+  src: url("Mona-Sans.woff2") format("woff2 supports variations"),
+    url("../font/Mona-Sans.woff2") format("woff2-variations");
   font-weight: 200;
   font-stretch: 75%;
 }
@@ -39,13 +39,13 @@
 
   /* font  */
 
-  --nelaSlabFont: 'NelaSlabMedium';
-  --nelaSlabLightFont: 'NelaSlabLight';
-  --poppinsFont: 'Poppins', sans-serif;
-  --montserratFont: 'Montserrat', sans-serif;
-  --newEleganceCondensed: 'NewEleganceSansCondensed';
-  --newEleganceItalic: 'NewEleganceItalic';
-  --newEleganceCondita: 'NewEleganceCondita';
+  --nelaSlabFont: "NelaSlabMedium";
+  --nelaSlabLightFont: "NelaSlabLight";
+  --poppinsFont: "Poppins", sans-serif;
+  --montserratFont: "Montserrat", sans-serif;
+  --newEleganceCondensed: "NewEleganceSansCondensed";
+  --newEleganceItalic: "NewEleganceItalic";
+  --newEleganceCondita: "NewEleganceCondita";
 }
 
 /* default settings */
@@ -64,7 +64,7 @@ nav {
 }
 
 .logo-navbar {
-  font-size: calc(2rem + 1vw);
+  font-size: calc(1.5rem + 1vw);
 }
 
 /* burger menu ---------------------------------------------------------- */
@@ -107,25 +107,25 @@ nav {
 }
 
 .menu-navbar li a {
-  font-size: calc(4rem + 1vw);
+  font-size: calc(3rem + 1vw);
   color: rgb(255, 255, 255);
 }
 
 /* home ----------------------------------------------------------------- */
 
 .cta-text1 h2 {
-  font-size: calc(3rem + 1vw);
+  font-size: calc(2rem + 1vw);
 }
 
 .cta-text2 h1 {
-  font-size: calc(13rem + 1vw);
-  line-height: 14rem;
+  font-size: calc(10rem + 1vw);
+  line-height: 11rem;
 }
 
 .cta-paragraph p {
   font-size: calc(1rem + 1vw);
   width: 50%;
-  line-height: 4rem;
+  line-height: 3rem;
 }
 
 /* ---------------------------------------------------------- right side  */
@@ -147,8 +147,8 @@ nav {
 }
 
 .biography-container h1 {
-  font-size: calc(10rem + 1vw);
-  padding-bottom: 7rem;
+  font-size: calc(7rem + 1vw);
+  padding-bottom: 5rem;
 }
 
 .text-higlight p {
@@ -169,7 +169,7 @@ nav {
 
 .showcase-title h1 {
   padding: 3rem 0;
-  font-size: calc(10rem + 1vw);
+  font-size: calc(7rem + 1vw);
 }
 
 .showcase-title p {
@@ -187,7 +187,7 @@ nav {
 /* closing sections ----------------------------------------------------------- */
 
 .text-title h1 {
-  font-size: calc(10rem + 1vw);
+  font-size: calc(7rem + 1vw);
 }
 
 .text-title p {
