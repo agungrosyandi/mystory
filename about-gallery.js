@@ -4,7 +4,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const lenis = new Lenis();
 
-lenis.on('scroll', (e) => {
+lenis.on("scroll", (e) => {
   console.log(e);
 });
 
@@ -21,8 +21,8 @@ const matchMediaResponsive = gsap.matchMedia();
 
 matchMediaResponsive.add(
   {
-    isDesktop: '(min-width: 1024px)',
-    isMobileTab: '(max-width: 1023px)',
+    isDesktop: "(min-width: 1024px)",
+    isMobileTab: "(max-width: 1024px)",
   },
   (context) => {
     console.log(context.conditions);
@@ -32,7 +32,7 @@ matchMediaResponsive.add(
 
     const lenis = new Lenis();
 
-    lenis.on('scroll', ScrollTrigger.update);
+    lenis.on("scroll", ScrollTrigger.update);
 
     gsap.ticker.add((time) => {
       lenis.raf(time * 1000);
@@ -43,33 +43,33 @@ matchMediaResponsive.add(
     // timeline setting basic ------------------------------------------------
 
     const tl = gsap.timeline({
-      default: { duration: 0.75, ease: 'Power3.easeOut' },
+      default: { duration: 0.75, ease: "Power3.easeOut" },
     });
 
     // poster sections ---------------------------------------------
 
     tl.fromTo(
-      '.logo-navbar-gallery-about',
-      { scale: 0 },
-      { scale: 1, duration: 2.5, delay: 0.35, ease: 'elastic.out(1.5, 1)' }
+      ".logo-navbar-gallery-about",
+      { scale: isMobileTab ? 1 : 0 },
+      { scale: 1, duration: 2.5, delay: 0.35, ease: "elastic.out(1.5, 1)" }
     )
       .fromTo(
-        '.poster-title-main',
-        { y: '50', opacity: 0 },
+        ".poster-title-main",
+        { y: isMobileTab ? "0" : "50", opacity: isMobileTab ? 1 : 0 },
         { y: 0, opacity: 1, duration: 1 },
-        '<'
+        "<"
       )
       .fromTo(
-        '.poster-title-submain',
-        { y: '50', opacity: 0 },
+        ".poster-title-submain",
+        { y: isMobileTab ? "0" : "50", opacity: isMobileTab ? 1 : 0 },
         { y: 0, opacity: 1, duration: 1 },
-        '<10%'
+        "<10%"
       )
       .fromTo(
-        ['.poster-1', '.poster-2', '.poster-3'],
-        { y: '50', opacity: 0 },
+        [".poster-1", ".poster-2", ".poster-3"],
+        { y: isMobileTab ? "0" : "50", opacity: isMobileTab ? 1 : 0 },
         { y: 0, stagger: 0.3, opacity: 1, duration: 1 },
-        '<35%'
+        "<35%"
       );
   }
 );

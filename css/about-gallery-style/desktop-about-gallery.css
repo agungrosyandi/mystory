@@ -63,14 +63,20 @@ body {
   background: #2b2730;
 }
 
+/* navbar sections ---------------------------------------------------------- */
+
+nav {
+  padding: 0 5%;
+}
+
 /* poster --------------------------------------------------------------- */
 
 .gallery-poster-container {
-  padding: 15rem 5% 5rem 5%;
+  padding: 10rem 5% 5rem 5%;
 }
 
 .poster-title-main {
-  font-size: calc(6rem + 1vw);
+  font-size: calc(5rem + 1vw);
 }
 
 .poster-title-submain {
@@ -79,12 +85,12 @@ body {
 
 /* vector ------------------------------------------------------------ */
 
-.title-vector-mask {
-  width: 70%;
+.gallery-vector-container {
+  padding: 0 5% 5rem 5%;
 }
 
 .vector-title h1 {
-  font-size: calc(6rem + 1vw);
+  font-size: calc(5rem + 1vw);
 }
 
 .vector-title p {
@@ -93,8 +99,12 @@ body {
 
 /* video  ---------------------------------------------------------------- */
 
+.gallery-video-container {
+  padding: 0 5% 5rem 5%;
+}
+
 .gallery-video h1 {
-  font-size: calc(6rem + 1vw);
+  font-size: calc(5rem + 1vw);
 }
 
 .gallery-video p {
@@ -103,8 +113,12 @@ body {
 
 /* ui ux web design ------------------------------------------------------------ */
 
+.gallery-narasihistorian-container {
+  padding: 0 5% 5rem 5%;
+}
+
 .narasihistorian-title h1 {
-  font-size: calc(6rem + 1vw);
+  font-size: calc(5rem + 1vw);
 }
 
 .narasihistorian-title p {

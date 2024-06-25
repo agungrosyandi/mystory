@@ -60,6 +60,7 @@
 body {
   overflow-x: hidden;
   background: #2b2730;
+  color: var(--darkWhiteColor);
 }
 
 /* smooth scrool snap  ------------------------------------------*/
@@ -116,7 +117,7 @@ nav {
 }
 
 .logo-navbar {
-  font-size: calc(0.2rem + 1vw);
+  font-size: calc(1rem + 0.5vw);
   letter-spacing: 0.2rem;
 }
 
@@ -128,7 +129,6 @@ nav {
 .menu-navbar {
   list-style-type: none;
   padding: 1rem 3rem;
-  border-radius: 10rem;
 }
 
 .menu-navbar li {
@@ -140,12 +140,13 @@ nav {
 .menu-navbar li a {
   color: rgb(253, 253, 253);
   text-decoration: none;
-  font-size: calc(0.2rem + 1vw);
+  font-size: calc(1rem + 0.5vw);
   font-weight: bold;
 }
 
 .menu-navbar li a:hover {
   color: rgb(214, 227, 71);
+  transition: 0.5s;
 }
 
 .menu1,
@@ -175,6 +176,7 @@ nav {
   justify-content: center;
   color: var(--darkWhiteColor);
   padding: 10rem 0 10rem 5%;
+  gap: 15px 0;
 }
 
 .cta-text1,
@@ -188,31 +190,36 @@ nav {
   font-family: var(--monasansLightNarrow);
   transform: translateX(-100%);
   transform-origin: left;
+  opacity: 0;
 }
 
 .cta-text2 {
-  padding: 3rem 0 3rem 0;
+  display: flex;
+  gap: 0 15px;
 }
 
 .cta-text2 h1 {
-  font-size: calc(13rem + 1vw);
+  font-size: calc(9rem + 1vw);
   font-family: var(--drukBoldTrial);
-  letter-spacing: 0.2rem;
-  line-height: 14rem;
+  letter-spacing: 0.3rem;
   text-transform: uppercase;
-  transform: translateX(-100%);
-  transform-origin: left;
+  transform: translateY(0%);
+  transform-origin: top;
+  opacity: 0;
 }
 
 .cta-paragraph p {
-  font-size: calc(0.4rem + 1vw);
-  font-family: var(--monaSansLight);
+  font-size: calc(1rem + 0.5vw);
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   width: 50%;
-  line-height: 4rem;
-  padding: 0 0 5rem 0;
+  line-height: 3rem;
+  padding-bottom: 5rem;
   border-bottom: 1px solid rgb(155, 155, 155);
   transform: translateY(100%);
   transform-origin: bottom;
+  opacity: 0;
 }
 
 /* ---------------------------------------------------------- right side  */
@@ -248,29 +255,26 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  line-height: 4rem;
   width: 60%;
   height: 100%;
   padding: 10rem 0 5rem 5%;
+  gap: 15px 0;
 }
 
 .biography-container h1 {
-  font-size: calc(8rem + 1vw);
+  font-size: calc(7rem + 1vw);
   font-family: var(--drukBoldTrial);
   letter-spacing: 0.3rem;
-  padding-bottom: 8rem;
   text-transform: uppercase;
 }
 
-.text-higlight {
-  padding: 0 0 5rem 0;
-}
-
 .text-higlight p {
-  font-size: calc(0.3rem + 1vw);
-  font-family: var(--monaSansLight);
-  line-height: 4rem;
-  padding: 0 10rem 0 0;
+  font-size: calc(1rem + 0.5vw);
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 3rem;
+  padding: 0 0rem 2rem 0;
 }
 
 .bottom-border {
@@ -309,14 +313,14 @@ nav {
   display: flex;
   flex-direction: column;
   color: var(--darkWhiteColor);
-  padding: 0 5rem 0 0;
+  padding-right: 5rem;
   overflow: hidden;
   flex: 1 1 40rem;
+  gap: 15px 0;
 }
 
 .showcase-title h1 {
-  padding: 3rem 0;
-  font-size: calc(8rem + 1vw);
+  font-size: calc(7rem + 1vw);
   font-family: var(--drukBoldTrial);
   text-transform: uppercase;
   transform: translateX(-100%);
@@ -324,10 +328,11 @@ nav {
 }
 
 .showcase-title p {
-  font-size: calc(0.3rem + 1vw);
-  font-family: var(--monaSansLight);
-  line-height: 4rem;
-  padding: 0 10rem 0 0;
+  font-size: calc(1rem + 0.5vw);
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 3rem;
   transform: translateX(-100%);
   opacity: 0;
 }
@@ -397,24 +402,26 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
-  letter-spacing: 0.3rem;
 }
 
 .text-title h1 {
   font-family: var(--drukBoldTrial);
-  font-size: calc(12rem + 1vw);
+  font-size: calc(9rem + 1vw);
+  line-height: 11rem;
   text-transform: uppercase;
 }
 
 .text-title p {
-  font-size: calc(0.2rem + 1vw);
-  font-family: var(--montserratFont);
+  font-size: calc(1rem + 0.5vw);
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   padding: 1rem 0 6rem 0;
 }
 
 .email-button {
   font-family: var(--poppinsFont);
-  font-size: calc(0.2rem + 1vw);
+  font-size: calc(1rem + 0.5vw);
   cursor: pointer;
   transform: scaleX(1);
   transform-origin: left;
@@ -451,7 +458,8 @@ nav {
   height: 100%;
 }
 
-small {
+.footer-container p {
   font-size: calc(0.8rem + 0.5vw);
   color: var(--darkWhiteColor);
+  font-family: var(--montserratFont);
 }

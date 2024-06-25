@@ -61,45 +61,24 @@ body {
 
 /* navbar */
 
-.burger {
-  padding-right: 0rem;
-}
-
-.burger span {
-  width: 100%;
-  height: 100%;
-}
-
 .menu-navbar li a {
-  font-size: calc(1.5rem + 1vw);
+  font-size: calc(1.5rem + 0.5vw);
 }
 
 .logo-navbar {
-  font-size: calc(1rem + 1vw);
+  font-size: calc(1.2rem + 0.5vw);
 }
 
 /* --------------------------------------------------------------- left text  */
 
-.home-container {
-  padding: 10rem 0 10rem 5%;
-}
-
-.cta-text2 {
-  padding: 2rem 0 2rem 0;
-}
-
 .cta-text2 h1 {
-  font-size: calc(8rem + 1vw);
-  line-height: 9rem;
+  font-size: calc(7rem + 1vw);
+  line-height: 8rem;
 }
 
 .cta-paragraph p {
-  font-size: calc(1rem + 1vw);
   width: 90%;
-  padding: 0 0 2rem 0;
 }
-
-/* ---------------------------------------------------------- right side  */
 
 .right-image {
   display: none;
@@ -118,32 +97,17 @@ body {
 }
 
 .biography-container h1 {
-  font-size: calc(6rem + 1vw);
-}
-
-.text-higlight p {
-  font-size: calc(1rem + 1vw);
+  font-size: calc(5rem + 1vw);
 }
 
 /* gallery showcase ----------------------------------------------- */
 
-.showcase-container {
-  flex-direction: column;
-}
-
-.showcase-title {
-  padding: 0 5rem 5rem 0;
-  flex: none;
-}
-
 .showcase-title h1 {
-  font-size: calc(5rem + 1vw);
-  padding: 3rem 0;
+  font-size: calc(4rem + 1vw);
 }
 
-.showcase-title p {
-  font-size: calc(1rem + 1vw);
-  padding: 0 0 0 0;
+.gallery-showcase {
+  height: 55%;
 }
 
 /* closing sections ----------------------------------------------------------- */
@@ -159,17 +123,11 @@ body {
 
 .text-title h1 {
   font-size: calc(6rem + 1vw);
-  line-height: 6rem;
+  line-height: 7rem;
 }
 
 .text-title p {
-  font-size: calc(0.9rem + 1vw);
-  line-height: 2rem;
-  padding: 3rem 0 5rem 0;
-}
-
-.email-button {
-  font-size: calc(1rem + 1vw);
+  padding: 1rem 0 4rem 0;
 }
 
 .email-button a {

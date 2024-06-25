@@ -75,13 +75,11 @@ body {
 }
 
 .poster-title-submain {
-  font-size: calc(1rem + 1vw);
-  padding: 2rem 0 3rem 0;
+  line-height: 2rem;
 }
 
 .poster-title {
   grid-column: 1/5;
-  padding: 0 0 5rem 0;
 }
 
 .poster-1 {
@@ -93,64 +91,47 @@ body {
 }
 
 .poster-3 {
+  display: none;
   grid-column: 1/5;
 }
 
 /* vector ------------------------------------------------------------ */
-
-.gallery-vector-container {
-  padding: 10rem 5% 5rem 5%;
-}
 
 .vector-title h1 {
   font-size: calc(5rem + 1vw);
 }
 
 .vector-title p {
-  font-size: calc(1rem + 1vw);
-  padding: 2rem 0 3rem 0;
+  line-height: 2rem;
 }
 
 /* video ------------------------------------------------- */
-
-.gallery-video-container {
-  padding: 10rem 5% 5rem 5%;
-}
 
 .gallery-video h1 {
   font-size: calc(5rem + 1vw);
 }
 
 .gallery-video p {
-  font-size: calc(1rem + 1vw);
-  padding: 2rem 0 3rem 0;
+  line-height: 2rem;
 }
-
 /* ui ux web design ------------------------------------------------------------ */
 
-.gallery-narasihistorian-container {
-  padding: 10rem 5% 5rem 5%;
-}
-
 .narasihistorian-title h1 {
-  font-size: calc(5rem + 1vw);
+  font-size: calc(4rem + 1vw);
 }
 
 .narasihistorian-title p {
-  font-size: calc(1rem + 1vw);
-  padding: 2rem 0 3rem 0;
+  line-height: 2rem;
 }
 
 .narasihistorian-about p,
 .mybiography-about p,
 .prototypemotionweb-about p {
-  font-size: calc(1rem + 1vw);
-  padding: 2rem 0 3rem 0;
+  line-height: 2rem;
 }
 
 .narasihistorian-title {
   grid-column: 1/3;
-  padding: 0 0 5rem 0;
 }
 
 .narasihistorian-1 {
@@ -166,7 +147,6 @@ body {
 .narasihistorian-about {
   grid-column: 1/3;
   grid-row: 3/4;
-  padding: 5rem 0 5rem 0;
 }
 
 .biography-1 {
@@ -182,7 +162,6 @@ body {
 .mybiography-about {
   grid-column: 1/3;
   grid-row: 5/6;
-  padding: 5rem 0 5rem 0;
 }
 
 .prototypemotionweb-1 {
@@ -200,5 +179,4 @@ body {
 .prototypemotionweb-about {
   grid-column: 1/3;
   grid-row: 7/8;
-  padding: 5rem 0 5rem 0;
 }
