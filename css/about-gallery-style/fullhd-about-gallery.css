@@ -233,14 +233,18 @@ html.lenis {
   flex-direction: column;
 }
 
-.narasihistorian-image {
+.narasihistorian-image,
+.antavalley-img,
+.agungv2-img {
   position: relative;
   width: 100%;
   height: 100%;
   overflow: hidden;
 }
 
-.narasihistorian-image img {
+.narasihistorian-image img,
+.antavalley-img img,
+.agungv2-img img {
   position: relative;
   width: 100%;
   height: 100%;
@@ -313,30 +317,8 @@ html.lenis {
   font-style: normal;
 }
 
-.antavalley-video,
-.agungv2-video {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
 .video-blur-reverse {
   filter: grayscale(70%);
-}
-
-.antavalley-video video,
-.agungv2-video video {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  opacity: 1;
-  scale: 1;
 }
 
 .line-divided {
