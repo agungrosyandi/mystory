@@ -4,7 +4,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const lenis = new Lenis();
 
-lenis.on("scroll", (e) => {
+lenis.on('scroll', (e) => {
   console.log(e);
 });
 
@@ -21,8 +21,8 @@ const matchMediaResponsive = gsap.matchMedia();
 
 matchMediaResponsive.add(
   {
-    isDesktop: "(min-width: 1024px)",
-    isMobileTab: "(max-width: 1024px)",
+    isDesktop: '(min-width: 1024px)',
+    isMobileTab: '(max-width: 1024px)',
   },
   (context) => {
     console.log(context.conditions);
@@ -32,7 +32,7 @@ matchMediaResponsive.add(
 
     const lenis = new Lenis();
 
-    lenis.on("scroll", ScrollTrigger.update);
+    lenis.on('scroll', ScrollTrigger.update);
 
     gsap.ticker.add((time) => {
       lenis.raf(time * 1000);
@@ -40,36 +40,167 @@ matchMediaResponsive.add(
 
     gsap.ticker.lagSmoothing(0);
 
-    // timeline setting basic ------------------------------------------------
+    // animation hyperlink ------------------------------------------------------------
 
-    const tl = gsap.timeline({
-      default: { duration: 0.75, ease: "Power3.easeOut" },
+    const links = gsap.utils.toArray('.link');
+
+    links.forEach((link) => {
+      let linkTl = gsap.timeline({
+        defaults: { ease: 'power4.inOut', duration: 0.6 },
+      });
+
+      const arrows = link.querySelector('img');
+      const headingStart = link.querySelector('.primary');
+      const headingEnd = link.querySelector('.secondary');
+
+      linkTl
+        .to(headingStart, { yPercent: -100 })
+        .to(headingEnd, { yPercent: -100, color: 'yellow' }, '<')
+        .to(arrows, { xPercent: 50 }, '-=.5');
+
+      linkTl.pause();
+
+      link.addEventListener('mouseenter', () => {
+        linkTl.play();
+      });
+
+      link.addEventListener('mouseleave', () => {
+        linkTl.reverse();
+      });
     });
 
-    // poster sections ---------------------------------------------
+    // behaviour logic function  ------------------------------------------------
 
-    tl.fromTo(
-      ".logo-navbar-gallery-about",
-      { scale: isMobileTab ? 1 : 0 },
-      { scale: 1, duration: 2.5, delay: 0.35, ease: "elastic.out(1.5, 1)" }
-    )
-      .fromTo(
-        ".poster-title-main",
-        { y: isMobileTab ? "0" : "50", opacity: isMobileTab ? 1 : 0 },
-        { y: 0, opacity: 1, duration: 1 },
-        "<"
+    // video hover logic function  ------------------------------------------------
+
+    const videoHover = gsap.utils.toArray('.video-blur');
+
+    videoHover.forEach((video) => {
+      let videoTl = gsap.timeline({
+        defaults: { ease: 'power4.inOut', duration: 0.6 },
+      });
+
+      const videoHover = video.querySelector('.video-blur-reverse');
+
+      videoTl.to(videoHover, { filter: 'grayscale(0%)' });
+
+      videoTl.pause();
+
+      video.addEventListener('mouseenter', () => {
+        videoTl.play();
+      });
+
+      video.addEventListener('mouseleave', () => {
+        videoTl.reverse();
+      });
+    });
+
+    // image hover logic function  ------------------------------------------------
+
+    const imageHover = gsap.utils.toArray('.img-blur');
+
+    imageHover.forEach((img) => {
+      let imgTl = gsap.timeline({
+        defaults: { ease: 'power4.inOut', duration: 0.6 },
+      });
+
+      const imgHover = img.querySelector('.blur-reverse');
+
+      imgTl.to(imgHover, { filter: 'grayscale(0%)' });
+
+      imgTl.pause();
+
+      img.addEventListener('mouseenter', () => {
+        imgTl.play();
+      });
+
+      img.addEventListener('mouseleave', () => {
+        imgTl.reverse();
+      });
+    });
+
+    // timeline setting basic ------------------------------------------------
+
+    gsap.set('.main-container', {
+      display: 'none',
+    });
+
+    const tl = gsap.timeline({
+      default: { duration: 0.75, ease: 'Power3.easeOut' },
+    });
+
+    // opening secene ------------------------------------------------
+
+    tl.to('.loader', { width: '100%', duration: 2.5, ease: 'power1.inOut' });
+
+    tl.from(
+      '.opening',
+      {
+        y: '-20%',
+        ease: 'elastic.out(1, 0.3)',
+        duration: 1.5,
+      },
+      '<'
+    );
+    tl.to('.loader', { height: '100vh', top: 0, duration: 1.5 });
+    tl.to('.opening-animation', { display: 'none' });
+    tl.to('.main-container', { display: 'block' }, '<');
+
+    // animation sections ---------------------------------------------
+
+    tl.from('.title-uiux', { y: -20, opacity: 0, duration: 1 })
+      .from(
+        [
+          '.paragraph-uiux-1',
+          '.paragraph-uiux-2',
+          '.paragraph-uiux-3',
+          '.paragraph-uiux-4',
+          '.paragraph-uiux-5',
+        ],
+        { color: 'rgba(255, 255, 255, 0.1)', stagger: 0.2, duration: 1 },
+        '<'
       )
-      .fromTo(
-        ".poster-title-submain",
-        { y: isMobileTab ? "0" : "50", opacity: isMobileTab ? 1 : 0 },
-        { y: 0, opacity: 1, duration: 1 },
-        "<10%"
+      .from(
+        [
+          '.narasihistorian-image img',
+          '.agungv2-video video',
+          '.antavalley-video video',
+        ],
+        { scale: 1.2, delay: 0.5, duration: 1, stagger: 0.2, opacity: 0.5 },
+        '<'
       )
-      .fromTo(
-        [".poster-1", ".poster-2", ".poster-3"],
-        { y: isMobileTab ? "0" : "50", opacity: isMobileTab ? 1 : 0 },
-        { y: 0, stagger: 0.3, opacity: 1, duration: 1 },
-        "<35%"
+      .from(
+        [
+          '.narasihistorian-hyperlink h1',
+          '.narasihistorian-hyperlink p',
+          '.link',
+        ],
+        { y: -20, opacity: 0, duration: 0.2, stagger: 0.2 },
+        '<'
+      )
+      .from(
+        '.menu-navbar',
+        { scale: 0, ease: 'bounce.out', opacity: 0, delay: 0.5, duration: 1 },
+        '<'
+      )
+      .from('.motion-title h1', { y: -20, opacity: 0, duration: 1 }, '<')
+      .from(
+        ['.paragraph-motion-1', '.paragraph-motion-2', '.paragraph-motion-3'],
+        { color: 'rgba(255, 255, 255, 0.1)', stagger: 0.2, duration: 1 },
+        '<'
+      )
+      .from(
+        [
+          '.video1-style video',
+          '.video2-style video',
+          '.video3-style video',
+          '.img1-style img',
+          '.img2-style img',
+          '.img3-style img',
+          '.img4-style img',
+        ],
+        { scale: 1.2, delay: 0.5, duration: 1, stagger: 0.2, opacity: 0.5 },
+        '<'
       );
   }
 );

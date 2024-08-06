@@ -1,24 +1,24 @@
 /* font used */
 
 @font-face {
-  font-family: "NelaSlabMedium";
-  src: url("../font/NelaSlab\ Medium.ttf") format("truetype");
+  font-family: 'NelaSlabMedium';
+  src: url('../font/NelaSlab\ Medium.ttf') format('truetype');
 }
 
 /* mona font -------------------------------------------------------------- */
 
 @font-face {
-  font-family: "MonaSansLight";
-  src: url("Mona-Sans.woff2") format("woff2 supports variations"),
-    url("../font/Mona-Sans.woff2") format("woff2-variations");
+  font-family: 'MonaSansLight';
+  src: url('Mona-Sans.woff2') format('woff2 supports variations'),
+    url('../font/Mona-Sans.woff2') format('woff2-variations');
   font-weight: 200;
   font-stretch: 125%;
 }
 
 @font-face {
-  font-family: "MonaSansLightNarrow";
-  src: url("Mona-Sans.woff2") format("woff2 supports variations"),
-    url("../font/Mona-Sans.woff2") format("woff2-variations");
+  font-family: 'MonaSansLightNarrow';
+  src: url('Mona-Sans.woff2') format('woff2 supports variations'),
+    url('../font/Mona-Sans.woff2') format('woff2-variations');
   font-weight: 200;
   font-stretch: 75%;
 }
@@ -39,13 +39,13 @@
 
   /* font  */
 
-  --nelaSlabFont: "NelaSlabMedium";
-  --nelaSlabLightFont: "NelaSlabLight";
-  --poppinsFont: "Poppins", sans-serif;
-  --montserratFont: "Montserrat", sans-serif;
-  --newEleganceCondensed: "NewEleganceSansCondensed";
-  --newEleganceItalic: "NewEleganceItalic";
-  --newEleganceCondita: "NewEleganceCondita";
+  --nelaSlabFont: 'NelaSlabMedium';
+  --nelaSlabLightFont: 'NelaSlabLight';
+  --poppinsFont: 'Poppins', sans-serif;
+  --montserratFont: 'Montserrat', sans-serif;
+  --newEleganceCondensed: 'NewEleganceSansCondensed';
+  --newEleganceItalic: 'NewEleganceItalic';
+  --newEleganceCondita: 'NewEleganceCondita';
 }
 
 /* default settings */
@@ -61,73 +61,97 @@ body {
 
 /* navbar */
 
-.menu-navbar li a {
-  font-size: calc(1.5rem + 0.5vw);
+.menu-navbar {
+  padding: 0 5rem;
+  top: 90%;
+  gap: 3rem;
 }
 
-.logo-navbar {
-  font-size: calc(1.2rem + 0.5vw);
+.menu1 img,
+.menu2 img,
+.menu3 img,
+.menu4 img,
+.menu5 img {
+  width: calc(1.8rem + 1vw);
 }
 
+.menu1,
+.menu2,
+.menu3,
+.menu4,
+.menu5 {
+  padding: 1rem 0;
+  width: calc(2rem + 1vw);
+}
 /* --------------------------------------------------------------- left text  */
 
+.home-container {
+  padding: 8rem 5% 5rem 5%;
+  align-items: center;
+  text-align: center;
+  gap: 1rem 0;
+}
+
+.cta-text1 h2 {
+  font-size: 2rem;
+}
+
+.cta-text2 {
+  flex-direction: row;
+}
+
 .cta-text2 h1 {
-  font-size: calc(7rem + 1vw);
-  line-height: 8rem;
+  font-size: calc(4rem + 1vw);
+  line-height: 6rem;
 }
 
 .cta-paragraph p {
-  width: 90%;
+  width: 100%;
 }
 
 .right-image {
-  display: none;
-  position: absolute;
-  top: 10%;
+  position: relative;
+  top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   width: 100%;
-  height: 30%;
+  height: 100%;
 }
 /* biography ------------------------------------------------------------------ */
 
 .biography-container {
-  width: 90%;
+  padding: 0 5% 5rem 5%;
 }
 
 .biography-container h1 {
-  font-size: calc(5rem + 1vw);
+  font-size: calc(4rem + 1vw);
 }
 
 /* gallery showcase ----------------------------------------------- */
+
+.showcase-container {
+  flex-direction: column-reverse;
+  padding: 0rem 5% 5rem 5%;
+}
 
 .showcase-title h1 {
   font-size: calc(4rem + 1vw);
 }
 
-.gallery-showcase {
-  height: 55%;
-}
-
 /* closing sections ----------------------------------------------------------- */
 
 .closing-container {
-  align-items: start;
-  padding: 0 5rem 0 5%;
-}
-
-.text-title {
-  align-items: start;
+  padding: 5rem 5% 20rem 5%;
 }
 
 .text-title h1 {
-  font-size: calc(6rem + 1vw);
-  line-height: 7rem;
+  font-size: calc(4rem + 1vw);
+  line-height: 5rem;
 }
 
 .text-title p {
-  padding: 1rem 0 4rem 0;
+  padding: 1rem 3rem 4rem 3rem;
 }
 
 .email-button a {

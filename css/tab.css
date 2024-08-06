@@ -1,24 +1,24 @@
 /* font used */
 
 @font-face {
-  font-family: "NelaSlabMedium";
-  src: url("../font/NelaSlab\ Medium.ttf") format("truetype");
+  font-family: 'NelaSlabMedium';
+  src: url('../font/NelaSlab\ Medium.ttf') format('truetype');
 }
 
 /* mona font -------------------------------------------------------------- */
 
 @font-face {
-  font-family: "MonaSansLight";
-  src: url("Mona-Sans.woff2") format("woff2 supports variations"),
-    url("../font/Mona-Sans.woff2") format("woff2-variations");
+  font-family: 'MonaSansLight';
+  src: url('Mona-Sans.woff2') format('woff2 supports variations'),
+    url('../font/Mona-Sans.woff2') format('woff2-variations');
   font-weight: 200;
   font-stretch: 125%;
 }
 
 @font-face {
-  font-family: "MonaSansLightNarrow";
-  src: url("Mona-Sans.woff2") format("woff2 supports variations"),
-    url("../font/Mona-Sans.woff2") format("woff2-variations");
+  font-family: 'MonaSansLightNarrow';
+  src: url('Mona-Sans.woff2') format('woff2 supports variations'),
+    url('../font/Mona-Sans.woff2') format('woff2-variations');
   font-weight: 200;
   font-stretch: 75%;
 }
@@ -39,13 +39,13 @@
 
   /* font  */
 
-  --nelaSlabFont: "NelaSlabMedium";
-  --nelaSlabLightFont: "NelaSlabLight";
-  --poppinsFont: "Poppins", sans-serif;
-  --montserratFont: "Montserrat", sans-serif;
-  --newEleganceCondensed: "NewEleganceSansCondensed";
-  --newEleganceItalic: "NewEleganceItalic";
-  --newEleganceCondita: "NewEleganceCondita";
+  --nelaSlabFont: 'NelaSlabMedium';
+  --nelaSlabLightFont: 'NelaSlabLight';
+  --poppinsFont: 'Poppins', sans-serif;
+  --montserratFont: 'Montserrat', sans-serif;
+  --newEleganceCondensed: 'NewEleganceSansCondensed';
+  --newEleganceItalic: 'NewEleganceItalic';
+  --newEleganceCondita: 'NewEleganceCondita';
 }
 
 /* default settings */
@@ -56,58 +56,54 @@
   box-sizing: border-box;
 }
 
-/* navbar --------------------------------------------------------------- */
-
-nav {
-  left: 0;
-  width: 100vw;
-}
-
-.logo-navbar {
-  font-size: calc(1.2rem + 0.5vw);
-}
-
-.burger {
-  position: relative;
-  display: block;
-}
-
-.burger span {
-  padding: 0.1rem 1rem;
-  background: rgb(255, 255, 255);
-  margin: 0.3rem 0rem;
-  display: block;
-  transition: all 0.5s ease;
-  width: 100%;
-  height: 100%;
-}
+/* navbar sections ---------------------------------------------------------- */
 
 .menu-navbar {
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  background: #2b2730;
-  transform: scaleY(0);
-  transform-origin: center;
-  top: 0;
-  left: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  padding: 0 5rem;
+  top: 90%;
+  gap: 3rem;
 }
 
-.menu-navbar li {
-  padding: 5rem 0;
-  border-bottom: 2px solid white;
-  opacity: 1;
+.menu1 img,
+.menu2 img,
+.menu3 img,
+.menu4 img,
+.menu5 img {
+  width: calc(2rem + 1vw);
 }
 
-.menu-navbar li a {
-  font-size: calc(3rem + 0.5vw);
+.menu1,
+.menu2,
+.menu3,
+.menu4,
+.menu5 {
+  padding: 1rem 0;
+  width: calc(2rem + 1vw);
 }
-
 /* home ----------------------------------------------------------------- */
+
+.main-content {
+  scroll-snap-type: none;
+  overflow-y: none;
+  overflow-x: none;
+  scroll-behavior: smooth;
+  width: none;
+  height: none;
+}
+
+section {
+  scroll-snap-align: none;
+}
+
+#home {
+  width: auto;
+  height: auto;
+}
+
+.home-container {
+  padding: 10rem 0 10rem 5%;
+  gap: 30px 0;
+}
 
 .cta-text2 {
   flex-direction: column;
@@ -119,23 +115,30 @@ nav {
 }
 
 .cta-paragraph p {
-  line-height: 2rem;
+  font-size: calc(1rem + 1vw);
+  line-height: 3rem;
 }
 
 .right-image {
-  position: fixed;
-  top: 0;
-  left: 10;
+  position: absolute;
+  top: 15%;
+  left: 60%;
   right: 0;
   bottom: 0;
   width: 40%;
-  height: 100%;
+  height: 90%;
 }
 
 /* short biography ------------------------------------------------------ */
 
+#biography {
+  width: auto;
+  height: auto;
+}
+
 .biography-container {
-  width: 50%;
+  padding: 10rem 5% 5rem 5%;
+  width: 100%;
 }
 
 .biography-container h1 {
@@ -143,18 +146,27 @@ nav {
 }
 
 .text-higlight p {
-  line-height: 2rem;
+  font-size: calc(1rem + 1vw);
+  line-height: 3rem;
 }
 
 /* gallery showcase ----------------------------------------------- */
 
+#showcase {
+  width: auto;
+  height: auto;
+}
+
 .showcase-container {
-  flex-direction: column;
+  flex-direction: column-reverse;
+  padding: 2rem 5% 0 5%;
 }
 
 .showcase-title {
-  padding: 5rem 5rem 5rem 0;
   flex: none;
+  padding-right: 0;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 
 .showcase-title h1 {
@@ -162,17 +174,39 @@ nav {
 }
 
 .showcase-title p {
-  line-height: 2rem;
+  font-size: calc(1rem + 1vw);
+  line-height: 3rem;
+}
+
+.hyperlink-gallery img {
+  width: 3%;
+  height: 50%;
 }
 
 .gallery-showcase {
-  height: 60%;
   flex: none;
 }
 
 /* closing sections ----------------------------------------------------------- */
 
+#closing-sections {
+  width: auto;
+  height: auto;
+}
+
+.closing-container {
+  padding: 5rem 5% 25rem 5%;
+  border-top: 1px solid rgb(155, 155, 155);
+  width: 90%;
+  margin: auto;
+}
+
 .text-title h1 {
-  font-size: calc(7rem + 1vw);
-  line-height: 8rem;
+  font-size: calc(5rem + 1vw);
+  line-height: 6rem;
+}
+
+.text-title p {
+  font-size: calc(1rem + 0.5vw);
+  text-align: center;
 }
