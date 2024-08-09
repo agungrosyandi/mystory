@@ -107,37 +107,20 @@ body {
   padding: 5rem 10% 5rem 10%;
 }
 
-.web-development-container h1 {
+.title-uiux {
   font-size: calc(3rem + 1vw);
 }
 
-.web-development-container p {
+.title-paragraph {
   font-size: calc(0.7rem + 0.5vw);
-  line-height: 3rem;
+  line-height: 2rem;
 }
 
 .narasihistorian-hyperlink h1 {
   font-size: calc(0.8rem + 1vw);
 }
 
-.narasihistorian-hyperlink p {
-  font-size: 1rem;
-}
-
-.link {
-  padding: 0 1rem;
-}
-
-.link img {
-  width: 1rem;
-  height: 1rem;
-}
-
-.heading-container {
-  height: 50%;
-}
-
-.heading-container p {
+.narasihistorian-hyperlink h6 {
   font-size: calc(0.3rem + 0.5vw);
 }
 
@@ -147,13 +130,13 @@ body {
   padding: 3rem 10% 10rem 10%;
 }
 
-.motion-title h1 {
+.title-motion {
   font-size: calc(3rem + 1vw);
 }
 
-.motion-title p {
+.paragraph-motion {
   font-size: calc(0.7rem + 0.5vw);
-  line-height: 3rem;
+  line-height: 2rem;
 }
 
 .video1-style {
@@ -161,11 +144,7 @@ body {
 }
 
 .video2-style {
-  grid-column: 3/4;
-}
-
-.video3-style {
-  grid-column: 4/5;
+  grid-column: 3/5;
 }
 
 .img1-style {

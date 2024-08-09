@@ -64,7 +64,7 @@ body {
 .menu-navbar {
   padding: 0 5rem;
   top: 90%;
-  gap: 3rem;
+  gap: 2rem;
 }
 
 .menu1 img,
@@ -72,7 +72,7 @@ body {
 .menu3 img,
 .menu4 img,
 .menu5 img {
-  width: calc(1.8rem + 1vw);
+  width: calc(1.3rem + 1vw);
 }
 
 .menu1,
@@ -80,8 +80,8 @@ body {
 .menu3,
 .menu4,
 .menu5 {
-  padding: 1rem 0;
-  width: calc(2rem + 1vw);
+  padding: 1.3rem 0;
+  width: calc(1rem + 1vw);
 }
 /* --------------------------------------------------------------- left text  */
 
@@ -107,6 +107,7 @@ body {
 
 .cta-paragraph p {
   width: 100%;
+  line-height: 2rem;
 }
 
 .right-image {
@@ -126,6 +127,10 @@ body {
 
 .biography-container h1 {
   font-size: calc(4rem + 1vw);
+}
+
+.text-higlight p {
+  line-height: 2rem;
 }
 
 /* gallery showcase ----------------------------------------------- */

@@ -176,11 +176,7 @@ section {
 .showcase-title p {
   font-size: calc(1rem + 1vw);
   line-height: 3rem;
-}
-
-.hyperlink-gallery img {
-  width: 3%;
-  height: 50%;
+  padding-right: 3rem;
 }
 
 .gallery-showcase {

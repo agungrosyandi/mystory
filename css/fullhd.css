@@ -312,6 +312,7 @@ section {
   font-weight: 400;
   font-style: normal;
   line-height: 3rem;
+  padding-right: 15rem;
   transform: translateX(-100%);
   opacity: 0;
 }
@@ -326,21 +327,21 @@ section {
 .hyperlink-gallery {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 2rem;
   transform: translateX(-100%);
   opacity: 0;
 }
 
 .hyperlink-gallery img {
-  width: 3%;
-  height: 3%;
+  width: 20px;
+  height: 20px;
 }
 
 .heading-container {
   overflow: hidden;
   display: flex;
   align-items: center;
-  height: 40px;
+  height: 2rem;
 }
 
 .heading-container p {

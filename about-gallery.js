@@ -150,13 +150,7 @@ matchMediaResponsive.add(
 
     tl.from('.title-uiux', { y: -20, opacity: 0, duration: 1 })
       .from(
-        [
-          '.paragraph-uiux-1',
-          '.paragraph-uiux-2',
-          '.paragraph-uiux-3',
-          '.paragraph-uiux-4',
-          '.paragraph-uiux-5',
-        ],
+        ['.paragraph-uiux-1', '.paragraph-uiux-2'],
         { color: 'rgba(255, 255, 255, 0.1)', stagger: 0.2, duration: 1 },
         '<'
       )
@@ -172,10 +166,10 @@ matchMediaResponsive.add(
       .from(
         [
           '.narasihistorian-hyperlink h1',
-          '.narasihistorian-hyperlink p',
+          '.narasihistorian-hyperlink h6',
           '.link',
         ],
-        { y: -20, opacity: 0, duration: 0.2, stagger: 0.2 },
+        { y: -20, opacity: 0, duration: 0.5, stagger: 0.2 },
         '<'
       )
       .from(
