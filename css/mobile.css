@@ -144,6 +144,10 @@ body {
   font-size: calc(4rem + 1vw);
 }
 
+.showcase-title p {
+  line-height: 2rem;
+}
+
 /* closing sections ----------------------------------------------------------- */
 
 .closing-container {
