@@ -95,26 +95,18 @@ body {
   width: calc(1rem + 1vw);
 }
 
-/* poster --------------------------------------------------------------- */
-
-.web-development-container {
-  padding: 5rem 10% 5rem 10%;
-}
+/* web development --------------------------------------------------------------- */
 
 .title-uiux {
   font-size: calc(3rem + 1vw);
 }
 
-.narasihistorian-hyperlink {
-  padding: 3rem;
-}
-
 .narasihistorian-hyperlink h1 {
-  font-size: calc(1.5rem + 1vw);
+  font-size: calc(1rem + 1vw);
 }
 
 .narasihistorian-hyperlink h6 {
-  font-size: calc(0.8rem + 0.5vw);
+  font-size: calc(0.4rem + 1vw);
 }
 
 /* motion graphic --------------------------------------------------------------- */

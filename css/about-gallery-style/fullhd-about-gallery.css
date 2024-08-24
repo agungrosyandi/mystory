@@ -176,7 +176,7 @@ html.lenis {
   opacity: 1;
 }
 
-/* poster --------------------------------------------------------------- */
+/* web development --------------------------------------------------------------- */
 
 #web-development {
   position: relative;
@@ -184,9 +184,10 @@ html.lenis {
   color: var(--darkWhiteColor);
   background: #2b2730;
   z-index: 15;
+  padding-bottom: 8rem;
 }
 
-.web-development-container {
+.web-development-title-container {
   position: relative;
   height: 100%;
   width: 100%;
@@ -195,7 +196,7 @@ html.lenis {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  padding: 5rem 10% 5rem 10%;
+  padding: 5rem 10% 3rem 10%;
   gap: 3rem;
 }
 
@@ -218,31 +219,30 @@ html.lenis {
   line-height: 3rem;
 }
 
-.web-development-img {
-  display: flex;
-  flex-direction: row;
-  gap: 3rem;
-}
+/* web development 2 --------------------------------------------------------------- */
 
-.narasihistorian,
-.agungv2,
-.antavalley {
-  display: flex;
-  flex-direction: column;
+.web-development-img {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+  width: 100%;
+  height: 100%;
+  padding: 0 10%;
 }
 
 .narasihistorian-image,
 .antavalley-img,
-.agungv2-img {
+.agungv2-img,
+.khairaskincare-img {
   position: relative;
-  width: 100%;
-  height: 100%;
   overflow: hidden;
 }
 
 .narasihistorian-image img,
 .antavalley-img img,
-.agungv2-img img {
+.agungv2-img img,
+.khairaskincare-img img {
   position: relative;
   width: 100%;
   height: 100%;
@@ -250,12 +250,30 @@ html.lenis {
   scale: 1;
 }
 
+.narasihistorian {
+  grid-column: 1/2;
+}
+
+.khairaskincare {
+  grid-column: 2/3;
+}
+
+.agungv2 {
+  grid-column: 1/2;
+}
+
+.antavalley {
+  grid-column: 2/3;
+}
+
+/* web development 3 --------------------------------------------------------------- */
+
 .narasihistorian-hyperlink {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
+  padding: 3rem 2rem;
   gap: 1.5rem;
   box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
 }

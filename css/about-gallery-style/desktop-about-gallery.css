@@ -101,11 +101,7 @@ body {
   transform-origin: left;
 }
 
-/* poster --------------------------------------------------------------- */
-
-.web-development-container {
-  padding: 5rem 10% 5rem 10%;
-}
+/* web development --------------------------------------------------------------- */
 
 .title-uiux {
   font-size: calc(3rem + 1vw);
@@ -116,8 +112,24 @@ body {
   line-height: 2rem;
 }
 
+.narasihistorian {
+  grid-column: 1/2;
+}
+
+.khairaskincare {
+  grid-column: 2/3;
+}
+
+.agungv2 {
+  grid-column: 1/2;
+}
+
+.antavalley {
+  grid-column: 2/3;
+}
+
 .narasihistorian-hyperlink h1 {
-  font-size: calc(0.8rem + 1vw);
+  font-size: calc(0.5rem + 1vw);
 }
 
 .narasihistorian-hyperlink h6 {
