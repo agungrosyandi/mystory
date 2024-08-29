@@ -142,3 +142,7 @@ body {
 .img4-style {
   grid-column: 3/5;
 }
+
+.back-to-mainmenu-svg {
+  width: 5%;
+}

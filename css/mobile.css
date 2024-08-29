@@ -59,34 +59,10 @@ body {
   overflow-x: hidden;
 }
 
-/* navbar */
-
-.menu-navbar {
-  padding: 0 5rem;
-  top: 90%;
-  gap: 2rem;
-}
-
-.menu1 img,
-.menu2 img,
-.menu3 img,
-.menu4 img,
-.menu5 img {
-  width: calc(1.3rem + 1vw);
-}
-
-.menu1,
-.menu2,
-.menu3,
-.menu4,
-.menu5 {
-  padding: 1.3rem 0;
-  width: calc(1rem + 1vw);
-}
 /* --------------------------------------------------------------- left text  */
 
 .home-container {
-  padding: 8rem 5% 5rem 5%;
+  padding: 5rem 5% 0 5%;
   align-items: center;
   text-align: center;
   gap: 1rem 0;
@@ -102,12 +78,21 @@ body {
 
 .cta-text2 h1 {
   font-size: calc(4rem + 1vw);
-  line-height: 6rem;
 }
 
 .cta-paragraph p {
   width: 100%;
-  line-height: 2rem;
+}
+
+.link-social-media {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-social-media {
+  width: 10%;
 }
 
 .right-image {
@@ -122,36 +107,28 @@ body {
 /* biography ------------------------------------------------------------------ */
 
 .biography-container {
-  padding: 0 5% 5rem 5%;
+  padding: 5rem 5% 0 5%;
 }
 
 .biography-container h1 {
   font-size: calc(4rem + 1vw);
 }
 
-.text-higlight p {
-  line-height: 2rem;
-}
-
 /* gallery showcase ----------------------------------------------- */
 
 .showcase-container {
   flex-direction: column-reverse;
-  padding: 0rem 5% 5rem 5%;
+  padding: 5rem 5% 0 5%;
 }
 
 .showcase-title h1 {
   font-size: calc(4rem + 1vw);
 }
 
-.showcase-title p {
-  line-height: 2rem;
-}
-
 /* closing sections ----------------------------------------------------------- */
 
 .closing-container {
-  padding: 5rem 5% 20rem 5%;
+  padding: 5rem 5% 15% 5%;
 }
 
 .text-title h1 {
@@ -160,9 +137,5 @@ body {
 }
 
 .text-title p {
-  padding: 1rem 3rem 4rem 3rem;
-}
-
-.email-button a {
-  padding: 1rem 3rem;
+  padding: 0 5rem;
 }

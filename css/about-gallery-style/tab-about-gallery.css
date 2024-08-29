@@ -70,31 +70,6 @@ body {
   font-size: 6rem;
 }
 
-/* navbar sections ---------------------------------------------------------- */
-
-.menu-navbar {
-  padding: 0 5rem;
-  top: 90%;
-  gap: 3rem;
-}
-
-.menu1 img,
-.menu2 img,
-.menu3 img,
-.menu4 img,
-.menu5 img {
-  width: calc(2rem + 1vw);
-}
-
-.menu1,
-.menu2,
-.menu3,
-.menu4,
-.menu5 {
-  padding: 1rem 0;
-  width: calc(2rem + 1vw);
-}
-
 /* web development --------------------------------------------------------------- */
 
 .title-uiux {
@@ -165,4 +140,8 @@ body {
 
 .img4-style {
   grid-column: 3/5;
+}
+
+.back-to-mainmenu-svg {
+  width: 4%;
 }

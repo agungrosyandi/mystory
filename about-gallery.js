@@ -129,7 +129,7 @@ matchMediaResponsive.add(
       default: { duration: 0.75, ease: 'Power3.easeOut' },
     });
 
-    // opening secene ------------------------------------------------
+    // opening scene ------------------------------------------------
 
     tl.to('.loader', { width: '100%', duration: 2.5, ease: 'power1.inOut' });
 
@@ -170,11 +170,6 @@ matchMediaResponsive.add(
           '.link',
         ],
         { y: -20, opacity: 0, duration: 0.5, stagger: 0.2 },
-        '<'
-      )
-      .from(
-        '.menu-navbar',
-        { scale: 0, ease: 'bounce.out', opacity: 0, delay: 0.5, duration: 1 },
         '<'
       )
       .from('.motion-title h1', { y: -20, opacity: 0, duration: 1 }, '<')

@@ -63,42 +63,10 @@ body {
   background: #2b2730;
 }
 
-/* navbar sections ---------------------------------------------------------- */
-
-.opening-animation {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  background: #ffffff;
-  overflow: hidden;
-}
+/* openong sections ---------------------------------------------------------- */
 
 .opening {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: grid;
-  place-content: center;
-  font-family: var(--monaSansBold);
   font-size: 7rem;
-  z-index: 5;
-  color: #2b2730;
-  transform: translateY(0);
-}
-
-.loader {
-  position: absolute;
-  background: #2b2730;
-  width: 0;
-  height: 0.5vh;
-  top: 50%;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 10;
-  transform-origin: left;
 }
 
 /* web development --------------------------------------------------------------- */

@@ -135,47 +135,6 @@ html.lenis {
   transform-origin: left;
 }
 
-/* navbar sections ---------------------------------------------------------- */
-
-.menu-navbar {
-  position: fixed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 5vh;
-  padding: 0 5rem;
-  z-index: 20;
-  top: 90%;
-  left: 50%;
-  border-radius: 5rem;
-  transform: translate(-50%, -50%);
-  backdrop-filter: blur(20px);
-  font-family: var(--montserratFont);
-  gap: 3rem;
-  background: #f1f0ea;
-  scale: 1;
-  transform-origin: center;
-  opacity: 1;
-}
-
-.menu1 img,
-.menu2 img,
-.menu3 img,
-.menu4 img,
-.menu5 img {
-  width: calc(0.5rem + 1vw);
-}
-
-.menu1,
-.menu2,
-.menu3,
-.menu4,
-.menu5 {
-  padding: 1rem 0;
-  width: calc(0.5rem + 1vw);
-  opacity: 1;
-}
-
 /* web development --------------------------------------------------------------- */
 
 #web-development {
@@ -446,4 +405,27 @@ html.lenis {
 
 .img4-style {
   grid-column: 4/5;
+}
+
+.back-to-mainmenu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.back-to-mainmenu-svg {
+  width: 3%;
+}
+
+.back-to-mainmenu-svg img {
+  width: 100%;
+}
+
+.back-to-mainmenu a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 1);
+  font-size: calc(1rem + 1vw);
+  font-family: var(--drukBoldTrial);
+  border-bottom: 2px solid white;
 }

@@ -64,24 +64,6 @@ body {
   background: #2b2730;
 }
 
-.menu1 img,
-.menu2 img,
-.menu3 img,
-.menu4 img,
-.menu5 img {
-  width: calc(0.5rem + 1vw);
-}
-
-.menu1,
-.menu2,
-.menu3,
-.menu4,
-.menu5 {
-  padding: 0.5rem 0;
-  width: calc(0.5rem + 1vw);
-  opacity: 1;
-}
-
 /* home sections -------------------------------------------------------- */
 
 .cta-text2 h1 {
@@ -90,7 +72,7 @@ body {
 
 .cta-paragraph p {
   font-size: calc(0.7rem + 0.5vw);
-  line-height: 3rem;
+  line-height: 2rem;
 }
 
 /* short biography ------------------------------------------------- */
@@ -101,7 +83,7 @@ body {
 
 .text-higlight p {
   font-size: calc(0.7rem + 0.5vw);
-  line-height: 3rem;
+  line-height: 2rem;
 }
 
 /* gallery showcase ----------------------------------------------------- */
@@ -112,14 +94,17 @@ body {
 
 .showcase-title p {
   font-size: calc(0.7rem + 0.5vw);
-  line-height: 3rem;
+  line-height: 2rem;
+}
+
+.heading-container p {
+  line-height: 2rem;
 }
 
 /* closing sections ------------------------------------------------------- */
 
 .text-title h1 {
-  font-size: calc(6rem + 1vw);
-  line-height: 8rem;
+  font-size: calc(5rem + 1vw);
 }
 
 .text-title p {
@@ -128,8 +113,4 @@ body {
 
 .email-button {
   font-size: calc(0.7rem + 0.5vw);
-}
-
-.footer-container p {
-  font-size: calc(0.5rem + 0.5vw);
 }
