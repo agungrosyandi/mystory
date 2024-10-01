@@ -2,118 +2,153 @@ gsap.registerPlugin(ScrollTrigger);
 
 // arrow hyperlink logic global --------------------------------------------------
 
-const links = gsap.utils.toArray('.link');
+// ChangeColor -------------------------------------------------------
 
-links.forEach((link) => {
-  let linkTl = gsap.timeline({
-    defaults: { ease: 'power4.inOut', duration: 0.6 },
+// function getGradient(name) {
+//   switch (name) {
+//     case 'home':
+//       return '#2b2730';
+
+//     case 'about':
+//       return '#3B3030';
+
+//     case 'showchase':
+//       return '#001F3F';
+//   }
+// }
+
+const lenisScrool = () => {
+  const lenis = new Lenis();
+
+  lenis.on('scroll', ScrollTrigger.update);
+
+  gsap.ticker.add((time) => {
+    lenis.raf(time * 1000);
   });
 
-  const headingStart = link.querySelector('.primary');
-  const headingEnd = link.querySelector('.secondary');
+  gsap.ticker.lagSmoothing(0);
+};
 
-  linkTl
-    .to(headingStart, { yPercent: -100 })
-    .to(headingEnd, { yPercent: -100, color: 'yellow' }, '<');
+const arrowLogic = () => {
+  const links = gsap.utils.toArray('.link');
 
-  linkTl.pause();
-
-  link.addEventListener('mouseenter', () => {
-    linkTl.play();
-  });
-
-  link.addEventListener('mouseleave', () => {
-    linkTl.reverse();
-  });
-});
-
-// random function logic img and video -----------------------------------------------
-
-const motionVideo = gsap.utils.toArray('.motion-container');
-const graphicDesign = gsap.utils.toArray('.graphic-design-container');
-
-motionVideo.forEach((video) => {
-  const motion = video.querySelector('video');
-  let p = video.querySelector('.motion-container p');
-  let originalText = p.innerText;
-
-  video.addEventListener('mouseenter', () => {
-    gsap.fromTo(
-      motion,
-      {
-        clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
-      },
-      { clipPath: 'polygon(0% 13%, 100% 0%, 100% 87%, 0% 100%)' }
-    );
-    randomType(p, '01', 500, true);
-  });
-  video.addEventListener('mouseleave', () => {
-    gsap.to(motion, {
-      clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
+  links.forEach((link) => {
+    let linkTl = gsap.timeline({
+      defaults: { ease: 'power4.inOut', duration: 0.6 },
     });
-    p.innerText = originalText;
-  });
-});
 
-graphicDesign.forEach((images) => {
-  const image = images.querySelector('img');
-  let p = images.querySelector('.graphic-design-container p');
-  let originalText = p.innerText;
+    const headingStart = link.querySelector('.primary');
+    const headingEnd = link.querySelector('.secondary');
 
-  images.addEventListener('mouseenter', () => {
-    gsap.fromTo(
-      image,
-      {
-        clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
-      },
-      { clipPath: 'polygon(0% 13%, 100% 0%, 100% 87%, 0% 100%)' }
-    );
-    randomType(p, '01', 500, true);
-  });
-  images.addEventListener('mouseleave', () => {
-    gsap.to(image, {
-      clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
+    linkTl
+      .to(headingStart, { yPercent: -100 })
+      .to(headingEnd, { yPercent: -100, color: 'yellow' }, '<');
+
+    linkTl.pause();
+
+    link.addEventListener('mouseenter', () => {
+      linkTl.play();
     });
-    p.innerText = originalText;
+
+    link.addEventListener('mouseleave', () => {
+      linkTl.reverse();
+    });
   });
-});
+};
 
-function randomType(element, characters, duration, sequential = false) {
-  let originalText = element.innerText;
-  let textArray = originalText.split('');
-  let charactersArray = characters.split('');
-  let startTime = new Date().getTime();
-  let interval;
+const randomNumberVideoAndImage = () => {
+  const motionVideo = gsap.utils.toArray('.motion-container');
+  const graphicDesign = gsap.utils.toArray('.graphic-design-container');
 
-  if (sequential) {
-    let currentIndex = 0;
-    interval = setInterval(function () {
-      textArray[currentIndex] =
-        charactersArray[Math.floor(Math.random() * charactersArray.length)];
-      element.innerText = textArray.join('');
-      currentIndex++;
-      if (currentIndex === textArray.length) {
-        currentIndex = 0;
-      }
-      if (new Date().getTime() - startTime >= duration) {
-        clearInterval(interval);
-        element.innerText = originalText;
-      }
-    }, 20);
-  } else {
-    interval = setInterval(function () {
-      for (let i = 0; i < textArray.length; i++) {
-        textArray[i] =
+  motionVideo.forEach((video) => {
+    const motion = video.querySelector('video');
+    let p = video.querySelector('.motion-container p');
+    let originalText = p.innerText;
+
+    video.addEventListener('mouseenter', () => {
+      gsap.fromTo(
+        motion,
+        {
+          clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
+        },
+        { clipPath: 'polygon(0% 13%, 100% 0%, 100% 87%, 0% 100%)' }
+      );
+      randomType(p, '01', 500, true);
+    });
+    video.addEventListener('mouseleave', () => {
+      gsap.to(motion, {
+        clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
+      });
+      p.innerText = originalText;
+    });
+  });
+
+  graphicDesign.forEach((images) => {
+    const image = images.querySelector('img');
+    let p = images.querySelector('.graphic-design-container p');
+    let originalText = p.innerText;
+
+    images.addEventListener('mouseenter', () => {
+      gsap.fromTo(
+        image,
+        {
+          clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
+        },
+        { clipPath: 'polygon(0% 13%, 100% 0%, 100% 87%, 0% 100%)' }
+      );
+      randomType(p, '01', 500, true);
+    });
+    images.addEventListener('mouseleave', () => {
+      gsap.to(image, {
+        clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
+      });
+      p.innerText = originalText;
+    });
+  });
+
+  function randomType(element, characters, duration, sequential = false) {
+    let originalText = element.innerText;
+    let textArray = originalText.split('');
+    let charactersArray = characters.split('');
+    let startTime = new Date().getTime();
+    let interval;
+
+    if (sequential) {
+      let currentIndex = 0;
+      interval = setInterval(function () {
+        textArray[currentIndex] =
           charactersArray[Math.floor(Math.random() * charactersArray.length)];
-      }
-      element.innerText = textArray.join('');
-      if (new Date().getTime() - startTime >= duration) {
-        clearInterval(interval);
-        element.innerText = originalText;
-      }
-    }, 0);
+        element.innerText = textArray.join('');
+        currentIndex++;
+        if (currentIndex === textArray.length) {
+          currentIndex = 0;
+        }
+        if (new Date().getTime() - startTime >= duration) {
+          clearInterval(interval);
+          element.innerText = originalText;
+        }
+      }, 20);
+    } else {
+      interval = setInterval(function () {
+        for (let i = 0; i < textArray.length; i++) {
+          textArray[i] =
+            charactersArray[Math.floor(Math.random() * charactersArray.length)];
+        }
+        element.innerText = textArray.join('');
+        if (new Date().getTime() - startTime >= duration) {
+          clearInterval(interval);
+          element.innerText = originalText;
+        }
+      }, 0);
+    }
   }
-}
+};
+
+document.addEventListener('DOMContentLoaded', () => {
+  arrowLogic();
+  randomNumberVideoAndImage();
+  lenisScrool();
+});
 
 // matchmedia responsive --------------------------------------------------
 
@@ -128,19 +163,9 @@ matchMediaResponsive.add(
     console.log(context.conditions);
     const { isMobile, isDesktop } = context.conditions;
 
-    // lenis scrooltriger ---------------------------------------------------
+    lenisScrool();
 
-    const lenis = new Lenis();
-
-    lenis.on('scroll', ScrollTrigger.update);
-
-    gsap.ticker.add((time) => {
-      lenis.raf(time * 1000);
-    });
-
-    gsap.ticker.lagSmoothing(0);
-
-    // BARBA GSAP timeline  ------------------------------------------------------
+    // timeline logic -------------------------------------------------------------------
 
     const tlLeave = gsap.timeline({
       default: { duration: 0.75, ease: 'Power2.easeOut' },
@@ -149,8 +174,6 @@ matchMediaResponsive.add(
     const tlEnter = gsap.timeline({
       default: { duration: 0.75, ease: 'Power2.easeOut' },
     });
-
-    // enter about barbajs ----------------------------------------------------------
 
     function enterTransitionAbout(next) {
       const imageBackground = next.querySelector(
@@ -209,34 +232,7 @@ matchMediaResponsive.add(
         );
     }
 
-    // enter showchase barbajs ----------------------------------------------------
-
     const enterTransitionShowchase = (next) => {
-      const links = gsap.utils.toArray('.link');
-
-      links.forEach((link) => {
-        let linkTl = gsap.timeline({
-          defaults: { ease: 'power4.inOut', duration: 0.6 },
-        });
-
-        const headingStart = link.querySelector('.primary');
-        const headingEnd = link.querySelector('.secondary');
-
-        linkTl
-          .to(headingStart, { yPercent: -100 })
-          .to(headingEnd, { yPercent: -100, color: 'yellow' }, '<');
-
-        linkTl.pause();
-
-        link.addEventListener('mouseenter', () => {
-          linkTl.play();
-        });
-
-        link.addEventListener('mouseleave', () => {
-          linkTl.reverse();
-        });
-      });
-
       const title = next.querySelector('.title-showchase h1');
       const titleParagraph = next.querySelector('.title-showchase p');
       const imgShowchase = next.querySelectorAll('.showchase-img img');
@@ -251,6 +247,8 @@ matchMediaResponsive.add(
       const topDescriptionTitle = next.querySelectorAll('.top-description h1');
       const topDescriptionSubTitle =
         next.querySelectorAll('.top-description p');
+
+      arrowLogic();
 
       return tlEnter
         .fromTo(
@@ -350,98 +348,8 @@ matchMediaResponsive.add(
         );
     };
 
-    // enter gallery from showchase barbajs ----------------------------------
-
     const enterTransitionGallery = (next) => {
-      const motionVideo = gsap.utils.toArray('.motion-container');
-      const graphicDesign = gsap.utils.toArray('.graphic-design-container');
-
-      motionVideo.forEach((video) => {
-        const motion = video.querySelector('video');
-        let p = video.querySelector('.motion-container p');
-        let originalText = p.innerText;
-
-        video.addEventListener('mouseenter', () => {
-          gsap.fromTo(
-            motion,
-            {
-              clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
-            },
-            { clipPath: 'polygon(0% 13%, 100% 0%, 100% 87%, 0% 100%)' }
-          );
-          randomType(p, '01', 500, true);
-        });
-        video.addEventListener('mouseleave', () => {
-          gsap.to(motion, {
-            clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
-          });
-          p.innerText = originalText;
-        });
-      });
-
-      graphicDesign.forEach((images) => {
-        const image = images.querySelector('img');
-        let p = images.querySelector('.graphic-design-container p');
-        let originalText = p.innerText;
-
-        images.addEventListener('mouseenter', () => {
-          gsap.fromTo(
-            image,
-            {
-              clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
-            },
-            { clipPath: 'polygon(0% 13%, 100% 0%, 100% 87%, 0% 100%)' }
-          );
-          randomType(p, '01', 500, true);
-        });
-        images.addEventListener('mouseleave', () => {
-          gsap.to(image, {
-            clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
-          });
-          p.innerText = originalText;
-        });
-      });
-
-      function randomType(element, characters, duration, sequential = false) {
-        let originalText = element.innerText;
-        let textArray = originalText.split('');
-        let charactersArray = characters.split('');
-        let startTime = new Date().getTime();
-        let interval;
-
-        if (sequential) {
-          let currentIndex = 0;
-          interval = setInterval(function () {
-            textArray[currentIndex] =
-              charactersArray[
-                Math.floor(Math.random() * charactersArray.length)
-              ];
-            element.innerText = textArray.join('');
-            currentIndex++;
-            if (currentIndex === textArray.length) {
-              currentIndex = 0;
-            }
-            if (new Date().getTime() - startTime >= duration) {
-              clearInterval(interval);
-              element.innerText = originalText;
-            }
-          }, 20);
-        } else {
-          interval = setInterval(function () {
-            for (let i = 0; i < textArray.length; i++) {
-              textArray[i] =
-                charactersArray[
-                  Math.floor(Math.random() * charactersArray.length)
-                ];
-            }
-            element.innerText = textArray.join('');
-            if (new Date().getTime() - startTime >= duration) {
-              clearInterval(interval);
-              element.innerText = originalText;
-            }
-          }, 0);
-        }
-      }
+      randomNumberVideoAndImage();
 
       return tlEnter.fromTo(
         next,
@@ -449,21 +357,6 @@ matchMediaResponsive.add(
         { y: 0, opacity: 1, duration: 1.5 }
       );
     };
-
-    // ChangeColor -------------------------------------------------------
-
-    // function getGradient(name) {
-    //   switch (name) {
-    //     case 'home':
-    //       return '#2b2730';
-
-    //     case 'about':
-    //       return '#3B3030';
-
-    //     case 'showchase':
-    //       return '#001F3F';
-    //   }
-    // }
 
     //  PAGE TRANSITION ANIMATION  ----------------------------------------------------
 
@@ -585,6 +478,8 @@ matchMediaResponsive.add(
         },
       ],
     });
+
+    // opening animation -----------------------------------------------------------
 
     const tl = gsap.timeline({
       default: { duration: 0.75, ease: 'power4.easeOut' },
