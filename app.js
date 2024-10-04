@@ -29,6 +29,69 @@ const lenisScrool = () => {
   gsap.ticker.lagSmoothing(0);
 };
 
+const animateWordsBoxHastag = () => {
+  const words = [
+    '#Flex-Box Style',
+    '#Grid-Box Style',
+    '#Page-Transition Style',
+    '#Page-Snap Scrool Style',
+    '#Vector Style',
+    '#Motion Style',
+  ];
+  let currentIndex = 0;
+  let split;
+  const textElement = document.querySelector('.Carousel-title-showchase h6');
+
+  function updateText() {
+    textElement.textContent = words[currentIndex];
+    split = new SplitType(textElement, { type: 'chars' });
+    animateChars(split.chars);
+    currentIndex = (currentIndex + 1) % words.length;
+  }
+
+  function animateChars(chars) {
+    gsap.from(chars, {
+      yPercent: 120,
+      stagger: 0.03,
+      duration: 1.5,
+      ease: 'power4.out',
+      onComplete: () => {
+        if (split) {
+          split.revert();
+        }
+      },
+    });
+  }
+
+  setInterval(updateText, 5000);
+};
+
+const bottomBorderNavbar = () => {
+  const borders = gsap.utils.toArray('.main-navbar-menu');
+
+  borders.forEach((border) => {
+    let linkTl = gsap.timeline({
+      defaults: { ease: 'power4.inOut', duration: 0.6 },
+    });
+
+    const borderBottomAnimation = border.querySelector(
+      '.main-home-menu-border-bottom'
+    );
+
+    linkTl.to(borderBottomAnimation, { scaleX: 1, duration: 1 });
+
+    linkTl.pause();
+
+    border.addEventListener('mouseenter', () => {
+      linkTl.play();
+    });
+
+    border.addEventListener('mouseleave', () => {
+      linkTl.reverse();
+    });
+  });
+};
+
 const arrowLogic = () => {
   const links = gsap.utils.toArray('.link');
 
@@ -145,6 +208,8 @@ const randomNumberVideoAndImage = () => {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
+  animateWordsBoxHastag();
+  bottomBorderNavbar();
   arrowLogic();
   randomNumberVideoAndImage();
   lenisScrool();
@@ -234,6 +299,7 @@ matchMediaResponsive.add(
 
     const enterTransitionShowchase = (next) => {
       const title = next.querySelector('.title-showchase h1');
+      const splitTitle = next.querySelector('.Carousel-title-showchase h6');
       const titleParagraph = next.querySelector('.title-showchase p');
       const imgShowchase = next.querySelectorAll('.showchase-img img');
       const videoShowchase = next.querySelector('.showchase-video video');
@@ -249,6 +315,7 @@ matchMediaResponsive.add(
         next.querySelectorAll('.top-description p');
 
       arrowLogic();
+      animateWordsBoxHastag();
 
       return tlEnter
         .fromTo(
@@ -270,11 +337,12 @@ matchMediaResponsive.add(
           }
         )
         .fromTo(
-          titleParagraph,
+          [splitTitle, titleParagraph],
           { opacity: 0, y: 20 },
           {
             opacity: 1,
             y: 0,
+            stagger: 0.02,
             duration: 1.5,
             delay: 0.3,
           },
@@ -515,11 +583,11 @@ matchMediaResponsive.add(
         '<'
       )
       .to(
-        ['.main-home-menu', '.about-menu', '.showchase-menu'],
+        '.main-navbar-menu',
         {
           y: 0,
           opacity: 1,
-          stagger: 0.5,
+          stagger: 0.4,
           duration: 1,
         },
         '<'
@@ -537,6 +605,14 @@ matchMediaResponsive.add(
       .to(
         ['.button-contact', '.copyright h1'],
         { scale: 1, opacity: 1, stagger: 0.2, duration: 1 },
+        '<10%'
+      )
+      .to(
+        '.border-top-footer-border',
+        {
+          scaleX: 1,
+          duration: 1.2,
+        },
         '<10%'
       )
       .to(

@@ -4,13 +4,15 @@
   font-size: calc(1.5rem + 0.5vw);
 }
 
-.main-home-menu p,
-.about-menu p,
-.showchase-menu p {
+.main-navbar-menu p {
   font-size: calc(1.5rem + 0.5vw);
 }
 
 /* FOOTER -------------------------------------------------------------------- */
+
+.border-top-footer-border {
+  width: 100%;
+}
 
 .copyright h1 {
   font-size: calc(1.5rem + 0.5vw);
@@ -80,6 +82,10 @@
 
 .title-showchase h1 {
   font-size: calc(4rem + 1vw);
+}
+
+.Carousel-title-showchase h6 {
+  font-size: calc(1.5rem + 0.5vw);
 }
 
 .title-showchase p {

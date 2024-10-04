@@ -8,9 +8,7 @@
   gap: 2rem;
 }
 
-.main-home-menu p,
-.about-menu p,
-.showchase-menu p {
+.main-navbar-menu p {
   font-size: calc(1rem + 0.5vw);
 }
 
@@ -71,6 +69,10 @@
 
 .title-showchase h1 {
   font-size: calc(3rem + 1vw);
+}
+
+.Carousel-title-showchase h6 {
+  font-size: calc(1rem + 0.5vw);
 }
 
 .title-showchase p {

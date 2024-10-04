@@ -128,6 +128,7 @@ nav {
 }
 
 .menu-navbar {
+  position: relative;
   display: flex;
   width: 100%;
   height: 100%;
@@ -137,16 +138,16 @@ nav {
   gap: 5rem;
 }
 
-.main-home-menu a,
-.about-menu a,
-.showchase-menu a {
+.main-navbar-menu {
+  position: relative;
+}
+
+.main-navbar-menu a {
   text-decoration: none;
   color: white;
 }
 
-.main-home-menu p,
-.about-menu p,
-.showchase-menu p {
+.main-navbar-menu p {
   font-size: calc(1rem + 0.5vw);
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
@@ -163,7 +164,51 @@ nav {
   transform-origin: left;
 }
 
+.main-home-menu-border-bottom {
+  position: absolute;
+  width: 100%;
+  height: 0.2rem;
+  top: 20px;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgb(251, 248, 58);
+}
+
+/* bg video effect -------------------------------------------------------------------- */
+
+.bg-effect-random video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.blur-video-background {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
 /* FOOTER -------------------------------------------------------------------- */
+
+.border-top-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.border-top-footer-border {
+  height: 0.3rem;
+  background: rgb(155, 155, 155);
+  position: relative;
+  width: 50%;
+}
 
 footer {
   position: relative;
@@ -271,7 +316,7 @@ footer {
 
 .button-contact a {
   text-decoration: none;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
 }
 
 .button-contact p {
@@ -281,7 +326,7 @@ footer {
   font-style: normal;
   padding: 1rem 2rem;
   border: 1px solid white;
-  background: #d9d9d9;
+  background: none;
 }
 
 .home-image {
@@ -304,6 +349,19 @@ footer {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.blur-image-background-home {
+  position: absolute;
+  background: rgb(143, 188, 181);
+  opacity: 0.4;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
 }
 
 /* ABOUT PAGE -------------------------------------------------------- */
@@ -443,6 +501,19 @@ footer {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-style: normal;
+}
+
+.Carousel-title-showchase {
+  overflow: hidden;
+}
+
+.Carousel-title-showchase h6 {
+  width: 100%;
+  font-size: calc(1rem + 0.5vw);
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  color: rgb(251, 248, 58);
 }
 
 .narasihistorian,
@@ -719,16 +790,24 @@ footer {
   opacity: 0;
 }
 
-.main-home-menu,
-.about-menu,
-.showchase-menu {
+.main-navbar-menu {
   transform: translateY(-100%);
   opacity: 0;
+}
+
+.main-home-menu-border-bottom {
+  transform: scaleX(0);
+  transform-origin: left;
 }
 
 .bottom-border {
   transform: scaleX(0);
   transform-origin: left;
+}
+
+.border-top-footer-border {
+  transform: scaleX(0);
+  transform-origin: right;
 }
 
 .home-image {
