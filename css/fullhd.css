@@ -74,6 +74,7 @@ body {
   margin: auto;
   display: flex;
   flex-direction: column;
+  z-index: 50;
 }
 
 /* lenis scrool css setup  ------------------------------------------*/
@@ -177,6 +178,12 @@ nav {
 
 /* bg video effect -------------------------------------------------------------------- */
 
+.bg-effect-random {
+  position: absolute;
+  z-index: -1;
+  overflow: hidden;
+}
+
 .bg-effect-random video {
   position: fixed;
   top: 0;
@@ -184,6 +191,7 @@ nav {
   right: 0;
   bottom: 0;
   z-index: -1;
+  overflow: hidden;
 }
 
 .blur-video-background {
@@ -194,6 +202,7 @@ nav {
   right: 0;
   bottom: 0;
   z-index: -1;
+  overflow: hidden;
 }
 
 /* FOOTER -------------------------------------------------------------------- */
