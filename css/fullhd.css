@@ -76,22 +76,15 @@ html.lenis {
 
 #home,
 #biography,
+#showchase-grid-container,
 #motion-grid,
 #graphic-design-grid {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  height: 80vh;
-}
-
-#showchase-grid-container {
-  position: relative;
-  width: 100%;
-  height: auto;
-  padding: 5% 0;
-}
-
-#motion-grid,
-#graphic-design-grid {
+  min-height: 80vh;
   padding: 5% 0;
 }
 
@@ -122,24 +115,24 @@ html.lenis {
   font-style: normal;
 }
 
-.cta-text2 h1,
-.biography-container h1,
-.title-showchase h1 {
+.cta-text2 h1 {
   font-size: calc(8rem + 1vw);
 }
 
-.cta-paragraph p,
-.title-showchase p,
-.text-higlight p,
-.button-contact p {
-  font-size: calc(1rem + 0.5vw);
-  line-height: 3rem;
+.biography-container h1,
+.title-showchase h1 {
+  font-size: calc(6rem + 1vw);
 }
 
 .copyright h1,
 .logo-mask h1,
-.main-navbar-menu p {
+.main-navbar-menu p,
+.cta-paragraph p,
+.title-showchase p,
+.text-higlight p,
+.button-contact p {
   font-size: calc(0.7rem + 0.5vw);
+  line-height: 3rem;
 }
 
 .cta-text1 h2,
@@ -230,7 +223,6 @@ footer {
   position: relative;
   width: 100%;
   height: 100%;
-  padding: 10rem 0;
   display: flex;
   flex-direction: row;
   justify-content: center;

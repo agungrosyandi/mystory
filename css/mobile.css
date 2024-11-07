@@ -1,21 +1,14 @@
 /* simple css --------------------------------------------------- */
 
-#showchase-grid-container {
-  position: relative;
-  width: 100%;
-  height: auto;
+#home,
+#biography,
+#showchase-grid-container,
+#motion-grid,
+#graphic-design-grid {
   padding: 5% 0;
 }
 
-#motion-grid,
-#graphic-design-grid,
-#biography {
-  padding: 15% 0;
-}
-
-.cta-text2 h1,
-.biography-container h1,
-.title-showchase h1 {
+.cta-text2 h1 {
   font-size: calc(6rem + 1vw);
 }
 
@@ -24,18 +17,15 @@
   font-size: calc(4rem + 1vw);
 }
 
+.copyright h1,
+.logo-mask h1,
+.main-navbar-menu p,
 .cta-paragraph p,
 .title-showchase p,
 .text-higlight p,
 .button-contact p {
   font-size: calc(1rem + 0.5vw);
   line-height: 2rem;
-}
-
-.copyright h1,
-.logo-mask h1,
-.main-navbar-menu p {
-  font-size: calc(1rem + 0.5vw);
 }
 
 .cta-text1 h2,
@@ -47,7 +37,7 @@
 .heading-container p,
 .motion-description p,
 .graphic-design-description p {
-  font-size: calc(1rem + 0.5vw);
+  font-size: calc(0.7rem + 0.5vw);
 }
 
 /* NAVBAR --------------------------------------------------- */
