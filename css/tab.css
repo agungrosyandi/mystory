@@ -1,158 +1,154 @@
-/* NAVBAR --------------------------------------------------- */
+/* simple css --------------------------------------------------- */
 
-.logo-mask h1 {
-  font-size: calc(1.5rem + 0.5vw);
+#home,
+#biography,
+#motion-grid,
+#graphic-design-grid {
+  position: relative;
+  width: 100%;
+  height: auto;
 }
 
+#showchase-grid-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 5% 0;
+}
+
+#motion-grid,
+#graphic-design-grid,
+#biography {
+  padding: 10% 0;
+}
+
+.cta-text2 h1,
+.biography-container h1,
+.title-showchase h1 {
+  font-size: calc(9rem + 1vw);
+}
+
+.biography-container h1,
+.title-showchase h1 {
+  font-size: calc(7rem + 1vw);
+}
+
+.cta-paragraph p,
+.title-showchase p,
+.text-higlight p,
+.button-contact p {
+  font-size: calc(1.5rem + 0.5vw);
+  line-height: 3rem;
+}
+
+.copyright h1,
+.logo-mask h1,
 .main-navbar-menu p {
   font-size: calc(1.5rem + 0.5vw);
 }
 
-/* FOOTER -------------------------------------------------------------------- */
-
-.border-top-footer-border {
-  width: 100%;
-}
-
-.copyright h1 {
+.cta-text1 h2,
+.top-description h1,
+.narasihistorian-hyperlink h1,
+.motion-description h1,
+.graphic-design-description h1,
+.top-description p,
+.heading-container p,
+.motion-description p,
+.graphic-design-description p {
   font-size: calc(1.5rem + 0.5vw);
 }
 
-.link-social-media {
-  width: 70%;
-  gap: 2rem;
-}
+/* NAVBAR --------------------------------------------------- */
 
-.menu-social-media {
-  width: 8%;
+.menu-navbar {
+  gap: 3rem;
 }
 
 /* MAIN HOME --------------------------------------------------- */
 
-#home {
-  height: auto;
-  overflow: hidden;
+.home-container {
+  padding: 10rem 0;
+  flex-direction: column;
+  gap: 5rem;
 }
 
-.home-container {
-  flex-direction: column;
+.link-social-media {
+  justify-content: center;
+  gap: 3rem;
+}
+
+.menu-social-media {
+  width: 5%;
 }
 
 .home-title {
   align-items: center;
   text-align: center;
-  padding: 0 5rem;
-}
-
-.cta-text1 h2 {
-  font-size: calc(2rem + 1vw);
-}
-
-.cta-text2 h1 {
-  font-size: calc(8rem + 1vw);
-}
-
-.cta-paragraph p {
-  font-size: calc(1.5rem + 0.5vw);
-}
-
-.button-contact p {
-  font-size: calc(1.5rem + 0.5vw);
-}
-
-.home-image {
-  height: 50rem;
+  gap: 3rem;
 }
 
 /* ABOUT PAGE -------------------------------------------------------- */
 
-.biography-container h1 {
-  font-size: calc(7rem + 1vw);
-}
-
-.text-higlight p {
-  font-size: calc(1.5rem + 0.5vw);
-}
-
-.button-contact-about p {
-  font-size: calc(1.5rem + 0.5vw);
+.biography-container {
+  gap: 3rem;
 }
 
 /* SHOWCHASE PAGE -------------------------------------------------------- */
 
-.title-showchase h1 {
-  font-size: calc(4rem + 1vw);
+.showchase-grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.motion-container-grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.vector-container-grid {
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .Carousel-title-showchase h6 {
-  font-size: calc(1.5rem + 0.5vw);
-}
-
-.title-showchase p {
-  font-size: calc(1.5rem + 0.5vw);
+  font-size: calc(2rem + 0.5vw);
 }
 
 .top-description h1 {
-  font-size: calc(1rem + 0.5vw);
-}
-
-.top-description p {
-  font-size: calc(1rem + 0.5vw);
-}
-
-.narasihistorian-hyperlink h1 {
-  font-size: calc(1.5rem + 1vw);
-}
-
-.heading-container p {
-  font-size: calc(1rem + 0.5vw);
+  font-size: calc(2rem + 0.5vw);
 }
 
 .title-showchase {
-  grid-column: 1/3;
+  grid-column: 1/5;
 }
 
 .narasihistorian {
-  grid-column: 1/3;
+  grid-column: 1/5;
 }
 
 .khairaskincare {
-  grid-column: 1/3;
+  grid-column: 1/5;
 }
 
 .agungv2 {
-  grid-column: 1/3;
+  grid-column: 1/5;
 }
 
 .antavalley {
-  grid-column: 1/3;
+  grid-column: 1/5;
 }
 
 .one-piece {
-  grid-column: 1/3;
+  grid-column: 1/5;
 }
 
 .motion-video {
-  grid-column: 1/3;
+  grid-column: 1/5;
 }
 
 .graphic-design {
-  grid-column: 1/3;
+  grid-column: 1/5;
 }
 
-/* MOTION PAGE ----------------------------------------------------------- */
-
-#motion-grid {
-  height: auto;
-}
-
-.motion-description h1 {
-  font-size: calc(1.5rem + 0.5vw);
-}
-
-.motion-description p {
-  font-size: calc(1rem + 0.5vw);
-}
+/* MOTION & VECTOR PAGE ----------------------------------------------------------- */
 
 .motion-1 {
   grid-column: 1/5;
@@ -166,32 +162,14 @@
   grid-column: 3/5;
 }
 
-/* VECTOR PAGE -------------------------------------------------------- */
-
-#graphic-design-grid {
-  height: auto;
-}
-
-.vector-container-grid {
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.graphic-design-description h1 {
-  font-size: calc(1.5rem + 0.5vw);
-}
-
-.graphic-design-description p {
-  font-size: calc(1rem + 0.5vw);
-}
-
 .vector-1 {
-  grid-column: 1/3;
+  grid-column: 1/5;
 }
 
 .vector-2 {
-  grid-column: 1/2;
+  grid-column: 1/5;
 }
 
 .vector-3 {
-  grid-column: 2/3;
+  grid-column: 1/5;
 }

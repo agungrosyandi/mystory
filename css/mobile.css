@@ -1,146 +1,101 @@
-/* NAVBAR --------------------------------------------------- */
+/* simple css --------------------------------------------------- */
 
-.logo-mask h1 {
+#showchase-grid-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 5% 0;
+}
+
+#motion-grid,
+#graphic-design-grid,
+#biography {
+  padding: 15% 0;
+}
+
+.cta-text2 h1,
+.biography-container h1,
+.title-showchase h1 {
+  font-size: calc(6rem + 1vw);
+}
+
+.biography-container h1,
+.title-showchase h1 {
+  font-size: calc(4rem + 1vw);
+}
+
+.cta-paragraph p,
+.title-showchase p,
+.text-higlight p,
+.button-contact p {
+  font-size: calc(1rem + 0.5vw);
+  line-height: 2rem;
+}
+
+.copyright h1,
+.logo-mask h1,
+.main-navbar-menu p {
   font-size: calc(1rem + 0.5vw);
 }
+
+.cta-text1 h2,
+.top-description h1,
+.narasihistorian-hyperlink h1,
+.motion-description h1,
+.graphic-design-description h1,
+.top-description p,
+.heading-container p,
+.motion-description p,
+.graphic-design-description p {
+  font-size: calc(1rem + 0.5vw);
+}
+
+/* NAVBAR --------------------------------------------------- */
 
 .menu-navbar {
   gap: 2rem;
 }
 
-.main-navbar-menu p {
-  font-size: calc(1rem + 0.5vw);
-}
-
-/* FOOTER -------------------------------------------------------------------- */
-
-.copyright h1 {
-  font-size: calc(1rem + 0.5vw);
-}
-
-.link-social-media {
-  width: 70%;
-  gap: 1rem;
-}
-
-.menu-social-media {
-  width: 10%;
-}
-
 /* MAIN HOME --------------------------------------------------- */
 
 .home-container {
+  padding: 5rem 0;
   gap: 5rem;
 }
 
-.cta-text1 h2 {
-  font-size: calc(2rem + 1vw);
+.link-social-media {
+  gap: 2rem;
 }
 
-.cta-text2 h1 {
-  font-size: calc(6rem + 1vw);
+.menu-social-media {
+  width: 8%;
 }
 
-.cta-paragraph p {
-  font-size: calc(1rem + 0.5vw);
-  line-height: 2rem;
-}
-
-.button-contact p {
-  font-size: calc(1rem + 0.5vw);
+.home-title {
+  gap: 3rem;
 }
 
 /* ABOUT PAGE -------------------------------------------------------- */
 
-.biography-container h1 {
-  font-size: calc(5rem + 1vw);
-}
-
-.text-higlight p {
-  font-size: calc(1rem + 0.5vw);
-  line-height: 2rem;
-}
-
-.button-contact-about p {
-  font-size: calc(1rem + 0.5vw);
+.biography-container {
+  gap: 3rem;
 }
 
 /* SHOWCHASE PAGE -------------------------------------------------------- */
 
-.title-showchase h1 {
-  font-size: calc(3rem + 1vw);
-}
-
 .Carousel-title-showchase h6 {
-  font-size: calc(1rem + 0.5vw);
-}
-
-.title-showchase p {
-  font-size: calc(1rem + 0.5vw);
-  line-height: 2rem;
+  font-size: calc(1.5rem + 0.5vw);
 }
 
 .top-description h1 {
   font-size: calc(1.5rem + 0.5vw);
 }
 
-.top-description p {
-  font-size: calc(1rem + 0.5vw);
+.heading-container {
+  height: 10px;
 }
 
-.narasihistorian-hyperlink h1 {
-  font-size: calc(1rem + 1vw);
-}
-
-.heading-container p {
-  font-size: calc(1rem + 0.5vw);
-}
-
-.title-showchase {
-  grid-column: 1/3;
-}
-
-.narasihistorian {
-  grid-column: 1/3;
-}
-
-.khairaskincare {
-  grid-column: 1/3;
-}
-
-.agungv2 {
-  grid-column: 1/3;
-}
-
-.antavalley {
-  grid-column: 1/3;
-}
-
-.one-piece {
-  grid-column: 1/3;
-}
-
-.motion-video {
-  grid-column: 1/3;
-}
-
-.graphic-design {
-  grid-column: 1/3;
-}
-
-/* MOTION PAGE ----------------------------------------------------------- */
-
-.motion-description h1 {
-  font-size: calc(1.5rem + 0.5vw);
-}
-
-.motion-description p {
-  font-size: calc(1rem + 0.5vw);
-}
-
-.motion-1 {
-  grid-column: 1/5;
-}
+/* MOTION & VECTOR PAGE ----------------------------------------------------------- */
 
 .motion-2 {
   grid-column: 1/5;
@@ -148,26 +103,4 @@
 
 .motion-3 {
   grid-column: 1/5;
-}
-
-/* VECTOR PAGE -------------------------------------------------------- */
-
-.graphic-design-description h1 {
-  font-size: calc(1.5rem + 0.5vw);
-}
-
-.graphic-design-description p {
-  font-size: calc(1rem + 0.5vw);
-}
-
-.vector-1 {
-  grid-column: 1/3;
-}
-
-.vector-2 {
-  grid-column: 1/3;
-}
-
-.vector-3 {
-  grid-column: 1/3;
 }
