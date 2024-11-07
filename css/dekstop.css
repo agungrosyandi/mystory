@@ -17,7 +17,7 @@
 .text-higlight p,
 .button-contact p {
   font-size: calc(0.7rem + 0.5vw);
-  line-height: 3rem;
+  line-height: 2rem;
 }
 
 .cta-text1 h2,
@@ -78,6 +78,10 @@
 
 .top-description h1 {
   font-size: calc(1rem + 0.5vw);
+}
+
+.heading-container {
+  height: 15px;
 }
 
 .title-showchase {
