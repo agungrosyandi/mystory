@@ -236,7 +236,7 @@ footer {
   justify-content: center;
   align-items: flex-start;
   gap: 3rem;
-  flex: 1 1 10rem;
+  flex: 2 1 10rem;
 }
 
 .cta-text1,
