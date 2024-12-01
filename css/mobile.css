@@ -23,7 +23,8 @@
 .cta-paragraph p,
 .title-showchase p,
 .text-higlight p,
-.button-contact p {
+.button-contact p,
+.button-resume p {
   font-size: calc(1rem + 0.5vw);
   line-height: 2rem;
 }

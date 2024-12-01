@@ -109,7 +109,8 @@ html.lenis {
 .heading-container p,
 .motion-description p,
 .graphic-design-description p,
-.button-contact p {
+.button-contact p,
+.button-resume p {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -130,7 +131,8 @@ html.lenis {
 .cta-paragraph p,
 .title-showchase p,
 .text-higlight p,
-.button-contact p {
+.button-contact p,
+.button-resume p {
   font-size: calc(0.7rem + 0.5vw);
   line-height: 3rem;
 }
@@ -147,6 +149,16 @@ html.lenis {
   font-size: calc(0.5rem + 0.5vw);
   color: rgb(255, 255, 255);
   text-align: end;
+}
+
+.button-contact p,
+.button-resume p {
+  padding: 1rem 2rem;
+}
+
+.button-contact a,
+.button-resume a {
+  text-decoration: none;
 }
 
 /* NAVBAR --------------------------------------------------- */
@@ -273,14 +285,11 @@ footer {
 }
 
 .button-contact a {
-  text-decoration: none;
   color: rgb(0, 0, 0);
 }
 
 .button-contact p {
-  padding: 1rem 2rem;
   border: 1px solid rgb(0, 0, 0);
-  background: none;
 }
 
 .home-image {
@@ -334,6 +343,20 @@ footer {
   height: 100%;
   z-index: 30;
   padding: 2rem 0;
+}
+
+.button-resume {
+  display: flex;
+}
+
+.button-resume p {
+  padding: 1rem 2rem;
+  border: 1px solid rgb(255, 255, 255);
+}
+
+.button-resume a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
 }
 
 /* SHOWCHASE PAGE -------------------------------------------------------- */
@@ -456,24 +479,20 @@ footer {
   grid-column: 2/3;
 }
 
-.agungv2 {
-  grid-column: 3/4;
-}
-
 .antavalley {
-  grid-column: 1/2;
+  grid-column: 3/4;
 }
 
 .one-piece {
-  grid-column: 2/3;
+  grid-column: 1/2;
 }
 
 .motion-video {
-  grid-column: 3/4;
+  grid-column: 2/3;
 }
 
 .graphic-design {
-  grid-column: 1/2;
+  grid-column: 3/4;
 }
 
 /* MOTION & VECTOR PAGE ----------------------------------------------------------- */

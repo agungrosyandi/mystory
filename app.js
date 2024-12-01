@@ -244,7 +244,7 @@ function enterTransitionAbout(next, gradient, colorNavbarFooter) {
   const imageBackground = next.querySelector(".biography-background-img img");
 
   const highlight = next.querySelectorAll(".highlight");
-  const button = next.querySelector(".button-contact-about");
+  const button = next.querySelector(".button-resume");
 
   return tlEnter
     .fromTo(
