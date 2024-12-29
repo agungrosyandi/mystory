@@ -97,20 +97,24 @@
   grid-column: 3/5;
 }
 
-.antavalley {
+.wonderful-indonesia {
   grid-column: 1/3;
+}
+
+.antavalley {
+  grid-column: 3/5;
 }
 
 .one-piece {
-  grid-column: 3/5;
-}
-
-.motion-video {
   grid-column: 1/3;
 }
 
-.graphic-design {
+.motion-video {
   grid-column: 3/5;
+}
+
+.graphic-design {
+  grid-column: 1/3;
 }
 
 /* MOTION & VECTOR PAGE ----------------------------------------------------------- */

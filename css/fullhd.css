@@ -409,7 +409,7 @@ footer {
 
 .narasihistorian,
 .khairaskincare,
-.agungv2,
+.wonderful-indonesia,
 .antavalley,
 .one-piece,
 .motion-video,
@@ -479,20 +479,24 @@ footer {
   grid-column: 2/3;
 }
 
-.antavalley {
+.wonderful-indonesia {
   grid-column: 3/4;
 }
 
-.one-piece {
+.antavalley {
   grid-column: 1/2;
 }
 
-.motion-video {
+.one-piece {
   grid-column: 2/3;
 }
 
-.graphic-design {
+.motion-video {
   grid-column: 3/4;
+}
+
+.graphic-design {
+  grid-column: 1/2;
 }
 
 /* MOTION & VECTOR PAGE ----------------------------------------------------------- */

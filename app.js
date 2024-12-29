@@ -54,12 +54,11 @@ const lenisScrool = () => {
 
 const animateWordsBoxHastag = () => {
   const words = [
-    "#Flex-Box Style",
-    "#Grid-Box Style",
-    "#Page-Transition Style",
-    "#Page-Snap Scrool Style",
-    "#Vector Style",
-    "#Motion Style",
+    "#Graphic Designer",
+    "#Web Designer",
+    "#Front-End Dev Specialist",
+    "#What are you waiting for ?",
+    "#Lets Work Together",
   ];
   let currentIndex = 0;
   let split;
