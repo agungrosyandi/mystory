@@ -74,7 +74,6 @@ html.lenis {
 
 /* simple css --------------------------------------------------- */
 
-#home,
 #biography,
 #showchase-grid-container,
 #motion-grid,
@@ -88,20 +87,13 @@ html.lenis {
   padding: 5% 0;
 }
 
-.cta-text2 h1,
 .biography-container h1,
-.title-showchase h1 {
-  font-family: var(--drukBoldTrial);
-}
-
-.copyright h1,
-.logo-mask h1,
+.title-showchase h1,
 .top-description h1,
 .narasihistorian-hyperlink h1,
 .motion-description h1,
 .graphic-design-description h1,
 .Carousel-title-showchase h6,
-.cta-paragraph p,
 .title-showchase p,
 .text-higlight p,
 .main-navbar-menu p,
@@ -116,28 +108,19 @@ html.lenis {
   font-style: normal;
 }
 
-.cta-text2 h1 {
-  font-size: calc(8rem + 1vw);
-}
-
 .biography-container h1,
 .title-showchase h1 {
-  font-size: calc(6rem + 1vw);
+  font-size: calc(3rem + 1vw);
 }
 
-.copyright h1,
-.logo-mask h1,
 .main-navbar-menu p,
-.cta-paragraph p,
 .title-showchase p,
 .text-higlight p,
-.button-contact p,
 .button-resume p {
   font-size: calc(0.7rem + 0.5vw);
   line-height: 3rem;
 }
 
-.cta-text1 h2,
 .top-description h1,
 .narasihistorian-hyperlink h1,
 .motion-description h1,
@@ -151,16 +134,6 @@ html.lenis {
   text-align: end;
 }
 
-.button-contact p,
-.button-resume p {
-  padding: 1rem 2rem;
-}
-
-.button-contact a,
-.button-resume a {
-  text-decoration: none;
-}
-
 /* NAVBAR --------------------------------------------------- */
 
 nav {
@@ -172,15 +145,9 @@ nav {
   min-height: 10vh;
 }
 
-.logo-mask a,
 .main-navbar-menu a {
   text-decoration: none;
   color: #2b2730;
-}
-
-.logo-mask {
-  width: 100%;
-  overflow: hidden;
 }
 
 .menu-navbar {
@@ -213,96 +180,39 @@ nav {
   background: rgb(251, 248, 58);
 }
 
-/* FOOTER -------------------------------------------------------------------- */
+/* MAIN HOME  --------------------------------------------------- */
 
-footer {
+/* layout setting grid */
+
+#home {
   position: relative;
-  display: flex;
-  align-items: center;
-  min-height: 10vh;
-  margin-top: auto;
+  height: 75vh;
+  margin: 3rem 0;
 }
-
-.copyright {
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-}
-
-/* MAIN HOME --------------------------------------------------- */
 
 .home-container {
   position: relative;
   width: 100%;
   height: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 35rem;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 30% 35% 35%;
 }
 
-.home-title {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 3rem;
-  flex: 2 1 10rem;
-}
-
-.cta-text1,
-.cta-text2,
-.cta-paragraph {
-  overflow: hidden;
-}
-
-.cta-text1 h2 {
-  color: rgb(0, 0, 0);
-}
-
-.cta-text2 {
-  display: flex;
-  gap: 0 15px;
-}
-
-.link-social-media {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  min-height: 5vh;
-  gap: 3rem;
-}
-
-.menu-social-media {
-  width: 4%;
-}
-
-.menu-social-media img {
-  width: 100%;
-  height: 100%;
-}
-
-.button-contact a {
-  color: rgb(0, 0, 0);
-}
-
-.button-contact p {
-  border: 1px solid rgb(0, 0, 0);
-}
-
-.home-image {
+.home-image,
+.showchase-grid-bg,
+.about-me-grid,
+.contact-me-grid,
+.about-me-bg-grid {
   position: relative;
   width: 100%;
   height: 100%;
-  flex: 1 1 10rem;
-  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
-    0 8px 10px -6px rgb(0 0 0 / 0.1);
 }
 
-.home-image img {
-  position: relative;
+.home-image img,
+.showchase-grid-bg img {
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
@@ -310,6 +220,148 @@ footer {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.cta-paragraph,
+.contact-me-grid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+  padding: 0 5rem;
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+    0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+.about-me-grid,
+.showchase-explore-grid {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  gap: 1rem;
+  padding: 3rem 5rem;
+}
+
+/* background color grid */
+
+.contact-me-grid {
+  background: #393e46;
+}
+
+.about-me-grid {
+  background: #424874;
+}
+
+.cta-paragraph {
+  background: #ffffff;
+}
+
+/* main title grid */
+
+.cta-paragraph h1,
+.contact-me-grid h1,
+.about-me-grid h1,
+.showchase-explore-grid h1 {
+  font-size: calc(0.3rem + 1vw);
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.cta-paragraph h1 {
+  color: #000000;
+  font-size: calc(0.1rem + 1vw);
+}
+
+/* paragraph & button grid */
+
+.showchase-explore-grid p,
+.cta-paragraph p,
+.contact-me-grid p,
+.about-me-grid p {
+  font-size: calc(0.4rem + 0.5vw);
+  line-height: 2rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #ffffff;
+}
+
+.cta-paragraph p {
+  color: #000000;
+}
+
+.showchase-explore-grid a,
+.contact-me-grid a,
+.about-me-grid a {
+  margin-top: 1rem;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 10px;
+  text-decoration: none;
+  padding: 0.5rem 3rem;
+  color: #ffffff;
+}
+
+.showchase-explore-grid a {
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* social media icon */
+
+.link-social-media {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.menu-social-media {
+  width: 2%;
+}
+
+.menu-social-media img {
+  width: 100%;
+  height: 100%;
+}
+
+/* grid coloum and row setting grid */
+
+.home-image {
+  grid-column: 1/3;
+  grid-row: 1/4;
+}
+
+.cta-paragraph {
+  grid-column: 3/7;
+  grid-row: 1/2;
+}
+
+.showchase-grid-bg {
+  grid-column: 5/7;
+  grid-row: 2/3;
+}
+
+.about-me-grid {
+  grid-column: 3/5;
+  grid-row: 2/3;
+}
+
+.contact-me-grid {
+  grid-column: 3/7;
+  grid-row: 3/4;
+}
+
+.showchase-explore-grid {
+  grid-column: 5/7;
+  grid-row: 2/3;
+  z-index: 10;
 }
 
 /* ABOUT PAGE -------------------------------------------------------- */
@@ -352,6 +404,7 @@ footer {
 .button-resume p {
   padding: 1rem 2rem;
   border: 1px solid rgb(255, 255, 255);
+  border-radius: 1rem;
 }
 
 .button-resume a {
@@ -387,7 +440,7 @@ footer {
 
 .Carousel-title-showchase h6 {
   width: 100%;
-  font-size: calc(2rem + 0.5vw);
+  font-size: calc(1rem + 0.5vw);
   color: rgb(251, 248, 58);
 }
 
@@ -563,11 +616,6 @@ footer {
 
 /* ANIMATION SETTING CSS FOR GSAP ----------------------------------- */
 
-.logo-mask h1 {
-  transform: translateX(-100%);
-  opacity: 0;
-}
-
 .main-navbar-menu {
   transform: translateY(-100%);
   opacity: 0;
@@ -583,31 +631,26 @@ footer {
   transform-origin: left;
 }
 
-.home-image {
-  transform: translateY(10%);
-  opacity: 0;
-}
-
-.cta-text1 h2 {
-  transform: translateX(-100%);
-  transform-origin: left;
-}
-
-.cta-text2 h1 {
-  transform: translateY(100%);
-  transform-origin: bottom;
-}
-
-.cta-paragraph p {
-  transform: translateY(100%);
-  transform-origin: top;
-}
-
-.button-contact,
-.copyright h1,
+.home-image,
+.cta-paragraph,
+.about-me-grid,
+.showchase-grid-bg,
+.contact-me-grid,
+.cta-paragraph h1,
+.cta-paragraph p,
+.about-me-grid h1,
+.about-me-grid p,
+.showchase-explore-grid h1,
+.showchase-explore-grid p,
+.contact-me-grid h1,
+.contact-me-grid p,
+.about-button-grid,
+.portfolio-button-grid,
+.contact-button-grid,
 .menu-social-media {
+  transform: translateY(5%);
+  transform-origin: top;
   opacity: 0;
-  scale: 0;
 }
 
 .biography-background-img {

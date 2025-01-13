@@ -8,7 +8,7 @@ function getGradient(name) {
       return "#ffffff";
 
     case "about":
-      return "#2b2730";
+      return "#222831";
 
     case "showchase":
       return "#000000";
@@ -54,11 +54,13 @@ const lenisScrool = () => {
 
 const animateWordsBoxHastag = () => {
   const words = [
-    "#Graphic Designer",
-    "#Web Designer",
-    "#Front-End Dev Specialist",
-    "#What are you waiting for ?",
-    "#Lets Work Together",
+    "#Minimalist style",
+    "#Clean layout",
+    "#Flexible working",
+    "Skilled front-end",
+    "Interesting, isn't it? :)",
+    "Lets working together !",
+    "Just contact me :)",
   ];
   let currentIndex = 0;
   let split;
@@ -326,7 +328,7 @@ const enterTransitionShowchase = (next, gradient, colorNavbarFooter) => {
       }
     )
     .to(
-      ["body", ".logo-mask a ", ".main-navbar-menu a"],
+      ["body", ".main-navbar-menu a"],
       { background: gradient, color: colorNavbarFooter },
       "<"
     )
@@ -425,7 +427,7 @@ const enterTransitionGallery = (next, gradient, colorNavbarFooter) => {
   return tlEnter
     .fromTo(next, { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 1.5 })
     .to(
-      ["body", ".logo-mask a ", ".main-navbar-menu a"],
+      ["body", ".main-navbar-menu a"],
       { background: gradient, color: colorNavbarFooter },
       "<"
     );
@@ -563,29 +565,31 @@ matchMediaResponsive.add(
               tlEnter
                 .fromTo(next, { y: 20, opacity: 0 }, { y: 0, opacity: 1 })
                 .to(
-                  [
-                    "body",
-                    ".logo-mask a ",
-                    ".main-navbar-menu a",
-                    ".copyright h1",
-                  ],
+                  ["body", ".main-navbar-menu a"],
                   { background: gradient, color: colorNavbarFooter },
                   "<"
                 )
-                .to(".cta-text1 h2", { x: 0, opacity: 1, duration: 1 }, "<")
                 .to(
-                  [".cta-text2 h1", ".home-image", ".cta-paragraph p"],
+                  [
+                    ".home-image",
+                    ".cta-paragraph",
+                    ".cta-paragraph h1",
+                    ".cta-paragraph p",
+                    ".menu-social-media",
+                    ".about-me-grid",
+                    ".about-me-grid h1",
+                    ".about-me-grid p",
+                    ".about-button-grid",
+                    ".showchase-grid-bg",
+                    ".showchase-explore-grid h1",
+                    ".showchase-explore-grid p",
+                    ".portfolio-button-grid",
+                    ".contact-me-grid ",
+                    ".contact-me-grid h1",
+                    ".contact-me-grid p",
+                    ".contact-button-grid",
+                  ],
                   { y: 0, opacity: 1, duration: 1 },
-                  "<"
-                )
-                .to(
-                  ".menu-social-media",
-                  { scale: 1, opacity: 1, duration: 1 },
-                  "<"
-                )
-                .to(
-                  ".button-contact",
-                  { scale: 1, opacity: 1, duration: 1 },
                   "<"
                 );
             }
@@ -606,45 +610,29 @@ matchMediaResponsive.add(
       default: { duration: 0.75, ease: "power4.easeOut" },
     });
 
-    tl.to(".home-image", {
-      y: 0,
-      opacity: 1,
-      duration: 1,
-    })
-      .to(
-        ".cta-text1 h2",
-        {
-          x: 0,
-          opacity: 1,
-          duration: 1,
-        },
-        "<10%"
-      )
-      .to(
-        ".cta-text2 h1",
-        { y: 0, opacity: 1, stagger: 0.3, duration: 1 },
-        "<20%"
-      )
-      .to(".cta-paragraph p", { y: 0, opacity: 1, duration: 1 }, "<30%")
-      .to(
-        ".logo-mask h1",
-        {
-          x: 0,
-          opacity: 1,
-          duration: 0.5,
-        },
-        "<"
-      )
-      .to(
-        ".main-navbar-menu",
-        {
-          y: 0,
-          opacity: 1,
-          stagger: 0.4,
-          duration: 1,
-        },
-        "<"
-      )
+    tl.to(
+      [
+        ".home-image",
+        ".cta-paragraph",
+        ".cta-paragraph h1",
+        ".cta-paragraph p",
+        ".menu-social-media",
+        ".about-me-grid",
+        ".about-me-grid h1",
+        ".about-me-grid p",
+        ".about-button-grid",
+        ".showchase-grid-bg",
+        ".showchase-explore-grid h1",
+        ".showchase-explore-grid p",
+        ".portfolio-button-grid",
+        ".contact-me-grid ",
+        ".contact-me-grid h1",
+        ".contact-me-grid p",
+        ".contact-button-grid",
+      ],
+      { y: 0, opacity: 1, stagger: 0.1, duration: 1 },
+      "<30%"
+    )
       .to(
         ".bottom-border",
         {
@@ -655,20 +643,15 @@ matchMediaResponsive.add(
         "<"
       )
       .to(
-        ".menu-social-media",
+        ".main-navbar-menu",
         {
-          scale: 1,
+          y: 0,
           opacity: 1,
-          ease: "bounce.out",
-          stagger: 0.2,
+          stagger: 0.4,
           duration: 1,
+          delay: 0.1,
         },
-        "<10%"
-      )
-      .to(
-        [".button-contact", ".copyright h1"],
-        { scale: 1, opacity: 1, stagger: 0.2, duration: 1 },
-        "<10%"
+        "<"
       );
   }
 );
