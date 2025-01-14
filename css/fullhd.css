@@ -210,7 +210,8 @@ nav {
 }
 
 .home-image img,
-.showchase-grid-bg img {
+.home-image video,
+.showchase-grid-bg video {
   position: absolute;
   top: 0;
   left: 0;
@@ -247,11 +248,11 @@ nav {
 /* background color grid */
 
 .contact-me-grid {
-  background: #393e46;
+  background: #576f72;
 }
 
 .about-me-grid {
-  background: #424874;
+  background: #f1f0e8;
 }
 
 .cta-paragraph {
@@ -274,7 +275,11 @@ nav {
 
 .cta-paragraph h1 {
   color: #000000;
-  font-size: calc(0.1rem + 1vw);
+  font-size: calc(0.3rem + 1vw);
+}
+
+.about-me-grid h1 {
+  color: #000000;
 }
 
 /* paragraph & button grid */
@@ -283,7 +288,7 @@ nav {
 .cta-paragraph p,
 .contact-me-grid p,
 .about-me-grid p {
-  font-size: calc(0.4rem + 0.5vw);
+  font-size: calc(0.6rem + 0.5vw);
   line-height: 2rem;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
@@ -292,6 +297,11 @@ nav {
 }
 
 .cta-paragraph p {
+  color: #000000;
+  padding: 0 10rem;
+}
+
+.about-me-grid p {
   color: #000000;
 }
 
@@ -302,8 +312,12 @@ nav {
   border: 2px solid rgb(255, 255, 255);
   border-radius: 10px;
   text-decoration: none;
-  padding: 0.5rem 3rem;
+  padding: 0.5rem 2rem;
   color: #ffffff;
+}
+
+.about-me-grid a {
+  border: 2px solid rgb(0, 0, 0);
 }
 
 .showchase-explore-grid a {
@@ -344,7 +358,7 @@ nav {
 
 .showchase-grid-bg {
   grid-column: 5/7;
-  grid-row: 2/3;
+  grid-row: 2/4;
 }
 
 .about-me-grid {
@@ -353,13 +367,13 @@ nav {
 }
 
 .contact-me-grid {
-  grid-column: 3/7;
+  grid-column: 3/5;
   grid-row: 3/4;
 }
 
 .showchase-explore-grid {
   grid-column: 5/7;
-  grid-row: 2/3;
+  grid-row: 2/4;
   z-index: 10;
 }
 
@@ -372,7 +386,8 @@ nav {
   overflow: hidden;
 }
 
-.biography-background-img img {
+.biography-background-img img,
+.biography-background-img video {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -402,13 +417,13 @@ nav {
 
 .button-resume p {
   padding: 1rem 2rem;
-  border: 1px solid rgb(255, 255, 255);
+  border: 1px solid rgb(0, 0, 0);
   border-radius: 1rem;
 }
 
 .button-resume a {
   text-decoration: none;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
 }
 
 /* SHOWCHASE PAGE -------------------------------------------------------- */

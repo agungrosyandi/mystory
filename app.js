@@ -8,7 +8,7 @@ function getGradient(name) {
       return "#ffffff";
 
     case "about":
-      return "#222831";
+      return "#ffffff";
 
     case "showchase":
       return "#000000";
@@ -27,7 +27,7 @@ function getNavbarFooterColor(name) {
       return "#2b2730";
 
     case "about":
-      return "#ffffff";
+      return "#2b2730";
 
     case "showchase":
       return "#ffffff";
@@ -278,7 +278,7 @@ function enterTransitionAbout(next, gradient, colorNavbarFooter) {
         color: "rgba(255, 255, 255, 0.1)",
       },
       {
-        color: "rgba(255, 255, 255, 1)",
+        color: "rgb(0, 0, 0)",
         stagger: 0.3,
         duration: 1,
         delay: 0.5,
@@ -508,11 +508,11 @@ matchMediaResponsive.add(
             enterTransitionAbout(next, gradient, colorNavbarFooter);
           },
 
-          async leave(data) {
-            const done = this.async();
-            let current = data.current.container;
-            leaveTransition(current, done);
-          },
+          // async leave(data) {
+          //   const done = this.async();
+          //   let current = data.current.container;
+          //   leaveTransition(current, done);
+          // },
         },
 
         {
@@ -595,11 +595,11 @@ matchMediaResponsive.add(
             }
           },
 
-          async leave(data) {
-            const done = this.async();
-            let current = data.current.container;
-            leaveTransition(current, done);
-          },
+          // async leave(data) {
+          //   const done = this.async();
+          //   let current = data.current.container;
+          //   leaveTransition(current, done);
+          // },
         },
       ],
     });
